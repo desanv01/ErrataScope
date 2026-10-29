@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "source_document_id": "FIXTURE-DOC",
+  "source_revision": null,
+  "claims": [
+    {
+      "field": "affected_revision",
+      "statement": "No revision statement appears in the supplied anchors.",
+      "anchor_ids": ["fixture-doc:p00:000"],
+      "status": "unresolved"
+    },
+    {
+      "field": "unresolved_field",
+      "statement": "Affected silicon revision remains unknown from the supplied anchors.",
+      "anchor_ids": ["fixture-doc:p00:001"],
+      "status": "unresolved"
+    }
+  ],
+  "unresolved_fields": ["source_revision", "affected_revision"],
+  "limitations": "Draft fixture interpretation for self-test only."
+}

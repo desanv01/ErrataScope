@@ -1,0 +1,51 @@
+{
+  "activated_utc": "2026-10-29T15:02:19Z",
+  "approval_text": "Approve 4 lifetime requests; keep $0.25 cap",
+  "approved_by": "human user in current chat",
+  "caps_after": {
+    "max_estimated_spend_usd": 0.25,
+    "max_input_tokens_per_request": 16000,
+    "max_output_tokens_per_request": 8192,
+    "max_requests": 4
+  },
+  "caps_before": {
+    "max_estimated_spend_usd": 0.25,
+    "max_input_tokens_per_request": 16000,
+    "max_output_tokens_per_request": 8192,
+    "max_requests": 3
+  },
+  "decision": "docs/execution/decisions/2026-10-29-w01-four-request-cap.md",
+  "ledger_sha256_after": "740f98edc8583075c6c58c5dd5c774a2c9047ff32e52762f93102d136cfe8617",
+  "ledger_sha256_before": "86ad7b589e4ab8df5c3dbf9a6a699ae00b054c6f514643be4f49bfc34506a9f2",
+  "paid_activation_requests": 0,
+  "preserved_attempts_sha256": "ff769ead322b79b975b4d79c44da8d99dfbf13f6a19e38e6f11452ff212b2a4a",
+  "preserved_blocked_events_sha256": "4f44c6db36c72d70a04ad9eb3b9ccef88a97938ebf71b0fbdc4a9ea9f08dd0da",
+  "remaining_reservations": 2,
+  "requests_reserved_after": 2,
+  "requests_reserved_before": 2,
+  "schema_version": 1,
+  "spend_reserved_usd_after": 0.0200484,
+  "spend_reserved_usd_before": 0.0200484,
+  "unchanged_artifacts": [
+    {
+      "path": ".local/w01/results/provider/cases/real_source/attempt-01.request.json",
+      "sha256": "ea76a48c55f5b071199df7fcbf93e7358f0ce1d5f3c242e92c669c69283d4c19"
+    },
+    {
+      "path": ".local/w01/results/provider/cases/real_source/attempt-01.response.json",
+      "sha256": "8e9025875ce4a3c229451e34db3216eae1b0431c24708078d3f4c4bba7ceb8ed"
+    },
+    {
+      "path": ".local/w01/results/provider/cases/real_source/attempt-02.request.json",
+      "sha256": "06d5757cf8919d47e636ddefc123d87379ce69262b6220497d7579aa09498a8b"
+    },
+    {
+      "path": ".local/w01/results/provider/cases/real_source/attempt-02.response.json",
+      "sha256": "6fa86a4296a5879d56df5149f2f931615e9f800af4d414a154371e8844d44935"
+    },
+    {
+      "path": ".local/w01/results/provider/cases/real_source/attempt-02.validation.json",
+      "sha256": "55b10419e0f7e19cefca45dfbbe375a9886f8242d3a3d353955d7e29932b3893"
+    }
+  ]
+}

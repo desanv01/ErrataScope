@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "packet": "W01",
+  "phase": "P0",
+  "status": "ACCEPTED",
+  "accepted_utc": "2026-10-29T15:17:56Z",
+  "review": "docs/execution/reviews/W01-review-06.md",
+  "worker_handoff": "docs/execution/handoffs/W01-attempt-06.md",
+  "reviewed_baseline": "docs/execution/baselines/W01-live-v4-baseline.json",
+  "gates": [
+    {
+      "gate": "W01-G1",
+      "status": "PASS",
+      "reason": "142 protected hashes / 233 links checked at 2026-10-29T15:08:33Z",
+      "evidence": "protected baseline record from this attempt"
+    },
+    {
+      "gate": "W01-G2",
+      "status": "PASS",
+      "reason": "source hash bound to anchors; 2 selected sections anchored",
+      "evidence": "sealed source + anchor bundle + coverage"
+    },
+    {
+      "gate": "W01-G3",
+      "status": "PASS",
+      "reason": "13 selected-section anchors with bbox and 6 rendered pages",
+      "evidence": "selected anchors with bbox + page renders"
+    },
+    {
+      "gate": "W01-G4",
+      "status": "PASS",
+      "reason": "attempt 3 evidence PASS: artifacts bound to case/attempt/model/endpoint; hashes match; completion stop; recomputed validation accepted",
+      "evidence": "real_source case artifacts in the ledger"
+    },
+    {
+      "gate": "W01-G5",
+      "status": "PASS",
+      "reason": "local checks pass and the live omission case evidence passed",
+      "evidence": "local self-test + synthetic_missing_revision case"
+    },
+    {
+      "gate": "W01-G6",
+      "status": "PASS",
+      "reason": "3 labeled synthetic fixtures with hashes; no manufacturer pair claimed",
+      "evidence": "synthetic fixtures + manifest records"
+    },
+    {
+      "gate": "W01-G7",
+      "status": "PASS",
+      "reason": "environment, baseline, and local-check records are current for this attempt; provider/account gaps listed below",
+      "evidence": "environment/baseline/self-test records; uncertainties below"
+    }
+  ],
+  "successful_cases": [
+    {
+      "attempt": 3,
+      "case": "real_source",
+      "artifact_status": "PASS",
+      "cli_replay_exit": 0,
+      "report_gate": "PASS",
+      "usage": {
+        "completion_tokens": 1174,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        },
+        "prompt_tokens": 2838,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0,
+          "created_cache_tokens": 0,
+          "multimodal_tokens": null
+        },
+        "total_tokens": 4012
+      },
+      "request_sha256": "1da81e32cd4370918b8eb87fc8db10dfba92fdbb2b8b58802316af94b291e9ba",
+      "response_sha256": "152a85d6468b523f610da49d33e19f95b43b75b716f0c6e7bea95dc897ccdcce",
+      "validation_sha256": "6830f3af51fffd1ee3e409a10cc85baa2d30ce87c8843fe62fd7ed5f94936df5"
+    },
+    {
+      "attempt": 4,
+      "case": "synthetic_missing_revision",
+      "artifact_status": "PASS",
+      "cli_replay_exit": 0,
+      "report_gate": "PASS",
+      "usage": {
+        "completion_tokens": 401,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        },
+        "prompt_tokens": 1412,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0,
+          "created_cache_tokens": 0,
+          "multimodal_tokens": null
+        },
+        "total_tokens": 1813
+      },
+      "request_sha256": "3dfd249e96d5a304376ed54cd5e7ff9dfab9ffbde05e02ab1727702b3f926bfe",
+      "response_sha256": "d13091a1f174d1b8cae3591dca305eb02b4db1e3adfb029a50e96fb5dcad475b",
+      "validation_sha256": "5dc92359319cb45c1ff0e42eb5d4e56b10a8bf6678f0d48cff06a8993e6ba872"
+    }
+  ],
+  "semantic_review": "Accepted for bounded source interpretation; see review for taxonomy/completeness limits; no automatic rule activation",
+  "ledger_sha256": "028084e43708460cc0e6a35cc03000bbbf2c756c6c87f235bf52d333a84e55a6",
+  "reservations_used": 4,
+  "reservations_remaining": 0,
+  "reserved_usd": 0.0404655,
+  "usage_based_estimate_usd": 0.0128994,
+  "new_review_provider_calls": 0,
+  "frozen_files": [
+    {
+      "path": "fixtures/manifests/w01/sources.json",
+      "sha256": "937dfb55db74d126145ea35ddea7d06530604a0b45add99ac5a8c6d1a975c058"
+    },
+    {
+      "path": "spikes/w01/erratascope_w01/schemas.py",
+      "sha256": "9cbbd6308ed84717c824d02a237126a6770406ac1e8740178cedf67faf4309d2"
+    },
+    {
+      "path": "spikes/w01/erratascope_w01/validate.py",
+      "sha256": "14f187ecb7ef3ea56bfbc6e517e621ffab1f08071971043ed07d5919db0175de"
+    },
+    {
+      "path": "spikes/w01/erratascope_w01/evidence.py",
+      "sha256": "8cea8e0c934e49060ae52d77354c60e537d2c155c4e52dc25ce917a99e060c08"
+    },
+    {
+      "path": "spikes/w01/erratascope_w01/cases.py",
+      "sha256": "df03651f991df49d21df0ac59f13ac671996e27d4e0246029b3a5b0e39024447"
+    },
+    {
+      "path": "spikes/w01/erratascope_w01/provider.py",
+      "sha256": "f99f68620799a5d56095693b9a74d3e0b8e995135efbd63323414498eef7e618"
+    },
+    {
+      "path": "spikes/w01/erratascope_w01/ledger.py",
+      "sha256": "8786812e9e6b82e505fe4dacc8b9d69ab317b3bcc1e7199dc2d65b5b2aa5807e"
+    },
+    {
+      "path": "spikes/w01/erratascope_w01/config.py",
+      "sha256": "0883a486869d0ea59920d9a498587b912aad1652a873be5d9861fab28d880cf8"
+    },
+    {
+      "path": "spikes/w01/prompts/draft_v4_system.md",
+      "sha256": "bfeb26e69ddeee89e9ece6742b10d146d7efdf2224b40f7ebfd2b5209c23d26a"
+    },
+    {
+      "path": "spikes/w01/prompts/draft_v4_schema.md",
+      "sha256": "4c5cba4faba0c0346240c2f4a201f01180ddcb548bb79b006487239a50b812ce"
+    },
+    {
+      "path": "spikes/w01/prompts/draft_v2_user.md",
+      "sha256": "626c1d06a66edac4fadf97962f7798c7649e4e3323b885bdaf8e59f53f67828f"
+    },
+    {
+      "path": "spikes/w01/prompts/synthetic_missing_user.md",
+      "sha256": "737f06c859bbebb26f32cb17524a3d7238973266a1be109e2e5b4fd9fc74aa24"
+    },
+    {
+      "path": "docs/evidence/W01/DRAFT_SCHEMA.json",
+      "sha256": "b785fa744ecf604f517d6c8ceb41c49617b461d60912118f5763563a576a8a50"
+    },
+    {
+      "path": "docs/evidence/W01/ANCHOR_SCHEMA.json",
+      "sha256": "314202f5abeed45b1c5f243931985cd98a2c88f07a0e080414ecb0cea5001937"
+    },
+    {
+      "path": ".local/w01/results/anchors.json",
+      "sha256": "b47f1417e984347e38dea7f2be72f437b15bd2f6e13d0a51e5fe03ea32c81b99"
+    },
+    {
+      "path": ".local/w01/results/coverage.json",
+      "sha256": "e240d8f3e7bc8fe54d40d9b042ec19cddf47fe974f4dcde6e52aae8ad9271262"
+    },
+    {
+      "path": ".local/w01/results/revision_matrix.json",
+      "sha256": "c9d2b0d4f05694e4025f36a46e52ca3c8be5f2143573e1730e1b8f1e9476f2c3"
+    },
+    {
+      "path": ".local/w01/results/renders.json",
+      "sha256": "21b4125367a8150d4195700bb4d9afa56441992c976ae0d99232ebbfa3928ce6"
+    }
+  ]
+}

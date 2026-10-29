@@ -1,0 +1,113 @@
+{
+  "$defs": {
+    "Claim": {
+      "additionalProperties": false,
+      "properties": {
+        "field": {
+          "enum": [
+            "source_identity",
+            "affected_device",
+            "affected_revision",
+            "trigger_condition",
+            "exception",
+            "consequence",
+            "workaround_documented",
+            "workaround_restriction",
+            "unresolved_field"
+          ],
+          "title": "Field",
+          "type": "string"
+        },
+        "statement": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Statement",
+          "type": "string"
+        },
+        "anchor_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Anchor Ids",
+          "type": "array"
+        },
+        "status": {
+          "default": "supported",
+          "enum": [
+            "supported",
+            "unresolved"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "field",
+        "statement",
+        "anchor_ids"
+      ],
+      "title": "Claim",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Structured DRAFT interpretation produced by the model.",
+  "properties": {
+    "schema_version": {
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "source_document_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Source Document Id"
+    },
+    "source_revision": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Source Revision"
+    },
+    "claims": {
+      "items": {
+        "$ref": "#/$defs/Claim"
+      },
+      "minItems": 1,
+      "title": "Claims",
+      "type": "array"
+    },
+    "unresolved_fields": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Unresolved Fields",
+      "type": "array"
+    },
+    "limitations": {
+      "default": "Draft model interpretation. Not a safety verdict. Requires human source review.",
+      "maxLength": 500,
+      "title": "Limitations",
+      "type": "string"
+    }
+  },
+  "required": [
+    "claims"
+  ],
+  "title": "DraftInterpretation",
+  "type": "object"
+}

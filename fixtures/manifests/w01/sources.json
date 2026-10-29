@@ -1,0 +1,204 @@
+{
+  "generated_utc": "2026-10-29T06:59:58Z",
+  "retrieval_attempts": [
+    {
+      "error": null,
+      "http_status": 200,
+      "request_url": "https://www.st.com/resource/en/errata_sheet/es0620-stm32n6xxxx-device-errata-stmicroelectronics.pdf",
+      "retrieval_utc": "2026-10-29T06:59:57Z",
+      "source_key": "st-es0620",
+      "type": "retrieval"
+    },
+    {
+      "error": null,
+      "http_status": 404,
+      "request_url": "https://www.nxp.com/pcn/202609010I",
+      "retrieval_utc": "2026-10-29T06:59:58Z",
+      "source_key": "nxp-pcn-202609010I",
+      "type": "retrieval"
+    },
+    {
+      "error": null,
+      "http_status": 200,
+      "request_url": "https://community.st.com/stm32-mcus-products-25/stm32n657-revision-b-nrst-workaround-without-an-initial-software-reset-168780",
+      "retrieval_utc": "2026-10-29T06:59:58Z",
+      "source_key": "st-community-nrst-thread",
+      "type": "retrieval"
+    }
+  ],
+  "schema_version": 1,
+  "selection": {
+    "anchored_sections": [
+      "2.2.18",
+      "2.2.5"
+    ],
+    "inventory_complete": false,
+    "inventory_entries": 53,
+    "parse_generated_utc": "2026-10-29T10:26:35Z",
+    "scope_note": "Selected-section coverage only. The full document was inventoried for headings but not interpreted.",
+    "selected_sections": [
+      "2.2.18",
+      "2.2.5"
+    ],
+    "selected_source_key": "st-es0620"
+  },
+  "sources": [
+    {
+      "artifact_path": ".local/w01/sources/st-es0620.pdf",
+      "authority": "Manufacturer errata sheet for STM32N6xxxx devices",
+      "byte_size": 1674378,
+      "content_type": "application/pdf",
+      "document_id": "ES0620",
+      "final_url": "https://www.st.com/resource/en/errata_sheet/es0620-stm32n6xxxx-device-errata-stmicroelectronics.pdf",
+      "http_status": 200,
+      "kind": "manufacturer_document",
+      "manufacturer": "STMicroelectronics",
+      "notes": [],
+      "page_count": 38,
+      "publication_date": "August 2026",
+      "redistribution": "unknown",
+      "redistribution_reference": "docs/execution/contracts/provider-and-sources.md: public document URLs do not authorize redistributing full documents",
+      "request_url": "https://www.st.com/resource/en/errata_sheet/es0620-stm32n6xxxx-device-errata-stmicroelectronics.pdf",
+      "retrieval_utc": "2026-10-29T06:59:57Z",
+      "revision": "Rev 5",
+      "schema_version": 1,
+      "sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd",
+      "source_key": "st-es0620",
+      "synthetic": false,
+      "title": "STM32N6xxxx device errata - Errata sheet"
+    },
+    {
+      "artifact_path": null,
+      "authority": "Manufacturer product change notice landing page (metadata only)",
+      "byte_size": null,
+      "content_type": null,
+      "document_id": "202609010I",
+      "final_url": null,
+      "http_status": null,
+      "kind": "manufacturer_notice",
+      "manufacturer": "NXP",
+      "notes": [
+        "Retrieval failed: HTTP 404 (no error detail)"
+      ],
+      "page_count": null,
+      "publication_date": null,
+      "redistribution": "unknown",
+      "redistribution_reference": "docs/execution/contracts/provider-and-sources.md: public document URLs do not authorize redistributing full documents",
+      "request_url": "https://www.nxp.com/pcn/202609010I",
+      "retrieval_utc": "2026-10-29T06:59:58Z",
+      "revision": null,
+      "schema_version": 1,
+      "sha256": null,
+      "source_key": "nxp-pcn-202609010I",
+      "synthetic": false,
+      "title": "202609010I"
+    },
+    {
+      "artifact_path": ".local/w01/sources/st-community-nrst-thread.html",
+      "authority": "Community thread (clarification only; not manufacturer authority)",
+      "byte_size": 402142,
+      "content_type": "text/html; charset=UTF-8",
+      "document_id": "168780",
+      "final_url": "https://community.st.com/stm32-mcus-products-25/stm32n657-revision-b-nrst-workaround-without-an-initial-software-reset-168780",
+      "http_status": 200,
+      "kind": "forum_clarification",
+      "manufacturer": "STMicroelectronics community",
+      "notes": [
+        "Non-PDF metadata page retrieved for provenance only; not parsed for errata content."
+      ],
+      "page_count": null,
+      "publication_date": null,
+      "redistribution": "unknown",
+      "redistribution_reference": "docs/execution/contracts/provider-and-sources.md: public document URLs do not authorize redistributing full documents",
+      "request_url": "https://community.st.com/stm32-mcus-products-25/stm32n657-revision-b-nrst-workaround-without-an-initial-software-reset-168780",
+      "retrieval_utc": "2026-10-29T06:59:58Z",
+      "revision": null,
+      "schema_version": 1,
+      "sha256": "42a8f5fb59f80d3ec9e4f60f4c76e3b4fbc8b31b5aa6a8f6d66a0741bba2a59e",
+      "source_key": "st-community-nrst-thread",
+      "synthetic": false,
+      "title": "168780"
+    },
+    {
+      "artifact_path": "spikes/w01/fixtures/synthetic/SYNTHETIC_missing_revision.md",
+      "authority": "Synthetic fixture authored for W01 testing; no manufacturer authority",
+      "byte_size": 460,
+      "content_type": "text/markdown",
+      "document_id": "SYNTHETIC_missing_revision",
+      "final_url": null,
+      "http_status": null,
+      "kind": "synthetic_fixture",
+      "manufacturer": null,
+      "notes": [
+        "Every object in this file is SYNTHETIC; it does not describe a real product.",
+        "Fixture availability only; it does not prove the change engine."
+      ],
+      "page_count": null,
+      "publication_date": null,
+      "redistribution": "permitted",
+      "redistribution_reference": "Authored for ErrataScope W01; contains no manufacturer content",
+      "request_url": null,
+      "retrieval_utc": null,
+      "revision": null,
+      "schema_version": 1,
+      "sha256": "9f26870b48116e44b69554bc1d20d0f4477099f201f58a0fdd39e72f05c34d2e",
+      "source_key": "synthetic-missing_revision",
+      "synthetic": true,
+      "title": "SYNTHETIC FIXTURE — NOT A MANUFACTURER DOCUMENT"
+    },
+    {
+      "artifact_path": "spikes/w01/fixtures/synthetic/SYNTHETIC_new.md",
+      "authority": "Synthetic fixture authored for W01 testing; no manufacturer authority",
+      "byte_size": 873,
+      "content_type": "text/markdown",
+      "document_id": "SYNTHETIC_new",
+      "final_url": null,
+      "http_status": null,
+      "kind": "synthetic_fixture",
+      "manufacturer": null,
+      "notes": [
+        "Every object in this file is SYNTHETIC; it does not describe a real product.",
+        "Fixture availability only; it does not prove the change engine."
+      ],
+      "page_count": null,
+      "publication_date": null,
+      "redistribution": "permitted",
+      "redistribution_reference": "Authored for ErrataScope W01; contains no manufacturer content",
+      "request_url": null,
+      "retrieval_utc": null,
+      "revision": null,
+      "schema_version": 1,
+      "sha256": "2b5828496fbd487bf1064bb1ac191e1eb3122905d0025dd559a1cb3397c664be",
+      "source_key": "synthetic-new",
+      "synthetic": true,
+      "title": "SYNTHETIC FIXTURE — NOT A MANUFACTURER DOCUMENT"
+    },
+    {
+      "artifact_path": "spikes/w01/fixtures/synthetic/SYNTHETIC_old.md",
+      "authority": "Synthetic fixture authored for W01 testing; no manufacturer authority",
+      "byte_size": 665,
+      "content_type": "text/markdown",
+      "document_id": "SYNTHETIC_old",
+      "final_url": null,
+      "http_status": null,
+      "kind": "synthetic_fixture",
+      "manufacturer": null,
+      "notes": [
+        "Every object in this file is SYNTHETIC; it does not describe a real product.",
+        "Fixture availability only; it does not prove the change engine."
+      ],
+      "page_count": null,
+      "publication_date": null,
+      "redistribution": "permitted",
+      "redistribution_reference": "Authored for ErrataScope W01; contains no manufacturer content",
+      "request_url": null,
+      "retrieval_utc": null,
+      "revision": null,
+      "schema_version": 1,
+      "sha256": "da8faf730c2cab9ca656e8ed095757fcb164551b02b41eacbbab180504428be2",
+      "source_key": "synthetic-old",
+      "synthetic": true,
+      "title": "SYNTHETIC FIXTURE — NOT A MANUFACTURER DOCUMENT"
+    }
+  ]
+}

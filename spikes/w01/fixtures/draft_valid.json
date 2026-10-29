@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "source_document_id": "FIXTURE-DOC",
+  "source_revision": null,
+  "claims": [
+    {
+      "field": "source_identity",
+      "statement": "Fixture document identifies section 2.2.18 concerning reset behavior when using the NRST pin.",
+      "anchor_ids": ["fixture-doc:p00:000"],
+      "status": "supported"
+    },
+    {
+      "field": "trigger_condition",
+      "statement": "Using the NRST pin may cause the system to fail to perform a correct reset.",
+      "anchor_ids": ["fixture-doc:p00:001"],
+      "status": "supported"
+    },
+    {
+      "field": "unresolved_field",
+      "statement": "The supplied anchors do not state a document revision.",
+      "anchor_ids": ["fixture-doc:p00:001"],
+      "status": "unresolved"
+    }
+  ],
+  "unresolved_fields": ["source_revision"],
+  "limitations": "Draft fixture interpretation for self-test only; not a safety verdict."
+}

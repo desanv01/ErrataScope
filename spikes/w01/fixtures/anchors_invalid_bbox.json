@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "source_key": "fixture-doc",
+  "document_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "page_count": 2,
+  "coordinate_system": "top_left_x_right_y_down_normalized",
+  "generated_utc": "2026-10-29T00:00:00Z",
+  "parsers": [{"name": "fixture", "version": "1", "mode": "hand-authored"}],
+  "anchors": [
+    {
+      "schema_version": 1,
+      "anchor_id": "fixture-doc:p00:000",
+      "document_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "source_key": "fixture-doc",
+      "page_index": 0,
+      "printed_page_label": "1",
+      "section": "2.2.18",
+      "section_title": "Out-of-range bbox fixture",
+      "block_id": "fixture-doc:p00",
+      "block_role": "body",
+      "text": "Negative fixture: normalized coordinates outside the unit square.",
+      "bbox": {"left": 1.4, "top": 0.12, "right": 1.5, "bottom": 0.15},
+      "bbox_original": {"unit": "pdf_points", "origin": "top_left_y_down", "left": 833.0, "top": 101.0, "right": 892.0, "bottom": 126.0},
+      "page_width_pt": 595.28,
+      "page_height_pt": 841.89,
+      "page_rotation": 0,
+      "coordinate_system": "top_left_x_right_y_down_normalized",
+      "parser": {"name": "fixture", "version": "1", "mode": "hand-authored"}
+    }
+  ]
+}

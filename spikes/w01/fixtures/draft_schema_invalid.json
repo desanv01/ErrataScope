@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "source_document_id": "FIXTURE-DOC",
+  "source_revision": null,
+  "unresolved_fields": [],
+  "limitations": "Negative fixture: missing required claims array."
+}

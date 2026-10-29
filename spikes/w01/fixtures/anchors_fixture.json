@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "source_key": "fixture-doc",
+  "document_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "page_count": 2,
+  "coordinate_system": "top_left_x_right_y_down_normalized",
+  "generated_utc": "2026-10-29T00:00:00Z",
+  "parsers": [
+    {
+      "name": "fixture",
+      "version": "1",
+      "mode": "hand-authored",
+      "notes": "Self-test fixture anchors, not real source evidence."
+    }
+  ],
+  "anchors": [
+    {
+      "schema_version": 1,
+      "anchor_id": "fixture-doc:p00:000",
+      "document_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "source_key": "fixture-doc",
+      "page_index": 0,
+      "printed_page_label": "1",
+      "section": "2.2.18",
+      "section_title": "Incorrect reset behavior when using NRST pin",
+      "block_id": "fixture-doc:p00",
+      "block_role": "heading",
+      "text": "2.2.18 Incorrect reset behavior when using NRST pin",
+      "bbox": {"left": 0.07, "top": 0.12, "right": 0.71, "bottom": 0.15},
+      "bbox_original": {"unit": "pdf_points", "origin": "top_left_y_down", "left": 41.0, "top": 101.0, "right": 422.0, "bottom": 126.0},
+      "page_width_pt": 595.28,
+      "page_height_pt": 841.89,
+      "page_rotation": 0,
+      "coordinate_system": "top_left_x_right_y_down_normalized",
+      "parser": {"name": "fixture", "version": "1", "mode": "hand-authored", "notes": "Self-test fixture."}
+    },
+    {
+      "schema_version": 1,
+      "anchor_id": "fixture-doc:p00:001",
+      "document_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "source_key": "fixture-doc",
+      "page_index": 0,
+      "printed_page_label": "1",
+      "section": "2.2.18",
+      "section_title": "Incorrect reset behavior when using NRST pin",
+      "block_id": "fixture-doc:p00",
+      "block_role": "body",
+      "text": "The system may fail to perform a correct reset when using the NRST pin.",
+      "bbox": {"left": 0.17, "top": 0.18, "right": 0.84, "bottom": 0.21},
+      "bbox_original": {"unit": "pdf_points", "origin": "top_left_y_down", "left": 99.2, "top": 151.5, "right": 500.1, "bottom": 176.8},
+      "page_width_pt": 595.28,
+      "page_height_pt": 841.89,
+      "page_rotation": 0,
+      "coordinate_system": "top_left_x_right_y_down_normalized",
+      "parser": {"name": "fixture", "version": "1", "mode": "hand-authored", "notes": "Self-test fixture."}
+    }
+  ]
+}

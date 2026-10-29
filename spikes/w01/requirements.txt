@@ -1,0 +1,7 @@
+# W01 spike direct dependencies, pinned to the versions tested on 2026-10-29.
+# Full transitive environment: requirements.lock
+pydantic==2.14.1
+httpx==0.28.1
+pdfplumber==0.11.10
+pymupdf==2.0
+docling==2.144.0

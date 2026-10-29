@@ -1,0 +1,292 @@
+{
+  "$defs": {
+    "Anchor": {
+      "additionalProperties": false,
+      "description": "One inspectable, citable span of source text.",
+      "properties": {
+        "schema_version": {
+          "default": 1,
+          "title": "Schema Version",
+          "type": "integer"
+        },
+        "anchor_id": {
+          "title": "Anchor Id",
+          "type": "string"
+        },
+        "document_sha256": {
+          "title": "Document Sha256",
+          "type": "string"
+        },
+        "source_key": {
+          "title": "Source Key",
+          "type": "string"
+        },
+        "page_index": {
+          "description": "Zero-based physical page index",
+          "minimum": 0,
+          "title": "Page Index",
+          "type": "integer"
+        },
+        "printed_page_label": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Printed Page Label"
+        },
+        "section": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Section"
+        },
+        "section_title": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Section Title"
+        },
+        "block_id": {
+          "title": "Block Id",
+          "type": "string"
+        },
+        "block_role": {
+          "enum": [
+            "heading",
+            "section_number",
+            "label",
+            "body",
+            "code",
+            "table_row",
+            "table_header"
+          ],
+          "title": "Block Role",
+          "type": "string"
+        },
+        "context_kind": {
+          "anyOf": [
+            {
+              "enum": [
+                "source_identity",
+                "revision_header",
+                "status_legend",
+                "footnote"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "R3 context role: identity/provenance spans, governing revision-column headers, status legend entries, and material footnotes used in interpretation.",
+          "title": "Context Kind"
+        },
+        "geometry_kind": {
+          "default": "located",
+          "description": "located = bbox is parser geometry from a real page; synthetic_not_located = text-only fixture with no page geometry (bbox is the full synthetic page).",
+          "enum": [
+            "located",
+            "synthetic_not_located"
+          ],
+          "title": "Geometry Kind",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "bbox": {
+          "$ref": "#/$defs/BBox"
+        },
+        "bbox_original": {
+          "additionalProperties": true,
+          "description": "Unmodified parser coordinates plus their unit/origin, for debugging conversion",
+          "title": "Bbox Original",
+          "type": "object"
+        },
+        "page_width_pt": {
+          "exclusiveMinimum": 0,
+          "title": "Page Width Pt",
+          "type": "number"
+        },
+        "page_height_pt": {
+          "exclusiveMinimum": 0,
+          "title": "Page Height Pt",
+          "type": "number"
+        },
+        "page_rotation": {
+          "maximum": 359,
+          "minimum": 0,
+          "title": "Page Rotation",
+          "type": "integer"
+        },
+        "coordinate_system": {
+          "default": "top_left_x_right_y_down_normalized",
+          "title": "Coordinate System",
+          "type": "string"
+        },
+        "parser": {
+          "$ref": "#/$defs/ParserInfo"
+        }
+      },
+      "required": [
+        "anchor_id",
+        "document_sha256",
+        "source_key",
+        "page_index",
+        "block_id",
+        "block_role",
+        "text",
+        "bbox",
+        "bbox_original",
+        "page_width_pt",
+        "page_height_pt",
+        "page_rotation",
+        "parser"
+      ],
+      "title": "Anchor",
+      "type": "object"
+    },
+    "BBox": {
+      "additionalProperties": false,
+      "description": "Normalized bounding box: top-left origin, x right, y down, [0, 1].",
+      "properties": {
+        "left": {
+          "title": "Left",
+          "type": "number"
+        },
+        "top": {
+          "title": "Top",
+          "type": "number"
+        },
+        "right": {
+          "title": "Right",
+          "type": "number"
+        },
+        "bottom": {
+          "title": "Bottom",
+          "type": "number"
+        }
+      },
+      "required": [
+        "left",
+        "top",
+        "right",
+        "bottom"
+      ],
+      "title": "BBox",
+      "type": "object"
+    },
+    "ParserInfo": {
+      "additionalProperties": false,
+      "description": "Parser/version provenance recorded on every anchor.",
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "version": {
+          "title": "Version",
+          "type": "string"
+        },
+        "mode": {
+          "description": "e.g. 'words+lines' or 'docling-text-items'",
+          "title": "Mode",
+          "type": "string"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        }
+      },
+      "required": [
+        "name",
+        "version",
+        "mode"
+      ],
+      "title": "ParserInfo",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "All anchors for one sealed source document.",
+  "properties": {
+    "schema_version": {
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "source_key": {
+      "title": "Source Key",
+      "type": "string"
+    },
+    "document_sha256": {
+      "title": "Document Sha256",
+      "type": "string"
+    },
+    "page_count": {
+      "minimum": 1,
+      "title": "Page Count",
+      "type": "integer"
+    },
+    "coordinate_system": {
+      "default": "top_left_x_right_y_down_normalized",
+      "title": "Coordinate System",
+      "type": "string"
+    },
+    "generated_utc": {
+      "title": "Generated Utc",
+      "type": "string"
+    },
+    "parsers": {
+      "items": {
+        "$ref": "#/$defs/ParserInfo"
+      },
+      "title": "Parsers",
+      "type": "array"
+    },
+    "anchors": {
+      "items": {
+        "$ref": "#/$defs/Anchor"
+      },
+      "title": "Anchors",
+      "type": "array"
+    }
+  },
+  "required": [
+    "source_key",
+    "document_sha256",
+    "page_count",
+    "generated_utc",
+    "parsers",
+    "anchors"
+  ],
+  "title": "AnchorDocument",
+  "type": "object"
+}

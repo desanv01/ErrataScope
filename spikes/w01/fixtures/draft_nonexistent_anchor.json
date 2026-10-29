@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "source_document_id": "FIXTURE-DOC",
+  "source_revision": null,
+  "claims": [
+    {
+      "field": "trigger_condition",
+      "statement": "Reset behavior depends on the NRST pin.",
+      "anchor_ids": ["fixture-doc:p00:999"],
+      "status": "supported"
+    }
+  ],
+  "unresolved_fields": [],
+  "limitations": "Negative fixture: cites a nonexistent anchor."
+}

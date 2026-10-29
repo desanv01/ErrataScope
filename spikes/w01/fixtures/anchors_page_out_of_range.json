@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "source_key": "fixture-doc",
+  "document_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "page_count": 2,
+  "coordinate_system": "top_left_x_right_y_down_normalized",
+  "generated_utc": "2026-10-29T00:00:00Z",
+  "parsers": [{"name": "fixture", "version": "1", "mode": "hand-authored"}],
+  "anchors": [
+    {
+      "schema_version": 1,
+      "anchor_id": "fixture-doc:p09:000",
+      "document_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "source_key": "fixture-doc",
+      "page_index": 9,
+      "printed_page_label": "10",
+      "section": "2.2.18",
+      "section_title": "Page index out of range fixture",
+      "block_id": "fixture-doc:p09",
+      "block_role": "body",
+      "text": "Negative fixture: page index is outside the declared page_count.",
+      "bbox": {"left": 0.1, "top": 0.1, "right": 0.5, "bottom": 0.2},
+      "bbox_original": {"unit": "pdf_points", "origin": "top_left_y_down", "left": 59.5, "top": 84.2, "right": 297.6, "bottom": 168.4},
+      "page_width_pt": 595.28,
+      "page_height_pt": 841.89,
+      "page_rotation": 0,
+      "coordinate_system": "top_left_x_right_y_down_normalized",
+      "parser": {"name": "fixture", "version": "1", "mode": "hand-authored"}
+    }
+  ]
+}

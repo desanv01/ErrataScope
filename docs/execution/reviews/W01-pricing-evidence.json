@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "purpose": "Public text-pricing reference verified by Codex for W01 repair; not account access or a live result",
+  "verified_date_malaysia": "2026-10-29",
+  "source_url": "https://nebius.com/blog/posts/three-new-open-weight-models-from-us-companies-give-builders-more-choice",
+  "source_publication_date": "2026-10-16",
+  "provider": "Nebius Token Factory",
+  "model_id": "nvidia/Nemotron-3.5-Super-VL",
+  "base_url": "https://api.tokenfactory.nebius.com/v1/",
+  "currency": "USD",
+  "input_usd_per_1m": 0.30,
+  "output_usd_per_1m": 0.90,
+  "modality_scope": "Text-only W01 probe; do not infer image billing",
+  "account_access_verified": false,
+  "limits": "Use as published pricing evidence, not a guarantee of account-specific billing. Confirm model/config compatibility; retain W01 request/token/$0.25 caps and uncertain-call reservations. Never edit the ledger to erase prior attempts."
+}

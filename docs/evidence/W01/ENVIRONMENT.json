@@ -1,0 +1,94 @@
+{
+  "capabilities": {
+    "docker_client": {
+      "available": true,
+      "exit_code": 0,
+      "first_line": "Docker version 29.8.1, build 4a63305"
+    },
+    "docker_daemon": {
+      "available": true,
+      "exit_code": 1,
+      "first_line": ""
+    },
+    "git": {
+      "available": true,
+      "exit_code": 0,
+      "first_line": "git version 2.53.0.windows.2"
+    },
+    "wsl": {
+      "available": true,
+      "exit_code": 4294967295,
+      "first_line": "Access is denied."
+    }
+  },
+  "configured_secret_variables": {
+    "HF_TOKEN": {
+      "configured": false
+    },
+    "NEBIUS_API_KEY": {
+      "configured": true
+    },
+    "OPENAI_API_KEY": {
+      "configured": false
+    }
+  },
+  "docling_runtime": {
+    "importable": true,
+    "version": "2.144.0"
+  },
+  "generated_utc": "2026-10-29T15:06:18Z",
+  "known_environment_quirks": [
+    "Windows sandbox denies access to directories created with POSIX mode 0700 (tempfile.mkdtemp default); the spike therefore creates its own directories with 0777 and sets HF_HUB_DISABLE_XET=1 so that Docling/Hugging Face model downloads do not use 0700 temporary directories.",
+    "Docker client is present; the daemon availability recorded above was probed read-only. No container was started for W01."
+  ],
+  "packages": {
+    "docling": {
+      "installed": true,
+      "version": "2.144.0"
+    },
+    "httpx": {
+      "installed": true,
+      "version": "0.28.1"
+    },
+    "pdfplumber": {
+      "installed": true,
+      "version": "0.11.10"
+    },
+    "pillow": {
+      "installed": true,
+      "version": "13.0.0"
+    },
+    "pydantic": {
+      "installed": true,
+      "version": "2.14.1"
+    },
+    "pymupdf": {
+      "installed": true,
+      "version": "2.0"
+    },
+    "pypdfium2": {
+      "installed": true,
+      "version": "5.14.0"
+    }
+  },
+  "path_environment": {
+    "note": "Absolute user paths are omitted from public evidence.",
+    "project_root_name": "ErrataScope"
+  },
+  "platform": {
+    "cpu_count": 8,
+    "machine": "AMD64",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "release": "10",
+    "system": "Windows"
+  },
+  "python": {
+    "executable": ".local/w01/venv/Scripts/python.exe",
+    "implementation": "CPython",
+    "in_virtualenv": true,
+    "venv_prefix": ".local/w01/venv",
+    "version": "3.11.15"
+  },
+  "schema_version": 1,
+  "scope": "W01 feasibility spike environment; not application acceptance"
+}

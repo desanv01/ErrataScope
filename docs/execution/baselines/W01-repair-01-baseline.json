@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "packet": "W01",
+  "packet_revision": 1,
+  "repair": "W01-R01",
+  "issued_date": "2026-10-29",
+  "state": "Attempt 01 partial; Codex changes requested; no W02 dispatch",
+  "supersedes_for_repair_preflight_only": "docs/execution/baselines/W01-baseline.json",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "9303e469e9c47069c8ae20c21cabfd0d42f86cec486f88bdcd0a57452de7f65f"
+    },
+    {
+      "path": "docs/execution/baselines/README.md",
+      "sha256": "530e8f0919c9a9a161959a94baa0b5b65358a6747a82899a0aadaaad5ff6f1ce"
+    },
+    {
+      "path": "docs/execution/baselines/W01-baseline.json",
+      "sha256": "109afe638862e61d78905009abf8b952ffdc50965003e7b91041f91aef58e966"
+    },
+    {
+      "path": "docs/execution/contracts/api-and-jobs.md",
+      "sha256": "71c4b83f631b27cf9b1200971bb2430a9bee0093aaf3691d4c4437b812a30764"
+    },
+    {
+      "path": "docs/execution/contracts/data-and-versions.md",
+      "sha256": "5cf73c17a4c3593e0fe4cf66a21a812d44f7e6b510588e266fabb105f1b64734"
+    },
+    {
+      "path": "docs/execution/contracts/domain-invariants.md",
+      "sha256": "cbbda88c2d8178a92f7e9fa2b400e227aa560baefd676596abfbef882337c9ec"
+    },
+    {
+      "path": "docs/execution/contracts/provider-and-sources.md",
+      "sha256": "623141dd59ece076ec3d71fa26a407dfffef744d5f739fad6ab7643b22673682"
+    },
+    {
+      "path": "docs/execution/contracts/rule-language.md",
+      "sha256": "702152f1937e42810318b68eb60f962627d159f0b5e3ccf7e6a2b63e6263c871"
+    },
+    {
+      "path": "docs/execution/contracts/security-and-operations.md",
+      "sha256": "842be168d36de61d63033fb02505e2632c7139163f3b4c34b13797355e80de88"
+    },
+    {
+      "path": "docs/execution/contracts/testing-and-acceptance.md",
+      "sha256": "952e52fc2296857b91bd0c3a14d7f8c36463a58a8b8b2c070fd265d1733a824e"
+    },
+    {
+      "path": "docs/execution/contracts/ui-and-design.md",
+      "sha256": "c2bd803d6287d5313861340b83c049f9eec006ab652dcb16578af0e604b44d6a"
+    },
+    {
+      "path": "docs/execution/handoffs/README.md",
+      "sha256": "58175dd12562dfaafed5f6e55e59611ee1ae4940bdaae05c85636bfe5c6bbee5"
+    },
+    {
+      "path": "docs/execution/handoffs/W01-attempt-01.md",
+      "sha256": "79a0bdadfce68f6efbbeaaa94a2feb5bfb8dc009b9a953e9b4ee120f34362bca"
+    },
+    {
+      "path": "docs/execution/PACKET_INDEX.md",
+      "sha256": "fdb06dffde3d6d2b6025876cd56a355f733c85d2bcdb7f5ea591b8ccafadae2b"
+    },
+    {
+      "path": "docs/execution/packets/W01-feasibility.md",
+      "sha256": "a6c4bbd5c40669d0aa46f9824914c30cb0e731313a1e3d2fff726a05aa366618"
+    },
+    {
+      "path": "docs/execution/packets/W02-domain-core.md",
+      "sha256": "868a32cc7d40604bec3fec524c21210d73e4dee37747dd8defd6740047f5d5ba"
+    },
+    {
+      "path": "docs/execution/packets/W03-persistence-jobs.md",
+      "sha256": "52d5368cf18e100776493296149217dec0f88ae3a68f03cbc7911cc2fbd8a9b5"
+    },
+    {
+      "path": "docs/execution/packets/W04-ingestion-review.md",
+      "sha256": "cef8f844ddf6fcd3d001be6a6193a274507abad9df37570a670d87955ec24ca6"
+    },
+    {
+      "path": "docs/execution/packets/W05-product-assessment.md",
+      "sha256": "1b49ac3e815c1a2f70ef0fc6d4dc7acbb3be2e3aa22f0835e8f242e7a620a931"
+    },
+    {
+      "path": "docs/execution/packets/W06-evidence-requirements.md",
+      "sha256": "7f8ea00d57b1fec0eed323e34c2a5bb88d17997b20f7c25add2ad2c6d3b38263"
+    },
+    {
+      "path": "docs/execution/packets/W07-change-impact.md",
+      "sha256": "583b4752cb4dce4b8b941a63d1c513c9bac5582bc24db5bc289b2aefc818587c"
+    },
+    {
+      "path": "docs/execution/packets/W08-ui-export.md",
+      "sha256": "0b5c4a559ab338a2bc79f124dda119b0c8827894222a460cd2ac47eef5990917"
+    },
+    {
+      "path": "docs/execution/packets/W09-evaluation-production.md",
+      "sha256": "b8c24de4f6697e5935c7a40b134b29bdaa7cae7f703899ea71229a04c759e84e"
+    },
+    {
+      "path": "docs/execution/packets/W10-release.md",
+      "sha256": "37cc30f8c2fe18c000300377fc9a705768eb770d3e14e0a42a0fe0c419ecbe21"
+    },
+    {
+      "path": "docs/execution/phases/P0-feasibility.md",
+      "sha256": "1ddced3a3a11c58990ce2d0e421f2d2d4c23f2e3bb7713c1e0f93df18fff993a"
+    },
+    {
+      "path": "docs/execution/phases/P1-domain-core.md",
+      "sha256": "d5343d7943ee5457289505f733600d799d83d3678a808a1df177cca1c3a596f6"
+    },
+    {
+      "path": "docs/execution/phases/P10-release.md",
+      "sha256": "d2568156d46d074a79129ec7b2b44ee3e7faf8c5e472ccd31633609cc774e948"
+    },
+    {
+      "path": "docs/execution/phases/P2-foundation.md",
+      "sha256": "2e5ce45c579326a253032147c5668c472b61a1c5ef35d92143575b07ae64a73b"
+    },
+    {
+      "path": "docs/execution/phases/P3-ingestion.md",
+      "sha256": "3461eceeb2f554234fbebb94cb7e91be16265a10df512d4ea7d84ccff6eb1b39"
+    },
+    {
+      "path": "docs/execution/phases/P4-assessment.md",
+      "sha256": "95e5f80a67893e33d50b545e1791652bc77c70d71fd1946d03c7203097cd71fa"
+    },
+    {
+      "path": "docs/execution/phases/P5-requirements.md",
+      "sha256": "602130d9762aabd17223fe76849a6e681736d848b9d01c1a88f9367fb8d2f0c4"
+    },
+    {
+      "path": "docs/execution/phases/P6-change-impact.md",
+      "sha256": "ebc0abeaec4317e6695f1208885b70edda644040f073b9f4e657305d18a0cf5d"
+    },
+    {
+      "path": "docs/execution/phases/P7-workflow-export.md",
+      "sha256": "75f730c88fc34f65fb73b15f501be8b42f22a0205a2e58594b6df99b558f32dd"
+    },
+    {
+      "path": "docs/execution/phases/P8-evaluation.md",
+      "sha256": "035b5ff4d643b8acabbdf75a7f01bf9534f114af7abc2b441c44f7b1f83eeee9"
+    },
+    {
+      "path": "docs/execution/phases/P9-production.md",
+      "sha256": "2b650f85e81c65825cce8e95ea3e3bd88afc57a8cf8e161c8fe5a438dd20afd8"
+    },
+    {
+      "path": "docs/execution/prompts/DISPATCH.md",
+      "sha256": "92b1db10f2301519e1e4a6f7c3d59c4d6a940c338654c9a98174b5f3eac569fa"
+    },
+    {
+      "path": "docs/execution/prompts/W01-REPAIR-01.md",
+      "sha256": "9f2d8d41bfdff33777f03e4bbca3ebbbcd792a380e3daedf34b924f0fbeec19e"
+    },
+    {
+      "path": "docs/execution/prompts/W01-START.md",
+      "sha256": "2ad16ef70fa486a554496943a4baf08efa8b88ea0940f0d17138720b3a213886"
+    },
+    {
+      "path": "docs/execution/reviews/README.md",
+      "sha256": "2c0b95913c654f48c3373d9fd2d9558628974710973993b83ab83b3618e0220e"
+    },
+    {
+      "path": "docs/execution/reviews/W01-pricing-evidence.json",
+      "sha256": "b5ef91fedf9867a254cc018f9789b466ac58018a8d5f7df9ddb128620d0ce2d9"
+    },
+    {
+      "path": "docs/execution/reviews/W01-repair-01.md",
+      "sha256": "f90203d1f7cf5fa91dc02071e9888b4853d887489b04386ce29460afc385e447"
+    },
+    {
+      "path": "docs/execution/reviews/W01-review-01-checks.py",
+      "sha256": "faaee90070d2ac0912bf8e0d05442e2be960a6ec8e477be8add05fac1ef5a954"
+    },
+    {
+      "path": "docs/execution/reviews/W01-review-01.md",
+      "sha256": "0e160b82cd387595b520ba320e4aa33b86d143a61c415010b7d15c08e0c25083"
+    },
+    {
+      "path": "docs/execution/START_HERE.md",
+      "sha256": "7314ee965ded1f7a75f1b10fa151c95cb3c36c792acefbc6354458ce7b9f205b"
+    },
+    {
+      "path": "docs/execution/STATUS.md",
+      "sha256": "2c3ba221686bf29a1cfb5548557ca4fa34ebdfa5936389993fcf017f56e91054"
+    },
+    {
+      "path": "docs/execution/templates/HANDOFF.md",
+      "sha256": "2c055ca9043742e6e7568e6091f392457344a906427f3aa7a28a56e0884a815e"
+    },
+    {
+      "path": "docs/execution/templates/REVIEW.md",
+      "sha256": "c7e20d405bc454b8807f5dce84677530cfd4ebdea6e25f8954a843eca8a554df"
+    },
+    {
+      "path": "docs/execution/UI_APPROVAL_GATE.md",
+      "sha256": "be3227f43f1d13adcfb85a7c713664292889727a55be2452bbd2112d3846cc25"
+    },
+    {
+      "path": "docs/execution/WORKER_RULES.md",
+      "sha256": "37e825d4ebf9908d8cee14f619f9b4db8bd3881d2ae40693436e8f083a9c84a6"
+    },
+    {
+      "path": "docs/EXECUTION_STATUS.md",
+      "sha256": "abca3dde0ca344f7584741979f2a2cae71ff9cc1b9afe65c4700cf4648ef1016"
+    },
+    {
+      "path": "ERRATASCOPE_GAMEPLAN.md",
+      "sha256": "8cf6a6cda68f69410f0a57c479694792195ba0a2b130f1689cf85ef4a50a8314"
+    },
+    {
+      "path": "IMPLEMENTATION_EXECUTION_PLAN.md",
+      "sha256": "3c6dce040dd288ebe39ceda5ecdf6ceedb50bfcf3a0e364bd2391564d60e15eb"
+    },
+    {
+      "path": "references/original-plan.txt",
+      "sha256": "5e6572b7368a8256271e2d40693e353ec15aafb433e6c977728959f3155d2a95"
+    },
+    {
+      "path": "scripts/verify_execution_framework.py",
+      "sha256": "b5fa77c124c0bc8d4a32b5c5cd8254c03d81cbac41622954fe6a0d7285dc7063"
+    },
+    {
+      "path": "visuals/erratascope-evidence-explorer.fragment.html",
+      "sha256": "c65b661c8058d7ec482894576a1833bd72d9fc7807eca75f5374fca0291ea788"
+    },
+    {
+      "path": "visuals/erratascope-evidence-explorer.html",
+      "sha256": "9e2a9c08f38f0870b46c1392e530f5122cb1a5f971c7033528a834eb1647e735"
+    }
+  ]
+}

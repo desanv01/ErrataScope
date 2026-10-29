@@ -1,0 +1,499 @@
+{
+  "schema_version": 2,
+  "packet": "W02",
+  "packet_revision": 2,
+  "worker_attempt": "W02-attempt-01",
+  "issued_date": "2026-10-29",
+  "state": "Ready; W01 offline findings accepted, live G4/G5 deferred by user authorization",
+  "decision": "docs/execution/decisions/2026-10-29-defer-live-provider.md",
+  "dispatch_states": {
+    "W01": "DEFERRED_LIVE",
+    "W02": "READY_TO_DISPATCH",
+    "W03": "PLANNED_NOT_DISPATCHABLE",
+    "W04": "PLANNED_NOT_DISPATCHABLE",
+    "W05": "PLANNED_NOT_DISPATCHABLE",
+    "W06": "PLANNED_NOT_DISPATCHABLE",
+    "W07": "PLANNED_NOT_DISPATCHABLE",
+    "W08": "PLANNED_NOT_DISPATCHABLE",
+    "W09": "PLANNED_NOT_DISPATCHABLE",
+    "W10": "PLANNED_NOT_DISPATCHABLE"
+  },
+  "files": [
+    {
+      "path": ".env.example",
+      "sha256": "1c005a4d392ae124bdd61078445e6095cc54aa06c390138bd31b9de4d3619862"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "9303e469e9c47069c8ae20c21cabfd0d42f86cec486f88bdcd0a57452de7f65f"
+    },
+    {
+      "path": "ERRATASCOPE_GAMEPLAN.md",
+      "sha256": "d12fd82b9e5401549228411d0da598c02122683a8d38c9c5ecb4077ae0dd8e2f"
+    },
+    {
+      "path": "IMPLEMENTATION_EXECUTION_PLAN.md",
+      "sha256": "8db70d70e4141a7ce188f848317b4ea73f7b3fafca9423ca830478cd5090c14f"
+    },
+    {
+      "path": "docs/EXECUTION_STATUS.md",
+      "sha256": "9ee6a25dfc59fae0293b383c2a9d7b9de2e380d6cf9a06398fc4a37ec7454270"
+    },
+    {
+      "path": "docs/LOCAL_CREDENTIALS.md",
+      "sha256": "26fa92389c6f3bcf5432df7a2bf988dc9de7465cdc8d48b2cad50dc7dbdcd40f"
+    },
+    {
+      "path": "docs/execution/COMPLETION_PROTOCOL.md",
+      "sha256": "19ddb0d45e99173eaed7b86cfeaecf274a981ddb78cdebd5c4f0e0f2f2771682"
+    },
+    {
+      "path": "docs/execution/PACKET_INDEX.md",
+      "sha256": "51d98596c5bf2107626270c78a2118c577f32c762f090c0c93f63d7aa7d88574"
+    },
+    {
+      "path": "docs/execution/START_HERE.md",
+      "sha256": "5bf6405872606131b957b3682265cc46bae5978d8f99f27f041919458b2c2534"
+    },
+    {
+      "path": "docs/execution/STATUS.md",
+      "sha256": "5e3fc02e09a526716887d235571b0d18439e78bbbd9696baed7c0dad7a5aeb73"
+    },
+    {
+      "path": "docs/execution/UI_APPROVAL_GATE.md",
+      "sha256": "be3227f43f1d13adcfb85a7c713664292889727a55be2452bbd2112d3846cc25"
+    },
+    {
+      "path": "docs/execution/WORKER_RULES.md",
+      "sha256": "37e825d4ebf9908d8cee14f619f9b4db8bd3881d2ae40693436e8f083a9c84a6"
+    },
+    {
+      "path": "docs/execution/baselines/README.md",
+      "sha256": "530e8f0919c9a9a161959a94baa0b5b65358a6747a82899a0aadaaad5ff6f1ce"
+    },
+    {
+      "path": "docs/execution/baselines/W01-baseline.json",
+      "sha256": "109afe638862e61d78905009abf8b952ffdc50965003e7b91041f91aef58e966"
+    },
+    {
+      "path": "docs/execution/baselines/W01-live-completion-baseline.json",
+      "sha256": "f2268f3c1259c15eaf2e21335aae57c82099c7d4f762fbc6245a9a3c45b2e746"
+    },
+    {
+      "path": "docs/execution/baselines/W01-repair-01-baseline.json",
+      "sha256": "695fd17681338d11e7f9834346244a8d3b0a9d249bdbe22cfa80a29479d4b2f8"
+    },
+    {
+      "path": "docs/execution/baselines/W01-repair-02-baseline.json",
+      "sha256": "05d4f3f5ddc9a8f4752875473e2af540f8926662bbd1509e6d3ba45d8949b647"
+    },
+    {
+      "path": "docs/execution/baselines/W01-review-03-baseline.json",
+      "sha256": "39019c5e7a5f8d86c57ee39716b5e64aa014786f0ad61ccafd7bba54ccb803c8"
+    },
+    {
+      "path": "docs/execution/bindings/W02-domain-v1.md",
+      "sha256": "f26c6cfe4a88249591f904daac8a2cfd76f111911ad08f6ce9e93e37cf88dd98"
+    },
+    {
+      "path": "docs/execution/continuations/W01-live-completion.md",
+      "sha256": "af054b42725935e4c40a3d69ce02339b4cac34119fe8c9c10083a1734683e311"
+    },
+    {
+      "path": "docs/execution/contracts/api-and-jobs.md",
+      "sha256": "71c4b83f631b27cf9b1200971bb2430a9bee0093aaf3691d4c4437b812a30764"
+    },
+    {
+      "path": "docs/execution/contracts/data-and-versions.md",
+      "sha256": "5cf73c17a4c3593e0fe4cf66a21a812d44f7e6b510588e266fabb105f1b64734"
+    },
+    {
+      "path": "docs/execution/contracts/domain-invariants.md",
+      "sha256": "cbbda88c2d8178a92f7e9fa2b400e227aa560baefd676596abfbef882337c9ec"
+    },
+    {
+      "path": "docs/execution/contracts/provider-and-sources.md",
+      "sha256": "623141dd59ece076ec3d71fa26a407dfffef744d5f739fad6ab7643b22673682"
+    },
+    {
+      "path": "docs/execution/contracts/rule-language.md",
+      "sha256": "702152f1937e42810318b68eb60f962627d159f0b5e3ccf7e6a2b63e6263c871"
+    },
+    {
+      "path": "docs/execution/contracts/security-and-operations.md",
+      "sha256": "842be168d36de61d63033fb02505e2632c7139163f3b4c34b13797355e80de88"
+    },
+    {
+      "path": "docs/execution/contracts/testing-and-acceptance.md",
+      "sha256": "952e52fc2296857b91bd0c3a14d7f8c36463a58a8b8b2c070fd265d1733a824e"
+    },
+    {
+      "path": "docs/execution/contracts/ui-and-design.md",
+      "sha256": "c2bd803d6287d5313861340b83c049f9eec006ab652dcb16578af0e604b44d6a"
+    },
+    {
+      "path": "docs/execution/decisions/2026-10-29-defer-live-provider.md",
+      "sha256": "2c568eacc70b19b24aba0e089da1d3bee71610ffd6cb764c9175dd3c71d647ab"
+    },
+    {
+      "path": "docs/execution/handoffs/README.md",
+      "sha256": "58175dd12562dfaafed5f6e55e59611ee1ae4940bdaae05c85636bfe5c6bbee5"
+    },
+    {
+      "path": "docs/execution/handoffs/W01-attempt-01.md",
+      "sha256": "79a0bdadfce68f6efbbeaaa94a2feb5bfb8dc009b9a953e9b4ee120f34362bca"
+    },
+    {
+      "path": "docs/execution/handoffs/W01-attempt-02.md",
+      "sha256": "4abba376d9998cbc96be0ff45706b88493f88995d26b3045d5927c5f31189b6e"
+    },
+    {
+      "path": "docs/execution/handoffs/W01-attempt-03.md",
+      "sha256": "36f76c5c68b09d4027bd7cc79bbeda1b7ee6480287cce4a3fa246b34a6c00554"
+    },
+    {
+      "path": "docs/execution/packets/W01-feasibility.md",
+      "sha256": "ffa810427d418305cb5894792bbf34fe3293cdf2085585797d13663f637f1caa"
+    },
+    {
+      "path": "docs/execution/packets/W02-domain-core.md",
+      "sha256": "0c5ab2ec01b1253b666661d61f9e53605c9627d014ddb158eb4d12cd59a0a4e7"
+    },
+    {
+      "path": "docs/execution/packets/W03-persistence-jobs.md",
+      "sha256": "52d5368cf18e100776493296149217dec0f88ae3a68f03cbc7911cc2fbd8a9b5"
+    },
+    {
+      "path": "docs/execution/packets/W04-ingestion-review.md",
+      "sha256": "cef8f844ddf6fcd3d001be6a6193a274507abad9df37570a670d87955ec24ca6"
+    },
+    {
+      "path": "docs/execution/packets/W05-product-assessment.md",
+      "sha256": "1b49ac3e815c1a2f70ef0fc6d4dc7acbb3be2e3aa22f0835e8f242e7a620a931"
+    },
+    {
+      "path": "docs/execution/packets/W06-evidence-requirements.md",
+      "sha256": "7f8ea00d57b1fec0eed323e34c2a5bb88d17997b20f7c25add2ad2c6d3b38263"
+    },
+    {
+      "path": "docs/execution/packets/W07-change-impact.md",
+      "sha256": "583b4752cb4dce4b8b941a63d1c513c9bac5582bc24db5bc289b2aefc818587c"
+    },
+    {
+      "path": "docs/execution/packets/W08-ui-export.md",
+      "sha256": "0b5c4a559ab338a2bc79f124dda119b0c8827894222a460cd2ac47eef5990917"
+    },
+    {
+      "path": "docs/execution/packets/W09-evaluation-production.md",
+      "sha256": "b8c24de4f6697e5935c7a40b134b29bdaa7cae7f703899ea71229a04c759e84e"
+    },
+    {
+      "path": "docs/execution/packets/W10-release.md",
+      "sha256": "37cc30f8c2fe18c000300377fc9a705768eb770d3e14e0a42a0fe0c419ecbe21"
+    },
+    {
+      "path": "docs/execution/phases/P0-feasibility.md",
+      "sha256": "d7fc646857cfa9649fb5fad1207bd99e5a6ff2bd7fd41740637a5833b2d0dd59"
+    },
+    {
+      "path": "docs/execution/phases/P1-domain-core.md",
+      "sha256": "d5343d7943ee5457289505f733600d799d83d3678a808a1df177cca1c3a596f6"
+    },
+    {
+      "path": "docs/execution/phases/P10-release.md",
+      "sha256": "d2568156d46d074a79129ec7b2b44ee3e7faf8c5e472ccd31633609cc774e948"
+    },
+    {
+      "path": "docs/execution/phases/P2-foundation.md",
+      "sha256": "2e5ce45c579326a253032147c5668c472b61a1c5ef35d92143575b07ae64a73b"
+    },
+    {
+      "path": "docs/execution/phases/P3-ingestion.md",
+      "sha256": "3461eceeb2f554234fbebb94cb7e91be16265a10df512d4ea7d84ccff6eb1b39"
+    },
+    {
+      "path": "docs/execution/phases/P4-assessment.md",
+      "sha256": "95e5f80a67893e33d50b545e1791652bc77c70d71fd1946d03c7203097cd71fa"
+    },
+    {
+      "path": "docs/execution/phases/P5-requirements.md",
+      "sha256": "602130d9762aabd17223fe76849a6e681736d848b9d01c1a88f9367fb8d2f0c4"
+    },
+    {
+      "path": "docs/execution/phases/P6-change-impact.md",
+      "sha256": "ebc0abeaec4317e6695f1208885b70edda644040f073b9f4e657305d18a0cf5d"
+    },
+    {
+      "path": "docs/execution/phases/P7-workflow-export.md",
+      "sha256": "75f730c88fc34f65fb73b15f501be8b42f22a0205a2e58594b6df99b558f32dd"
+    },
+    {
+      "path": "docs/execution/phases/P8-evaluation.md",
+      "sha256": "035b5ff4d643b8acabbdf75a7f01bf9534f114af7abc2b441c44f7b1f83eeee9"
+    },
+    {
+      "path": "docs/execution/phases/P9-production.md",
+      "sha256": "2b650f85e81c65825cce8e95ea3e3bd88afc57a8cf8e161c8fe5a438dd20afd8"
+    },
+    {
+      "path": "docs/execution/prompts/DISPATCH.md",
+      "sha256": "b46d823726bf0fdbbf025beb12a4a0c8cfd3861fabedcf66483fec90937b0c00"
+    },
+    {
+      "path": "docs/execution/prompts/W01-LIVE-COMPLETION.md",
+      "sha256": "72b291408467c4438f87f657cbb100c521087cc58211d82af2a28ca9110f04b8"
+    },
+    {
+      "path": "docs/execution/prompts/W01-REPAIR-01.md",
+      "sha256": "9f2d8d41bfdff33777f03e4bbca3ebbbcd792a380e3daedf34b924f0fbeec19e"
+    },
+    {
+      "path": "docs/execution/prompts/W01-REPAIR-02.md",
+      "sha256": "ac12abb6b468f51ee027cc3d50f3c545c02bb07044f0c5295f701438135e3f21"
+    },
+    {
+      "path": "docs/execution/prompts/W01-START.md",
+      "sha256": "2ad16ef70fa486a554496943a4baf08efa8b88ea0940f0d17138720b3a213886"
+    },
+    {
+      "path": "docs/execution/prompts/W02-START.md",
+      "sha256": "d52b7f20e4e900c21df07882687da9fd0dd56cda5666444ec095d5537742a04c"
+    },
+    {
+      "path": "docs/execution/reviews/README.md",
+      "sha256": "2c0b95913c654f48c3373d9fd2d9558628974710973993b83ab83b3618e0220e"
+    },
+    {
+      "path": "docs/execution/reviews/W01-pricing-evidence.json",
+      "sha256": "b5ef91fedf9867a254cc018f9789b466ac58018a8d5f7df9ddb128620d0ce2d9"
+    },
+    {
+      "path": "docs/execution/reviews/W01-repair-01.md",
+      "sha256": "f90203d1f7cf5fa91dc02071e9888b4853d887489b04386ce29460afc385e447"
+    },
+    {
+      "path": "docs/execution/reviews/W01-repair-02.md",
+      "sha256": "661006cc8312d44601e478aee5022f8423254a5ea3dc8931df7da2e8472ccc11"
+    },
+    {
+      "path": "docs/execution/reviews/W01-review-01-checks.py",
+      "sha256": "faaee90070d2ac0912bf8e0d05442e2be960a6ec8e477be8add05fac1ef5a954"
+    },
+    {
+      "path": "docs/execution/reviews/W01-review-01.md",
+      "sha256": "0e160b82cd387595b520ba320e4aa33b86d143a61c415010b7d15c08e0c25083"
+    },
+    {
+      "path": "docs/execution/reviews/W01-review-02-checks.py",
+      "sha256": "f81247a8cf551685ae6cc645a5fc1130a7c08567ddbb33ab06cf63f576cbe75f"
+    },
+    {
+      "path": "docs/execution/reviews/W01-review-02.md",
+      "sha256": "47db738a369bcf19e1598a23c7ac5cbb07b50082d93f23d8e6f249a6efd7c9bc"
+    },
+    {
+      "path": "docs/execution/reviews/W01-review-03-checks.py",
+      "sha256": "821ccb13a059b0c200c4fd53583550b011cd169bb9955522b6eecb3b6cf5a5c4"
+    },
+    {
+      "path": "docs/execution/reviews/W01-review-03.md",
+      "sha256": "4c0f389c89a4d369123a3a5c578417809a4fab19f70b2a90de62ca4bba33fdff"
+    },
+    {
+      "path": "docs/execution/templates/HANDOFF.md",
+      "sha256": "2c055ca9043742e6e7568e6091f392457344a906427f3aa7a28a56e0884a815e"
+    },
+    {
+      "path": "docs/execution/templates/REVIEW.md",
+      "sha256": "c7e20d405bc454b8807f5dce84677530cfd4ebdea6e25f8954a843eca8a554df"
+    },
+    {
+      "path": "fixtures/manifests/w01/sources.json",
+      "sha256": "937dfb55db74d126145ea35ddea7d06530604a0b45add99ac5a8c6d1a975c058"
+    },
+    {
+      "path": "references/original-plan.txt",
+      "sha256": "5e6572b7368a8256271e2d40693e353ec15aafb433e6c977728959f3155d2a95"
+    },
+    {
+      "path": "scripts/verify_execution_framework.py",
+      "sha256": "c04ef7e380e4c4a2bc91ac57d7aa5803bdd03f22a2b39a593f5353bc2a15345f"
+    },
+    {
+      "path": "spikes/w01/README.md",
+      "sha256": "205807de6eee63ba9ff6b26475a996c3d163e4ec2ca5819df78d9bee8a72528a"
+    },
+    {
+      "path": "spikes/w01/erratascope_w01/__init__.py",
+      "sha256": "89bf7e27529d0132ad6284274e2cb096d4e5600267a7a91fbae89bc5eecdbe73"
+    },
+    {
+      "path": "spikes/w01/erratascope_w01/anchors.py",
+      "sha256": "b0b17508d9730348e09f15e365bce92a5ee07ced1a4cd5752add0c5467750f68"
+    },
+    {
+      "path": "spikes/w01/erratascope_w01/cases.py",
+      "sha256": "5f2b444df4277e5972a4035f31007e08d63f72c792b2d8391616fa7e552743ce"
+    },
+    {
+      "path": "spikes/w01/erratascope_w01/config.py",
+      "sha256": "cd6f71374fe628c80265fbb5e8dbe32dd4c888787a172b8b5908b2cb81321621"
+    },
+    {
+      "path": "spikes/w01/erratascope_w01/context.py",
+      "sha256": "358e27be93b02d11ee5254f9af7e6f496aadef6ac412c8d8dff53cb6bfc720da"
+    },
+    {
+      "path": "spikes/w01/erratascope_w01/envprobe.py",
+      "sha256": "caadeb553cc4d3c26f0459bd6c641bc94b5eaefad0b28b9bab0c1ce4ff22e231"
+    },
+    {
+      "path": "spikes/w01/erratascope_w01/evidence.py",
+      "sha256": "8cea8e0c934e49060ae52d77354c60e537d2c155c4e52dc25ce917a99e060c08"
+    },
+    {
+      "path": "spikes/w01/erratascope_w01/extract_docling.py",
+      "sha256": "1b7091731f25d13a255f6aa28701b22a7242f40bc621f7773568dd15c18f61dd"
+    },
+    {
+      "path": "spikes/w01/erratascope_w01/extract_pdfplumber.py",
+      "sha256": "627c045de51503391efeb13b61fb876924e318bf1751eb1ba1f08405b89803a7"
+    },
+    {
+      "path": "spikes/w01/erratascope_w01/fetch.py",
+      "sha256": "57229f8ebbfcf17391f206612f5e388c7d0bf0d8c7ecc7a17d0a476f163803a7"
+    },
+    {
+      "path": "spikes/w01/erratascope_w01/ledger.py",
+      "sha256": "ad9ad3b7ad7e317fba240dd05432a88aa1b93150e5cd64e299a71175f665dcc6"
+    },
+    {
+      "path": "spikes/w01/erratascope_w01/localenv.py",
+      "sha256": "44b8cdd5cf0a6c191d291f6d00c370f1f992bbf7d1f88b96f1c02d46bf2a0b0e"
+    },
+    {
+      "path": "spikes/w01/erratascope_w01/provider.py",
+      "sha256": "890c05cac1d2dc6143cae1691be7663e07038eb538611b1f6e7a7ba6bc501d2a"
+    },
+    {
+      "path": "spikes/w01/erratascope_w01/report.py",
+      "sha256": "8329fa4c398eeaba3f61195b07537e88c289f1a96e08c06e86a7c41a312f0050"
+    },
+    {
+      "path": "spikes/w01/erratascope_w01/schemas.py",
+      "sha256": "9cbbd6308ed84717c824d02a237126a6770406ac1e8740178cedf67faf4309d2"
+    },
+    {
+      "path": "spikes/w01/erratascope_w01/selftest.py",
+      "sha256": "5e90067e378d273f78c8961b6284fc583c9542ca9c5749182130131d65760f65"
+    },
+    {
+      "path": "spikes/w01/erratascope_w01/util.py",
+      "sha256": "444a61a70694a006a3ec0dcb6c2c61e8a0245cea68a9a43f948c3459874e75bd"
+    },
+    {
+      "path": "spikes/w01/erratascope_w01/validate.py",
+      "sha256": "14f187ecb7ef3ea56bfbc6e517e621ffab1f08071971043ed07d5919db0175de"
+    },
+    {
+      "path": "spikes/w01/fixtures/anchors_fixture.json",
+      "sha256": "94557c6045ac3598694fb7933858c9b5c713ccdd074f08f4c589470f22701b93"
+    },
+    {
+      "path": "spikes/w01/fixtures/anchors_invalid_bbox.json",
+      "sha256": "6d5fff6dac99c6e7b4b97c3bce74371955adc5e103335686fe468df29e0cd860"
+    },
+    {
+      "path": "spikes/w01/fixtures/anchors_page_out_of_range.json",
+      "sha256": "d69f8083a3cfdcaab7f057893fdae3a3875e0e4c4a085e7ec8587bd9d895d178"
+    },
+    {
+      "path": "spikes/w01/fixtures/draft_invented_revision.json",
+      "sha256": "d3346ec65ef30e44f57c43234f0d30eba0c9e713adc28ba540c59d0ba3e1c2f0"
+    },
+    {
+      "path": "spikes/w01/fixtures/draft_malformed.json",
+      "sha256": "3666f03173425f66fcbde003d620ac056c8ab2be35cf50d069d9e469cc466a84"
+    },
+    {
+      "path": "spikes/w01/fixtures/draft_missing_revision.json",
+      "sha256": "5ad8a46694e742216c24010bcca9a87a8dc061518175b4a410eea19e1fb9e1ca"
+    },
+    {
+      "path": "spikes/w01/fixtures/draft_nonexistent_anchor.json",
+      "sha256": "0cc69ca89be44b963ab13effef550f29345cbc9b1db2c74593f39c3887b854a7"
+    },
+    {
+      "path": "spikes/w01/fixtures/draft_schema_invalid.json",
+      "sha256": "2a5335a68b8aaad16ed8099ef973c78d84906b2e9149335de22b7a12ddd6e638"
+    },
+    {
+      "path": "spikes/w01/fixtures/draft_valid.json",
+      "sha256": "cedf7e2795feb8781e5ba9a384a3d3e45f4ce44324784efcedd3b7b33ee71671"
+    },
+    {
+      "path": "spikes/w01/fixtures/synthetic/SYNTHETIC_missing_revision.md",
+      "sha256": "9f26870b48116e44b69554bc1d20d0f4477099f201f58a0fdd39e72f05c34d2e"
+    },
+    {
+      "path": "spikes/w01/fixtures/synthetic/SYNTHETIC_new.md",
+      "sha256": "2b5828496fbd487bf1064bb1ac191e1eb3122905d0025dd559a1cb3397c664be"
+    },
+    {
+      "path": "spikes/w01/fixtures/synthetic/SYNTHETIC_old.md",
+      "sha256": "da8faf730c2cab9ca656e8ed095757fcb164551b02b41eacbbab180504428be2"
+    },
+    {
+      "path": "spikes/w01/prompts/draft_v1_schema.md",
+      "sha256": "87ee38c48adc8debf99f1e81828eea07a5c007c35a9ba5e1fa5d46b50225a089"
+    },
+    {
+      "path": "spikes/w01/prompts/draft_v1_system.md",
+      "sha256": "c3a492fd28a92b3977d7a6d7fdd7f96e5f7e2dfef0d850b7c65bee15074dffc5"
+    },
+    {
+      "path": "spikes/w01/prompts/draft_v1_user.md",
+      "sha256": "5a999b12703598b9c8570eb52857f46e763780241eda5e65afc5e9d66ea713ab"
+    },
+    {
+      "path": "spikes/w01/prompts/draft_v2_schema.md",
+      "sha256": "15a168ef8032f4b5de92b1c93f9672d5ca5c8d321cb2f47b0d963d93ed221547"
+    },
+    {
+      "path": "spikes/w01/prompts/draft_v2_system.md",
+      "sha256": "278372e1f339e8d3424be27d138b4c03a5b2209e93b739c572a9b51bc08c69b4"
+    },
+    {
+      "path": "spikes/w01/prompts/draft_v2_user.md",
+      "sha256": "626c1d06a66edac4fadf97962f7798c7649e4e3323b885bdaf8e59f53f67828f"
+    },
+    {
+      "path": "spikes/w01/prompts/synthetic_missing_user.md",
+      "sha256": "737f06c859bbebb26f32cb17524a3d7238973266a1be109e2e5b4fd9fc74aa24"
+    },
+    {
+      "path": "spikes/w01/requirements.lock",
+      "sha256": "9833d4b40fe108ae5aca679844d2b17cd3018c18650730b6693c33f80795c06f"
+    },
+    {
+      "path": "spikes/w01/requirements.txt",
+      "sha256": "38f947d9bdb6f1c58f977cf6ef1b3cc348d55dcb874df2217ebfd9477467cb8a"
+    },
+    {
+      "path": "spikes/w01/run.py",
+      "sha256": "9ba78038f82c0fd4acbbb89bf43e10a5f998d644864aa8d7e2bd85e3bb4340a7"
+    },
+    {
+      "path": "spikes/w01/tests/test_localenv.py",
+      "sha256": "74bc12ad5a76e599fa93d221ad3a9538d2829152ee740f9387d5b92a7bfea60a"
+    },
+    {
+      "path": "visuals/erratascope-evidence-explorer.fragment.html",
+      "sha256": "c65b661c8058d7ec482894576a1833bd72d9fc7807eca75f5374fca0291ea788"
+    },
+    {
+      "path": "visuals/erratascope-evidence-explorer.html",
+      "sha256": "9e2a9c08f38f0870b46c1392e530f5122cb1a5f971c7033528a834eb1647e735"
+    }
+  ]
+}

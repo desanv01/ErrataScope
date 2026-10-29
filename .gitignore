@@ -1,0 +1,20 @@
+# Private local sources, model payloads, credentials, logs, environments, locks
+.local/
+.env
+.env.*
+!.env.example
+!.env.template
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
+
+# Actual vendor PDFs and raw provider payloads belong in .local/, not source control.

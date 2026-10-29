@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "source_document_id": "FIXTURE-DOC",
+  "source_revision": "Rev 9",
+  "claims": [
+    {
+      "field": "affected_revision",
+      "statement": "Applies to Rev 9 devices.",
+      "anchor_ids": ["fixture-doc:p00:001"],
+      "status": "supported"
+    }
+  ],
+  "unresolved_fields": [],
+  "limitations": "Negative fixture: the revision is invented and must be rejected."
+}

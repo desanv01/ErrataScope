@@ -1,0 +1,93 @@
+<div id="errata-evidence-explorer">
+  <h2>How evidence changes a decision</h2>
+  <div class="text-small text-muted">Illustrative rule · affected revision requires reset · board requires power-hold to remain asserted</div>
+  <div class="viz-controls">
+    <label class="form-label">Device identity
+      <select class="form-select" id="ee-revision">
+        <option value="affected">Confirmed affected revision</option>
+        <option value="unaffected">Confirmed unaffected revision</option>
+        <option value="unknown" selected>Revision unknown</option>
+      </select>
+    </label>
+    <label class="form-label">Supplied evidence: reset effect
+      <select class="form-select" id="ee-power">
+        <option value="drops">Power-hold drops</option>
+        <option value="retained">Power-hold remains asserted</option>
+        <option value="unknown" selected>No supporting evidence</option>
+        <option value="conflicting">Evidence sources disagree</option>
+      </select>
+    </label>
+    <label class="form-label">Document baseline
+      <select class="form-select" id="ee-baseline">
+        <option value="current" selected>Reviewed source version</option>
+        <option value="changed">Relevant source section changed</option>
+      </select>
+    </label>
+  </div>
+  <div class="ee-chain" role="img" aria-label="Device evidence and document conditions feed applicability; board evidence feeds a requirement conflict review.">
+    <div><span class="text-small text-muted">Source conditions</span><div>Revision → reset obligation</div></div>
+    <span aria-hidden="true">↓</span>
+    <div><span class="text-small text-muted">Project evidence</span><div id="ee-facts">Revision unknown · reset behavior unknown</div></div>
+    <span aria-hidden="true">↓</span>
+  </div>
+  <div class="card" aria-live="polite">
+    <div class="ee-output"><span>Applicability</span><strong id="ee-app">Unknown</strong></div>
+    <div class="ee-output"><span>Requirement review</span><strong id="ee-result">Unresolved</strong></div>
+    <div class="ee-output"><span>Next evidence needed</span><span id="ee-next">Confirm device revision</span></div>
+  </div>
+  <div class="text-small text-muted ee-foot">Document logic only · no hardware execution or physical validation</div>
+</div>
+<style>
+#errata-evidence-explorer .ee-chain {display:flex; flex-direction:column; align-items:center; gap:8px; text-align:center; margin:18px 0 8px;}
+#errata-evidence-explorer .ee-output {display:grid; grid-template-columns:minmax(120px,1fr) minmax(0,2fr); gap:12px; padding:6px 0; overflow-wrap:anywhere;}
+#errata-evidence-explorer strong {font-weight:500;}
+#errata-evidence-explorer .ee-foot {margin-top:12px;}
+@media(max-width:440px){#errata-evidence-explorer .ee-output {grid-template-columns:1fr; gap:4px;}}
+</style>
+<script>
+(() => {
+  const root = document.getElementById('errata-evidence-explorer');
+  const revision = root.querySelector('#ee-revision');
+  const power = root.querySelector('#ee-power');
+  const baseline = root.querySelector('#ee-baseline');
+  const applicability = root.querySelector('#ee-app');
+  const result = root.querySelector('#ee-result');
+  const next = root.querySelector('#ee-next');
+  const facts = root.querySelector('#ee-facts');
+  const allowed = {revision:['affected','unaffected','unknown'],power:['drops','retained','unknown','conflicting'],baseline:['current','changed']};
+  function draw() {
+    facts.textContent = revision.options[revision.selectedIndex].text + ' · ' + power.options[power.selectedIndex].text;
+    let app='Unknown', review='Unresolved', action='Confirm device revision';
+    if (baseline.value === 'changed') {
+      app='Reassessment required'; review='Previous assessment retained as history'; action='Review the changed source condition';
+    } else if (revision.value === 'unaffected') {
+      app='Not applicable within this rule'; review='This erratum imposes no reset obligation'; action='No further evidence for this rule';
+    } else if (revision.value === 'affected') {
+      app='Applicable';
+      if (power.value === 'drops') {review='Conflict under the supplied facts'; action='Engineering review or external validation';}
+      else if (power.value === 'retained') {review='No conflict identified within this rule'; action='Record evidence scope and reviewer decision';}
+      else if (power.value === 'conflicting') {review='Conflicting evidence — unresolved'; action='Resolve evidence scope, identity, and timing';}
+      else {action='Obtain scoped reset-behavior evidence';}
+    }
+    applicability.textContent=app; result.textContent=review; next.textContent=action;
+  }
+  function apply(saved) {
+    const s=saved && saved.modelContent;
+    if(s && s.explainer==='erratascope-evidence') {
+      for(const [key, element] of [['revision',revision],['power',power],['baseline',baseline]]) {
+        if(allowed[key].includes(s[key])) element.value=s[key];
+      }
+    }
+    draw();
+  }
+  function save() {
+    draw();
+    if(window.openai && typeof window.openai.setWidgetState==='function') {
+      window.openai.setWidgetState({modelContent:{explainer:'erratascope-evidence',revision:revision.value,power:power.value,baseline:baseline.value},privateContent:null}).catch(()=>{});
+    }
+  }
+  for(const el of [revision,power,baseline]) el.addEventListener('change',save);
+  window.addEventListener('openai:set_globals',e=>{if(e.detail && e.detail.globals && e.detail.globals.widgetState)apply(e.detail.globals.widgetState);});
+  apply(window.openai && window.openai.widgetState);
+})();
+</script>
