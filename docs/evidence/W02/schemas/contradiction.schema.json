@@ -1,0 +1,32 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "fact_ids": {
+      "items": {
+        "format": "uuid",
+        "type": "string"
+      },
+      "title": "Fact Ids",
+      "type": "array"
+    },
+    "selector": {
+      "minLength": 1,
+      "title": "Selector",
+      "type": "string"
+    },
+    "value_reprs": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Value Reprs",
+      "type": "array"
+    }
+  },
+  "required": [
+    "selector",
+    "fact_ids",
+    "value_reprs"
+  ],
+  "title": "Contradiction",
+  "type": "object"
+}

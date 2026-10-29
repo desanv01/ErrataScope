@@ -1,0 +1,284 @@
+{
+  "checks": [
+    {
+      "name": "baseline_fixture",
+      "expected": true,
+      "observed": true,
+      "pass_check": true
+    },
+    {
+      "name": "explicit_unknown_identity_manufacturer",
+      "expected": true,
+      "observed": true,
+      "pass_check": true
+    },
+    {
+      "name": "explicit_unknown_identity_exact_part",
+      "expected": true,
+      "observed": true,
+      "pass_check": true
+    },
+    {
+      "name": "explicit_unknown_identity_family",
+      "expected": true,
+      "observed": true,
+      "pass_check": true
+    },
+    {
+      "name": "explicit_unknown_identity_package",
+      "expected": true,
+      "observed": true,
+      "pass_check": true
+    },
+    {
+      "name": "explicit_unknown_identity_silicon_revision",
+      "expected": true,
+      "observed": true,
+      "pass_check": true
+    },
+    {
+      "name": "missing_silicon_revision_key_rejected",
+      "expected": false,
+      "observed": false,
+      "pass_check": true
+    },
+    {
+      "name": "missing_fact_value_key_rejected",
+      "expected": false,
+      "observed": false,
+      "pass_check": true
+    },
+    {
+      "name": "foreign_component_project_rejected",
+      "expected": false,
+      "observed": false,
+      "pass_check": true
+    },
+    {
+      "name": "missing_snapshot_identity_evidence_ref_rejected",
+      "expected": false,
+      "observed": false,
+      "pass_check": true
+    },
+    {
+      "name": "missing_nonidentity_fact_evidence_ref_rejected",
+      "expected": false,
+      "observed": false,
+      "pass_check": true
+    },
+    {
+      "name": "aggregate_512_rule_nodes_accepted",
+      "expected": true,
+      "observed": true,
+      "pass_check": true
+    },
+    {
+      "name": "aggregate_602_rule_nodes_rejected",
+      "expected": false,
+      "observed": false,
+      "pass_check": true
+    },
+    {
+      "name": "aggregate_513_nodes_across_exceptions_rejected",
+      "expected": false,
+      "observed": false,
+      "pass_check": true
+    },
+    {
+      "name": "evaluate_revalidates_model_copy_schema_version",
+      "expected": false,
+      "observed": false,
+      "pass_check": true
+    },
+    {
+      "name": "evaluate_rejects_constructed_empty_logical_group",
+      "expected": false,
+      "observed": false,
+      "pass_check": true
+    },
+    {
+      "name": "quantity_trailing_newline_rejected",
+      "expected": false,
+      "observed": false,
+      "pass_check": true
+    },
+    {
+      "name": "boolean_registry_disallows_in",
+      "expected": false,
+      "observed": false,
+      "pass_check": true
+    },
+    {
+      "name": "quantity_registry_disallows_in",
+      "expected": false,
+      "observed": false,
+      "pass_check": true
+    },
+    {
+      "name": "integer_registry_allows_ordering",
+      "expected": true,
+      "observed": true,
+      "pass_check": true
+    },
+    {
+      "name": "fixture_applicable",
+      "expected": "applicable",
+      "observed": "applicable",
+      "pass_check": true
+    },
+    {
+      "name": "fixture_unknown_revision",
+      "expected": "unknown",
+      "observed": "unknown",
+      "pass_check": true
+    },
+    {
+      "name": "fixture_conflicting",
+      "expected": "unknown",
+      "observed": "unknown",
+      "pass_check": true
+    },
+    {
+      "name": "fixture_out_of_scope",
+      "expected": "unknown",
+      "observed": "unknown",
+      "pass_check": true
+    },
+    {
+      "name": "connected_all_true_true",
+      "expected": "true",
+      "observed": "true",
+      "pass_check": true
+    },
+    {
+      "name": "connected_all_true_false",
+      "expected": "false",
+      "observed": "false",
+      "pass_check": true
+    },
+    {
+      "name": "connected_all_true_unknown",
+      "expected": "unknown",
+      "observed": "unknown",
+      "pass_check": true
+    },
+    {
+      "name": "connected_all_false_true",
+      "expected": "false",
+      "observed": "false",
+      "pass_check": true
+    },
+    {
+      "name": "connected_all_false_false",
+      "expected": "false",
+      "observed": "false",
+      "pass_check": true
+    },
+    {
+      "name": "connected_all_false_unknown",
+      "expected": "false",
+      "observed": "false",
+      "pass_check": true
+    },
+    {
+      "name": "connected_all_unknown_true",
+      "expected": "unknown",
+      "observed": "unknown",
+      "pass_check": true
+    },
+    {
+      "name": "connected_all_unknown_false",
+      "expected": "false",
+      "observed": "false",
+      "pass_check": true
+    },
+    {
+      "name": "connected_all_unknown_unknown",
+      "expected": "unknown",
+      "observed": "unknown",
+      "pass_check": true
+    },
+    {
+      "name": "connected_any_true_true",
+      "expected": "true",
+      "observed": "true",
+      "pass_check": true
+    },
+    {
+      "name": "connected_any_true_false",
+      "expected": "true",
+      "observed": "true",
+      "pass_check": true
+    },
+    {
+      "name": "connected_any_true_unknown",
+      "expected": "true",
+      "observed": "true",
+      "pass_check": true
+    },
+    {
+      "name": "connected_any_false_true",
+      "expected": "true",
+      "observed": "true",
+      "pass_check": true
+    },
+    {
+      "name": "connected_any_false_false",
+      "expected": "false",
+      "observed": "false",
+      "pass_check": true
+    },
+    {
+      "name": "connected_any_false_unknown",
+      "expected": "unknown",
+      "observed": "unknown",
+      "pass_check": true
+    },
+    {
+      "name": "connected_any_unknown_true",
+      "expected": "true",
+      "observed": "true",
+      "pass_check": true
+    },
+    {
+      "name": "connected_any_unknown_false",
+      "expected": "unknown",
+      "observed": "unknown",
+      "pass_check": true
+    },
+    {
+      "name": "connected_any_unknown_unknown",
+      "expected": "unknown",
+      "observed": "unknown",
+      "pass_check": true
+    },
+    {
+      "name": "false_target_retains_unknown_exception_dependency",
+      "expected": true,
+      "observed": true,
+      "pass_check": true
+    },
+    {
+      "name": "fresh_process_cli_success",
+      "expected": true,
+      "observed": true,
+      "pass_check": true
+    },
+    {
+      "name": "fresh_process_bytes_identical",
+      "expected": true,
+      "observed": true,
+      "pass_check": true
+    },
+    {
+      "name": "invalid_cli_exit_and_output_preservation",
+      "expected": true,
+      "observed": true,
+      "pass_check": true
+    }
+  ],
+  "passed": 46,
+  "total": 46,
+  "provider_calls": 0,
+  "network_used": false
+}

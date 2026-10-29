@@ -1,69 +1,77 @@
 # W03 — Persistence, authorization, artifacts, and durable jobs
 
-Packet revision: **1**
-Dispatch state: **PLANNED_NOT_DISPATCHABLE**
-Phase: [P2](../phases/P2-foundation.md)
-Starting baseline: **UNBOUND — Codex must issue before work starts.**
+Packet revision: **2**
+Dispatch state: **READY_TO_DISPATCH**
+Phase: [P2](../phases/P2-foundation.md), non-UI local foundation only.
+Worker: DeepSeek, attempt **W03-attempt-01**. Codex owns acceptance and Git.
+Starting baseline: [W03-baseline.json](../baselines/W03-baseline.json), bound after [W02/P1 acceptance](../reviews/W02-review-02.md).
 
-## Prerequisites
+## Required reading
 
-W02 accepted; Codex binds persistence schemas, local runtime, auth adapter strategy, and API prefix.
+Read [worker rules](../WORKER_RULES.md), [status](../STATUS.md), [W02 freeze](../bindings/W02-observed-contracts.md), the entire [foundation-v1 binding](../bindings/W03-foundation-v1.md), [data/version](../contracts/data-and-versions.md), [API/jobs](../contracts/api-and-jobs.md), [security](../contracts/security-and-operations.md) and [testing](../contracts/testing-and-acceptance.md) contracts. The binding supplies exact runtime pins, routes, records, auth/storage/job semantics, tests and exclusions.
 
-Required shared reading: [worker rules](../WORKER_RULES.md), [status](../STATUS.md), [data-and-versions](../contracts/data-and-versions.md), [api-and-jobs](../contracts/api-and-jobs.md), [security-and-operations](../contracts/security-and-operations.md), [testing-and-acceptance](../contracts/testing-and-acceptance.md).
+## Preflight and ownership
 
-Human visual approval remains a separate prerequisite for all application UI work. See [UI approval gate](../UI_APPROVAL_GATE.md).
+Work only in C:\Users\Dv\Desktop\ErrataScope. Run:
 
-## Planned ownership
+~~~powershell
+python scripts/verify_execution_framework.py --baseline docs/execution/baselines/W03-baseline.json
+docker version
+docker compose version
+~~~
 
-backend API/auth/storage/jobs modules, migrations, local container/config templates, integration tests, evidence/handoff. Dependency manifests and migration ownership must be explicitly bound. No UI.
+Require baseline PASS, no active lock and no existing W03-attempt-01 handoff. Claim .local/coordination/ACTIVE_WORKER.json exclusively with packet/revision/attempt, start UTC and ownership. Docker permission errors may require the harness's permission mechanism; do not alter Docker configuration or unrelated projects.
 
-No worker Git mutations, shared-plan edits, independent dispatch, or acceptance-status changes. Existing accepted code must be inspected before implementation; generated code is not assumed correct.
+Writable paths only:
 
-## Implementation sequence
+- backend/erratascope_service/** — new service package/helpers.
+- backend/migrations/** and backend/alembic.ini — Alembic history/config.
+- backend/requirements-service.lock — exact protected Linux lock copy.
+- backend/tests_w03/** — new foundation tests/fixtures.
+- backend/README-W03.md and backend/.dockerignore — instructions/build exclusions.
+- infra/w03/** — Dockerfile, compose.yaml, local templates/scripts and hosted prerequisites.
+- docs/evidence/W03/** — sanitized reports, logs, OpenAPI, dependency/image inventories.
+- .local/w03/** — synthetic keys/tokens, test data/logs and scratch; never publish secrets.
+- docs/execution/handoffs/W03-attempt-01.md and your own worker lock.
 
-1. Implement relational ownership/version records and migrations around accepted domain types. Add transaction and uniqueness constraints for sealed versions, idempotency, and reviews.
+Everything else is read-only, including accepted domain code, backend/tests/**, W02 fixtures/requirements/README, W01/W02 evidence, protected documentation, .local/reviews/**, .local/w01/**, .env.local and Git metadata. No provider calls, credentials search, UI, W04, account provisioning or hosted deployment. Only the assigned local containers/dependencies are authorized infrastructure work. No volume deletion or global Docker prune.
 
-2. Implement project membership, scoped service/database authorization, artifact authorization, and fail-closed hosted configuration. Loopback-only development identity is visibly separate.
+## Sequence
 
-3. Implement storage abstraction, durable job/attempt/outbox/event records, dispatch/reconciliation, and attempt-token protection. Broker remains a scheduler, not authoritative state.
+1. Runtime/config: service package, frozen lock, backend-only Docker build, isolated Compose, local JWT bootstrap, hosted-disabled configuration.
+2. Persistence/auth: Alembic schema, constrained ownership/versions, actor/project checks, immutable validated bundle persistence.
+3. Artifacts/API: private streaming artifacts, typed routes, errors, idempotency/review concurrency, OpenAPI.
+4. Jobs/recovery: durable DB state, JSON-serialized RQ delivery, attempt-token guarded commits, outbox/reconciliation and artifact_digest.
+5. Real-service integration/race/restart evidence; retain domain tests; hosted validation stays unrun.
 
-4. Expose a thin API to create a project, store an artifact, enqueue a harmless job, and retrieve ordered status/results.
+## Commands and evidence
 
-5. Create reproducible local startup/health commands. Perform only the hosted actions expressly bound by Codex; no account provisioning or spend by implication.
+Implement these exact interfaces, then run sequentially and inspect exits. They are target interfaces to create, not claims that implementation exists. The test service uses /app as cwd/PYTHONPATH and mounts only .local/w03 as /local for outputs/dev keys. API receives only public JWKS. Domain tests write scratch data inside the container; do not modify protected host files for path convenience.
 
-## Required acceptance evidence
+~~~powershell
+docker compose -p erratascope-w03 -f infra/w03/compose.yaml config --quiet
+docker compose -p erratascope-w03 -f infra/w03/compose.yaml build
+docker compose -p erratascope-w03 -f infra/w03/compose.yaml run --rm --no-deps test python -m erratascope_service.cli bootstrap-local --out /local/dev-auth
+docker compose -p erratascope-w03 -f infra/w03/compose.yaml up -d --wait db broker
+docker compose -p erratascope-w03 -f infra/w03/compose.yaml run --rm migrate
+docker compose -p erratascope-w03 -f infra/w03/compose.yaml run --rm migrate
+docker compose -p erratascope-w03 -f infra/w03/compose.yaml up -d --wait api worker dispatcher
+docker compose -p erratascope-w03 -f infra/w03/compose.yaml run --rm test python -m unittest discover -s tests -v
+docker compose -p erratascope-w03 -f infra/w03/compose.yaml run --rm test python -m unittest discover -s tests_w03 -v
+docker compose -p erratascope-w03 -f infra/w03/compose.yaml run --rm test python -m erratascope_service.cli verify-foundation --output /local/verification.json
+python scripts/verify_execution_framework.py --baseline docs/execution/baselines/W03-baseline.json
+~~~
 
-- **W03-G1:** Clean database migration/startup and project/artifact/job flow work.
-- **W03-G2:** Cross-project access is denied, including artifact URLs.
-- **W03-G3:** Duplicate submissions and review races behave correctly.
-- **W03-G4:** Worker restart/outbox redispatch preserves committed results without duplicates.
-- **W03-G5:** Deployment prerequisites are recorded; any hosted P2 gate still untested remains open.
+verify-foundation must drive the actual API and DB/broker-backed worker with synthetic tokens, verify receipt/content/events and foreign-user denial, and write actual observations without secrets. Integration tests use a dedicated DB/schema namespace and resource prefix inside this project's database, preserving running example data. Missing services fail tests, not skip or mock them.
 
-Tests must check behavior, not merely mirror implementation. Codex binds exact command lines against the accepted predecessor code before dispatch. At minimum provide focused checks for the behaviors above and one connected flow when applicable. Record actual exit codes and artifacts; no claim that an unrun command passed.
+Implement a PowerShell recovery script under infra/w03/ that narrowly restarts this project's worker/dispatcher, records deterministic stage barriers and confirms recovery. Gate failpoints to explicit local test mode; no production HTTP failpoint endpoints. Restart API/worker with existing volumes and verify retrieval. At completion stop only services started/owned by this attempt, preserve volumes/evidence and record stopped/remaining resources; no hidden jobs.
 
-## Failure response
+Export docs/evidence/W03/openapi.json, IMPLEMENTATION_REPORT.md and sanitized recovery evidence. G1=migrations/flow; G2=auth/artifacts; G3=idempotency/review races; G4=actual recovery; G5=hosted prerequisites documented. Hosted execution is NOT_RUN and P2 overall hosted/UI deliverables remain pending.
 
-Resolve one local/host path. Private hosted uploads stay disabled until auth/storage checks pass. Do not add an unapproved alternate database.
+## Handoff
 
-Complete independent in-scope work and report the blocked dependency. Do not silently waive gates, change the stack, or add work from later packets.
+Recheck baseline, write handoff, stop owned jobs/services, release your lock and stop editing. Do not start W04 or edit acceptance status. If blocked, report the precise prerequisite and complete independent in-scope work; never change stack/pins or weaken gates.
 
-## Required handoff
+Return:
 
-Write `docs/execution/handoffs/W03-attempt-NN.md` using [the template](../templates/HANDOFF.md). Record starting baseline, changed paths, exact checks/results, gate evidence, mocks/synthetic/live distinctions, deviations, and unresolved issues. Stop editing and release your own worker lock before returning to Codex.
-
-## Codex dispatch binding — must be completed later
-
-- Accepted baseline: UNBOUND.
-- Exact writable paths: UNBOUND.
-- Frozen contract/schema/API versions: UNBOUND.
-- Required design artifact and human approval (where applicable): UNBOUND.
-- Exact build/test/startup commands: UNBOUND.
-- Provider/deployment budgets or publication scope: UNBOUND.
-- Current packet-specific repair/compatibility notes: UNBOUND.
-
-Do not infer readiness from this plan. Codex changes Dispatch state and fills these fields before issuing the exact start prompt.
-
-## Next eligible work after acceptance
-
-W04; Codex must obtain the human's UI/imagegen approval before any interpretation-review UI work.
-
+> Review ErrataScope W03 revision 2, worker attempt 01. The worker has stopped editing. Read docs/execution/handoffs/W03-attempt-01.md, docs/execution/packets/W03-persistence-jobs.md and docs/execution/bindings/W03-foundation-v1.md. Verify the W03 protected baseline, preserving accepted W01/W02 evidence and domain code. Independently check actual PostgreSQL migrations/version integrity, JWT/project/artifact authorization, idempotency and review races, RQ/outbox/attempt-token recovery and the connected local API flow. Mocks or skipped services do not establish integration pass. Hosted P2 acceptance remains open unless separately authorized and evidenced; no UI approval is implied. If W03 passes, record acceptance, perform the Git/GitHub checkpoint, bind eligible W04 scope and give its exact DeepSeek prompt. Otherwise issue one consolidated repair and prompt. Preserve the UI/imagegen approval gate.

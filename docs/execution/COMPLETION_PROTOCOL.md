@@ -20,4 +20,4 @@ If authentication, repository identity, network policy, or another real prerequi
 
 ## Current application
 
-[W01/P0 accepted](reviews/W01-review-06.md); [checkpoint record](reviews/W01-git-checkpoint.md). W02 revision 2 is bound to that acceptance and dispatched through [its exact prompt](prompts/W02-START.md). W01's four reservations remain counted; W02 needs no provider calls. [UI approval](UI_APPROVAL_GATE.md) remains pending.
+[W01/P0](reviews/W01-review-06.md) and [W02/P1](reviews/W02-review-02.md) accepted; [W02 checkpoint procedure](reviews/W02-git-checkpoint.md). Current [W03 prompt](prompts/W03-START.md) authorizes only bound local backend foundation. W01 reservations remain exhausted. UI/imagegen and hosted P2 acceptance remain pending.

@@ -1,7 +1,9 @@
 # W02 — Domain contracts and deterministic evaluator
 
+Acceptance notice (30 October 2026): W02/P1 accepted under [review 02](../reviews/W02-review-02.md), including repair 01 and recorded Codex boundary corrections. Instructions below are historical; current dispatch is [W03](W03-persistence-jobs.md). Domain-v1 requirements remain unchanged.
+
 Packet revision: **2**
-Dispatch state: **READY_TO_DISPATCH**
+Dispatch state: **ACCEPTED**
 Phase: [P1](../phases/P1-domain-core.md)
 Starting baseline: [W02-baseline.json](../baselines/W02-baseline.json), freshly bound after [W01 acceptance](../reviews/W01-review-06.md). The earlier deferred draft is preserved separately; it is not a dispatch baseline.
 Worker: DeepSeek, attempt **W02-attempt-01**. Codex accepts.

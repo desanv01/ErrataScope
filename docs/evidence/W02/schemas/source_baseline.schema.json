@@ -1,0 +1,45 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "coverage_manifest_id": {
+      "format": "uuid",
+      "title": "Coverage Manifest Id",
+      "type": "string"
+    },
+    "document_version_ids": {
+      "items": {
+        "format": "uuid",
+        "type": "string"
+      },
+      "title": "Document Version Ids",
+      "type": "array"
+    },
+    "id": {
+      "format": "uuid",
+      "title": "Id",
+      "type": "string"
+    },
+    "project_id": {
+      "format": "uuid",
+      "title": "Project Id",
+      "type": "string"
+    },
+    "rule_version_ids": {
+      "items": {
+        "format": "uuid",
+        "type": "string"
+      },
+      "title": "Rule Version Ids",
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "project_id",
+    "document_version_ids",
+    "rule_version_ids",
+    "coverage_manifest_id"
+  ],
+  "title": "SourceBaseline",
+  "type": "object"
+}

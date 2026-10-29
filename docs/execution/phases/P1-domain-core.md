@@ -1,6 +1,6 @@
 # P1 — Domain contracts and pure evaluator
 
-Phase specification revision 1. **Implementation status: READY — W02 revision 2 bound; worker not started.** Codex owns phase acceptance.
+Phase specification revision 1. **Implementation status: ACCEPTED — W02 review 02, 30 October 2026.** Codex owns phase acceptance.
 
 Implementation packet(s): [W02](../packets/W02-domain-core.md).
 
@@ -33,5 +33,5 @@ Preserve partial outputs and diagnostic evidence. Do not broaden scope or weaken
 
 ## Completion record
 
-No accepted implementation evidence yet. Codex will add review references after execution.
+Accepted under [W02 review 02](../reviews/W02-review-02.md); [acceptance manifest](../../evidence/W02/ACCEPTANCE.json) freezes code/contracts/tests. 92 tests and 46 independent assertions pass. No production deployment or electrical verification is implied.
 

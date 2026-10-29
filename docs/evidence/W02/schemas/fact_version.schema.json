@@ -1,0 +1,227 @@
+{
+  "$defs": {
+    "BooleanValue": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "boolean",
+          "default": "boolean",
+          "title": "Kind",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "BooleanValue",
+      "type": "object"
+    },
+    "EvaluationScope": {
+      "additionalProperties": false,
+      "properties": {
+        "firmware_build_id": {
+          "format": "uuid",
+          "title": "Firmware Build Id",
+          "type": "string"
+        },
+        "operating_profile_id": {
+          "format": "uuid",
+          "title": "Operating Profile Id",
+          "type": "string"
+        },
+        "project_id": {
+          "format": "uuid",
+          "title": "Project Id",
+          "type": "string"
+        },
+        "snapshot_id": {
+          "format": "uuid",
+          "title": "Snapshot Id",
+          "type": "string"
+        },
+        "subject_id": {
+          "format": "uuid",
+          "title": "Subject Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "project_id",
+        "snapshot_id",
+        "subject_id",
+        "firmware_build_id",
+        "operating_profile_id"
+      ],
+      "title": "EvaluationScope",
+      "type": "object"
+    },
+    "IntegerValue": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "integer",
+          "default": "integer",
+          "title": "Kind",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "IntegerValue",
+      "type": "object"
+    },
+    "QuantityValue": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "quantity",
+          "default": "quantity",
+          "title": "Kind",
+          "type": "string"
+        },
+        "unit": {
+          "title": "Unit",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "unit"
+      ],
+      "title": "QuantityValue",
+      "type": "object"
+    },
+    "TextValue": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "text",
+          "default": "text",
+          "title": "Kind",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "TextValue",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "evidence_refs": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Evidence Refs",
+      "type": "array"
+    },
+    "id": {
+      "format": "uuid",
+      "title": "Id",
+      "type": "string"
+    },
+    "origin": {
+      "enum": [
+        "declared",
+        "extracted",
+        "measured",
+        "external"
+      ],
+      "title": "Origin",
+      "type": "string"
+    },
+    "predecessor_id": {
+      "anyOf": [
+        {
+          "format": "uuid",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Predecessor Id"
+    },
+    "review_state": {
+      "enum": [
+        "draft",
+        "accepted",
+        "rejected"
+      ],
+      "title": "Review State",
+      "type": "string"
+    },
+    "scope": {
+      "$ref": "#/$defs/EvaluationScope"
+    },
+    "selector": {
+      "minLength": 1,
+      "title": "Selector",
+      "type": "string"
+    },
+    "value": {
+      "anyOf": [
+        {
+          "discriminator": {
+            "mapping": {
+              "boolean": "#/$defs/BooleanValue",
+              "integer": "#/$defs/IntegerValue",
+              "quantity": "#/$defs/QuantityValue",
+              "text": "#/$defs/TextValue"
+            },
+            "propertyName": "kind"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/TextValue"
+            },
+            {
+              "$ref": "#/$defs/BooleanValue"
+            },
+            {
+              "$ref": "#/$defs/IntegerValue"
+            },
+            {
+              "$ref": "#/$defs/QuantityValue"
+            }
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Value"
+    }
+  },
+  "required": [
+    "id",
+    "scope",
+    "selector",
+    "value",
+    "origin",
+    "review_state"
+  ],
+  "title": "FactVersion",
+  "type": "object"
+}

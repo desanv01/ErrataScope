@@ -1,0 +1,383 @@
+{
+  "$defs": {
+    "BooleanValue": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "boolean",
+          "default": "boolean",
+          "title": "Kind",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "BooleanValue",
+      "type": "object"
+    },
+    "IntegerValue": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "integer",
+          "default": "integer",
+          "title": "Kind",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "IntegerValue",
+      "type": "object"
+    },
+    "NodeTrace": {
+      "additionalProperties": false,
+      "properties": {
+        "anchor_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Anchor Ids",
+          "type": "array"
+        },
+        "children": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/NodeTrace"
+          },
+          "title": "Children",
+          "type": "array"
+        },
+        "conflict": {
+          "default": false,
+          "title": "Conflict",
+          "type": "boolean"
+        },
+        "constant_value": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Constant Value"
+        },
+        "fact_ids": {
+          "default": [],
+          "items": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "title": "Fact Ids",
+          "type": "array"
+        },
+        "missing": {
+          "default": false,
+          "title": "Missing",
+          "type": "boolean"
+        },
+        "op": {
+          "minLength": 1,
+          "title": "Op",
+          "type": "string"
+        },
+        "path": {
+          "minLength": 1,
+          "title": "Path",
+          "type": "string"
+        },
+        "resolved_value": {
+          "anyOf": [
+            {
+              "discriminator": {
+                "mapping": {
+                  "boolean": "#/$defs/BooleanValue",
+                  "integer": "#/$defs/IntegerValue",
+                  "quantity": "#/$defs/QuantityValue",
+                  "text": "#/$defs/TextValue"
+                },
+                "propertyName": "kind"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/TextValue"
+                },
+                {
+                  "$ref": "#/$defs/BooleanValue"
+                },
+                {
+                  "$ref": "#/$defs/IntegerValue"
+                },
+                {
+                  "$ref": "#/$defs/QuantityValue"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Resolved Value"
+        },
+        "result": {
+          "enum": [
+            "true",
+            "false",
+            "unknown"
+          ],
+          "title": "Result",
+          "type": "string"
+        },
+        "selector": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Selector"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "discriminator": {
+                "mapping": {
+                  "boolean": "#/$defs/BooleanValue",
+                  "integer": "#/$defs/IntegerValue",
+                  "quantity": "#/$defs/QuantityValue",
+                  "text": "#/$defs/TextValue"
+                },
+                "propertyName": "kind"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/TextValue"
+                },
+                {
+                  "$ref": "#/$defs/BooleanValue"
+                },
+                {
+                  "$ref": "#/$defs/IntegerValue"
+                },
+                {
+                  "$ref": "#/$defs/QuantityValue"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "values": {
+          "anyOf": [
+            {
+              "items": {
+                "discriminator": {
+                  "mapping": {
+                    "boolean": "#/$defs/BooleanValue",
+                    "integer": "#/$defs/IntegerValue",
+                    "quantity": "#/$defs/QuantityValue",
+                    "text": "#/$defs/TextValue"
+                  },
+                  "propertyName": "kind"
+                },
+                "oneOf": [
+                  {
+                    "$ref": "#/$defs/TextValue"
+                  },
+                  {
+                    "$ref": "#/$defs/BooleanValue"
+                  },
+                  {
+                    "$ref": "#/$defs/IntegerValue"
+                  },
+                  {
+                    "$ref": "#/$defs/QuantityValue"
+                  }
+                ]
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Values"
+        },
+        "warning_codes": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Warning Codes",
+          "type": "array"
+        }
+      },
+      "required": [
+        "path",
+        "op",
+        "result"
+      ],
+      "title": "NodeTrace",
+      "type": "object"
+    },
+    "QuantityValue": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "quantity",
+          "default": "quantity",
+          "title": "Kind",
+          "type": "string"
+        },
+        "unit": {
+          "title": "Unit",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "unit"
+      ],
+      "title": "QuantityValue",
+      "type": "object"
+    },
+    "TextValue": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "text",
+          "default": "text",
+          "title": "Kind",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "TextValue",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "applicability": {
+      "enum": [
+        "applicable",
+        "not_applicable",
+        "unknown"
+      ],
+      "title": "Applicability",
+      "type": "string"
+    },
+    "document_version_id": {
+      "format": "uuid",
+      "title": "Document Version Id",
+      "type": "string"
+    },
+    "entry_id": {
+      "minLength": 1,
+      "title": "Entry Id",
+      "type": "string"
+    },
+    "exception": {
+      "enum": [
+        "true",
+        "false",
+        "unknown"
+      ],
+      "title": "Exception",
+      "type": "string"
+    },
+    "exception_traces": {
+      "items": {
+        "$ref": "#/$defs/NodeTrace"
+      },
+      "title": "Exception Traces",
+      "type": "array"
+    },
+    "overall": {
+      "enum": [
+        "true",
+        "false",
+        "unknown"
+      ],
+      "title": "Overall",
+      "type": "string"
+    },
+    "rule_version_id": {
+      "format": "uuid",
+      "title": "Rule Version Id",
+      "type": "string"
+    },
+    "target": {
+      "enum": [
+        "true",
+        "false",
+        "unknown"
+      ],
+      "title": "Target",
+      "type": "string"
+    },
+    "target_trace": {
+      "$ref": "#/$defs/NodeTrace"
+    },
+    "trigger": {
+      "enum": [
+        "true",
+        "false",
+        "unknown"
+      ],
+      "title": "Trigger",
+      "type": "string"
+    },
+    "trigger_trace": {
+      "$ref": "#/$defs/NodeTrace"
+    }
+  },
+  "required": [
+    "rule_version_id",
+    "document_version_id",
+    "entry_id",
+    "target",
+    "trigger",
+    "exception",
+    "overall",
+    "applicability",
+    "target_trace",
+    "trigger_trace",
+    "exception_traces"
+  ],
+  "title": "RuleResult",
+  "type": "object"
+}

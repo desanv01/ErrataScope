@@ -1,0 +1,918 @@
+{
+  "$defs": {
+    "All": {
+      "additionalProperties": false,
+      "properties": {
+        "children": {
+          "items": {
+            "discriminator": {
+              "mapping": {
+                "all": "#/$defs/All",
+                "any": "#/$defs/Any",
+                "constant": "#/$defs/Constant",
+                "eq": "#/$defs/Eq",
+                "gt": "#/$defs/Gt",
+                "gte": "#/$defs/Gte",
+                "in": "#/$defs/In",
+                "lt": "#/$defs/Lt",
+                "lte": "#/$defs/Lte",
+                "not": "#/$defs/Not"
+              },
+              "propertyName": "op"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/$defs/Eq"
+              },
+              {
+                "$ref": "#/$defs/In"
+              },
+              {
+                "$ref": "#/$defs/Lt"
+              },
+              {
+                "$ref": "#/$defs/Lte"
+              },
+              {
+                "$ref": "#/$defs/Gt"
+              },
+              {
+                "$ref": "#/$defs/Gte"
+              },
+              {
+                "$ref": "#/$defs/All"
+              },
+              {
+                "$ref": "#/$defs/Any"
+              },
+              {
+                "$ref": "#/$defs/Not"
+              },
+              {
+                "$ref": "#/$defs/Constant"
+              }
+            ]
+          },
+          "title": "Children",
+          "type": "array"
+        },
+        "op": {
+          "const": "all",
+          "default": "all",
+          "title": "Op",
+          "type": "string"
+        }
+      },
+      "required": [
+        "children"
+      ],
+      "title": "All",
+      "type": "object"
+    },
+    "Any": {
+      "additionalProperties": false,
+      "properties": {
+        "children": {
+          "items": {
+            "discriminator": {
+              "mapping": {
+                "all": "#/$defs/All",
+                "any": "#/$defs/Any",
+                "constant": "#/$defs/Constant",
+                "eq": "#/$defs/Eq",
+                "gt": "#/$defs/Gt",
+                "gte": "#/$defs/Gte",
+                "in": "#/$defs/In",
+                "lt": "#/$defs/Lt",
+                "lte": "#/$defs/Lte",
+                "not": "#/$defs/Not"
+              },
+              "propertyName": "op"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/$defs/Eq"
+              },
+              {
+                "$ref": "#/$defs/In"
+              },
+              {
+                "$ref": "#/$defs/Lt"
+              },
+              {
+                "$ref": "#/$defs/Lte"
+              },
+              {
+                "$ref": "#/$defs/Gt"
+              },
+              {
+                "$ref": "#/$defs/Gte"
+              },
+              {
+                "$ref": "#/$defs/All"
+              },
+              {
+                "$ref": "#/$defs/Any"
+              },
+              {
+                "$ref": "#/$defs/Not"
+              },
+              {
+                "$ref": "#/$defs/Constant"
+              }
+            ]
+          },
+          "title": "Children",
+          "type": "array"
+        },
+        "op": {
+          "const": "any",
+          "default": "any",
+          "title": "Op",
+          "type": "string"
+        }
+      },
+      "required": [
+        "children"
+      ],
+      "title": "Any",
+      "type": "object"
+    },
+    "BooleanValue": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "boolean",
+          "default": "boolean",
+          "title": "Kind",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "BooleanValue",
+      "type": "object"
+    },
+    "Constant": {
+      "additionalProperties": false,
+      "properties": {
+        "anchor_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Anchor Ids",
+          "type": "array"
+        },
+        "op": {
+          "const": "constant",
+          "default": "constant",
+          "title": "Op",
+          "type": "string"
+        },
+        "review_rationale": {
+          "title": "Review Rationale",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "value",
+        "anchor_ids",
+        "review_rationale"
+      ],
+      "title": "Constant",
+      "type": "object"
+    },
+    "Eq": {
+      "additionalProperties": false,
+      "properties": {
+        "anchor_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Anchor Ids",
+          "type": "array"
+        },
+        "op": {
+          "const": "eq",
+          "default": "eq",
+          "title": "Op",
+          "type": "string"
+        },
+        "selector": {
+          "title": "Selector",
+          "type": "string"
+        },
+        "value": {
+          "discriminator": {
+            "mapping": {
+              "boolean": "#/$defs/BooleanValue",
+              "integer": "#/$defs/IntegerValue",
+              "quantity": "#/$defs/QuantityValue",
+              "text": "#/$defs/TextValue"
+            },
+            "propertyName": "kind"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/TextValue"
+            },
+            {
+              "$ref": "#/$defs/BooleanValue"
+            },
+            {
+              "$ref": "#/$defs/IntegerValue"
+            },
+            {
+              "$ref": "#/$defs/QuantityValue"
+            }
+          ],
+          "title": "Value"
+        }
+      },
+      "required": [
+        "anchor_ids",
+        "selector",
+        "value"
+      ],
+      "title": "Eq",
+      "type": "object"
+    },
+    "Gt": {
+      "additionalProperties": false,
+      "properties": {
+        "anchor_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Anchor Ids",
+          "type": "array"
+        },
+        "op": {
+          "const": "gt",
+          "default": "gt",
+          "title": "Op",
+          "type": "string"
+        },
+        "selector": {
+          "title": "Selector",
+          "type": "string"
+        },
+        "value": {
+          "discriminator": {
+            "mapping": {
+              "boolean": "#/$defs/BooleanValue",
+              "integer": "#/$defs/IntegerValue",
+              "quantity": "#/$defs/QuantityValue",
+              "text": "#/$defs/TextValue"
+            },
+            "propertyName": "kind"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/TextValue"
+            },
+            {
+              "$ref": "#/$defs/BooleanValue"
+            },
+            {
+              "$ref": "#/$defs/IntegerValue"
+            },
+            {
+              "$ref": "#/$defs/QuantityValue"
+            }
+          ],
+          "title": "Value"
+        }
+      },
+      "required": [
+        "anchor_ids",
+        "selector",
+        "value"
+      ],
+      "title": "Gt",
+      "type": "object"
+    },
+    "Gte": {
+      "additionalProperties": false,
+      "properties": {
+        "anchor_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Anchor Ids",
+          "type": "array"
+        },
+        "op": {
+          "const": "gte",
+          "default": "gte",
+          "title": "Op",
+          "type": "string"
+        },
+        "selector": {
+          "title": "Selector",
+          "type": "string"
+        },
+        "value": {
+          "discriminator": {
+            "mapping": {
+              "boolean": "#/$defs/BooleanValue",
+              "integer": "#/$defs/IntegerValue",
+              "quantity": "#/$defs/QuantityValue",
+              "text": "#/$defs/TextValue"
+            },
+            "propertyName": "kind"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/TextValue"
+            },
+            {
+              "$ref": "#/$defs/BooleanValue"
+            },
+            {
+              "$ref": "#/$defs/IntegerValue"
+            },
+            {
+              "$ref": "#/$defs/QuantityValue"
+            }
+          ],
+          "title": "Value"
+        }
+      },
+      "required": [
+        "anchor_ids",
+        "selector",
+        "value"
+      ],
+      "title": "Gte",
+      "type": "object"
+    },
+    "In": {
+      "additionalProperties": false,
+      "properties": {
+        "anchor_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Anchor Ids",
+          "type": "array"
+        },
+        "op": {
+          "const": "in",
+          "default": "in",
+          "title": "Op",
+          "type": "string"
+        },
+        "selector": {
+          "title": "Selector",
+          "type": "string"
+        },
+        "values": {
+          "items": {
+            "discriminator": {
+              "mapping": {
+                "boolean": "#/$defs/BooleanValue",
+                "integer": "#/$defs/IntegerValue",
+                "quantity": "#/$defs/QuantityValue",
+                "text": "#/$defs/TextValue"
+              },
+              "propertyName": "kind"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/$defs/TextValue"
+              },
+              {
+                "$ref": "#/$defs/BooleanValue"
+              },
+              {
+                "$ref": "#/$defs/IntegerValue"
+              },
+              {
+                "$ref": "#/$defs/QuantityValue"
+              }
+            ]
+          },
+          "title": "Values",
+          "type": "array"
+        }
+      },
+      "required": [
+        "anchor_ids",
+        "selector",
+        "values"
+      ],
+      "title": "In",
+      "type": "object"
+    },
+    "IntegerValue": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "integer",
+          "default": "integer",
+          "title": "Kind",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "IntegerValue",
+      "type": "object"
+    },
+    "Lt": {
+      "additionalProperties": false,
+      "properties": {
+        "anchor_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Anchor Ids",
+          "type": "array"
+        },
+        "op": {
+          "const": "lt",
+          "default": "lt",
+          "title": "Op",
+          "type": "string"
+        },
+        "selector": {
+          "title": "Selector",
+          "type": "string"
+        },
+        "value": {
+          "discriminator": {
+            "mapping": {
+              "boolean": "#/$defs/BooleanValue",
+              "integer": "#/$defs/IntegerValue",
+              "quantity": "#/$defs/QuantityValue",
+              "text": "#/$defs/TextValue"
+            },
+            "propertyName": "kind"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/TextValue"
+            },
+            {
+              "$ref": "#/$defs/BooleanValue"
+            },
+            {
+              "$ref": "#/$defs/IntegerValue"
+            },
+            {
+              "$ref": "#/$defs/QuantityValue"
+            }
+          ],
+          "title": "Value"
+        }
+      },
+      "required": [
+        "anchor_ids",
+        "selector",
+        "value"
+      ],
+      "title": "Lt",
+      "type": "object"
+    },
+    "Lte": {
+      "additionalProperties": false,
+      "properties": {
+        "anchor_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Anchor Ids",
+          "type": "array"
+        },
+        "op": {
+          "const": "lte",
+          "default": "lte",
+          "title": "Op",
+          "type": "string"
+        },
+        "selector": {
+          "title": "Selector",
+          "type": "string"
+        },
+        "value": {
+          "discriminator": {
+            "mapping": {
+              "boolean": "#/$defs/BooleanValue",
+              "integer": "#/$defs/IntegerValue",
+              "quantity": "#/$defs/QuantityValue",
+              "text": "#/$defs/TextValue"
+            },
+            "propertyName": "kind"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/TextValue"
+            },
+            {
+              "$ref": "#/$defs/BooleanValue"
+            },
+            {
+              "$ref": "#/$defs/IntegerValue"
+            },
+            {
+              "$ref": "#/$defs/QuantityValue"
+            }
+          ],
+          "title": "Value"
+        }
+      },
+      "required": [
+        "anchor_ids",
+        "selector",
+        "value"
+      ],
+      "title": "Lte",
+      "type": "object"
+    },
+    "Not": {
+      "additionalProperties": false,
+      "properties": {
+        "child": {
+          "discriminator": {
+            "mapping": {
+              "all": "#/$defs/All",
+              "any": "#/$defs/Any",
+              "constant": "#/$defs/Constant",
+              "eq": "#/$defs/Eq",
+              "gt": "#/$defs/Gt",
+              "gte": "#/$defs/Gte",
+              "in": "#/$defs/In",
+              "lt": "#/$defs/Lt",
+              "lte": "#/$defs/Lte",
+              "not": "#/$defs/Not"
+            },
+            "propertyName": "op"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/Eq"
+            },
+            {
+              "$ref": "#/$defs/In"
+            },
+            {
+              "$ref": "#/$defs/Lt"
+            },
+            {
+              "$ref": "#/$defs/Lte"
+            },
+            {
+              "$ref": "#/$defs/Gt"
+            },
+            {
+              "$ref": "#/$defs/Gte"
+            },
+            {
+              "$ref": "#/$defs/All"
+            },
+            {
+              "$ref": "#/$defs/Any"
+            },
+            {
+              "$ref": "#/$defs/Not"
+            },
+            {
+              "$ref": "#/$defs/Constant"
+            }
+          ],
+          "title": "Child"
+        },
+        "op": {
+          "const": "not",
+          "default": "not",
+          "title": "Op",
+          "type": "string"
+        }
+      },
+      "required": [
+        "child"
+      ],
+      "title": "Not",
+      "type": "object"
+    },
+    "QuantityValue": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "quantity",
+          "default": "quantity",
+          "title": "Kind",
+          "type": "string"
+        },
+        "unit": {
+          "title": "Unit",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "unit"
+      ],
+      "title": "QuantityValue",
+      "type": "object"
+    },
+    "TextValue": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "text",
+          "default": "text",
+          "title": "Kind",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "TextValue",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "anchors": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Anchors",
+      "type": "array"
+    },
+    "consequence": {
+      "title": "Consequence",
+      "type": "string"
+    },
+    "document_version_id": {
+      "format": "uuid",
+      "title": "Document Version Id",
+      "type": "string"
+    },
+    "entry_id": {
+      "minLength": 1,
+      "title": "Entry Id",
+      "type": "string"
+    },
+    "exceptions": {
+      "items": {
+        "discriminator": {
+          "mapping": {
+            "all": "#/$defs/All",
+            "any": "#/$defs/Any",
+            "constant": "#/$defs/Constant",
+            "eq": "#/$defs/Eq",
+            "gt": "#/$defs/Gt",
+            "gte": "#/$defs/Gte",
+            "in": "#/$defs/In",
+            "lt": "#/$defs/Lt",
+            "lte": "#/$defs/Lte",
+            "not": "#/$defs/Not"
+          },
+          "propertyName": "op"
+        },
+        "oneOf": [
+          {
+            "$ref": "#/$defs/Eq"
+          },
+          {
+            "$ref": "#/$defs/In"
+          },
+          {
+            "$ref": "#/$defs/Lt"
+          },
+          {
+            "$ref": "#/$defs/Lte"
+          },
+          {
+            "$ref": "#/$defs/Gt"
+          },
+          {
+            "$ref": "#/$defs/Gte"
+          },
+          {
+            "$ref": "#/$defs/All"
+          },
+          {
+            "$ref": "#/$defs/Any"
+          },
+          {
+            "$ref": "#/$defs/Not"
+          },
+          {
+            "$ref": "#/$defs/Constant"
+          }
+        ]
+      },
+      "title": "Exceptions",
+      "type": "array"
+    },
+    "id": {
+      "format": "uuid",
+      "title": "Id",
+      "type": "string"
+    },
+    "predecessor_id": {
+      "anyOf": [
+        {
+          "format": "uuid",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Predecessor Id"
+    },
+    "project_id": {
+      "format": "uuid",
+      "title": "Project Id",
+      "type": "string"
+    },
+    "review_state": {
+      "enum": [
+        "draft",
+        "accepted",
+        "rejected"
+      ],
+      "title": "Review State",
+      "type": "string"
+    },
+    "reviewer_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Reviewer Id"
+    },
+    "target": {
+      "discriminator": {
+        "mapping": {
+          "all": "#/$defs/All",
+          "any": "#/$defs/Any",
+          "constant": "#/$defs/Constant",
+          "eq": "#/$defs/Eq",
+          "gt": "#/$defs/Gt",
+          "gte": "#/$defs/Gte",
+          "in": "#/$defs/In",
+          "lt": "#/$defs/Lt",
+          "lte": "#/$defs/Lte",
+          "not": "#/$defs/Not"
+        },
+        "propertyName": "op"
+      },
+      "oneOf": [
+        {
+          "$ref": "#/$defs/Eq"
+        },
+        {
+          "$ref": "#/$defs/In"
+        },
+        {
+          "$ref": "#/$defs/Lt"
+        },
+        {
+          "$ref": "#/$defs/Lte"
+        },
+        {
+          "$ref": "#/$defs/Gt"
+        },
+        {
+          "$ref": "#/$defs/Gte"
+        },
+        {
+          "$ref": "#/$defs/All"
+        },
+        {
+          "$ref": "#/$defs/Any"
+        },
+        {
+          "$ref": "#/$defs/Not"
+        },
+        {
+          "$ref": "#/$defs/Constant"
+        }
+      ],
+      "title": "Target"
+    },
+    "trigger": {
+      "discriminator": {
+        "mapping": {
+          "all": "#/$defs/All",
+          "any": "#/$defs/Any",
+          "constant": "#/$defs/Constant",
+          "eq": "#/$defs/Eq",
+          "gt": "#/$defs/Gt",
+          "gte": "#/$defs/Gte",
+          "in": "#/$defs/In",
+          "lt": "#/$defs/Lt",
+          "lte": "#/$defs/Lte",
+          "not": "#/$defs/Not"
+        },
+        "propertyName": "op"
+      },
+      "oneOf": [
+        {
+          "$ref": "#/$defs/Eq"
+        },
+        {
+          "$ref": "#/$defs/In"
+        },
+        {
+          "$ref": "#/$defs/Lt"
+        },
+        {
+          "$ref": "#/$defs/Lte"
+        },
+        {
+          "$ref": "#/$defs/Gt"
+        },
+        {
+          "$ref": "#/$defs/Gte"
+        },
+        {
+          "$ref": "#/$defs/All"
+        },
+        {
+          "$ref": "#/$defs/Any"
+        },
+        {
+          "$ref": "#/$defs/Not"
+        },
+        {
+          "$ref": "#/$defs/Constant"
+        }
+      ],
+      "title": "Trigger"
+    },
+    "workaround_documentation": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Workaround Documentation"
+    },
+    "workaround_restrictions": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Workaround Restrictions"
+    }
+  },
+  "required": [
+    "id",
+    "project_id",
+    "document_version_id",
+    "entry_id",
+    "review_state",
+    "target",
+    "trigger",
+    "exceptions",
+    "consequence",
+    "anchors"
+  ],
+  "title": "RuleVersion",
+  "type": "object"
+}

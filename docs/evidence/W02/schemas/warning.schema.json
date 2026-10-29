@@ -1,0 +1,63 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "anchor_ids": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Anchor Ids",
+      "type": "array"
+    },
+    "code": {
+      "minLength": 1,
+      "title": "Code",
+      "type": "string"
+    },
+    "fact_ids": {
+      "default": [],
+      "items": {
+        "format": "uuid",
+        "type": "string"
+      },
+      "title": "Fact Ids",
+      "type": "array"
+    },
+    "message": {
+      "minLength": 1,
+      "title": "Message",
+      "type": "string"
+    },
+    "rule_version_id": {
+      "anyOf": [
+        {
+          "format": "uuid",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Rule Version Id"
+    },
+    "selector": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Selector"
+    }
+  },
+  "required": [
+    "code",
+    "message"
+  ],
+  "title": "Warning",
+  "type": "object"
+}

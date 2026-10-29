@@ -1,0 +1,751 @@
+{
+  "$defs": {
+    "BooleanValue": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "boolean",
+          "default": "boolean",
+          "title": "Kind",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "BooleanValue",
+      "type": "object"
+    },
+    "Contradiction": {
+      "additionalProperties": false,
+      "properties": {
+        "fact_ids": {
+          "items": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "title": "Fact Ids",
+          "type": "array"
+        },
+        "selector": {
+          "minLength": 1,
+          "title": "Selector",
+          "type": "string"
+        },
+        "value_reprs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Value Reprs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "selector",
+        "fact_ids",
+        "value_reprs"
+      ],
+      "title": "Contradiction",
+      "type": "object"
+    },
+    "CoverageSummary": {
+      "additionalProperties": false,
+      "properties": {
+        "assessed_count": {
+          "minimum": 0,
+          "title": "Assessed Count",
+          "type": "integer"
+        },
+        "discovered_count": {
+          "minimum": 0,
+          "title": "Discovered Count",
+          "type": "integer"
+        },
+        "failed_count": {
+          "minimum": 0,
+          "title": "Failed Count",
+          "type": "integer"
+        },
+        "inventory_complete": {
+          "title": "Inventory Complete",
+          "type": "boolean"
+        },
+        "notes": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Notes",
+          "type": "array"
+        },
+        "reviewed_count": {
+          "minimum": 0,
+          "title": "Reviewed Count",
+          "type": "integer"
+        },
+        "selected_entries": {
+          "items": {
+            "$ref": "#/$defs/EntryKey"
+          },
+          "title": "Selected Entries",
+          "type": "array"
+        },
+        "supported_count": {
+          "minimum": 0,
+          "title": "Supported Count",
+          "type": "integer"
+        },
+        "unsupported_count": {
+          "minimum": 0,
+          "title": "Unsupported Count",
+          "type": "integer"
+        },
+        "unsupported_entries": {
+          "items": {
+            "$ref": "#/$defs/EntryKey"
+          },
+          "title": "Unsupported Entries",
+          "type": "array"
+        }
+      },
+      "required": [
+        "inventory_complete",
+        "selected_entries",
+        "unsupported_entries",
+        "discovered_count",
+        "supported_count",
+        "reviewed_count",
+        "assessed_count",
+        "failed_count",
+        "unsupported_count"
+      ],
+      "title": "CoverageSummary",
+      "type": "object"
+    },
+    "Dependency": {
+      "additionalProperties": false,
+      "properties": {
+        "scope": {
+          "$ref": "#/$defs/EvaluationScope"
+        },
+        "selector": {
+          "minLength": 1,
+          "title": "Selector",
+          "type": "string"
+        }
+      },
+      "required": [
+        "scope",
+        "selector"
+      ],
+      "title": "Dependency",
+      "type": "object"
+    },
+    "EntryKey": {
+      "additionalProperties": false,
+      "properties": {
+        "document_version_id": {
+          "format": "uuid",
+          "title": "Document Version Id",
+          "type": "string"
+        },
+        "entry_id": {
+          "minLength": 1,
+          "title": "Entry Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "document_version_id",
+        "entry_id"
+      ],
+      "title": "EntryKey",
+      "type": "object"
+    },
+    "EvaluationScope": {
+      "additionalProperties": false,
+      "properties": {
+        "firmware_build_id": {
+          "format": "uuid",
+          "title": "Firmware Build Id",
+          "type": "string"
+        },
+        "operating_profile_id": {
+          "format": "uuid",
+          "title": "Operating Profile Id",
+          "type": "string"
+        },
+        "project_id": {
+          "format": "uuid",
+          "title": "Project Id",
+          "type": "string"
+        },
+        "snapshot_id": {
+          "format": "uuid",
+          "title": "Snapshot Id",
+          "type": "string"
+        },
+        "subject_id": {
+          "format": "uuid",
+          "title": "Subject Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "project_id",
+        "snapshot_id",
+        "subject_id",
+        "firmware_build_id",
+        "operating_profile_id"
+      ],
+      "title": "EvaluationScope",
+      "type": "object"
+    },
+    "IntegerValue": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "integer",
+          "default": "integer",
+          "title": "Kind",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "IntegerValue",
+      "type": "object"
+    },
+    "NodeTrace": {
+      "additionalProperties": false,
+      "properties": {
+        "anchor_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Anchor Ids",
+          "type": "array"
+        },
+        "children": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/NodeTrace"
+          },
+          "title": "Children",
+          "type": "array"
+        },
+        "conflict": {
+          "default": false,
+          "title": "Conflict",
+          "type": "boolean"
+        },
+        "constant_value": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Constant Value"
+        },
+        "fact_ids": {
+          "default": [],
+          "items": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "title": "Fact Ids",
+          "type": "array"
+        },
+        "missing": {
+          "default": false,
+          "title": "Missing",
+          "type": "boolean"
+        },
+        "op": {
+          "minLength": 1,
+          "title": "Op",
+          "type": "string"
+        },
+        "path": {
+          "minLength": 1,
+          "title": "Path",
+          "type": "string"
+        },
+        "resolved_value": {
+          "anyOf": [
+            {
+              "discriminator": {
+                "mapping": {
+                  "boolean": "#/$defs/BooleanValue",
+                  "integer": "#/$defs/IntegerValue",
+                  "quantity": "#/$defs/QuantityValue",
+                  "text": "#/$defs/TextValue"
+                },
+                "propertyName": "kind"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/TextValue"
+                },
+                {
+                  "$ref": "#/$defs/BooleanValue"
+                },
+                {
+                  "$ref": "#/$defs/IntegerValue"
+                },
+                {
+                  "$ref": "#/$defs/QuantityValue"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Resolved Value"
+        },
+        "result": {
+          "enum": [
+            "true",
+            "false",
+            "unknown"
+          ],
+          "title": "Result",
+          "type": "string"
+        },
+        "selector": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Selector"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "discriminator": {
+                "mapping": {
+                  "boolean": "#/$defs/BooleanValue",
+                  "integer": "#/$defs/IntegerValue",
+                  "quantity": "#/$defs/QuantityValue",
+                  "text": "#/$defs/TextValue"
+                },
+                "propertyName": "kind"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/TextValue"
+                },
+                {
+                  "$ref": "#/$defs/BooleanValue"
+                },
+                {
+                  "$ref": "#/$defs/IntegerValue"
+                },
+                {
+                  "$ref": "#/$defs/QuantityValue"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "values": {
+          "anyOf": [
+            {
+              "items": {
+                "discriminator": {
+                  "mapping": {
+                    "boolean": "#/$defs/BooleanValue",
+                    "integer": "#/$defs/IntegerValue",
+                    "quantity": "#/$defs/QuantityValue",
+                    "text": "#/$defs/TextValue"
+                  },
+                  "propertyName": "kind"
+                },
+                "oneOf": [
+                  {
+                    "$ref": "#/$defs/TextValue"
+                  },
+                  {
+                    "$ref": "#/$defs/BooleanValue"
+                  },
+                  {
+                    "$ref": "#/$defs/IntegerValue"
+                  },
+                  {
+                    "$ref": "#/$defs/QuantityValue"
+                  }
+                ]
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Values"
+        },
+        "warning_codes": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Warning Codes",
+          "type": "array"
+        }
+      },
+      "required": [
+        "path",
+        "op",
+        "result"
+      ],
+      "title": "NodeTrace",
+      "type": "object"
+    },
+    "QuantityValue": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "quantity",
+          "default": "quantity",
+          "title": "Kind",
+          "type": "string"
+        },
+        "unit": {
+          "title": "Unit",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "unit"
+      ],
+      "title": "QuantityValue",
+      "type": "object"
+    },
+    "RuleResult": {
+      "additionalProperties": false,
+      "properties": {
+        "applicability": {
+          "enum": [
+            "applicable",
+            "not_applicable",
+            "unknown"
+          ],
+          "title": "Applicability",
+          "type": "string"
+        },
+        "document_version_id": {
+          "format": "uuid",
+          "title": "Document Version Id",
+          "type": "string"
+        },
+        "entry_id": {
+          "minLength": 1,
+          "title": "Entry Id",
+          "type": "string"
+        },
+        "exception": {
+          "enum": [
+            "true",
+            "false",
+            "unknown"
+          ],
+          "title": "Exception",
+          "type": "string"
+        },
+        "exception_traces": {
+          "items": {
+            "$ref": "#/$defs/NodeTrace"
+          },
+          "title": "Exception Traces",
+          "type": "array"
+        },
+        "overall": {
+          "enum": [
+            "true",
+            "false",
+            "unknown"
+          ],
+          "title": "Overall",
+          "type": "string"
+        },
+        "rule_version_id": {
+          "format": "uuid",
+          "title": "Rule Version Id",
+          "type": "string"
+        },
+        "target": {
+          "enum": [
+            "true",
+            "false",
+            "unknown"
+          ],
+          "title": "Target",
+          "type": "string"
+        },
+        "target_trace": {
+          "$ref": "#/$defs/NodeTrace"
+        },
+        "trigger": {
+          "enum": [
+            "true",
+            "false",
+            "unknown"
+          ],
+          "title": "Trigger",
+          "type": "string"
+        },
+        "trigger_trace": {
+          "$ref": "#/$defs/NodeTrace"
+        }
+      },
+      "required": [
+        "rule_version_id",
+        "document_version_id",
+        "entry_id",
+        "target",
+        "trigger",
+        "exception",
+        "overall",
+        "applicability",
+        "target_trace",
+        "trigger_trace",
+        "exception_traces"
+      ],
+      "title": "RuleResult",
+      "type": "object"
+    },
+    "TextValue": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "text",
+          "default": "text",
+          "title": "Kind",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "TextValue",
+      "type": "object"
+    },
+    "Warning": {
+      "additionalProperties": false,
+      "properties": {
+        "anchor_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Anchor Ids",
+          "type": "array"
+        },
+        "code": {
+          "minLength": 1,
+          "title": "Code",
+          "type": "string"
+        },
+        "fact_ids": {
+          "default": [],
+          "items": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "title": "Fact Ids",
+          "type": "array"
+        },
+        "message": {
+          "minLength": 1,
+          "title": "Message",
+          "type": "string"
+        },
+        "rule_version_id": {
+          "anyOf": [
+            {
+              "format": "uuid",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rule Version Id"
+        },
+        "selector": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Selector"
+        }
+      },
+      "required": [
+        "code",
+        "message"
+      ],
+      "title": "Warning",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "contradictions": {
+      "items": {
+        "$ref": "#/$defs/Contradiction"
+      },
+      "title": "Contradictions",
+      "type": "array"
+    },
+    "coverage_manifest_id": {
+      "format": "uuid",
+      "title": "Coverage Manifest Id",
+      "type": "string"
+    },
+    "coverage_summary": {
+      "$ref": "#/$defs/CoverageSummary"
+    },
+    "evaluator_version": {
+      "const": "domain-v1",
+      "default": "domain-v1",
+      "title": "Evaluator Version",
+      "type": "string"
+    },
+    "fact_set_id": {
+      "format": "uuid",
+      "title": "Fact Set Id",
+      "type": "string"
+    },
+    "input_hash": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Input Hash",
+      "type": "string"
+    },
+    "missing_selectors": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Missing Selectors",
+      "type": "array"
+    },
+    "project_id": {
+      "format": "uuid",
+      "title": "Project Id",
+      "type": "string"
+    },
+    "result_hash": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Result Hash",
+      "type": "string"
+    },
+    "rule_version_ids": {
+      "items": {
+        "format": "uuid",
+        "type": "string"
+      },
+      "title": "Rule Version Ids",
+      "type": "array"
+    },
+    "rules": {
+      "items": {
+        "$ref": "#/$defs/RuleResult"
+      },
+      "title": "Rules",
+      "type": "array"
+    },
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "scope": {
+      "$ref": "#/$defs/EvaluationScope"
+    },
+    "selector_dependencies": {
+      "items": {
+        "$ref": "#/$defs/Dependency"
+      },
+      "title": "Selector Dependencies",
+      "type": "array"
+    },
+    "snapshot_id": {
+      "format": "uuid",
+      "title": "Snapshot Id",
+      "type": "string"
+    },
+    "source_baseline_id": {
+      "format": "uuid",
+      "title": "Source Baseline Id",
+      "type": "string"
+    },
+    "warnings": {
+      "items": {
+        "$ref": "#/$defs/Warning"
+      },
+      "title": "Warnings",
+      "type": "array"
+    }
+  },
+  "required": [
+    "project_id",
+    "scope",
+    "snapshot_id",
+    "fact_set_id",
+    "source_baseline_id",
+    "coverage_manifest_id",
+    "rule_version_ids",
+    "input_hash",
+    "result_hash",
+    "rules",
+    "selector_dependencies",
+    "missing_selectors",
+    "contradictions",
+    "warnings",
+    "coverage_summary"
+  ],
+  "title": "AssessmentResult",
+  "type": "object"
+}

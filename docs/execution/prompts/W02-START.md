@@ -1,3 +1,7 @@
+> Historical W02 assignment; W02 is accepted. Current dispatch: [W03](W03-START.md).
+
+> Historical attempt-01 prompt. Current dispatch is [W02 repair 01, attempt 02](W02-REPAIR-01.md); do not rerun this initial assignment.
+
 # Exact DeepSeek prompt — W02 revision 2
 
 **READY_TO_DISPATCH:** W01/P0 accepted, including actual live G4/G5 and semantic review. Use the freshly bound W02 baseline.

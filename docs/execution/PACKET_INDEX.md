@@ -1,6 +1,6 @@
 # Packet index and dependency map
 
-Revision 6. W01/P0 accepted. W02 revision 2 is READY_TO_DISPATCH against the fresh accepted baseline. [Acceptance](reviews/W01-review-06.md), [status](STATUS.md).
+Revision 8. W01/P0 and W02/P1 accepted. [W03 revision 2](packets/W03-persistence-jobs.md) is ready against its bound local foundation contract. [Status](STATUS.md).
 
 | Packet | Deliverable | Prerequisite acceptance | Phase coverage |
 |---|---|---|---|

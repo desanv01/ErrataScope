@@ -1,6 +1,6 @@
 # P2 — Persistent foundation and thin deployment
 
-Phase specification revision 1. **Implementation status: NOT_STARTED.** Codex owns phase acceptance.
+Phase specification revision 1. **Implementation status: READY — W03 revision 2 local backend scope bound; worker not started. Hosted/UI exit conditions remain open.** Codex owns phase acceptance.
 
 Implementation packet(s): [W03](../packets/W03-persistence-jobs.md), [W09](../packets/W09-evaluation-production.md).
 

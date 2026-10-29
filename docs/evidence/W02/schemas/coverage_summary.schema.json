@@ -1,0 +1,97 @@
+{
+  "$defs": {
+    "EntryKey": {
+      "additionalProperties": false,
+      "properties": {
+        "document_version_id": {
+          "format": "uuid",
+          "title": "Document Version Id",
+          "type": "string"
+        },
+        "entry_id": {
+          "minLength": 1,
+          "title": "Entry Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "document_version_id",
+        "entry_id"
+      ],
+      "title": "EntryKey",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "assessed_count": {
+      "minimum": 0,
+      "title": "Assessed Count",
+      "type": "integer"
+    },
+    "discovered_count": {
+      "minimum": 0,
+      "title": "Discovered Count",
+      "type": "integer"
+    },
+    "failed_count": {
+      "minimum": 0,
+      "title": "Failed Count",
+      "type": "integer"
+    },
+    "inventory_complete": {
+      "title": "Inventory Complete",
+      "type": "boolean"
+    },
+    "notes": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Notes",
+      "type": "array"
+    },
+    "reviewed_count": {
+      "minimum": 0,
+      "title": "Reviewed Count",
+      "type": "integer"
+    },
+    "selected_entries": {
+      "items": {
+        "$ref": "#/$defs/EntryKey"
+      },
+      "title": "Selected Entries",
+      "type": "array"
+    },
+    "supported_count": {
+      "minimum": 0,
+      "title": "Supported Count",
+      "type": "integer"
+    },
+    "unsupported_count": {
+      "minimum": 0,
+      "title": "Unsupported Count",
+      "type": "integer"
+    },
+    "unsupported_entries": {
+      "items": {
+        "$ref": "#/$defs/EntryKey"
+      },
+      "title": "Unsupported Entries",
+      "type": "array"
+    }
+  },
+  "required": [
+    "inventory_complete",
+    "selected_entries",
+    "unsupported_entries",
+    "discovered_count",
+    "supported_count",
+    "reviewed_count",
+    "assessed_count",
+    "failed_count",
+    "unsupported_count"
+  ],
+  "title": "CoverageSummary",
+  "type": "object"
+}

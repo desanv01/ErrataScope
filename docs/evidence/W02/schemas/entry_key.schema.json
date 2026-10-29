@@ -1,0 +1,21 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "document_version_id": {
+      "format": "uuid",
+      "title": "Document Version Id",
+      "type": "string"
+    },
+    "entry_id": {
+      "minLength": 1,
+      "title": "Entry Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "document_version_id",
+    "entry_id"
+  ],
+  "title": "EntryKey",
+  "type": "object"
+}

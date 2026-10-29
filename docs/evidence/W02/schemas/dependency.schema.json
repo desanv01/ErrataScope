@@ -1,0 +1,60 @@
+{
+  "$defs": {
+    "EvaluationScope": {
+      "additionalProperties": false,
+      "properties": {
+        "firmware_build_id": {
+          "format": "uuid",
+          "title": "Firmware Build Id",
+          "type": "string"
+        },
+        "operating_profile_id": {
+          "format": "uuid",
+          "title": "Operating Profile Id",
+          "type": "string"
+        },
+        "project_id": {
+          "format": "uuid",
+          "title": "Project Id",
+          "type": "string"
+        },
+        "snapshot_id": {
+          "format": "uuid",
+          "title": "Snapshot Id",
+          "type": "string"
+        },
+        "subject_id": {
+          "format": "uuid",
+          "title": "Subject Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "project_id",
+        "snapshot_id",
+        "subject_id",
+        "firmware_build_id",
+        "operating_profile_id"
+      ],
+      "title": "EvaluationScope",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "scope": {
+      "$ref": "#/$defs/EvaluationScope"
+    },
+    "selector": {
+      "minLength": 1,
+      "title": "Selector",
+      "type": "string"
+    }
+  },
+  "required": [
+    "scope",
+    "selector"
+  ],
+  "title": "Dependency",
+  "type": "object"
+}

@@ -1,0 +1,335 @@
+{
+  "anchors": [
+    {
+      "anchor_id": "synth-erratum:p00:000",
+      "bbox": null,
+      "document_sha256": "12f5308d8d5d0f76d12ff479992ac9a9deac304e4d3e3c1b8acd8ca36c2a12c3",
+      "document_version_id": "00000000-0000-0000-0000-000000000002",
+      "geometry_kind": "synthetic_not_located",
+      "page_height_pt": null,
+      "page_index": 0,
+      "page_rotation": 0,
+      "page_width_pt": null,
+      "parser_name": "synthetic-fixture",
+      "parser_version": "1",
+      "printed_page_label": null,
+      "section": "1",
+      "text": "Synthetic anchor text for a bounded errata condition."
+    },
+    {
+      "anchor_id": "synth-erratum:p00:001",
+      "bbox": null,
+      "document_sha256": "12f5308d8d5d0f76d12ff479992ac9a9deac304e4d3e3c1b8acd8ca36c2a12c3",
+      "document_version_id": "00000000-0000-0000-0000-000000000002",
+      "geometry_kind": "synthetic_not_located",
+      "page_height_pt": null,
+      "page_index": 0,
+      "page_rotation": 0,
+      "page_width_pt": null,
+      "parser_name": "synthetic-fixture",
+      "parser_version": "1",
+      "printed_page_label": null,
+      "section": "1",
+      "text": "Second synthetic anchor for release-b workaround text."
+    }
+  ],
+  "coverage": {
+    "assessed": [
+      {
+        "document_version_id": "00000000-0000-0000-0000-000000000002",
+        "entry_id": "1.1"
+      }
+    ],
+    "discovered": [
+      {
+        "document_version_id": "00000000-0000-0000-0000-000000000002",
+        "entry_id": "1.1"
+      }
+    ],
+    "document_version_ids": [
+      "00000000-0000-0000-0000-000000000002"
+    ],
+    "failed": [],
+    "id": "00000000-0000-0000-0000-000000000005",
+    "inventory_complete": true,
+    "notes": [],
+    "project_id": "00000000-0000-0000-0000-000000000001",
+    "reviewed": [
+      {
+        "document_version_id": "00000000-0000-0000-0000-000000000002",
+        "entry_id": "1.1"
+      }
+    ],
+    "selected": [
+      {
+        "document_version_id": "00000000-0000-0000-0000-000000000002",
+        "entry_id": "1.1"
+      }
+    ],
+    "supported": [
+      {
+        "document_version_id": "00000000-0000-0000-0000-000000000002",
+        "entry_id": "1.1"
+      }
+    ],
+    "unsupported": []
+  },
+  "documents": [
+    {
+      "authority": "synthetic",
+      "document_id": "SYNTH-ERRATA-1",
+      "document_sha256": "12f5308d8d5d0f76d12ff479992ac9a9deac304e4d3e3c1b8acd8ca36c2a12c3",
+      "id": "00000000-0000-0000-0000-000000000002",
+      "manufacturer": null,
+      "predecessor_id": null,
+      "project_id": "00000000-0000-0000-0000-000000000001",
+      "revision": "Rev A",
+      "source_url": null,
+      "synthetic": true
+    }
+  ],
+  "evaluator_version": "domain-v1",
+  "fact_set": {
+    "content_hash": "d03b99466ea3e78780144e8f59b6bab964dec63f6db667386dd188f7ac8522a2",
+    "fact_versions": [
+      {
+        "evidence_refs": [
+          "synth-erratum:p00:000"
+        ],
+        "id": "00000000-0000-0000-0000-0000000003e9",
+        "origin": "declared",
+        "predecessor_id": null,
+        "review_state": "accepted",
+        "scope": {
+          "firmware_build_id": "00000000-0000-0000-0000-000000000009",
+          "operating_profile_id": "00000000-0000-0000-0000-00000000000a",
+          "project_id": "00000000-0000-0000-0000-000000000001",
+          "snapshot_id": "00000000-0000-0000-0000-000000000008",
+          "subject_id": "00000000-0000-0000-0000-000000000007"
+        },
+        "selector": "component.silicon_revision",
+        "value": {
+          "kind": "text",
+          "value": "B"
+        }
+      },
+      {
+        "evidence_refs": [
+          "synth-erratum:p00:000"
+        ],
+        "id": "00000000-0000-0000-0000-0000000003ea",
+        "origin": "declared",
+        "predecessor_id": null,
+        "review_state": "accepted",
+        "scope": {
+          "firmware_build_id": "00000000-0000-0000-0000-000000000009",
+          "operating_profile_id": "00000000-0000-0000-0000-00000000000a",
+          "project_id": "00000000-0000-0000-0000-000000000001",
+          "snapshot_id": "00000000-0000-0000-0000-000000000008",
+          "subject_id": "00000000-0000-0000-0000-000000000007"
+        },
+        "selector": "operating.external_reset_used",
+        "value": {
+          "kind": "boolean",
+          "value": true
+        }
+      },
+      {
+        "evidence_refs": [
+          "synth-erratum:p00:000"
+        ],
+        "id": "00000000-0000-0000-0000-0000000003eb",
+        "origin": "declared",
+        "predecessor_id": null,
+        "review_state": "accepted",
+        "scope": {
+          "firmware_build_id": "00000000-0000-0000-0000-000000000009",
+          "operating_profile_id": "00000000-0000-0000-0000-00000000000a",
+          "project_id": "00000000-0000-0000-0000-000000000001",
+          "snapshot_id": "00000000-0000-0000-0000-000000000008",
+          "subject_id": "00000000-0000-0000-0000-000000000007"
+        },
+        "selector": "operating.reset_pulse_ns",
+        "value": {
+          "kind": "quantity",
+          "unit": "ns",
+          "value": "10"
+        }
+      },
+      {
+        "evidence_refs": [
+          "synth-erratum:p00:000"
+        ],
+        "id": "00000000-0000-0000-0000-0000000003ec",
+        "origin": "declared",
+        "predecessor_id": null,
+        "review_state": "accepted",
+        "scope": {
+          "firmware_build_id": "00000000-0000-0000-0000-000000000009",
+          "operating_profile_id": "00000000-0000-0000-0000-00000000000a",
+          "project_id": "00000000-0000-0000-0000-000000000001",
+          "snapshot_id": "00000000-0000-0000-0000-000000000008",
+          "subject_id": "00000000-0000-0000-0000-000000000007"
+        },
+        "selector": "firmware.initial_software_reset",
+        "value": {
+          "kind": "boolean",
+          "value": false
+        }
+      },
+      {
+        "evidence_refs": [
+          "synth-erratum:p00:001"
+        ],
+        "id": "00000000-0000-0000-0000-0000000003ed",
+        "origin": "declared",
+        "predecessor_id": null,
+        "review_state": "accepted",
+        "scope": {
+          "firmware_build_id": "00000000-0000-0000-0000-000000000009",
+          "operating_profile_id": "00000000-0000-0000-0000-00000000000a",
+          "project_id": "00000000-0000-0000-0000-000000000001",
+          "snapshot_id": "00000000-0000-0000-0000-000000000008",
+          "subject_id": "00000000-0000-0000-0000-000000000011"
+        },
+        "selector": "operating.reset_pulse_ns",
+        "value": {
+          "kind": "quantity",
+          "unit": "ns",
+          "value": "100"
+        }
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000004",
+    "project_id": "00000000-0000-0000-0000-000000000001"
+  },
+  "project_id": "00000000-0000-0000-0000-000000000001",
+  "rules": [
+    {
+      "anchors": [
+        "synth-erratum:p00:000"
+      ],
+      "consequence": "Synthetic condition consequence for test purposes.",
+      "document_version_id": "00000000-0000-0000-0000-000000000002",
+      "entry_id": "1.1",
+      "exceptions": [
+        {
+          "anchor_ids": [
+            "synth-erratum:p00:000"
+          ],
+          "op": "eq",
+          "selector": "firmware.initial_software_reset",
+          "value": {
+            "kind": "boolean",
+            "value": true
+          }
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000003",
+      "predecessor_id": null,
+      "project_id": "00000000-0000-0000-0000-000000000001",
+      "review_state": "accepted",
+      "reviewer_id": "synthetic-reviewer",
+      "target": {
+        "anchor_ids": [
+          "synth-erratum:p00:000"
+        ],
+        "op": "eq",
+        "selector": "component.silicon_revision",
+        "value": {
+          "kind": "text",
+          "value": "B"
+        }
+      },
+      "trigger": {
+        "children": [
+          {
+            "anchor_ids": [
+              "synth-erratum:p00:000"
+            ],
+            "op": "eq",
+            "selector": "operating.external_reset_used",
+            "value": {
+              "kind": "boolean",
+              "value": true
+            }
+          },
+          {
+            "anchor_ids": [
+              "synth-erratum:p00:000"
+            ],
+            "op": "lt",
+            "selector": "operating.reset_pulse_ns",
+            "value": {
+              "kind": "quantity",
+              "unit": "ns",
+              "value": "20"
+            }
+          }
+        ],
+        "op": "all"
+      },
+      "workaround_documentation": null,
+      "workaround_restrictions": null
+    }
+  ],
+  "schema_version": 1,
+  "scope": {
+    "firmware_build_id": "00000000-0000-0000-0000-000000000009",
+    "operating_profile_id": "00000000-0000-0000-0000-00000000000a",
+    "project_id": "00000000-0000-0000-0000-000000000001",
+    "snapshot_id": "00000000-0000-0000-0000-000000000008",
+    "subject_id": "00000000-0000-0000-0000-000000000007"
+  },
+  "snapshot": {
+    "board_revision": "A",
+    "component_instances": [
+      {
+        "id": "00000000-0000-0000-0000-000000000007",
+        "identity": {
+          "evidence_refs": [
+            "synth-erratum:p00:000"
+          ],
+          "exact_part": "SYNTH-1",
+          "family": "SYNTH-FAMILY",
+          "manufacturer": "SYNTH",
+          "package": "SYNTH-PKG",
+          "silicon_revision": "B"
+        },
+        "project_id": "00000000-0000-0000-0000-000000000001"
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000011",
+        "identity": {
+          "evidence_refs": [
+            "synth-erratum:p00:000"
+          ],
+          "exact_part": "SYNTH-1",
+          "family": "SYNTH-FAMILY",
+          "manufacturer": "SYNTH",
+          "package": "SYNTH-PKG",
+          "silicon_revision": "A"
+        },
+        "project_id": "00000000-0000-0000-0000-000000000001"
+      }
+    ],
+    "content_hash": "cbafd6a35df627cfaef33502482845b917cec6fb1ae928da00a1b41d00a89e99",
+    "firmware_build_id": "00000000-0000-0000-0000-000000000009",
+    "id": "00000000-0000-0000-0000-000000000008",
+    "operating_profile_id": "00000000-0000-0000-0000-00000000000a",
+    "predecessor_id": null,
+    "product_name": "Synthetic W02 board",
+    "project_id": "00000000-0000-0000-0000-000000000001"
+  },
+  "source_baseline": {
+    "coverage_manifest_id": "00000000-0000-0000-0000-000000000005",
+    "document_version_ids": [
+      "00000000-0000-0000-0000-000000000002"
+    ],
+    "id": "00000000-0000-0000-0000-000000000006",
+    "project_id": "00000000-0000-0000-0000-000000000001",
+    "rule_version_ids": [
+      "00000000-0000-0000-0000-000000000003"
+    ]
+  }
+}

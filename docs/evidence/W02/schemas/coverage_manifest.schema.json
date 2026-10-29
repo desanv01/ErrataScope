@@ -1,0 +1,122 @@
+{
+  "$defs": {
+    "EntryKey": {
+      "additionalProperties": false,
+      "properties": {
+        "document_version_id": {
+          "format": "uuid",
+          "title": "Document Version Id",
+          "type": "string"
+        },
+        "entry_id": {
+          "minLength": 1,
+          "title": "Entry Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "document_version_id",
+        "entry_id"
+      ],
+      "title": "EntryKey",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "assessed": {
+      "items": {
+        "$ref": "#/$defs/EntryKey"
+      },
+      "title": "Assessed",
+      "type": "array"
+    },
+    "discovered": {
+      "items": {
+        "$ref": "#/$defs/EntryKey"
+      },
+      "title": "Discovered",
+      "type": "array"
+    },
+    "document_version_ids": {
+      "items": {
+        "format": "uuid",
+        "type": "string"
+      },
+      "title": "Document Version Ids",
+      "type": "array"
+    },
+    "failed": {
+      "items": {
+        "$ref": "#/$defs/EntryKey"
+      },
+      "title": "Failed",
+      "type": "array"
+    },
+    "id": {
+      "format": "uuid",
+      "title": "Id",
+      "type": "string"
+    },
+    "inventory_complete": {
+      "title": "Inventory Complete",
+      "type": "boolean"
+    },
+    "notes": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Notes",
+      "type": "array"
+    },
+    "project_id": {
+      "format": "uuid",
+      "title": "Project Id",
+      "type": "string"
+    },
+    "reviewed": {
+      "items": {
+        "$ref": "#/$defs/EntryKey"
+      },
+      "title": "Reviewed",
+      "type": "array"
+    },
+    "selected": {
+      "items": {
+        "$ref": "#/$defs/EntryKey"
+      },
+      "title": "Selected",
+      "type": "array"
+    },
+    "supported": {
+      "items": {
+        "$ref": "#/$defs/EntryKey"
+      },
+      "title": "Supported",
+      "type": "array"
+    },
+    "unsupported": {
+      "items": {
+        "$ref": "#/$defs/EntryKey"
+      },
+      "title": "Unsupported",
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "project_id",
+    "document_version_ids",
+    "inventory_complete",
+    "discovered",
+    "supported",
+    "reviewed",
+    "assessed",
+    "failed",
+    "unsupported",
+    "selected"
+  ],
+  "title": "CoverageManifest",
+  "type": "object"
+}

@@ -12,9 +12,9 @@ Authority: direct human instruction > current Codex-issued packet revision and e
 
 ## Current dispatch
 
-**W02 revision 2, worker attempt 01 is READY_TO_DISPATCH.** W01/P0 accepted under [review 06](reviews/W01-review-06.md). Use [the W02 prompt](prompts/W02-START.md), [packet](packets/W02-domain-core.md), [binding](bindings/W02-domain-v1.md) and [fresh baseline](baselines/W02-baseline.json). W02 is fully offline; do not rerun historical W01 live commands or read credentials.
+**W03 revision 2, attempt 01 is READY_TO_DISPATCH.** W01/P0 and W02/P1 are accepted. Use [W03 prompt](prompts/W03-START.md), [packet](packets/W03-persistence-jobs.md), [binding](bindings/W03-foundation-v1.md) and [protected baseline](baselines/W03-baseline.json). W03 is local backend foundation with real PostgreSQL/Valkey integration; no Nebius key or provider call.
 
-[Git/GitHub checkpoint](reviews/W01-git-checkpoint.md) records the accepted work. [UI/imagegen approval](UI_APPROVAL_GATE.md) remains pending.
+[W02 checkpoint](reviews/W02-git-checkpoint.md) records the publication procedure. [UI/imagegen approval](UI_APPROVAL_GATE.md) and hosted P2 validation remain pending.
 
 ## Reading and execution sequence
 

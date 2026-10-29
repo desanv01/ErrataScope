@@ -1,0 +1,4 @@
+# W02 domain runtime pins.
+# Nothing was installed for W02; these are the exact pre-existing pins used.
+python==3.11.15
+pydantic==2.14.1

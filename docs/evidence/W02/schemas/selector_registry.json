@@ -1,0 +1,136 @@
+{
+  "component.exact_part": {
+    "description": "Exact manufacturer part number.",
+    "kind": "text",
+    "operators": [
+      "eq",
+      "in"
+    ],
+    "supports_ordering": false,
+    "unit": null
+  },
+  "component.family": {
+    "description": "Component family identity.",
+    "kind": "text",
+    "operators": [
+      "eq",
+      "in"
+    ],
+    "supports_ordering": false,
+    "unit": null
+  },
+  "component.manufacturer": {
+    "description": "Component manufacturer identity.",
+    "kind": "text",
+    "operators": [
+      "eq",
+      "in"
+    ],
+    "supports_ordering": false,
+    "unit": null
+  },
+  "component.package": {
+    "description": "Package identity.",
+    "kind": "text",
+    "operators": [
+      "eq",
+      "in"
+    ],
+    "supports_ordering": false,
+    "unit": null
+  },
+  "component.silicon_revision": {
+    "description": "Silicon revision identity.",
+    "kind": "text",
+    "operators": [
+      "eq",
+      "in"
+    ],
+    "supports_ordering": false,
+    "unit": null
+  },
+  "firmware.initial_software_reset": {
+    "description": "Initial software reset performed.",
+    "kind": "boolean",
+    "operators": [
+      "eq"
+    ],
+    "supports_ordering": false,
+    "unit": null
+  },
+  "firmware.revision_id_value": {
+    "description": "Revision identifier register value.",
+    "kind": "integer",
+    "operators": [
+      "eq",
+      "in",
+      "lt",
+      "lte",
+      "gt",
+      "gte"
+    ],
+    "supports_ordering": true,
+    "unit": null
+  },
+  "operating.clock_hz": {
+    "description": "Operating clock rate in hertz.",
+    "kind": "quantity",
+    "operators": [
+      "eq",
+      "lt",
+      "lte",
+      "gt",
+      "gte"
+    ],
+    "supports_ordering": true,
+    "unit": "Hz"
+  },
+  "operating.external_reset_used": {
+    "description": "External reset input used.",
+    "kind": "boolean",
+    "operators": [
+      "eq"
+    ],
+    "supports_ordering": false,
+    "unit": null
+  },
+  "operating.reset_pulse_ns": {
+    "description": "Reset pulse width in nanoseconds.",
+    "kind": "quantity",
+    "operators": [
+      "eq",
+      "lt",
+      "lte",
+      "gt",
+      "gte"
+    ],
+    "supports_ordering": true,
+    "unit": "ns"
+  },
+  "operating.supply_voltage_v": {
+    "description": "Supply voltage in volts.",
+    "kind": "quantity",
+    "operators": [
+      "eq",
+      "lt",
+      "lte",
+      "gt",
+      "gte"
+    ],
+    "supports_ordering": true,
+    "unit": "V"
+  },
+  "operating.temperature_c": {
+    "description": "Operating temperature in degrees Celsius.",
+    "kind": "quantity",
+    "operators": [
+      "eq",
+      "lt",
+      "lte",
+      "gt",
+      "gte"
+    ],
+    "supports_ordering": true,
+    "unit": "degC"
+  }
+}

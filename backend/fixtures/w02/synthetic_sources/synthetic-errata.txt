@@ -1,0 +1,5 @@
+SYNTHETIC FIXTURE — NOT A MANUFACTURER DOCUMENT
+Original text authored for W02 deterministic-domain tests.
+Entry 1.1: a synthetic condition applies when external reset is used and the
+reset pulse is shorter than 20 ns on silicon revision B, unless an initial
+software reset has been performed.

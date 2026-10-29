@@ -1,0 +1,1756 @@
+{
+  "$defs": {
+    "All": {
+      "additionalProperties": false,
+      "properties": {
+        "children": {
+          "items": {
+            "discriminator": {
+              "mapping": {
+                "all": "#/$defs/All",
+                "any": "#/$defs/Any",
+                "constant": "#/$defs/Constant",
+                "eq": "#/$defs/Eq",
+                "gt": "#/$defs/Gt",
+                "gte": "#/$defs/Gte",
+                "in": "#/$defs/In",
+                "lt": "#/$defs/Lt",
+                "lte": "#/$defs/Lte",
+                "not": "#/$defs/Not"
+              },
+              "propertyName": "op"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/$defs/Eq"
+              },
+              {
+                "$ref": "#/$defs/In"
+              },
+              {
+                "$ref": "#/$defs/Lt"
+              },
+              {
+                "$ref": "#/$defs/Lte"
+              },
+              {
+                "$ref": "#/$defs/Gt"
+              },
+              {
+                "$ref": "#/$defs/Gte"
+              },
+              {
+                "$ref": "#/$defs/All"
+              },
+              {
+                "$ref": "#/$defs/Any"
+              },
+              {
+                "$ref": "#/$defs/Not"
+              },
+              {
+                "$ref": "#/$defs/Constant"
+              }
+            ]
+          },
+          "title": "Children",
+          "type": "array"
+        },
+        "op": {
+          "const": "all",
+          "default": "all",
+          "title": "Op",
+          "type": "string"
+        }
+      },
+      "required": [
+        "children"
+      ],
+      "title": "All",
+      "type": "object"
+    },
+    "Any": {
+      "additionalProperties": false,
+      "properties": {
+        "children": {
+          "items": {
+            "discriminator": {
+              "mapping": {
+                "all": "#/$defs/All",
+                "any": "#/$defs/Any",
+                "constant": "#/$defs/Constant",
+                "eq": "#/$defs/Eq",
+                "gt": "#/$defs/Gt",
+                "gte": "#/$defs/Gte",
+                "in": "#/$defs/In",
+                "lt": "#/$defs/Lt",
+                "lte": "#/$defs/Lte",
+                "not": "#/$defs/Not"
+              },
+              "propertyName": "op"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/$defs/Eq"
+              },
+              {
+                "$ref": "#/$defs/In"
+              },
+              {
+                "$ref": "#/$defs/Lt"
+              },
+              {
+                "$ref": "#/$defs/Lte"
+              },
+              {
+                "$ref": "#/$defs/Gt"
+              },
+              {
+                "$ref": "#/$defs/Gte"
+              },
+              {
+                "$ref": "#/$defs/All"
+              },
+              {
+                "$ref": "#/$defs/Any"
+              },
+              {
+                "$ref": "#/$defs/Not"
+              },
+              {
+                "$ref": "#/$defs/Constant"
+              }
+            ]
+          },
+          "title": "Children",
+          "type": "array"
+        },
+        "op": {
+          "const": "any",
+          "default": "any",
+          "title": "Op",
+          "type": "string"
+        }
+      },
+      "required": [
+        "children"
+      ],
+      "title": "Any",
+      "type": "object"
+    },
+    "BooleanValue": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "boolean",
+          "default": "boolean",
+          "title": "Kind",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "BooleanValue",
+      "type": "object"
+    },
+    "ComponentIdentity": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_refs": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "exact_part": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Exact Part"
+        },
+        "family": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Family"
+        },
+        "manufacturer": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Manufacturer"
+        },
+        "package": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Package"
+        },
+        "silicon_revision": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Silicon Revision"
+        }
+      },
+      "required": [
+        "manufacturer",
+        "exact_part",
+        "family",
+        "package",
+        "silicon_revision"
+      ],
+      "title": "ComponentIdentity",
+      "type": "object"
+    },
+    "ComponentInstance": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "format": "uuid",
+          "title": "Id",
+          "type": "string"
+        },
+        "identity": {
+          "$ref": "#/$defs/ComponentIdentity"
+        },
+        "project_id": {
+          "format": "uuid",
+          "title": "Project Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "project_id",
+        "identity"
+      ],
+      "title": "ComponentInstance",
+      "type": "object"
+    },
+    "Constant": {
+      "additionalProperties": false,
+      "properties": {
+        "anchor_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Anchor Ids",
+          "type": "array"
+        },
+        "op": {
+          "const": "constant",
+          "default": "constant",
+          "title": "Op",
+          "type": "string"
+        },
+        "review_rationale": {
+          "title": "Review Rationale",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "value",
+        "anchor_ids",
+        "review_rationale"
+      ],
+      "title": "Constant",
+      "type": "object"
+    },
+    "CoverageManifest": {
+      "additionalProperties": false,
+      "properties": {
+        "assessed": {
+          "items": {
+            "$ref": "#/$defs/EntryKey"
+          },
+          "title": "Assessed",
+          "type": "array"
+        },
+        "discovered": {
+          "items": {
+            "$ref": "#/$defs/EntryKey"
+          },
+          "title": "Discovered",
+          "type": "array"
+        },
+        "document_version_ids": {
+          "items": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "title": "Document Version Ids",
+          "type": "array"
+        },
+        "failed": {
+          "items": {
+            "$ref": "#/$defs/EntryKey"
+          },
+          "title": "Failed",
+          "type": "array"
+        },
+        "id": {
+          "format": "uuid",
+          "title": "Id",
+          "type": "string"
+        },
+        "inventory_complete": {
+          "title": "Inventory Complete",
+          "type": "boolean"
+        },
+        "notes": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Notes",
+          "type": "array"
+        },
+        "project_id": {
+          "format": "uuid",
+          "title": "Project Id",
+          "type": "string"
+        },
+        "reviewed": {
+          "items": {
+            "$ref": "#/$defs/EntryKey"
+          },
+          "title": "Reviewed",
+          "type": "array"
+        },
+        "selected": {
+          "items": {
+            "$ref": "#/$defs/EntryKey"
+          },
+          "title": "Selected",
+          "type": "array"
+        },
+        "supported": {
+          "items": {
+            "$ref": "#/$defs/EntryKey"
+          },
+          "title": "Supported",
+          "type": "array"
+        },
+        "unsupported": {
+          "items": {
+            "$ref": "#/$defs/EntryKey"
+          },
+          "title": "Unsupported",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "project_id",
+        "document_version_ids",
+        "inventory_complete",
+        "discovered",
+        "supported",
+        "reviewed",
+        "assessed",
+        "failed",
+        "unsupported",
+        "selected"
+      ],
+      "title": "CoverageManifest",
+      "type": "object"
+    },
+    "DocumentVersion": {
+      "additionalProperties": false,
+      "properties": {
+        "authority": {
+          "enum": [
+            "manufacturer",
+            "forum",
+            "synthetic"
+          ],
+          "title": "Authority",
+          "type": "string"
+        },
+        "document_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Document Id"
+        },
+        "document_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Document Sha256",
+          "type": "string"
+        },
+        "id": {
+          "format": "uuid",
+          "title": "Id",
+          "type": "string"
+        },
+        "manufacturer": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Manufacturer"
+        },
+        "predecessor_id": {
+          "anyOf": [
+            {
+              "format": "uuid",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Predecessor Id"
+        },
+        "project_id": {
+          "format": "uuid",
+          "title": "Project Id",
+          "type": "string"
+        },
+        "revision": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Revision"
+        },
+        "source_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Url"
+        },
+        "synthetic": {
+          "title": "Synthetic",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "project_id",
+        "document_sha256",
+        "authority",
+        "synthetic"
+      ],
+      "title": "DocumentVersion",
+      "type": "object"
+    },
+    "EntryKey": {
+      "additionalProperties": false,
+      "properties": {
+        "document_version_id": {
+          "format": "uuid",
+          "title": "Document Version Id",
+          "type": "string"
+        },
+        "entry_id": {
+          "minLength": 1,
+          "title": "Entry Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "document_version_id",
+        "entry_id"
+      ],
+      "title": "EntryKey",
+      "type": "object"
+    },
+    "Eq": {
+      "additionalProperties": false,
+      "properties": {
+        "anchor_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Anchor Ids",
+          "type": "array"
+        },
+        "op": {
+          "const": "eq",
+          "default": "eq",
+          "title": "Op",
+          "type": "string"
+        },
+        "selector": {
+          "title": "Selector",
+          "type": "string"
+        },
+        "value": {
+          "discriminator": {
+            "mapping": {
+              "boolean": "#/$defs/BooleanValue",
+              "integer": "#/$defs/IntegerValue",
+              "quantity": "#/$defs/QuantityValue",
+              "text": "#/$defs/TextValue"
+            },
+            "propertyName": "kind"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/TextValue"
+            },
+            {
+              "$ref": "#/$defs/BooleanValue"
+            },
+            {
+              "$ref": "#/$defs/IntegerValue"
+            },
+            {
+              "$ref": "#/$defs/QuantityValue"
+            }
+          ],
+          "title": "Value"
+        }
+      },
+      "required": [
+        "anchor_ids",
+        "selector",
+        "value"
+      ],
+      "title": "Eq",
+      "type": "object"
+    },
+    "EvaluationScope": {
+      "additionalProperties": false,
+      "properties": {
+        "firmware_build_id": {
+          "format": "uuid",
+          "title": "Firmware Build Id",
+          "type": "string"
+        },
+        "operating_profile_id": {
+          "format": "uuid",
+          "title": "Operating Profile Id",
+          "type": "string"
+        },
+        "project_id": {
+          "format": "uuid",
+          "title": "Project Id",
+          "type": "string"
+        },
+        "snapshot_id": {
+          "format": "uuid",
+          "title": "Snapshot Id",
+          "type": "string"
+        },
+        "subject_id": {
+          "format": "uuid",
+          "title": "Subject Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "project_id",
+        "snapshot_id",
+        "subject_id",
+        "firmware_build_id",
+        "operating_profile_id"
+      ],
+      "title": "EvaluationScope",
+      "type": "object"
+    },
+    "FactSet": {
+      "additionalProperties": false,
+      "properties": {
+        "content_hash": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Content Hash",
+          "type": "string"
+        },
+        "fact_versions": {
+          "items": {
+            "$ref": "#/$defs/FactVersion"
+          },
+          "title": "Fact Versions",
+          "type": "array"
+        },
+        "id": {
+          "format": "uuid",
+          "title": "Id",
+          "type": "string"
+        },
+        "project_id": {
+          "format": "uuid",
+          "title": "Project Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "project_id",
+        "fact_versions",
+        "content_hash"
+      ],
+      "title": "FactSet",
+      "type": "object"
+    },
+    "FactVersion": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_refs": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "id": {
+          "format": "uuid",
+          "title": "Id",
+          "type": "string"
+        },
+        "origin": {
+          "enum": [
+            "declared",
+            "extracted",
+            "measured",
+            "external"
+          ],
+          "title": "Origin",
+          "type": "string"
+        },
+        "predecessor_id": {
+          "anyOf": [
+            {
+              "format": "uuid",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Predecessor Id"
+        },
+        "review_state": {
+          "enum": [
+            "draft",
+            "accepted",
+            "rejected"
+          ],
+          "title": "Review State",
+          "type": "string"
+        },
+        "scope": {
+          "$ref": "#/$defs/EvaluationScope"
+        },
+        "selector": {
+          "minLength": 1,
+          "title": "Selector",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "discriminator": {
+                "mapping": {
+                  "boolean": "#/$defs/BooleanValue",
+                  "integer": "#/$defs/IntegerValue",
+                  "quantity": "#/$defs/QuantityValue",
+                  "text": "#/$defs/TextValue"
+                },
+                "propertyName": "kind"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/TextValue"
+                },
+                {
+                  "$ref": "#/$defs/BooleanValue"
+                },
+                {
+                  "$ref": "#/$defs/IntegerValue"
+                },
+                {
+                  "$ref": "#/$defs/QuantityValue"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Value"
+        }
+      },
+      "required": [
+        "id",
+        "scope",
+        "selector",
+        "value",
+        "origin",
+        "review_state"
+      ],
+      "title": "FactVersion",
+      "type": "object"
+    },
+    "Gt": {
+      "additionalProperties": false,
+      "properties": {
+        "anchor_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Anchor Ids",
+          "type": "array"
+        },
+        "op": {
+          "const": "gt",
+          "default": "gt",
+          "title": "Op",
+          "type": "string"
+        },
+        "selector": {
+          "title": "Selector",
+          "type": "string"
+        },
+        "value": {
+          "discriminator": {
+            "mapping": {
+              "boolean": "#/$defs/BooleanValue",
+              "integer": "#/$defs/IntegerValue",
+              "quantity": "#/$defs/QuantityValue",
+              "text": "#/$defs/TextValue"
+            },
+            "propertyName": "kind"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/TextValue"
+            },
+            {
+              "$ref": "#/$defs/BooleanValue"
+            },
+            {
+              "$ref": "#/$defs/IntegerValue"
+            },
+            {
+              "$ref": "#/$defs/QuantityValue"
+            }
+          ],
+          "title": "Value"
+        }
+      },
+      "required": [
+        "anchor_ids",
+        "selector",
+        "value"
+      ],
+      "title": "Gt",
+      "type": "object"
+    },
+    "Gte": {
+      "additionalProperties": false,
+      "properties": {
+        "anchor_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Anchor Ids",
+          "type": "array"
+        },
+        "op": {
+          "const": "gte",
+          "default": "gte",
+          "title": "Op",
+          "type": "string"
+        },
+        "selector": {
+          "title": "Selector",
+          "type": "string"
+        },
+        "value": {
+          "discriminator": {
+            "mapping": {
+              "boolean": "#/$defs/BooleanValue",
+              "integer": "#/$defs/IntegerValue",
+              "quantity": "#/$defs/QuantityValue",
+              "text": "#/$defs/TextValue"
+            },
+            "propertyName": "kind"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/TextValue"
+            },
+            {
+              "$ref": "#/$defs/BooleanValue"
+            },
+            {
+              "$ref": "#/$defs/IntegerValue"
+            },
+            {
+              "$ref": "#/$defs/QuantityValue"
+            }
+          ],
+          "title": "Value"
+        }
+      },
+      "required": [
+        "anchor_ids",
+        "selector",
+        "value"
+      ],
+      "title": "Gte",
+      "type": "object"
+    },
+    "In": {
+      "additionalProperties": false,
+      "properties": {
+        "anchor_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Anchor Ids",
+          "type": "array"
+        },
+        "op": {
+          "const": "in",
+          "default": "in",
+          "title": "Op",
+          "type": "string"
+        },
+        "selector": {
+          "title": "Selector",
+          "type": "string"
+        },
+        "values": {
+          "items": {
+            "discriminator": {
+              "mapping": {
+                "boolean": "#/$defs/BooleanValue",
+                "integer": "#/$defs/IntegerValue",
+                "quantity": "#/$defs/QuantityValue",
+                "text": "#/$defs/TextValue"
+              },
+              "propertyName": "kind"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/$defs/TextValue"
+              },
+              {
+                "$ref": "#/$defs/BooleanValue"
+              },
+              {
+                "$ref": "#/$defs/IntegerValue"
+              },
+              {
+                "$ref": "#/$defs/QuantityValue"
+              }
+            ]
+          },
+          "title": "Values",
+          "type": "array"
+        }
+      },
+      "required": [
+        "anchor_ids",
+        "selector",
+        "values"
+      ],
+      "title": "In",
+      "type": "object"
+    },
+    "IntegerValue": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "integer",
+          "default": "integer",
+          "title": "Kind",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "IntegerValue",
+      "type": "object"
+    },
+    "Lt": {
+      "additionalProperties": false,
+      "properties": {
+        "anchor_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Anchor Ids",
+          "type": "array"
+        },
+        "op": {
+          "const": "lt",
+          "default": "lt",
+          "title": "Op",
+          "type": "string"
+        },
+        "selector": {
+          "title": "Selector",
+          "type": "string"
+        },
+        "value": {
+          "discriminator": {
+            "mapping": {
+              "boolean": "#/$defs/BooleanValue",
+              "integer": "#/$defs/IntegerValue",
+              "quantity": "#/$defs/QuantityValue",
+              "text": "#/$defs/TextValue"
+            },
+            "propertyName": "kind"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/TextValue"
+            },
+            {
+              "$ref": "#/$defs/BooleanValue"
+            },
+            {
+              "$ref": "#/$defs/IntegerValue"
+            },
+            {
+              "$ref": "#/$defs/QuantityValue"
+            }
+          ],
+          "title": "Value"
+        }
+      },
+      "required": [
+        "anchor_ids",
+        "selector",
+        "value"
+      ],
+      "title": "Lt",
+      "type": "object"
+    },
+    "Lte": {
+      "additionalProperties": false,
+      "properties": {
+        "anchor_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Anchor Ids",
+          "type": "array"
+        },
+        "op": {
+          "const": "lte",
+          "default": "lte",
+          "title": "Op",
+          "type": "string"
+        },
+        "selector": {
+          "title": "Selector",
+          "type": "string"
+        },
+        "value": {
+          "discriminator": {
+            "mapping": {
+              "boolean": "#/$defs/BooleanValue",
+              "integer": "#/$defs/IntegerValue",
+              "quantity": "#/$defs/QuantityValue",
+              "text": "#/$defs/TextValue"
+            },
+            "propertyName": "kind"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/TextValue"
+            },
+            {
+              "$ref": "#/$defs/BooleanValue"
+            },
+            {
+              "$ref": "#/$defs/IntegerValue"
+            },
+            {
+              "$ref": "#/$defs/QuantityValue"
+            }
+          ],
+          "title": "Value"
+        }
+      },
+      "required": [
+        "anchor_ids",
+        "selector",
+        "value"
+      ],
+      "title": "Lte",
+      "type": "object"
+    },
+    "Not": {
+      "additionalProperties": false,
+      "properties": {
+        "child": {
+          "discriminator": {
+            "mapping": {
+              "all": "#/$defs/All",
+              "any": "#/$defs/Any",
+              "constant": "#/$defs/Constant",
+              "eq": "#/$defs/Eq",
+              "gt": "#/$defs/Gt",
+              "gte": "#/$defs/Gte",
+              "in": "#/$defs/In",
+              "lt": "#/$defs/Lt",
+              "lte": "#/$defs/Lte",
+              "not": "#/$defs/Not"
+            },
+            "propertyName": "op"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/Eq"
+            },
+            {
+              "$ref": "#/$defs/In"
+            },
+            {
+              "$ref": "#/$defs/Lt"
+            },
+            {
+              "$ref": "#/$defs/Lte"
+            },
+            {
+              "$ref": "#/$defs/Gt"
+            },
+            {
+              "$ref": "#/$defs/Gte"
+            },
+            {
+              "$ref": "#/$defs/All"
+            },
+            {
+              "$ref": "#/$defs/Any"
+            },
+            {
+              "$ref": "#/$defs/Not"
+            },
+            {
+              "$ref": "#/$defs/Constant"
+            }
+          ],
+          "title": "Child"
+        },
+        "op": {
+          "const": "not",
+          "default": "not",
+          "title": "Op",
+          "type": "string"
+        }
+      },
+      "required": [
+        "child"
+      ],
+      "title": "Not",
+      "type": "object"
+    },
+    "ProductSnapshot": {
+      "additionalProperties": false,
+      "properties": {
+        "board_revision": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Board Revision"
+        },
+        "component_instances": {
+          "items": {
+            "$ref": "#/$defs/ComponentInstance"
+          },
+          "minItems": 1,
+          "title": "Component Instances",
+          "type": "array"
+        },
+        "content_hash": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Content Hash",
+          "type": "string"
+        },
+        "firmware_build_id": {
+          "format": "uuid",
+          "title": "Firmware Build Id",
+          "type": "string"
+        },
+        "id": {
+          "format": "uuid",
+          "title": "Id",
+          "type": "string"
+        },
+        "operating_profile_id": {
+          "format": "uuid",
+          "title": "Operating Profile Id",
+          "type": "string"
+        },
+        "predecessor_id": {
+          "anyOf": [
+            {
+              "format": "uuid",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Predecessor Id"
+        },
+        "product_name": {
+          "minLength": 1,
+          "title": "Product Name",
+          "type": "string"
+        },
+        "project_id": {
+          "format": "uuid",
+          "title": "Project Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "project_id",
+        "product_name",
+        "firmware_build_id",
+        "operating_profile_id",
+        "component_instances",
+        "content_hash"
+      ],
+      "title": "ProductSnapshot",
+      "type": "object"
+    },
+    "QuantityValue": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "quantity",
+          "default": "quantity",
+          "title": "Kind",
+          "type": "string"
+        },
+        "unit": {
+          "title": "Unit",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "unit"
+      ],
+      "title": "QuantityValue",
+      "type": "object"
+    },
+    "RuleVersion": {
+      "additionalProperties": false,
+      "properties": {
+        "anchors": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Anchors",
+          "type": "array"
+        },
+        "consequence": {
+          "title": "Consequence",
+          "type": "string"
+        },
+        "document_version_id": {
+          "format": "uuid",
+          "title": "Document Version Id",
+          "type": "string"
+        },
+        "entry_id": {
+          "minLength": 1,
+          "title": "Entry Id",
+          "type": "string"
+        },
+        "exceptions": {
+          "items": {
+            "discriminator": {
+              "mapping": {
+                "all": "#/$defs/All",
+                "any": "#/$defs/Any",
+                "constant": "#/$defs/Constant",
+                "eq": "#/$defs/Eq",
+                "gt": "#/$defs/Gt",
+                "gte": "#/$defs/Gte",
+                "in": "#/$defs/In",
+                "lt": "#/$defs/Lt",
+                "lte": "#/$defs/Lte",
+                "not": "#/$defs/Not"
+              },
+              "propertyName": "op"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/$defs/Eq"
+              },
+              {
+                "$ref": "#/$defs/In"
+              },
+              {
+                "$ref": "#/$defs/Lt"
+              },
+              {
+                "$ref": "#/$defs/Lte"
+              },
+              {
+                "$ref": "#/$defs/Gt"
+              },
+              {
+                "$ref": "#/$defs/Gte"
+              },
+              {
+                "$ref": "#/$defs/All"
+              },
+              {
+                "$ref": "#/$defs/Any"
+              },
+              {
+                "$ref": "#/$defs/Not"
+              },
+              {
+                "$ref": "#/$defs/Constant"
+              }
+            ]
+          },
+          "title": "Exceptions",
+          "type": "array"
+        },
+        "id": {
+          "format": "uuid",
+          "title": "Id",
+          "type": "string"
+        },
+        "predecessor_id": {
+          "anyOf": [
+            {
+              "format": "uuid",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Predecessor Id"
+        },
+        "project_id": {
+          "format": "uuid",
+          "title": "Project Id",
+          "type": "string"
+        },
+        "review_state": {
+          "enum": [
+            "draft",
+            "accepted",
+            "rejected"
+          ],
+          "title": "Review State",
+          "type": "string"
+        },
+        "reviewer_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reviewer Id"
+        },
+        "target": {
+          "discriminator": {
+            "mapping": {
+              "all": "#/$defs/All",
+              "any": "#/$defs/Any",
+              "constant": "#/$defs/Constant",
+              "eq": "#/$defs/Eq",
+              "gt": "#/$defs/Gt",
+              "gte": "#/$defs/Gte",
+              "in": "#/$defs/In",
+              "lt": "#/$defs/Lt",
+              "lte": "#/$defs/Lte",
+              "not": "#/$defs/Not"
+            },
+            "propertyName": "op"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/Eq"
+            },
+            {
+              "$ref": "#/$defs/In"
+            },
+            {
+              "$ref": "#/$defs/Lt"
+            },
+            {
+              "$ref": "#/$defs/Lte"
+            },
+            {
+              "$ref": "#/$defs/Gt"
+            },
+            {
+              "$ref": "#/$defs/Gte"
+            },
+            {
+              "$ref": "#/$defs/All"
+            },
+            {
+              "$ref": "#/$defs/Any"
+            },
+            {
+              "$ref": "#/$defs/Not"
+            },
+            {
+              "$ref": "#/$defs/Constant"
+            }
+          ],
+          "title": "Target"
+        },
+        "trigger": {
+          "discriminator": {
+            "mapping": {
+              "all": "#/$defs/All",
+              "any": "#/$defs/Any",
+              "constant": "#/$defs/Constant",
+              "eq": "#/$defs/Eq",
+              "gt": "#/$defs/Gt",
+              "gte": "#/$defs/Gte",
+              "in": "#/$defs/In",
+              "lt": "#/$defs/Lt",
+              "lte": "#/$defs/Lte",
+              "not": "#/$defs/Not"
+            },
+            "propertyName": "op"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/Eq"
+            },
+            {
+              "$ref": "#/$defs/In"
+            },
+            {
+              "$ref": "#/$defs/Lt"
+            },
+            {
+              "$ref": "#/$defs/Lte"
+            },
+            {
+              "$ref": "#/$defs/Gt"
+            },
+            {
+              "$ref": "#/$defs/Gte"
+            },
+            {
+              "$ref": "#/$defs/All"
+            },
+            {
+              "$ref": "#/$defs/Any"
+            },
+            {
+              "$ref": "#/$defs/Not"
+            },
+            {
+              "$ref": "#/$defs/Constant"
+            }
+          ],
+          "title": "Trigger"
+        },
+        "workaround_documentation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Workaround Documentation"
+        },
+        "workaround_restrictions": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Workaround Restrictions"
+        }
+      },
+      "required": [
+        "id",
+        "project_id",
+        "document_version_id",
+        "entry_id",
+        "review_state",
+        "target",
+        "trigger",
+        "exceptions",
+        "consequence",
+        "anchors"
+      ],
+      "title": "RuleVersion",
+      "type": "object"
+    },
+    "SourceAnchor": {
+      "additionalProperties": false,
+      "properties": {
+        "anchor_id": {
+          "minLength": 1,
+          "title": "Anchor Id",
+          "type": "string"
+        },
+        "bbox": {
+          "anyOf": [
+            {
+              "maxItems": 4,
+              "minItems": 4,
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Bbox"
+        },
+        "document_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Document Sha256",
+          "type": "string"
+        },
+        "document_version_id": {
+          "format": "uuid",
+          "title": "Document Version Id",
+          "type": "string"
+        },
+        "geometry_kind": {
+          "enum": [
+            "located",
+            "synthetic_not_located"
+          ],
+          "title": "Geometry Kind",
+          "type": "string"
+        },
+        "page_height_pt": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Page Height Pt"
+        },
+        "page_index": {
+          "minimum": 0,
+          "title": "Page Index",
+          "type": "integer"
+        },
+        "page_rotation": {
+          "maximum": 359,
+          "minimum": 0,
+          "title": "Page Rotation",
+          "type": "integer"
+        },
+        "page_width_pt": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Page Width Pt"
+        },
+        "parser_name": {
+          "minLength": 1,
+          "title": "Parser Name",
+          "type": "string"
+        },
+        "parser_version": {
+          "minLength": 1,
+          "title": "Parser Version",
+          "type": "string"
+        },
+        "printed_page_label": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Printed Page Label"
+        },
+        "section": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Section"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "anchor_id",
+        "document_version_id",
+        "document_sha256",
+        "page_index",
+        "text",
+        "page_rotation",
+        "parser_name",
+        "parser_version",
+        "geometry_kind"
+      ],
+      "title": "SourceAnchor",
+      "type": "object"
+    },
+    "SourceBaseline": {
+      "additionalProperties": false,
+      "properties": {
+        "coverage_manifest_id": {
+          "format": "uuid",
+          "title": "Coverage Manifest Id",
+          "type": "string"
+        },
+        "document_version_ids": {
+          "items": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "title": "Document Version Ids",
+          "type": "array"
+        },
+        "id": {
+          "format": "uuid",
+          "title": "Id",
+          "type": "string"
+        },
+        "project_id": {
+          "format": "uuid",
+          "title": "Project Id",
+          "type": "string"
+        },
+        "rule_version_ids": {
+          "items": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "title": "Rule Version Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "project_id",
+        "document_version_ids",
+        "rule_version_ids",
+        "coverage_manifest_id"
+      ],
+      "title": "SourceBaseline",
+      "type": "object"
+    },
+    "TextValue": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "text",
+          "default": "text",
+          "title": "Kind",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "TextValue",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "anchors": {
+      "items": {
+        "$ref": "#/$defs/SourceAnchor"
+      },
+      "title": "Anchors",
+      "type": "array"
+    },
+    "coverage": {
+      "$ref": "#/$defs/CoverageManifest"
+    },
+    "documents": {
+      "items": {
+        "$ref": "#/$defs/DocumentVersion"
+      },
+      "title": "Documents",
+      "type": "array"
+    },
+    "evaluator_version": {
+      "const": "domain-v1",
+      "default": "domain-v1",
+      "title": "Evaluator Version",
+      "type": "string"
+    },
+    "fact_set": {
+      "$ref": "#/$defs/FactSet"
+    },
+    "project_id": {
+      "format": "uuid",
+      "title": "Project Id",
+      "type": "string"
+    },
+    "rules": {
+      "items": {
+        "$ref": "#/$defs/RuleVersion"
+      },
+      "title": "Rules",
+      "type": "array"
+    },
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "scope": {
+      "$ref": "#/$defs/EvaluationScope"
+    },
+    "snapshot": {
+      "$ref": "#/$defs/ProductSnapshot"
+    },
+    "source_baseline": {
+      "$ref": "#/$defs/SourceBaseline"
+    }
+  },
+  "required": [
+    "project_id",
+    "scope",
+    "snapshot",
+    "fact_set",
+    "source_baseline",
+    "documents",
+    "anchors",
+    "rules",
+    "coverage"
+  ],
+  "title": "AssessmentInputBundle",
+  "type": "object"
+}
