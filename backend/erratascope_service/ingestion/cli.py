@@ -1,4 +1,4 @@
-﻿"""W04 CLI: key presence, connected ingestion verification, evidence checks, OpenAPI."""
+"""W04 CLI: key presence, connected ingestion verification, evidence checks, OpenAPI."""
 
 from __future__ import annotations
 
@@ -235,29 +235,74 @@ def verify_ingestion(mode: str, case: str, output: str) -> int:
 
 
 def verify_evidence(path: str) -> int:
-    manifest = json.loads(Path(path).read_text(encoding="utf-8"))
-    errors = []
+    errors: list[str] = []
+    manifest: dict = {}
+    try:
+        manifest = json.loads(Path(path).read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        payload = {
+            "status": "fail",
+            "integrity_pass": False,
+            "gate_pass": False,
+            "errors": [f"malformed or unreadable manifest: {type(exc).__name__}"],
+            "gates": {},
+            "checked_utc": datetime.now(timezone.utc).isoformat(),
+        }
+        print(json.dumps(payload, indent=2, sort_keys=True))
+        return 2
+    if not isinstance(manifest, dict):
+        errors.append("manifest must be a JSON object")
+        manifest = {}
+    status = manifest.get("status")
+    if status != "pass":
+        errors.append(f"manifest status is {status!r}, not 'pass'")
     gates = manifest.get("gates")
     if not isinstance(gates, dict) or not gates:
         errors.append("manifest has no gates")
-    if manifest.get("status") not in ("pass", "partial", "blocked"):
-        errors.append("manifest status is not pass/partial/blocked")
-    for item in manifest.get("files", []):
-        try:
-            actual = hashlib.sha256(Path(item["path"]).read_bytes()).hexdigest()
-        except OSError:
-            errors.append(f"missing file {item['path']}")
+        gates = {}
+    for name, gate in gates.items():
+        if not isinstance(gate, dict) or gate.get("status") != "pass":
+            errors.append(f"gate {name!r} is not pass")
+    gate_pass = status == "pass" and bool(gates) and all(
+        isinstance(gate, dict) and gate.get("status") == "pass" for gate in gates.values()
+    )
+    files = manifest.get("files")
+    file_errors: list[str] = []
+    if not isinstance(files, list) or not files:
+        file_errors.append("manifest has no file bindings")
+        files = []
+    for item in files:
+        if not isinstance(item, dict):
+            file_errors.append("file binding is not an object")
             continue
-        if actual != item.get("sha256"):
-            errors.append(f"hash mismatch {item['path']}")
+        item_path = item.get("path")
+        expected = item.get("sha256")
+        if not isinstance(item_path, str) or not item_path:
+            file_errors.append("file binding has no path")
+            continue
+        if not isinstance(expected, str) or len(expected) != 64:
+            file_errors.append(f"file binding has invalid sha256: {item_path}")
+            continue
+        try:
+            actual = hashlib.sha256(Path(item_path).read_bytes()).hexdigest()
+        except OSError:
+            file_errors.append(f"missing file {item_path}")
+            continue
+        if actual != expected:
+            file_errors.append(f"hash mismatch {item_path}")
+    errors.extend(file_errors)
+    integrity_pass = not file_errors
     payload = {
-        "status": "pass" if not errors else "fail",
+        "status": "pass" if integrity_pass and gate_pass else "fail",
+        "integrity_pass": integrity_pass,
+        "gate_pass": gate_pass,
+        "note": "A manifest pass is not new live provider success or semantic acceptance.",
         "errors": errors,
         "gates": gates,
         "checked_utc": datetime.now(timezone.utc).isoformat(),
     }
     print(json.dumps(payload, indent=2, sort_keys=True))
-    return 0 if not errors else 2
+    return 0 if integrity_pass and gate_pass else 2
 
 
 def export_openapi(output: str) -> int:

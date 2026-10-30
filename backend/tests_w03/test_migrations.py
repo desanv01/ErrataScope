@@ -59,11 +59,12 @@ class MigrationUpgradeTests(unittest.TestCase):
             version = sessions.execute(
                 text("SELECT version_num FROM erratascope.alembic_version")
             ).scalar()
-            self.assertEqual(version, "0004_ingestion")
+            self.assertEqual(version, "0005_interpretation_review")
         finally:
             sessions.close()
 
 
 if __name__ == "__main__":
     unittest.main()
+
 

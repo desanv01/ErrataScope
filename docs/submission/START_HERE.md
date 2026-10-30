@@ -1,11 +1,9 @@
-# Deadline submission — start here
+# Submission release — start here
 
-The user-approved accelerated plan is active. W04 has stopped and been independently reviewed as PARTIAL. **Dispatch S01 revision 1 now** using [S01-START](S01-START.md) and [complete binding](S01_BINDING.md). Verify `python scripts/verify_submission_baseline.py --starting` first.
+**S01 local implementation ACCEPTED; public release incomplete.** Read [the independent review](S01-review-01.md) and [RELEASE_NEXT](RELEASE_NEXT.md).
 
-Chosen scope is the cited interpretation/review fallback: actual source, recorded live Nemotron draft, inspect citations/unknowns, persist explicit review/rejection, export and reproduce a local test build. Do not broaden selectors or deliver fake applicability.
+The source/citation/review/export workspace works with a recorded live NVIDIA/Nebius result and an original offline unknown-information example. A source-only clean install was tested with the pinned PDF explicitly supplied. Automatic vendor download timed out; document and use -PdfPath when needed. No new inference calls were made, and both historical budgets remain exhausted and intact.
 
-[W04 review](../execution/reviews/W04-review-01.md) records passing checks and consolidated corrections. [Approved design](ui/APPROVED_DESIGN_BRIEF.md) is activated; no further style approval needed. [Deadline plan](DEADLINE_PLAN.md) and [release kit](RELEASE_KIT.md) retain the 21:30 MYT feature freeze and 00:15 MYT submission target.
+No further DeepSeek implementation packet is required for this accepted scope. Do not dispatch the historical S01-START prompt or original W05–W10 chain. Full W04/P3 and hosted P2 remain unaccepted.
 
-W01 4/4 and W04 2/2 paid histories stay unchanged. S01 authorizes no inference calls. FullW04/P3 and hosted P2 are incomplete. Original W05–W10 remain deferred. Public publication of reviewed project work is authorized. Only one worker edits product code.
-
-Human next step: paste S01-START into DeepSeek. After the worker returns, paste its exact Codex review prompt. Implementation approval does not mean the submission has been sent.
+Next Codex task: inspect MajuPilot on the Desktop and produce the user's silent under-three-minute video using its HyperFrames workflow. Read [VIDEO_PREFERENCES](release/VIDEO_PREFERENCES.md); the exact next prompt and publishing/form steps are in RELEASE_NEXT. A video upload and actual Devpost confirmation are still required. Target 00:15 MYT before the 01:00 MYT deadline on 31 October 2026.

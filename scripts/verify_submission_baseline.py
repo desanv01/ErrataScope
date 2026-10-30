@@ -13,15 +13,18 @@ MANIFEST = ROOT / "docs/submission/S01-baseline.json"
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--starting", action="store_true")
+    parser.add_argument("--baseline", type=Path)
     args = parser.parse_args()
     try:
-        manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+        accepted = ROOT / "docs/submission/S01-accepted-baseline.json"
+        selected = (ROOT / args.baseline) if args.baseline else (accepted if accepted.exists() and not args.starting else MANIFEST)
+        manifest = json.loads(selected.read_text(encoding="utf-8"))
         if manifest.get("assignment") != "S01-revision-1" or manifest.get("schema_version") != 1:
             raise ValueError("unsupported submission baseline")
         records = list(manifest["protected_files"])
         if args.starting:
             records += manifest["starting_inventory"]
-        if not records or not manifest["protected_files"] or not manifest["starting_inventory"]:
+        if not records or not manifest["protected_files"] or (args.starting and not manifest["starting_inventory"]):
             raise ValueError("empty inventory")
         errors = []
         seen = set()
@@ -40,6 +43,7 @@ def main() -> int:
         if approval["decision"] != "Approve this direction":
             errors.append("visual approval missing")
         print(json.dumps({"status": "FAIL" if errors else "PASS", "assignment": manifest["assignment"],
+                          "baseline": str(selected.relative_to(ROOT)),
                           "mode": "starting" if args.starting else "protected", "checked": len(records),
                           "errors": errors}, indent=2))
         return 2 if errors else 0

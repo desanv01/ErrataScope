@@ -1,0 +1,18 @@
+{
+  "two_cases": true,
+  "recorded_live_citations": true,
+  "review_persisted_after_restart": true,
+  "real_source_hash": true,
+  "import_labeled_cached": true,
+  "actual_request_id": true,
+  "unrelated_user_denied": true,
+  "anonymous_denied": true,
+  "recorded_live_markdown": true,
+  "recorded_live_no_secret": true,
+  "synthetic_offline_citations": true,
+  "synthetic_identity_unknown": true,
+  "synthetic_unlocated": true,
+  "synthetic_offline_markdown": true,
+  "synthetic_offline_no_secret": true,
+  "unknown_api_json404": true
+}

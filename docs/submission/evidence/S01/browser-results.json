@@ -1,0 +1,102 @@
+{
+  "checks": {
+    "recorded_live_visible": {
+      "pass": true,
+      "detail": ""
+    },
+    "source_section_visible": {
+      "pass": true,
+      "detail": ""
+    },
+    "claims_visible": {
+      "pass": true,
+      "detail": ""
+    },
+    "unresolved_visible": {
+      "pass": true,
+      "detail": ""
+    },
+    "coverage_visible": {
+      "pass": true,
+      "detail": ""
+    },
+    "real_document_identity": {
+      "pass": true,
+      "detail": ""
+    },
+    "no_illustrative_page_12": {
+      "pass": true,
+      "detail": ""
+    },
+    "real_content_nrst": {
+      "pass": true,
+      "detail": ""
+    },
+    "selected_coverage_incomplete": {
+      "pass": true,
+      "detail": ""
+    },
+    "citation_selection_highlights_source": {
+      "pass": true,
+      "detail": ""
+    },
+    "synthetic_case_offered": {
+      "pass": true,
+      "detail": ""
+    },
+    "synthetic_label_visible": {
+      "pass": true,
+      "detail": ""
+    },
+    "synthetic_not_live": {
+      "pass": true,
+      "detail": ""
+    },
+    "api_live_draft_found": {
+      "pass": true,
+      "detail": ""
+    },
+    "review_recorded": {
+      "pass": true,
+      "detail": ""
+    },
+    "external_review_created": {
+      "pass": true,
+      "detail": ""
+    },
+    "stale_conflict_visible": {
+      "pass": true,
+      "detail": ""
+    },
+    "export_download": {
+      "pass": true,
+      "detail": ""
+    },
+    "export_contains_source": {
+      "pass": true,
+      "detail": ""
+    },
+    "export_no_secret": {
+      "pass": true,
+      "detail": ""
+    },
+    "narrow_no_horizontal_overflow": {
+      "pass": true,
+      "detail": "overflow=0"
+    },
+    "no_console_errors": {
+      "pass": true,
+      "detail": ""
+    }
+  },
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 409 (Conflict)"
+  ],
+  "downloads": {
+    "markdown": {
+      "suggested": "erratascope-review-075a2625.md",
+      "bytes": 8827
+    }
+  },
+  "status": "pass"
+}

@@ -10,6 +10,7 @@ import logging
 import os
 import time
 import uuid
+from pathlib import Path
 from contextlib import asynccontextmanager
 from datetime import datetime, timedelta, timezone
 from typing import Any, Callable
@@ -1287,10 +1288,34 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     from .ingestion.api import build_router
 
     app.include_router(build_router(settings, actor_dep, session_dep))
+    from .submission.api import build_router as build_submission_router
+
+    app.include_router(build_submission_router(settings, actor_dep, session_dep))
+
+    # Submission UI: registered routes win; unknown /api paths stay JSON 404.
+    from fastapi.staticfiles import StaticFiles
+
+    dist_candidates = (
+        Path("/app/frontend/dist"),
+        Path(__file__).resolve().parents[1] / "frontend" / "dist",
+        Path(__file__).resolve().parents[2] / "frontend" / "dist",
+    )
+    dist_dir = next((path for path in dist_candidates if path.is_dir()), None)
+    if dist_dir is not None:
+        @app.api_route(
+            "/api/{rest:path}",
+            methods=["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+            include_in_schema=False,
+        )
+        def unknown_api(rest: str):
+            return _error(404, "NOT_FOUND", "request failed", None, rest)
+
+        app.mount("/", StaticFiles(directory=str(dist_dir), html=True), name="submission-ui")
     return app
 
 
 app = create_app()
+
 
 
 

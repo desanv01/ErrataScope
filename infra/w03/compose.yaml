@@ -51,9 +51,12 @@ services:
     build:
       context: ../../backend
       dockerfile: ../infra/w03/Dockerfile
+      additional_contexts:
+        frontend: ../../frontend
     image: erratascope-w03-service:local
     environment:
       <<: *service_env
+      W03_DEV_AUTH_DIR: /local/dev-auth
     command: ["python", "-m", "uvicorn", "erratascope_service.api:app", "--host", "0.0.0.0", "--port", "8000"]
     depends_on:
       db:
@@ -65,6 +68,7 @@ services:
     volumes:
       - artifacts:/var/lib/erratascope/artifacts
       - ../../.local/w03/dev-auth/jwks.json:/run/dev-auth/jwks.json:ro
+      - ../../.local/w03/dev-auth/tokens.json:/local/dev-auth/tokens.json:ro
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health/ready', timeout=3)"]
       interval: 5s
@@ -78,6 +82,8 @@ services:
     build:
       context: ../../backend
       dockerfile: ../infra/w03/Dockerfile
+      additional_contexts:
+        frontend: ../../frontend
     environment:
       <<: *service_env
     command: ["python", "-m", "erratascope_service.cli", "worker"]
@@ -95,6 +101,8 @@ services:
     build:
       context: ../../backend
       dockerfile: ../infra/w03/Dockerfile
+      additional_contexts:
+        frontend: ../../frontend
     environment:
       <<: *service_env
     command: ["python", "-m", "erratascope_service.cli", "dispatcher"]
@@ -112,6 +120,8 @@ services:
     build:
       context: ../../backend
       dockerfile: ../infra/w03/Dockerfile
+      additional_contexts:
+        frontend: ../../frontend
     environment:
       <<: *service_env
       W03_MIGRATOR_DATABASE_URL: postgresql+psycopg://erratascope_migrator:dev_migrator_password@db:5432/erratascope
@@ -127,6 +137,8 @@ services:
     build:
       context: ../../backend
       dockerfile: ../infra/w03/Dockerfile
+      additional_contexts:
+        frontend: ../../frontend
     environment:
       <<: *service_env
       W03_DATABASE_URL: postgresql+psycopg://erratascope_app:dev_app_password@db:5432/erratascope_test
@@ -154,4 +166,5 @@ volumes:
   pgdata:
   artifacts:
   test_artifacts:
+
 

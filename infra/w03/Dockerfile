@@ -1,3 +1,10 @@
+# syntax=docker/dockerfile:1.7
+FROM node:24.14.1-bookworm-slim AS submission-ui
+WORKDIR /ui
+COPY --from=frontend /package.json /package-lock.json /vite.config.ts /tsconfig.json /index.html /ui/
+COPY --from=frontend /src /ui/src
+RUN npm ci --no-audit --no-fund && npm run build
+
 FROM python:3.11.15-slim-bookworm@sha256:d29f48a31a8b408ed19272ca1e7b10ebae13b240a27e862d3d4217c528e2e0c3
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
@@ -21,7 +28,9 @@ COPY alembic.ini /app/alembic.ini
 COPY tests /app/tests
 COPY tests_w03 /app/tests_w03
 COPY tests_w04 /app/tests_w04
+COPY tests_submission /app/tests_submission
 COPY fixtures /app/fixtures
+COPY --from=submission-ui /ui/dist /app/frontend/dist
 
 RUN useradd --create-home --uid 10001 appuser \
     && mkdir -p /var/lib/erratascope/artifacts /var/lib/erratascope/test-artifacts \

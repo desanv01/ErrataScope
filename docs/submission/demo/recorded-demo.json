@@ -1,0 +1,2425 @@
+{
+  "schema_version": 1,
+  "kind": "recorded_live_demo",
+  "recorded_label": "Recorded live Nemotron result",
+  "attribution": "ST ES0620 Rev 5 (STMicroelectronics); NVIDIA Nemotron via Nebius Token Factory; recorded from the bounded W04 history. Not a new live call.",
+  "generated_utc": "2026-10-30T11:31:42.934432+00:00",
+  "project_name": "S01 recorded live demonstration",
+  "source": {
+    "document_id": "ES0620",
+    "revision": "Rev 5",
+    "manufacturer": "STMicroelectronics",
+    "source_url": "https://www.st.com/resource/en/errata_sheet/es0620-stm32n6xxxx-device-errata-stmicroelectronics.pdf",
+    "published_at": null,
+    "authority": "manufacturer",
+    "synthetic": false,
+    "sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd",
+    "byte_length": 1674378
+  },
+  "selected_entries": [
+    "2.2.18",
+    "2.2.5"
+  ],
+  "coverage_summary": {
+    "status_counts": {
+      "supported": 2,
+      "discovered": 51
+    },
+    "inventory_note": "Digital-text headings followed by a Description label only; scanned/OCR content is not claimed.",
+    "detected_entries": 53,
+    "selected_entries": [
+      "2.2.18",
+      "2.2.5"
+    ],
+    "inventory_complete": false,
+    "supported_selected": 2
+  },
+  "anchors": [
+    {
+      "id": "a8285305-d603-4e84-a2b9-c2bce0b5b91a",
+      "anchor_key": "st-es0620:ctx-identity",
+      "page_index": 0,
+      "printed_page_label": null,
+      "section": null,
+      "section_title": null,
+      "block_role": "body",
+      "context_kind": "source_identity",
+      "geometry_kind": "located",
+      "text": "ES0620 - Rev 5 - August 2026 www.st.com",
+      "bbox": {
+        "top": 0.975272071544473,
+        "left": 0.07142575280630924,
+        "right": 0.9285655621413564,
+        "bottom": 0.9846415760581103
+      },
+      "bbox_original": {
+        "top": 821.0715799999999,
+        "left": 42.51801,
+        "unit": "pdf_points",
+        "right": 552.7524500000001,
+        "bottom": 828.95967,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "eca70a83-3820-4580-9c2f-d446462a1e1c",
+      "anchor_key": "st-es0620:ctx-legend--",
+      "page_index": 1,
+      "printed_page_label": "2",
+      "section": null,
+      "section_title": null,
+      "block_role": "body",
+      "context_kind": "status_legend",
+      "geometry_kind": "located",
+      "text": "- Limitation not applicable.",
+      "bbox": {
+        "top": 0.2438712493204424,
+        "left": 0.27722159564973287,
+        "right": 0.4802314181751402,
+        "bottom": 0.2533736809748857
+      },
+      "bbox_original": {
+        "top": 205.31270999999992,
+        "left": 165.02326,
+        "unit": "pdf_points",
+        "right": 285.87006,
+        "bottom": 213.31270999999992,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "13cba52a-00ce-4a65-b5ff-f63cdc48a9b6",
+      "anchor_key": "st-es0620:ctx-legend-A",
+      "page_index": 1,
+      "printed_page_label": "2",
+      "section": null,
+      "section_title": null,
+      "block_role": "body",
+      "context_kind": "status_legend",
+      "geometry_kind": "located",
+      "text": "A Limitation applicable. Workaround available",
+      "bbox": {
+        "top": 0.18946046820357487,
+        "left": 0.2719937653083497,
+        "right": 0.5912925748362989,
+        "bottom": 0.19896289985801818
+      },
+      "bbox_original": {
+        "top": 159.50482999999997,
+        "left": 161.91126,
+        "unit": "pdf_points",
+        "right": 351.98206,
+        "bottom": 167.50482999999997,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "d8feeee2-5426-4e2e-8fe5-7244bdf3b1c4",
+      "anchor_key": "st-es0620:ctx-legend-N",
+      "page_index": 1,
+      "printed_page_label": "2",
+      "section": null,
+      "section_title": null,
+      "block_role": "body",
+      "context_kind": "status_legend",
+      "geometry_kind": "located",
+      "text": "N Limitation applicable. No workaround available",
+      "bbox": {
+        "top": 0.20759739128318416,
+        "left": 0.2719937653083497,
+        "right": 0.609462309081929,
+        "bottom": 0.21709982293762747
+      },
+      "bbox_original": {
+        "top": 174.77411999999993,
+        "left": 161.91126,
+        "unit": "pdf_points",
+        "right": 362.79805999999996,
+        "bottom": 182.77411999999993,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "d21523d0-e65c-4de6-b08c-2f17fa24f7fd",
+      "anchor_key": "st-es0620:ctx-legend-P",
+      "page_index": 1,
+      "printed_page_label": "2",
+      "section": null,
+      "section_title": null,
+      "block_role": "body",
+      "context_kind": "status_legend",
+      "geometry_kind": "located",
+      "text": "P Limitation applicable. Partial workaround available",
+      "bbox": {
+        "top": 0.2257343143627936,
+        "left": 0.27273291869851957,
+        "right": 0.6303736304474619,
+        "bottom": 0.2352367460172369
+      },
+      "bbox_original": {
+        "top": 190.04341,
+        "left": 162.35126,
+        "unit": "pdf_points",
+        "right": 375.24606,
+        "bottom": 198.04341,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "270b38e3-1b82-40da-ac5e-b09064d1432c",
+      "anchor_key": "st-es0620:ctx-rev-B",
+      "page_index": 1,
+      "printed_page_label": "2",
+      "section": null,
+      "section_title": null,
+      "block_role": "table_header",
+      "context_kind": "revision_header",
+      "geometry_kind": "located",
+      "text": "Rev. B",
+      "bbox": {
+        "top": 0.40302482829788994,
+        "left": 0.8551489500754466,
+        "right": 0.8648520182154946,
+        "bottom": 0.41252725995233325
+      },
+      "bbox_original": {
+        "top": 339.30248000000006,
+        "left": 509.04933,
+        "unit": "pdf_points",
+        "right": 514.82533,
+        "bottom": 347.30248000000006,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "610c6c42-5b0f-40b8-ab24-b0c82ccdd46e",
+      "anchor_key": "st-es0620:ctx-rev-X",
+      "page_index": 1,
+      "printed_page_label": "2",
+      "section": null,
+      "section_title": null,
+      "block_role": "table_header",
+      "context_kind": "revision_header",
+      "geometry_kind": "located",
+      "text": "Rev. X",
+      "bbox": {
+        "top": 0.40302482829788994,
+        "left": 0.9012260589266857,
+        "right": 0.9101899736765638,
+        "bottom": 0.41252725995233325
+      },
+      "bbox_original": {
+        "top": 339.30248000000006,
+        "left": 536.47791,
+        "unit": "pdf_points",
+        "right": 541.81391,
+        "bottom": 347.30248000000006,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "ca70bc0e-aaa3-424d-b6d9-e6c19ca78fe8",
+      "anchor_key": "st-es0620:ctx-rev-Z",
+      "page_index": 1,
+      "printed_page_label": "2",
+      "section": null,
+      "section_title": null,
+      "block_role": "table_header",
+      "context_kind": "revision_header",
+      "geometry_kind": "located",
+      "text": "Rev. Z",
+      "bbox": {
+        "top": 0.40302482829788994,
+        "left": 0.8101872740867957,
+        "right": 0.8183985962939554,
+        "bottom": 0.41252725995233325
+      },
+      "bbox_original": {
+        "top": 339.30248000000006,
+        "left": 482.28473999999994,
+        "unit": "pdf_points",
+        "right": 487.1727399999999,
+        "bottom": 347.30248000000006,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "93b4fdc5-0c59-41e1-a509-6051ac2977d0",
+      "anchor_key": "st-es0620:p01:row-2-2-18",
+      "page_index": 1,
+      "printed_page_label": "2",
+      "section": "2.2.18",
+      "section_title": "Incorrect reset behavior when using NRST pin",
+      "block_role": "table_row",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "2.2.18 | Incorrect reset behavior when using NRST pin | Rev. Z=A | Rev. B=A | Rev. X=-",
+      "bbox": {
+        "top": 0.8761734924038808,
+        "left": 0.30037063670824216,
+        "right": 0.9079456352009572,
+        "bottom": 0.8856759240583241
+      },
+      "bbox_original": {
+        "top": 737.6415,
+        "left": 178.80331999999999,
+        "unit": "pdf_points",
+        "right": 540.47791,
+        "bottom": 745.6415,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "12695f32-49c5-459c-8dda-81d59ffd38f0",
+      "anchor_key": "st-es0620:p01:row-2-2-5",
+      "page_index": 1,
+      "printed_page_label": "2",
+      "section": "2.2.5",
+      "section_title": "Incorrect DBGMCU_IDCODE register value",
+      "block_role": "table_row",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "2.2.5 | Incorrect DBGMCU_IDCODE register value | Rev. Z=N | Rev. B=A | Rev. X=A",
+      "bbox": {
+        "top": 0.5954220705164288,
+        "left": 0.3041067211167371,
+        "right": 0.9101899736765638,
+        "bottom": 0.6049245021708721
+      },
+      "bbox_original": {
+        "top": 501.27975000000004,
+        "left": 181.02731999999997,
+        "unit": "pdf_points",
+        "right": 541.81391,
+        "bottom": 509.27975000000004,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "a4e81673-9e0a-4bfd-b04d-f816bedc8e3d",
+      "anchor_key": "st-es0620:p06:s2.2.5:a000",
+      "page_index": 6,
+      "printed_page_label": "7",
+      "section": "2.2.5",
+      "section_title": "Incorrect DBGMCU_IDCODE register value",
+      "block_role": "heading",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "2.2.5 Incorrect DBGMCU_IDCODE register value",
+      "bbox": {
+        "top": 0.7673854024856483,
+        "left": 0.07142857502834443,
+        "right": 0.5073827900530717,
+        "bottom": 0.7792634420537026
+      },
+      "bbox_original": {
+        "top": 646.05392,
+        "left": 42.51969,
+        "unit": "pdf_points",
+        "right": 302.03261,
+        "bottom": 656.05392,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "0e9586b1-6f77-4b53-b8f5-f25e7008da01",
+      "anchor_key": "st-es0620:p06:s2.2.5:a001",
+      "page_index": 6,
+      "printed_page_label": "7",
+      "section": "2.2.5",
+      "section_title": "Incorrect DBGMCU_IDCODE register value",
+      "block_role": "label",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "Description",
+      "bbox": {
+        "top": 0.7949893725398278,
+        "left": 0.16666344966952537,
+        "right": 0.24983332511025186,
+        "bottom": 0.8056796081510765
+      },
+      "bbox_original": {
+        "top": 669.29342,
+        "left": 99.21069,
+        "unit": "pdf_points",
+        "right": 148.71968999999999,
+        "bottom": 678.29342,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "eb53bf8d-ecb9-4514-9972-4d327dbbb618",
+      "anchor_key": "st-es0620:p06:s2.2.5:a002",
+      "page_index": 6,
+      "printed_page_label": "7",
+      "section": "2.2.5",
+      "section_title": "Incorrect DBGMCU_IDCODE register value",
+      "block_role": "body",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "The DBGMCU_IDCODE register value remains the same.",
+      "bbox": {
+        "top": 0.816235134915584,
+        "left": 0.16666344966952537,
+        "right": 0.5548147334706108,
+        "bottom": 0.8269253705268327
+      },
+      "bbox_original": {
+        "top": 687.1800099999999,
+        "left": 99.21069,
+        "unit": "pdf_points",
+        "right": 330.26768999999996,
+        "bottom": 696.1800099999999,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "33d1f86e-04ed-4094-84e2-c4fde5cf8f37",
+      "anchor_key": "st-es0620:p06:s2.2.5:a003",
+      "page_index": 6,
+      "printed_page_label": "7",
+      "section": "2.2.5",
+      "section_title": "Incorrect DBGMCU_IDCODE register value",
+      "block_role": "label",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "Workaround",
+      "bbox": {
+        "top": 0.8425313922035185,
+        "left": 0.16666348326740674,
+        "right": 0.25542740595646424,
+        "bottom": 0.8532216278147672
+      },
+      "bbox_original": {
+        "top": 709.3185599999999,
+        "left": 99.21071,
+        "unit": "pdf_points",
+        "right": 152.04971,
+        "bottom": 718.3185599999999,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "f99de23a-d934-41ae-aa47-40cefca43df3",
+      "anchor_key": "st-es0620:p06:s2.2.5:a004",
+      "page_index": 6,
+      "printed_page_label": "7",
+      "section": "2.2.5",
+      "section_title": "Incorrect DBGMCU_IDCODE register value",
+      "block_role": "body",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "For revision Z devices, no workaround is available.",
+      "bbox": {
+        "top": 0.8637771664573142,
+        "left": 0.16666348326740674,
+        "right": 0.5061163179147783,
+        "bottom": 0.874467402068563
+      },
+      "bbox_original": {
+        "top": 727.20516,
+        "left": 99.21071,
+        "unit": "pdf_points",
+        "right": 301.27870999999993,
+        "bottom": 736.20516,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "ea672d30-9c2a-42af-8517-61d65d9e1934",
+      "anchor_key": "st-es0620:p06:s2.2.5:a005",
+      "page_index": 6,
+      "printed_page_label": "7",
+      "section": "2.2.5",
+      "section_title": "Incorrect DBGMCU_IDCODE register value",
+      "block_role": "body",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "For revision B devices, use the new register definition Boot ROM (Base address: 0x1800 1000, Address",
+      "bbox": {
+        "top": 0.8797500295080198,
+        "left": 0.1666635168652881,
+        "right": 0.8607638280102284,
+        "bottom": 0.8904402651192685
+      },
+      "bbox_original": {
+        "top": 740.65255,
+        "left": 99.21073,
+        "unit": "pdf_points",
+        "right": 512.3917300000004,
+        "bottom": 749.65255,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "8f68db7a-daed-411c-abf6-8eb917ba4fd1",
+      "anchor_key": "st-es0620:p06:s2.2.5:a006",
+      "page_index": 6,
+      "printed_page_label": "7",
+      "section": "2.2.5",
+      "section_title": "Incorrect DBGMCU_IDCODE register value",
+      "block_role": "body",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "offset: 0x0004).",
+      "bbox": {
+        "top": 0.8925783003634787,
+        "left": 0.16666348326740674,
+        "right": 0.2706069287600435,
+        "bottom": 0.9032685359747274
+      },
+      "bbox_original": {
+        "top": 751.45254,
+        "left": 99.21071,
+        "unit": "pdf_points",
+        "right": 161.08571,
+        "bottom": 760.45254,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "85459b02-fca2-40a5-af46-2a49d30802b3",
+      "anchor_key": "st-es0620:p09:s2.2.18:a000",
+      "page_index": 9,
+      "printed_page_label": "10",
+      "section": "2.2.18",
+      "section_title": "Incorrect reset behavior when using NRST pin",
+      "block_role": "heading",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "2.2.18 Incorrect reset behavior when using NRST pin",
+      "bbox": {
+        "top": 0.4378485677525216,
+        "left": 0.07142857502834443,
+        "right": 0.5354034231167838,
+        "bottom": 0.44972660732057573
+      },
+      "bbox_original": {
+        "top": 368.6202299999998,
+        "left": 42.51969,
+        "unit": "pdf_points",
+        "right": 318.71261000000004,
+        "bottom": 378.6202299999998,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "91e3e198-b7d3-4d55-ba54-ece37b6db8a1",
+      "anchor_key": "st-es0620:p09:s2.2.18:a001",
+      "page_index": 9,
+      "printed_page_label": "10",
+      "section": "2.2.18",
+      "section_title": "Incorrect reset behavior when using NRST pin",
+      "block_role": "label",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "Description",
+      "bbox": {
+        "top": 0.46545253780670104,
+        "left": 0.16666344966952537,
+        "right": 0.24983332511025186,
+        "bottom": 0.47614277341794975
+      },
+      "bbox_original": {
+        "top": 391.85972999999984,
+        "left": 99.21069,
+        "unit": "pdf_points",
+        "right": 148.71968999999999,
+        "bottom": 400.85972999999984,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "7ea75450-5348-4e37-902b-e2a83610bfd5",
+      "anchor_key": "st-es0620:p09:s2.2.18:a002",
+      "page_index": 9,
+      "printed_page_label": "10",
+      "section": "2.2.18",
+      "section_title": "Incorrect reset behavior when using NRST pin",
+      "block_role": "body",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "The system may fail to perform a correct reset when using the NRST pin. This issue might require a full power",
+      "bbox": {
+        "top": 0.48669831206049674,
+        "left": 0.16666344966952537,
+        "right": 0.9010257819558317,
+        "bottom": 0.49738854767174545
+      },
+      "bbox_original": {
+        "top": 409.74632999999983,
+        "left": 99.21069,
+        "unit": "pdf_points",
+        "right": 536.3586900000004,
+        "bottom": 418.74632999999983,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "aac0e194-9394-4c62-a4ac-3df4400fded7",
+      "anchor_key": "st-es0620:p09:s2.2.18:a003",
+      "page_index": 9,
+      "printed_page_label": "10",
+      "section": "2.2.18",
+      "section_title": "Incorrect reset behavior when using NRST pin",
+      "block_role": "body",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "cycle (power off and on) to restore functionality.",
+      "bbox": {
+        "top": 0.49952658291595564,
+        "left": 0.16666348326740674,
+        "right": 0.48290858135751336,
+        "bottom": 0.5102168185272044
+      },
+      "bbox_original": {
+        "top": 420.5463199999998,
+        "left": 99.21071,
+        "unit": "pdf_points",
+        "right": 287.46371,
+        "bottom": 429.5463199999998,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "0935cdc1-efd2-43e3-98af-6e64cf1bbfe9",
+      "anchor_key": "st-es0620:p09:s2.2.18:a004",
+      "page_index": 9,
+      "printed_page_label": "10",
+      "section": "2.2.18",
+      "section_title": "Incorrect reset behavior when using NRST pin",
+      "block_role": "label",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "Workaround",
+      "bbox": {
+        "top": 0.5258228758380089,
+        "left": 0.16666348326740674,
+        "right": 0.25542740595646424,
+        "bottom": 0.5365131114492576
+      },
+      "bbox_original": {
+        "top": 442.68489999999986,
+        "left": 99.21071,
+        "unit": "pdf_points",
+        "right": 152.04971,
+        "bottom": 451.68489999999986,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "b98513b0-9473-4f87-8260-1a61ac9d0958",
+      "anchor_key": "st-es0620:p09:s2.2.18:a005",
+      "page_index": 9,
+      "printed_page_label": "10",
+      "section": "2.2.18",
+      "section_title": "Incorrect reset behavior when using NRST pin",
+      "block_role": "body",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "When using the NRST pin, configure the reset mode to power-on reset as follows:",
+      "bbox": {
+        "top": 0.5470686382137651,
+        "left": 0.16666348326740674,
+        "right": 0.71370082796771,
+        "bottom": 0.5577588738250138
+      },
+      "bbox_original": {
+        "top": 460.57148999999987,
+        "left": 99.21071,
+        "unit": "pdf_points",
+        "right": 424.84871000000015,
+        "bottom": 469.57148999999987,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "99bd37ed-445f-409c-8dc2-c815d985b25d",
+      "anchor_key": "st-es0620:p09:s2.2.18:a006",
+      "page_index": 9,
+      "printed_page_label": "10",
+      "section": "2.2.18",
+      "section_title": "Incorrect reset behavior when using NRST pin",
+      "block_role": "body",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "1. On the first system power-on reset, set the reset type to power-on reset by setting the CORE_RESET_TYPE",
+      "bbox": {
+        "top": 0.563041465630352,
+        "left": 0.16666348326740674,
+        "right": 0.9164925834440769,
+        "bottom": 0.5737317012416007
+      },
+      "bbox_original": {
+        "top": 474.0188499999999,
+        "left": 99.21071,
+        "unit": "pdf_points",
+        "right": 545.5657000000004,
+        "bottom": 483.0188499999999,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "bd1904a6-37a0-4975-b01b-2365cb679222",
+      "anchor_key": "st-es0620:p09:s2.2.18:a007",
+      "page_index": 9,
+      "printed_page_label": "10",
+      "section": "2.2.18",
+      "section_title": "Incorrect reset behavior when using NRST pin",
+      "block_role": "body",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "bit in the SYSCFG_CM55RSTCR register.",
+      "bbox": {
+        "top": 0.5758697364858107,
+        "left": 0.19047601528723762,
+        "right": 0.4727788537219305,
+        "bottom": 0.5865599720970596
+      },
+      "bbox_original": {
+        "top": 484.81883999999985,
+        "left": 113.38573,
+        "unit": "pdf_points",
+        "right": 281.43373,
+        "bottom": 493.81883999999985,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "10ce773b-1bc2-4f1b-8625-f2369a95da36",
+      "anchor_key": "st-es0620:p09:s2.2.18:a008",
+      "page_index": 9,
+      "printed_page_label": "10",
+      "section": "2.2.18",
+      "section_title": "Incorrect reset behavior when using NRST pin",
+      "block_role": "body",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "2. Generate a software reset by setting the SYSRESETREQ bit in the AIRCR register of the SBC.",
+      "bbox": {
+        "top": 0.5918425639023976,
+        "left": 0.16666355046316947,
+        "right": 0.8257481328439401,
+        "bottom": 0.6025327995136464
+      },
+      "bbox_original": {
+        "top": 498.26619999999986,
+        "left": 99.21074999999999,
+        "unit": "pdf_points",
+        "right": 491.54774000000015,
+        "bottom": 507.26619999999986,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "9ad1af33-173a-44a0-91e9-b5a348fa980e",
+      "anchor_key": "st-es0620:p09:s2.2.18:a009",
+      "page_index": 9,
+      "printed_page_label": "10",
+      "section": "2.2.18",
+      "section_title": "Incorrect reset behavior when using NRST pin",
+      "block_role": "body",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "In the main application code, declare this global variable at any address in AXISRAM1:",
+      "bbox": {
+        "top": 0.6078153794409449,
+        "left": 0.16666360085999155,
+        "right": 0.7464941576728079,
+        "bottom": 0.6185056150521936
+      },
+      "bbox_original": {
+        "top": 511.7135499999998,
+        "left": 99.21078,
+        "unit": "pdf_points",
+        "right": 444.36978000000005,
+        "bottom": 520.7135499999998,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "ca76d102-7e1f-4025-bd19-9b198f096f96",
+      "anchor_key": "st-es0620:p09:s2.2.18:a010",
+      "page_index": 9,
+      "printed_page_label": "10",
+      "section": "2.2.18",
+      "section_title": "Incorrect reset behavior when using NRST pin",
+      "block_role": "code",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "volatile uint32_t * init_p = (volatile uint32_t *) 0x34001004;",
+      "bbox": {
+        "top": 0.6273842001904831,
+        "left": 0.1714328201206557,
+        "right": 0.6713692949264535,
+        "bottom": 0.6368866318449264
+      },
+      "bbox_original": {
+        "top": 528.1883399999998,
+        "left": 102.04978,
+        "unit": "pdf_points",
+        "right": 399.64978000000036,
+        "bottom": 536.1883399999998,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "cf1de648-a821-4521-bd4d-0a102ac75f48",
+      "anchor_key": "st-es0620:p09:s2.2.18:a011",
+      "page_index": 9,
+      "printed_page_label": "10",
+      "section": "2.2.18",
+      "section_title": "Incorrect reset behavior when using NRST pin",
+      "block_role": "body",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "At the start of the main function, insert:",
+      "bbox": {
+        "top": 0.6488816225905677,
+        "left": 0.16666531435194146,
+        "right": 0.4255033924368784,
+        "bottom": 0.6595718582018164
+      },
+      "bbox_original": {
+        "top": 546.2867999999999,
+        "left": 99.2118,
+        "unit": "pdf_points",
+        "right": 253.29180000000002,
+        "bottom": 555.2867999999999,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "7a511f7e-9165-4188-ae24-d193184b7552",
+      "anchor_key": "st-es0620:p09:s2.2.18:a012",
+      "page_index": 9,
+      "printed_page_label": "10",
+      "section": "2.2.18",
+      "section_title": "Incorrect reset behavior when using NRST pin",
+      "block_role": "code",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "/* Enable SYSCFG Clock */",
+      "bbox": {
+        "top": 0.6684504314620664,
+        "left": 0.17142277435412567,
+        "right": 0.37301006258226965,
+        "bottom": 0.6779528631165097
+      },
+      "bbox_original": {
+        "top": 562.7615799999999,
+        "left": 102.0438,
+        "unit": "pdf_points",
+        "right": 222.04379999999998,
+        "bottom": 570.7615799999999,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "5efce27d-637b-40bf-935e-e60bf9c2cebb",
+      "anchor_key": "st-es0620:p09:s2.2.18:a013",
+      "page_index": 9,
+      "printed_page_label": "10",
+      "section": "2.2.18",
+      "section_title": "Incorrect reset behavior when using NRST pin",
+      "block_role": "code",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "RCC->APB4ENSR2 |= 1; // SYSCFGEN: SYSCFG enable in RCC_APB4HENR register",
+      "bbox": {
+        "top": 0.6798533613254378,
+        "left": 0.17142277435412567,
+        "right": 0.7600576559803071,
+        "bottom": 0.6893557929798811
+      },
+      "bbox_original": {
+        "top": 572.3615899999998,
+        "left": 102.0438,
+        "unit": "pdf_points",
+        "right": 452.4438000000005,
+        "bottom": 580.3615899999998,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "6ecdeaba-d27e-4728-8593-ea2e99a80318",
+      "anchor_key": "st-es0620:p09:s2.2.18:a014",
+      "page_index": 9,
+      "printed_page_label": "10",
+      "section": "2.2.18",
+      "section_title": "Incorrect reset behavior when using NRST pin",
+      "block_role": "code",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "if(*init_p != 0x11223344) //First power-on reset is detected",
+      "bbox": {
+        "top": 0.6912562911888095,
+        "left": 0.1714227407562443,
+        "right": 0.6552322325037905,
+        "bottom": 0.7007587228432528
+      },
+      "bbox_original": {
+        "top": 581.9615999999999,
+        "left": 102.04378,
+        "unit": "pdf_points",
+        "right": 390.04378000000037,
+        "bottom": 589.9615999999999,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "ca6d4b17-39bd-42e1-81e6-9c78991ec504",
+      "anchor_key": "st-es0620:p09:s2.2.18:a015",
+      "page_index": 9,
+      "printed_page_label": "10",
+      "section": "2.2.18",
+      "section_title": "Incorrect reset behavior when using NRST pin",
+      "block_role": "code",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "{",
+      "bbox": {
+        "top": 0.702659221052181,
+        "left": 0.1714227407562443,
+        "right": 0.17948623228537006,
+        "bottom": 0.7121616527066243
+      },
+      "bbox_original": {
+        "top": 591.5616099999999,
+        "left": 102.04378,
+        "unit": "pdf_points",
+        "right": 106.84378,
+        "bottom": 599.5616099999999,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "39cf5850-f9e0-458a-8678-25ddd730ca5d",
+      "anchor_key": "st-es0620:p09:s2.2.18:a016",
+      "page_index": 9,
+      "printed_page_label": "10",
+      "section": "2.2.18",
+      "section_title": "Incorrect reset behavior when using NRST pin",
+      "block_role": "body",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "*init_p=0x11223344; // change init_p variable with a known value",
+      "bbox": {
+        "top": 0.7140621509155526,
+        "left": 0.21980368993099889,
+        "right": 0.7358671477950484,
+        "bottom": 0.7235645825699959
+      },
+      "bbox_original": {
+        "top": 601.1616199999999,
+        "left": 130.84378,
+        "unit": "pdf_points",
+        "right": 438.0437800000005,
+        "bottom": 609.1616199999999,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "b2c1f90d-d501-4f1f-9005-a7e1174b9b3a",
+      "anchor_key": "st-es0620:p09:s2.2.18:a017",
+      "page_index": 9,
+      "printed_page_label": "10",
+      "section": "2.2.18",
+      "section_title": "Incorrect reset behavior when using NRST pin",
+      "block_role": "code",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "SYSCFG->CM55RSTCR |= 1; //Setting power-on reset from NRST pin",
+      "bbox": {
+        "top": 0.7254651164130428,
+        "left": 0.21980368993099889,
+        "right": 0.7197401647367968,
+        "bottom": 0.7349675480674861
+      },
+      "bbox_original": {
+        "top": 610.7616599999998,
+        "left": 130.84378,
+        "unit": "pdf_points",
+        "right": 428.44378000000046,
+        "bottom": 618.7616599999998,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "b768cac1-31a1-4c57-8a8b-0983b119ca52",
+      "anchor_key": "st-es0620:p09:s2.2.18:a018",
+      "page_index": 9,
+      "printed_page_label": "10",
+      "section": "2.2.18",
+      "section_title": "Incorrect reset behavior when using NRST pin",
+      "block_role": "body",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "__ISB(); // Instruction Synchronization Barrier",
+      "bbox": {
+        "top": 0.7368680106422956,
+        "left": 0.2198036395341768,
+        "right": 0.598787741403088,
+        "bottom": 0.7463704422967389
+      },
+      "bbox_original": {
+        "top": 620.3616399999997,
+        "left": 130.84375,
+        "unit": "pdf_points",
+        "right": 356.44375000000025,
+        "bottom": 628.3616399999997,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "20f71ee6-82e3-4c64-8bec-1d01676e4997",
+      "anchor_key": "st-es0620:p09:s2.2.18:a019",
+      "page_index": 9,
+      "printed_page_label": "10",
+      "section": "2.2.18",
+      "section_title": "Incorrect reset behavior when using NRST pin",
+      "block_role": "body",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "__DSB(); // Data Synchronization Barrier",
+      "bbox": {
+        "top": 0.7482709048715483,
+        "left": 0.21980360593629542,
+        "right": 0.5423432671013261,
+        "bottom": 0.7577733365259917
+      },
+      "bbox_original": {
+        "top": 629.9616199999997,
+        "left": 130.84373,
+        "unit": "pdf_points",
+        "right": 322.84373000000016,
+        "bottom": 637.9616199999997,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "9a3d6134-9cc2-40a8-bbe8-19556010c068",
+      "anchor_key": "st-es0620:p09:s2.2.18:a020",
+      "page_index": 9,
+      "printed_page_label": "10",
+      "section": "2.2.18",
+      "section_title": "Incorrect reset behavior when using NRST pin",
+      "block_role": "body",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "NVIC_SystemReset(); // Generate a system reset",
+      "bbox": {
+        "top": 0.7596737991008011,
+        "left": 0.2198036563331175,
+        "right": 0.5907242666729028,
+        "bottom": 0.7691762307552444
+      },
+      "bbox_original": {
+        "top": 639.5615999999997,
+        "left": 130.84376,
+        "unit": "pdf_points",
+        "right": 351.6437600000002,
+        "bottom": 647.5615999999997,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    },
+    {
+      "id": "70efbafd-d1b1-4d81-8580-12d7e6bdef85",
+      "anchor_key": "st-es0620:p09:s2.2.18:a021",
+      "page_index": 9,
+      "printed_page_label": "10",
+      "section": "2.2.18",
+      "section_title": "Incorrect reset behavior when using NRST pin",
+      "block_role": "code",
+      "context_kind": null,
+      "geometry_kind": "located",
+      "text": "}",
+      "bbox": {
+        "top": 0.7710766933300539,
+        "left": 0.1875497238144958,
+        "right": 0.19561321534362155,
+        "bottom": 0.7805791249844972
+      },
+      "bbox_original": {
+        "top": 649.1615799999996,
+        "left": 111.64377999999999,
+        "unit": "pdf_points",
+        "right": 116.44377999999999,
+        "bottom": 657.1615799999996,
+        "origin": "top_left_y_down"
+      },
+      "page_width_pt": 595.27563,
+      "page_height_pt": 841.88977,
+      "page_rotation": 0,
+      "parser": {
+        "mode": "words+table-geometry",
+        "name": "pdfplumber",
+        "notes": "Bounded digital-text parser; no OCR or network access.",
+        "version": "0.11.10"
+      },
+      "document_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd"
+    }
+  ],
+  "coverage": [
+    {
+      "section": "2.10.1",
+      "title": "Alarm flag may be repeatedly set when the core is stopped in debug",
+      "status": "discovered",
+      "page_indexes": [
+        24
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.11.1",
+      "title": "Wrong data sampling when data setup time (t ) is shorter than one I2C kernel clock period SU;DAT",
+      "status": "discovered",
+      "page_indexes": [
+        24
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.11.2",
+      "title": "Spurious bus error detection in controller mode",
+      "status": "discovered",
+      "page_indexes": [
+        25
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.12.1",
+      "title": "Received data may be corrupted upon clearing the ABREN bit",
+      "status": "discovered",
+      "page_indexes": [
+        25
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.12.2",
+      "title": "Noise error flag set while ONEBIT is set",
+      "status": "discovered",
+      "page_indexes": [
+        25
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.13.1",
+      "title": "Possible LPUART transmitter issue when using low BRR[15:0] value",
+      "status": "discovered",
+      "page_indexes": [
+        26
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.14.1",
+      "title": "Desynchronization under specific condition with edge filtering enabled",
+      "status": "discovered",
+      "page_indexes": [
+        26
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.14.2",
+      "title": "Tx FIFO messages inverted under specific buffer usage and priority setting",
+      "status": "discovered",
+      "page_indexes": [
+        26
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.14.3",
+      "title": "DAR mode transmission failure due to lost arbitration",
+      "status": "discovered",
+      "page_indexes": [
+        27
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.15.1",
+      "title": "External VBUS detection method malfunctioning",
+      "status": "discovered",
+      "page_indexes": [
+        27
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.16.1",
+      "title": "Ordered set with multiple errors in a single K-code is reported as invalid",
+      "status": "discovered",
+      "page_indexes": [
+        27
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.16.2",
+      "title": "Rp value drift causes incorrect source current capabiliy detection",
+      "status": "discovered",
+      "page_indexes": [
+        28
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.17.1",
+      "title": "Incorrect DMA transfer state in TEB[2:0] and REB[2:0] on bus error",
+      "status": "discovered",
+      "page_indexes": [
+        28
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.2.1",
+      "title": "APBx clock prescaling fails",
+      "status": "discovered",
+      "page_indexes": [
+        6
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.2.10",
+      "title": "PG10 not maintained at 1 during blocking failure",
+      "status": "discovered",
+      "page_indexes": [
+        7
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.2.11",
+      "title": "Monotonic counter only uses 32\u2011bit fuse value in anti-rollback version",
+      "status": "discovered",
+      "page_indexes": [
+        7
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.2.12",
+      "title": "FSBL2 boot fails due to SecureBoot after incorrect FSBL1 image version boot attempt",
+      "status": "discovered",
+      "page_indexes": [
+        8
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.2.14",
+      "title": "Desynchronization of VENC and DCMIPP when streaming",
+      "status": "discovered",
+      "page_indexes": [
+        8
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.2.15",
+      "title": "Bit 31 VSWRST: V (VSW) domain software reset in RCC_BDCR register not functional switch",
+      "status": "discovered",
+      "page_indexes": [
+        8
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.2.16",
+      "title": "CLAMP enable requested on path from VREFBUF to Pad_VREFP",
+      "status": "discovered",
+      "page_indexes": [
+        9
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.2.17",
+      "title": "SSP is not supported",
+      "status": "discovered",
+      "page_indexes": [
+        9
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.2.18",
+      "title": "Incorrect reset behavior when using NRST pin",
+      "status": "supported",
+      "page_indexes": [
+        1,
+        9
+      ],
+      "anchor_keys": [
+        "st-es0620:p09:s2.2.18:a000",
+        "st-es0620:p09:s2.2.18:a001",
+        "st-es0620:p09:s2.2.18:a002",
+        "st-es0620:p09:s2.2.18:a003",
+        "st-es0620:p09:s2.2.18:a004",
+        "st-es0620:p09:s2.2.18:a005",
+        "st-es0620:p09:s2.2.18:a006",
+        "st-es0620:p09:s2.2.18:a007",
+        "st-es0620:p09:s2.2.18:a008",
+        "st-es0620:p09:s2.2.18:a009",
+        "st-es0620:p09:s2.2.18:a010",
+        "st-es0620:p09:s2.2.18:a011",
+        "st-es0620:p09:s2.2.18:a012",
+        "st-es0620:p09:s2.2.18:a013",
+        "st-es0620:p09:s2.2.18:a014",
+        "st-es0620:p09:s2.2.18:a015",
+        "st-es0620:p09:s2.2.18:a016",
+        "st-es0620:p09:s2.2.18:a017",
+        "st-es0620:p09:s2.2.18:a018",
+        "st-es0620:p09:s2.2.18:a019",
+        "st-es0620:p09:s2.2.18:a020",
+        "st-es0620:p09:s2.2.18:a021",
+        "st-es0620:p01:row-2-2-18"
+      ],
+      "reason": null,
+      "notes": {
+        "selected": true,
+        "inventory_source": "detected_heading",
+        "revision_columns": [
+          "Z",
+          "B",
+          "X"
+        ],
+        "row_cell_bboxes_pt": {
+          "B": [
+            509.26533,
+            737.6415,
+            514.60133,
+            745.6415
+          ],
+          "X": [
+            537.81391,
+            737.6415,
+            540.47791,
+            745.6415
+          ],
+          "Z": [
+            482.05274,
+            737.6415,
+            487.38874,
+            745.6415
+          ]
+        },
+        "status_by_revision": {
+          "B": "A",
+          "X": "-",
+          "Z": "A"
+        }
+      }
+    },
+    {
+      "section": "2.2.19",
+      "title": "Access to SYSCFG_VDDIOxCCCR and SYSCFG_VDDIOxCCSR unduly depends on VDDIOxSV",
+      "status": "discovered",
+      "page_indexes": [
+        10
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.2.2",
+      "title": "Do not clear BSECEN bit before entering Low-power mode",
+      "status": "discovered",
+      "page_indexes": [
+        6
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.2.20",
+      "title": "I/O compensation may deform output signal rise and fall edges",
+      "status": "discovered",
+      "page_indexes": [
+        10
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.2.21",
+      "title": "STNoC AXI deadlock during GFXMMU read of 24 bpp frame buffer",
+      "status": "discovered",
+      "page_indexes": [
+        10
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.2.22",
+      "title": "Boot ROM execution failure after system reset due to wrong clocking of peripherals",
+      "status": "discovered",
+      "page_indexes": [
+        11
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.2.23",
+      "title": "Recovery from clock switching failure",
+      "status": "discovered",
+      "page_indexes": [
+        11
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.2.24",
+      "title": "Incorrect definition of HSERDY flag in reference manual",
+      "status": "discovered",
+      "page_indexes": [
+        11
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.2.25",
+      "title": "Incorrect definition of the RTCPRE divider formula in reference manual",
+      "status": "discovered",
+      "page_indexes": [
+        12
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.2.26",
+      "title": "Incorrect description of the OTP16 BootROM_CONFIG_7 in reference manual",
+      "status": "discovered",
+      "page_indexes": [
+        12
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.2.28",
+      "title": "Missing default value for rng_htcr_value in OPT19 BootROM_CONFIG_10",
+      "status": "discovered",
+      "page_indexes": [
+        12
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.2.3",
+      "title": "Debugging connection lost when writing into RISAFx without enabling the related clock",
+      "status": "discovered",
+      "page_indexes": [
+        6
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.2.4",
+      "title": "Overconsumption in Standby mode",
+      "status": "discovered",
+      "page_indexes": [
+        6
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.2.5",
+      "title": "Incorrect DBGMCU_IDCODE register value",
+      "status": "supported",
+      "page_indexes": [
+        1,
+        6
+      ],
+      "anchor_keys": [
+        "st-es0620:p06:s2.2.5:a000",
+        "st-es0620:p06:s2.2.5:a001",
+        "st-es0620:p06:s2.2.5:a002",
+        "st-es0620:p06:s2.2.5:a003",
+        "st-es0620:p06:s2.2.5:a004",
+        "st-es0620:p06:s2.2.5:a005",
+        "st-es0620:p06:s2.2.5:a006",
+        "st-es0620:p01:row-2-2-5"
+      ],
+      "reason": null,
+      "notes": {
+        "selected": true,
+        "inventory_source": "detected_heading",
+        "revision_columns": [
+          "Z",
+          "B",
+          "X"
+        ],
+        "row_cell_bboxes_pt": {
+          "B": [
+            509.26533,
+            501.27975000000004,
+            514.60133,
+            509.27975000000004
+          ],
+          "X": [
+            536.47791,
+            501.27975000000004,
+            541.81391,
+            509.27975000000004
+          ],
+          "Z": [
+            481.83673999999996,
+            501.27975000000004,
+            487.61274,
+            509.27975000000004
+          ]
+        },
+        "status_by_revision": {
+          "B": "A",
+          "X": "A",
+          "Z": "N"
+        }
+      }
+    },
+    {
+      "section": "2.2.6",
+      "title": "Unable to enable VENC clock independently",
+      "status": "discovered",
+      "page_indexes": [
+        7
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.2.7",
+      "title": "Boot process stuck when using HyperFlash\u2122",
+      "status": "discovered",
+      "page_indexes": [
+        7
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.2.8",
+      "title": "USB download stuck when using NA payload",
+      "status": "discovered",
+      "page_indexes": [
+        7
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.2.9",
+      "title": "SecureBoot anti-rollback corner case error",
+      "status": "discovered",
+      "page_indexes": [
+        7
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.3.1",
+      "title": "NOR flash memory/PSRAM incorrect bus turnaround timing",
+      "status": "discovered",
+      "page_indexes": [
+        13
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.4.1",
+      "title": "Deadlock can occur under certain conditions",
+      "status": "discovered",
+      "page_indexes": [
+        16
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.4.10",
+      "title": "Possible deadlock when a request arrives during the disabling process",
+      "status": "discovered",
+      "page_indexes": [
+        19
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.4.11",
+      "title": "A read mismatch occurs after disabling the controller during a read transaction",
+      "status": "discovered",
+      "page_indexes": [
+        19
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.4.2",
+      "title": "Indirect write mode limited to 256 Mbytes",
+      "status": "discovered",
+      "page_indexes": [
+        16
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.4.3",
+      "title": "CALMAX bit not set when the PHY reaches the DLL maximum value",
+      "status": "discovered",
+      "page_indexes": [
+        17
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.5.1",
+      "title": "Command response and receive data end bits not checked",
+      "status": "discovered",
+      "page_indexes": [
+        19
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.6.1",
+      "title": "In injected simultaneous mode, stopping regular conversion may delay injected conversion",
+      "status": "discovered",
+      "page_indexes": [
+        19
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.6.5",
+      "title": "Shifted master and slave sequence in interleaved discontinuous mode",
+      "status": "discovered",
+      "page_indexes": [
+        21
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.7.1",
+      "title": "Layers cannot read YUV420 multibuffer data",
+      "status": "discovered",
+      "page_indexes": [
+        22
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.8.1",
+      "title": "Occasional writing miss to frame buffer with slow memories",
+      "status": "discovered",
+      "page_indexes": [
+        23
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.9.1",
+      "title": "Device may remain stuck in LPTIM interrupt when entering Stop mode",
+      "status": "discovered",
+      "page_indexes": [
+        23
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.9.2",
+      "title": "ARRM and CMPM flags are not set when APB clock is slower than kernel clock",
+      "status": "discovered",
+      "page_indexes": [
+        23
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    },
+    {
+      "section": "2.9.4",
+      "title": "LPTIM4 remains active after user code starts in development mode",
+      "status": "discovered",
+      "page_indexes": [
+        24
+      ],
+      "anchor_keys": [],
+      "reason": "not_selected",
+      "notes": {
+        "selected": false,
+        "inventory_source": "detected_heading"
+      }
+    }
+  ],
+  "draft": {
+    "case_kind": "real_source",
+    "provenance": "live",
+    "prompt_version": "w04-draft-v5-grounded-no-thinking",
+    "request_hash": "2ed6fbb4c530d70d18e8767b7cbeb3e951cdabcdd22e2402abd01c7f585f3ea4",
+    "response_hash": "4e62c49aaa01a61af4eda9031a9d71b6447c58396bc688e414a2e0679f26fa13",
+    "draft": {
+      "claims": [
+        {
+          "field": "source_identity",
+          "value": "ES0620 - Rev 5 - August 2026 www.st.com",
+          "status": "supported",
+          "citations": [
+            "st-es0620:ctx-identity"
+          ]
+        },
+        {
+          "field": "affected_revision",
+          "value": "Section 2.2.5 Incorrect DBGMCU_IDCODE register value: Rev. Z = N (Limitation applicable. No workaround available), Rev. B = A (Limitation applicable. Workaround available), Rev. X = A (Limitation applicable. Workaround available)",
+          "status": "supported",
+          "citations": [
+            "st-es0620:p01:row-2-2-5",
+            "st-es0620:ctx-legend-N",
+            "st-es0620:ctx-legend-A"
+          ]
+        },
+        {
+          "field": "consequence",
+          "value": "The DBGMCU_IDCODE register value remains the same.",
+          "status": "supported",
+          "citations": [
+            "st-es0620:p06:s2.2.5:a002"
+          ]
+        },
+        {
+          "field": "workaround_documented",
+          "value": "For revision Z devices, no workaround is available. For revision B devices, use the new register definition Boot ROM (Base address: 0x1800 1000, Address offset: 0x0004).",
+          "status": "supported",
+          "citations": [
+            "st-es0620:p06:s2.2.5:a004",
+            "st-es0620:p06:s2.2.5:a005",
+            "st-es0620:p06:s2.2.5:a006"
+          ]
+        },
+        {
+          "field": "affected_revision",
+          "value": "Section 2.2.18 Incorrect reset behavior when using NRST pin: Rev. Z = A (Limitation applicable. Workaround available), Rev. B = A (Limitation applicable. Workaround available), Rev. X = - (Limitation not applicable)",
+          "status": "supported",
+          "citations": [
+            "st-es0620:p01:row-2-2-18",
+            "st-es0620:ctx-legend-A",
+            "st-es0620:ctx-legend--"
+          ]
+        },
+        {
+          "field": "trigger_condition",
+          "value": "Using the NRST pin for reset.",
+          "status": "supported",
+          "citations": [
+            "st-es0620:p09:s2.2.18:a002",
+            "st-es0620:p09:s2.2.18:a005"
+          ]
+        },
+        {
+          "field": "consequence",
+          "value": "The system may fail to perform a correct reset when using the NRST pin. This issue might require a full power cycle (power off and on) to restore functionality.",
+          "status": "supported",
+          "citations": [
+            "st-es0620:p09:s2.2.18:a002",
+            "st-es0620:p09:s2.2.18:a003"
+          ]
+        },
+        {
+          "field": "workaround_documented",
+          "value": "When using the NRST pin, configure the reset mode to power-on reset: 1. On the first system power-on reset, set the reset type to power-on reset by setting the CORE_RESET_TYPE bit in the SYSCFG_CM55RSTCR register. 2. Generate a software reset by setting the SYSRESETREQ bit in the AIRCR register of the SBC. In the main application code, declare a global variable at any address in AXISRAM1; at the start of main, if the variable is not 0x11223344, set it to 0x11223344, enable SYSCFG clock, set power-on reset from NRST pin in SYSCFG->CM55RSTCR, issue __ISB() and __DSB(), then call NVIC_SystemReset().",
+          "status": "supported",
+          "citations": [
+            "st-es0620:p09:s2.2.18:a005",
+            "st-es0620:p09:s2.2.18:a006",
+            "st-es0620:p09:s2.2.18:a007",
+            "st-es0620:p09:s2.2.18:a008",
+            "st-es0620:p09:s2.2.18:a009",
+            "st-es0620:p09:s2.2.18:a010",
+            "st-es0620:p09:s2.2.18:a011",
+            "st-es0620:p09:s2.2.18:a012",
+            "st-es0620:p09:s2.2.18:a013",
+            "st-es0620:p09:s2.2.18:a014",
+            "st-es0620:p09:s2.2.18:a015",
+            "st-es0620:p09:s2.2.18:a016",
+            "st-es0620:p09:s2.2.18:a017",
+            "st-es0620:p09:s2.2.18:a018",
+            "st-es0620:p09:s2.2.18:a019",
+            "st-es0620:p09:s2.2.18:a020",
+            "st-es0620:p09:s2.2.18:a021"
+          ]
+        },
+        {
+          "field": "workaround_restriction",
+          "value": "The example code declares the global variable at address 0x34001004, but the prose states the variable may be declared at any address in AXISRAM1; the specific address is not required.",
+          "status": "supported",
+          "citations": [
+            "st-es0620:p09:s2.2.18:a009",
+            "st-es0620:p09:s2.2.18:a010"
+          ]
+        }
+      ],
+      "limitations": "source-bounded draft; human review required; no safety/certification claim",
+      "schema_version": 1,
+      "source_revision": "Rev 5",
+      "unresolved_fields": [
+        "affected_device",
+        "exception"
+      ],
+      "source_document_id": "ES0620"
+    },
+    "validation": {
+      "errors": [],
+      "status": "validated",
+      "warnings": [],
+      "checked_claims": 9,
+      "identity_checked": true,
+      "anchor_references": 34
+    },
+    "provider_request_id": "663823b4200b5f0a9cb78a2f092f5e71",
+    "usage": {
+      "total_tokens": 4834,
+      "prompt_tokens": 3247,
+      "completion_tokens": 1587,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "multimodal_tokens": null,
+        "created_cache_tokens": 0
+      },
+      "completion_tokens_details": {
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "accepted_prediction_tokens": null,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "status": "validated"
+  }
+}

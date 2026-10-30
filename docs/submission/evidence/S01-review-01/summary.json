@@ -1,0 +1,64 @@
+{
+  "migration": [
+    "0005_interpretation_review"
+  ],
+  "artifact_count": 157,
+  "response_artifact_equals_wire_hash": false,
+  "anchors": 39,
+  "coverage": 53,
+  "claims": 9,
+  "source": {
+    "document_id": "ES0620",
+    "revision": "Rev 5"
+  },
+  "image_source_files": 49,
+  "image_source_mismatches": [],
+  "checks": {
+    "source_hash": true,
+    "stored_response_matches_draft": true,
+    "no_thinking": true,
+    "finish_stop": true,
+    "exact_model": true,
+    "all_citations_resolve": true,
+    "anchor_scope_hash": true,
+    "coverage_selected": true,
+    "ledger_response_binding": true,
+    "image_matches_workspace": true
+  },
+  "legacy_missing_count": 41,
+  "legacy_set_unchanged": true,
+  "focused_tests": {
+    "run": 8,
+    "failed": 0
+  },
+  "independent_http_checks": 16,
+  "protected_baseline": {
+    "checked": 453,
+    "status": "PASS before coordination updates"
+  },
+  "backup": {
+    "checked": 14,
+    "mismatches": 0
+  },
+  "browser": {
+    "cross_section_citation": true,
+    "context_citation_opens": true,
+    "review": true,
+    "rejection": true,
+    "restart_persistence": true,
+    "export": true,
+    "synthetic_unknown_and_unlocated": true,
+    "narrow_overflow": false
+  },
+  "clean_checkout": {
+    "source_only": true,
+    "new_project": "erratascope-s01-review01",
+    "provided_pdf_setup": "PASS",
+    "automatic_st_download": "TIMEOUT; documented -PdfPath fallback",
+    "host_venv_required": false,
+    "private_auth_required": false,
+    "two_demo_cases": true
+  },
+  "provider_calls": 0,
+  "scope_decision": "ACCEPTED local cited-review implementation; public release incomplete"
+}

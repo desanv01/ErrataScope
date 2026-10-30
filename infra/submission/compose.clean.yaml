@@ -1,0 +1,10 @@
+services:
+  api:
+    ports: !override
+      - "127.0.0.1:18081:8000"
+    volumes:
+      - ../../.local/submission/clean/dev-auth/jwks.json:/run/dev-auth/jwks.json:ro
+      - ../../.local/submission/clean/dev-auth/tokens.json:/local/dev-auth/tokens.json:ro
+  test:
+    volumes:
+      - ../../.local/submission/clean:/local

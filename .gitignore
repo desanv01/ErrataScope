@@ -18,3 +18,14 @@ playwright-report/
 test-results/
 
 # Actual vendor PDFs and raw provider payloads belong in .local/, not source control.
+
+# S01 frontend build artifacts
+frontend/node_modules/
+frontend/dist/
+.local/submission/browser/node_modules/
+
+# Local browser review traces and downloads (publish only selected sanitized evidence).
+.playwright-cli/
+output/playwright/
+
+*.tsbuildinfo

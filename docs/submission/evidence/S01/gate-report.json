@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "status": "partial",
+  "assignment": "S01",
+  "gates": {
+    "R1_journey": {
+      "status": "pass",
+      "detail": "Actual API/browser journey passed at desktop and narrow widths."
+    },
+    "R2_recorded_provenance": {
+      "status": "pass",
+      "detail": "Recorded live W04 draft displayed with actual provider request/usage/hashes; no new paid call."
+    },
+    "R3_citations_review_unknowns": {
+      "status": "pass",
+      "detail": "Exact citations with physical/printed pages, incomplete selected coverage, unresolved fields, append-only review/reject and stale conflict."
+    },
+    "R4_authorization_no_secrets": {
+      "status": "pass",
+      "detail": "Owner/reviewer authorization, current-membership replay blocks, no secret in UI/export, W01/W04 ledgers unchanged."
+    },
+    "R5_test_build_access": {
+      "status": "pass",
+      "detail": "Retained build and isolated clean project/fresh-volume install both verified by real browser journeys."
+    },
+    "R6_release_materials": {
+      "status": "partial",
+      "detail": "License, README, testing, demo script, submission copy and known limits written; public video/Git/Devpost actions intentionally not performed by worker."
+    }
+  },
+  "files": [
+    {
+      "path": "docs/submission/evidence/S01/browser-results.json",
+      "sha256": "5e1d5f91dc391403d095accfdb7af5ddbd730cd3ed3116758e18114e5a5ab1c8",
+      "bytes": 1970
+    },
+    {
+      "path": "docs/submission/evidence/S01/screenshots/desktop-live.png",
+      "sha256": "8afd42d785160b48a606495b7c9e5dd2df30713e9177de819bd22658df393e68",
+      "bytes": 180209
+    },
+    {
+      "path": "docs/submission/evidence/S01/screenshots/narrow.png",
+      "sha256": "c406bde257c124051be56b83f220ceb5674ad26d330f8d9e8a6846be7297c500",
+      "bytes": 230264
+    },
+    {
+      "path": "docs/submission/evidence/S01/screenshots/desktop-synthetic.png",
+      "sha256": "9c0559c86648b35ab49a2513e4fc869cee16bb8a57c3f71187545880c5d8650e",
+      "bytes": 118171
+    },
+    {
+      "path": "docs/submission/evidence/S01/export-review.md",
+      "sha256": "efee35bec172385363e4cde48017828daa95e881e798b6265d5e3083acff5b32",
+      "bytes": 8911
+    },
+    {
+      "path": "docs/submission/evidence/S01/main-audit.json",
+      "sha256": "3577f3775a942a58c272b051b460377437a61bd0e00f40e3e5daa73e1e2e7f9e",
+      "bytes": 81579
+    },
+    {
+      "path": "docs/submission/evidence/S01/legacy-loss-comparison.json",
+      "sha256": "91517a161736934a69f941c3ad302e0a469550fd3962b12138af161a19102310",
+      "bytes": 254
+    },
+    {
+      "path": "docs/submission/evidence/S01/main-sentinel.json",
+      "sha256": "b731b488d52daee83d13516016fa45be1d00fac4d062e2beb7a47675b70663ba",
+      "bytes": 479
+    },
+    {
+      "path": "docs/submission/evidence/S01/clean-browser-results.json",
+      "sha256": "78522f78f32de30d16d4d57236e06e1d817036c61b67091385597ae2fdc15b71",
+      "bytes": 601
+    },
+    {
+      "path": "docs/submission/evidence/S01/screenshots/clean-desktop.png",
+      "sha256": "54177b43038d7af3e8632f9de7041c0f723c9f2b2340f8c1d776571a616f422c",
+      "bytes": 168417
+    },
+    {
+      "path": "docs/submission/evidence/S01/screenshots/clean-narrow.png",
+      "sha256": "78c14bf2fb13a65df8938689f4a739060f9f84608113f4c5fee59159d7260b99",
+      "bytes": 202327
+    },
+    {
+      "path": "docs/submission/evidence/S01/clean-export.md",
+      "sha256": "9c2e0e3bc59438c7e60620b961c83912d3a506d67a5f58be414ecf20c79e2a5f",
+      "bytes": 7855
+    }
+  ],
+  "files_required": true,
+  "note": "Manifest integrity is not semantic/provider acceptance. Partial status must fail the evidence command."
+}

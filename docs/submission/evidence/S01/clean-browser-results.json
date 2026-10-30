@@ -1,0 +1,36 @@
+{
+  "status": "pass",
+  "base": "http://127.0.0.1:18081",
+  "checks": {
+    "recorded_live": {
+      "pass": true,
+      "detail": ""
+    },
+    "real_identity": {
+      "pass": true,
+      "detail": ""
+    },
+    "real_content": {
+      "pass": true,
+      "detail": ""
+    },
+    "citation_highlight": {
+      "pass": true,
+      "detail": ""
+    },
+    "review": {
+      "pass": true,
+      "detail": ""
+    },
+    "export": {
+      "pass": true,
+      "detail": ""
+    },
+    "narrow_no_overflow": {
+      "pass": true,
+      "detail": "0"
+    }
+  },
+  "consoleErrors": [],
+  "exportBytes": 7785
+}
