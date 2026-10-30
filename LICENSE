@@ -19,9 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-This license applies only to original ErrataScope project code. It does not
-apply to vendor manufacturer documents (including ST ES0620), model outputs,
-or the approved image-generation mockup, which retain their own ownership and
-terms. See docs/submission/release/KNOWN_LIMITATIONS.md for attribution and
-scope.

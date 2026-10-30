@@ -144,8 +144,13 @@
     },
     {
       "path": "LICENSE",
-      "sha256": "01e92f6b6e70dab3e19a7d616a267d5b0e6a19704e1f18852f8bec3d85df469b",
-      "bytes": 1418
+      "sha256": "0035a3546b00227a0347ec768320af24b6908adde435fb251afbf2d183449a11",
+      "bytes": 1124
+    },
+    {
+      "path": "NOTICE.md",
+      "sha256": "7e3535443a60e34d77897307e1d56fdf40feda773f37fc5002c84a3dd49054ee",
+      "bytes": 506
     },
     {
       "path": "README.md",
