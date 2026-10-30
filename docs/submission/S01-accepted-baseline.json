@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "assignment": "S01-revision-1",
-  "state": "ACCEPTED_LOCAL_IMPLEMENTATION_RELEASE_PENDING",
+  "state": "ACCEPTED_LOCAL_IMPLEMENTATION_SUBMITTED",
   "decision": "docs/submission/S01-review-01.md",
   "previous_dispatch_baseline": "docs/submission/S01-baseline.json",
   "original_protected_check_before_coordination": "453/453 PASS",
@@ -2009,8 +2009,8 @@
     },
     {
       "path": "docs/submission/RELEASE_NEXT.md",
-      "sha256": "6428bb9d17b7872d2a3e3c4030707871a80e7cbe6abbf8bb47d5389453a350b5",
-      "bytes": 4138
+      "sha256": "80f409126dc2cf84c79a18c1a0ade028bf04a429a8fa71f1e5946a00f6960560",
+      "bytes": 4976
     },
     {
       "path": "docs/submission/S01-START.md",
@@ -2666,6 +2666,21 @@
           "file": "README.md",
           "before_sha256": "5a97b2ddb814197c0c64fecf92aa7aec076d54adcbf1a7703e9d1476df3c709d",
           "after_sha256": "cbd67ee7dd39935adb85ba4ed2cbbeefd120d25e2079a74ff3c67d21efa8e93e"
+        }
+      ],
+      "other_protected_files_unchanged": 526,
+      "provider_histories_and_code_changed": false
+    },
+    {
+      "date": "2026-10-30",
+      "reason": "Record user-completed and independently observed Devpost submission; stop historical release instructions from being repeated.",
+      "git_baseline": "4d97c5a0619a0026ecc99a87c627741c1b7b756d",
+      "previous_manifest_sha256": "8ba6e9bf273e4e9621f2092911f0dcb46484c000d01bb5a516294cda26e4ccbc",
+      "changes": [
+        {
+          "file": "docs/submission/RELEASE_NEXT.md",
+          "before_sha256": "6428bb9d17b7872d2a3e3c4030707871a80e7cbe6abbf8bb47d5389453a350b5",
+          "after_sha256": "80f409126dc2cf84c79a18c1a0ade028bf04a429a8fa71f1e5946a00f6960560"
         }
       ],
       "other_protected_files_unchanged": 526,

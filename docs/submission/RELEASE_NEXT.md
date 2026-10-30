@@ -1,4 +1,12 @@
-# Next release actions
+# Release completed — submission confirmed
+
+**Current status: SUBMITTED.** The user completed final submission, and Codex observed Devpost's **“Project submitted!”** banner at https://devpost.com/software/erratascope. The public video is https://youtu.be/oD1uhOq6UHk. The source test build is available at https://github.com/desanv01/ErrataScope/releases/tag/hackathon-2026-local-demo.
+
+Read [the final submission receipt](release/SUBMISSION_RECEIPT.md) for verified links, artifact hashes and scope. Chrome computer use was stopped at the user's request. **Do not repeat upload/submission or start another worker packet.** Keep public judging links available.
+
+## Archived pre-submission instructions
+
+The remaining text records the earlier release checklist and its then-pending state; it is retained as history, not as current work to execute.
 
 The local S01 workflow is accepted; its public submission is not complete. Do not dispatch W05–W10 or another general implementation worker.
 
