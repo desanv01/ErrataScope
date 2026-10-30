@@ -1,6 +1,6 @@
 # P3 — Source ingestion, live interpretation, and review
 
-Phase specification revision 1. **Implementation status: NOT_STARTED.** Codex owns phase acceptance.
+Phase specification revision 1. **Implementation status: W04 BACKEND BOUND / NOT_STARTED. UI approval pending.** Codex owns phase acceptance.
 
 Implementation packet(s): [W04](../packets/W04-ingestion-review.md).
 
@@ -33,5 +33,5 @@ Preserve partial outputs and diagnostic evidence. Do not broaden scope or weaken
 
 ## Completion record
 
-No accepted implementation evidence yet. Codex will add review references after execution.
+[W04 backend revision 2](../packets/W04-ingestion-review.md) is ready against accepted W03. No P3 implementation acceptance yet. UI/imagegen and real-source semantic approval remain explicit gates.
 

@@ -12,7 +12,7 @@ Standing user instruction, 29 October 2026: after each phase or W-packet complet
 
 ## Git/GitHub checkpoint after acceptance
 
-Codex owns Git and GitHub; DeepSeek never mutates Git. The user's standing instruction authorizes routine repository setup, scoped branches, accepted-work commits, pushes, and review PRs for this project. Follow an existing repository's workflow when present. Prefer a private repository for initial publication if visibility has not been chosen; public release remains a separate release decision. Verify the authenticated owner and intended repository before creating or pushing. Use the current project name unless the user selects a replacement; do not let an optional naming discussion block a private checkpoint.
+Codex owns Git and GitHub; DeepSeek never mutates Git. The user's standing instruction authorizes routine repository setup, scoped branches, accepted-work commits, pushes, and review PRs for this project. Follow an existing repository's workflow when present. For ErrataScope, the user intentionally chose public visibility and explicitly authorized reviewed public checkpoints on 30 October 2026; see [standing authorization](decisions/2026-10-30-public-repository.md). Do not request this same visibility confirmation again. For a different/new repository with no visibility decision, prefer private initial publication. Verify the authenticated owner and intended repository before creating or pushing. Use the current project name unless the user selects a replacement; do not let an optional naming discussion block a private checkpoint.
 
 Inspect the actual diff and staged paths. Exclude keys, `.env`, `.local`, raw provider payloads, vendor PDFs, environments, and unapproved third-party material. Inspect public-safe reports and preserved research for sensitive content before staging. Preserve unrelated work. Use descriptive commits stating the accepted outcome and actual validation. Push only the intended branch. If a PR is created, attach it to this Codex task. Report CI status when relevant; do not silently merge merely because a PR exists. Avoid duplicate commits for packet and phase completion when one checkpoint covers both.
 
@@ -20,4 +20,4 @@ If authentication, repository identity, network policy, or another real prerequi
 
 ## Current application
 
-W01/P0, W02/P1 and [W03 local foundation](reviews/W03-review-05.md) are accepted. Codex checkpoints W03 and binds the eligible W04 backend scope. Full hosted P2 and UI/imagegen remain open. Historical repair prompts are not current dispatches; follow [STATUS](STATUS.md).
+W01/P0, W02/P1 and [W03 local foundation](reviews/W03-review-05.md) are accepted. W03 commit `99090c6aed74c0378eeae02860f33027b9cbca2d` and tag `w03-local-accepted` are pushed and remotely verified. [W04 backend start](prompts/W04-START.md) is bound and ready. Full hosted P2 and UI/imagegen remain open. Follow [STATUS](STATUS.md), not historical repair prompts.

@@ -6,7 +6,7 @@ Last updated: 30 October 2026.
 
 W01/P0 and W02/P1 accepted. [W02 review 02](execution/reviews/W02-review-02.md) records 92 tests, 46 independent assertions and the small Codex corrections. [Accepted domain freeze](execution/bindings/W02-observed-contracts.md) is W03's immutable input.
 
-[W03 local foundation accepted](execution/reviews/W03-review-05.md): 110 integration tests, 92 domain tests, real descriptor/recovery checks. Codex is checkpointing and binding W04 backend next. Hosted P2 NOT_RUN and UI/imagegen PENDING.
+[W03 local foundation accepted](execution/reviews/W03-review-05.md): 110 integration tests, 92 domain tests, real descriptor/recovery checks. W03 is checkpointed publicly at 99090c6 / w03-local-accepted. [W04 backend prompt](execution/prompts/W04-START.md) is bound and ready. Hosted P2 NOT_RUN and UI/imagegen PENDING.
 
 ## Phase ledger
 
@@ -15,7 +15,7 @@ W01/P0 and W02/P1 accepted. [W02 review 02](execution/reviews/W02-review-02.md) 
 | P0 Feasibility | Accepted | W01 review 06, live/semantic evidence frozen |
 | P1 Contracts/evaluator | Accepted | W02 review 02 and acceptance manifest |
 | P2 Persistence/auth/jobs | Local foundation accepted | Hosted/UI remain later; W03 review 05 accepted |
-| P3 Ingestion/review | Not started | Cited drafts and explicit review activation |
+| P3 Ingestion/review | W04 backend bound; not started | Cited drafts and explicit review activation |
 | P4 Product assessment | Not started | Scoped persisted assessments |
 | P5 Evidence/requirements | Not started | Grounded requests/consistency |
 | P6 Change impact | Not started | Baseline comparisons and reassessment |

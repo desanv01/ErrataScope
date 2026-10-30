@@ -1,6 +1,6 @@
 # Packet index and dependency map
 
-Revision 13. W01/P0, W02/P1 and W03 local foundation accepted. [W03 review 05](reviews/W03-review-05.md); next eligible scope is W04 backend. [Status](STATUS.md).
+Revision 13. W01/P0, W02/P1 and W03 local foundation accepted. [W03 review 05](reviews/W03-review-05.md); W04 revision 2 backend is bound and ready: [prompt](prompts/W04-START.md). Full W04/P3 and UI remain open. [Status](STATUS.md).
 
 | Packet | Deliverable | Prerequisite acceptance | Phase coverage |
 |---|---|---|---|

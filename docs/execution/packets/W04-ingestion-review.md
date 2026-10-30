@@ -1,69 +1,38 @@
 # W04 — Source ingestion, live model drafts, and interpretation review
 
-Packet revision: **1**
-Dispatch state: **PLANNED_NOT_DISPATCHABLE**
-Phase: [P3](../phases/P3-ingestion.md)
-Starting baseline: **UNBOUND — Codex must issue before work starts.**
+Packet revision: **2**
+Dispatch state: **READY_TO_DISPATCH**
+Dispatched portion: **backend only**, worker attempt **01**.
+Phase: [P3](../phases/P3-ingestion.md). Full W04/P3 acceptance is not implied by backend completion.
+Starting baseline: [W04-backend-v1-baseline.json](../baselines/W04-backend-v1-baseline.json).
+Accepted predecessor: W03 local commit `99090c6aed74c0378eeae02860f33027b9cbca2d`, tag `w03-local-accepted`, [review 05](../reviews/W03-review-05.md).
 
-## Prerequisites
+## Required reading and executable assignment
 
-W03 accepted; W01 provider path remains valid; accepted domain/API contracts. UI portion additionally requires UI_APPROVAL_GATE explicitly approved.
+Read [worker rules](../WORKER_RULES.md), [status](../STATUS.md), the complete [ingestion-v1 binding](../bindings/W04-ingestion-v1.md), [W01 freeze](../bindings/W01-observed-contracts.md), [W02 freeze](../bindings/W02-observed-contracts.md), [W03 freeze](../bindings/W03-observed-contracts.md), [data/version](../contracts/data-and-versions.md), [API/jobs](../contracts/api-and-jobs.md), [rule language](../contracts/rule-language.md), [security](../contracts/security-and-operations.md), and [testing](../contracts/testing-and-acceptance.md) contracts. The binding supplies exact source, writable paths, dependency pins, migration, routes, budgets, stages and verification commands.
 
-Required shared reading: [worker rules](../WORKER_RULES.md), [status](../STATUS.md), [provider-and-sources](../contracts/provider-and-sources.md), [data-and-versions](../contracts/data-and-versions.md), [api-and-jobs](../contracts/api-and-jobs.md), [ui-and-design](../contracts/ui-and-design.md), [testing-and-acceptance](../contracts/testing-and-acceptance.md).
+Use [this exact start prompt](../prompts/W04-START.md). Verify the protected baseline and [starting inventory](../reviews/W04-starting-inventory.json), claim the single-worker lock, and back up the starting implementation. Do not run historical W03 repair assignments. Existing accepted evidence, W01 ledger and applied migrations remain immutable.
 
-Human visual approval remains a separate prerequisite for all application UI work. See [UI approval gate](../UI_APPROVAL_GATE.md).
+## Backend sequence
 
-## Planned ownership
+1. Install the bounded additive parser lock without changing base pins. Add forward migration 0004 and typed source/anchor/coverage records with project ownership and immutable history.
+2. Implement durable source extraction using accepted W03 storage/jobs and the bounded genuine ES0620 subset. Preserve identity, table/footnote context, located geometry, selected scope and explicit failures.
+3. Implement the Nebius adapter using W01's working no-thinking request shape, strict draft validation, private case-bound evidence and reservation-before-dispatch accounting. Offline failures first; then at most two separately bounded W04 live cases. Never reset W01 accounting.
+4. Add explicit source-grounded conversion proposals and append-only authorized reviews. Accepted rules require all unchanged W02 invariants. Model draft validity is not human semantic approval.
+5. Run real local integration, negative cases, existing regressions, fresh main-store sentinel and restart/duplicate/cancellation checks. Record partial/blocked gates honestly; preserve historical missing artifacts.
 
-backend sources/extraction/rule-review modules; approved UI interpretation/source-viewer feature paths only after visual approval; relevant tests/evidence. Exact dependency and UI paths bound before dispatch.
+## Original packet gates retained
 
-No worker Git mutations, shared-plan edits, independent dispatch, or acceptance-status changes. Existing accepted code must be inspected before implementation; generated code is not assumed correct.
+| Gate | Required result | Current dispatch coverage |
+|---|---|---|
+| W04-G1 | Real source to live draft to authorized human review to accepted rule | Backend mechanism and actual live evidence; final real semantic approval is Codex's decision |
+| W04-G2 | Conditions resolve to exact source version/anchor context | API/CLI provenance and geometry now; UI highlighting later |
+| W04-G3 | Unsupported/failed/unselected entries visible in coverage | Backend coverage/API now; UI later |
+| W04-G4 | Model/parser failures cannot activate rules or disappear behind success | Required backend acceptance |
+| W04-G5 | Approved UI matches brief and works against real API | NOT_RUN — UI/imagegen PENDING |
 
-## Implementation sequence
+The [UI gate](../UI_APPROVAL_GATE.md) remains binding. No screen, shell, styles or frontend is authorized. Backend acceptance may be recorded separately; do not mark full W04/P3 complete by omitting UI. W05 remains unbound until Codex records exact prerequisites and scope.
 
-1. Promote proven spike behavior into source ingestion, immutable bytes, inventory, anchors, coverage, parser provenance, and bounded worker execution.
+## Handoff
 
-2. Implement the actual Nebius adapter with approved current model/limits, redacted artifacts, usage accounting, explicit cache/live state, schema validation, and anchor verification.
-
-3. Persist draft interpretations and append rule review actions tied to exact hashes. Schema-valid drafts cannot become accepted automatically.
-
-4. Implement the user-approved source/interpretation review screen and source highlighting. If visual approval is pending, a separately scoped backend-only dispatch may proceed; full packet acceptance remains pending.
-
-5. Exercise invalid JSON, nonexistent anchors, table/footnote ambiguity, prompt-injection source text, truncation, provider failure, and review race paths.
-
-## Required acceptance evidence
-
-- **W04-G1:** Real source → live draft → authorized human review → accepted rule works.
-- **W04-G2:** All displayed conditions resolve to the correct source version and anchor context.
-- **W04-G3:** Unsupported/failed entries remain visible in coverage.
-- **W04-G4:** Model and parser failures cannot activate rules or disappear behind a success badge.
-- **W04-G5:** Approved UI matches the design brief and works against the actual API.
-
-Tests must check behavior, not merely mirror implementation. Codex binds exact command lines against the accepted predecessor code before dispatch. At minimum provide focused checks for the behaviors above and one connected flow when applicable. Record actual exit codes and artifacts; no claim that an unrun command passed.
-
-## Failure response
-
-Narrow to the proven source subset; retain explicit failures. No hand-authored output presented as live inference and no unapproved UI design.
-
-Complete independent in-scope work and report the blocked dependency. Do not silently waive gates, change the stack, or add work from later packets.
-
-## Required handoff
-
-Write `docs/execution/handoffs/W04-attempt-NN.md` using [the template](../templates/HANDOFF.md). Record starting baseline, changed paths, exact checks/results, gate evidence, mocks/synthetic/live distinctions, deviations, and unresolved issues. Stop editing and release your own worker lock before returning to Codex.
-
-## Codex dispatch binding — must be completed later
-
-- Accepted baseline: UNBOUND.
-- Exact writable paths: UNBOUND.
-- Frozen contract/schema/API versions: UNBOUND.
-- Required design artifact and human approval (where applicable): UNBOUND.
-- Exact build/test/startup commands: UNBOUND.
-- Provider/deployment budgets or publication scope: UNBOUND.
-- Current packet-specific repair/compatibility notes: UNBOUND.
-
-Do not infer readiness from this plan. Codex changes Dispatch state and fills these fields before issuing the exact start prompt.
-
-## Next eligible work after acceptance
-
-W05 after the connected workflow and required review gates pass.
-
+Write `docs/execution/handoffs/W04-attempt-01.md` using [the template](../templates/HANDOFF.md). Include baseline/inventory checks, changed files, actual tests/exits, source/claim provenance, synthetic/mock/cached/live distinctions, all paid reservations and remaining caps, volume/sentinel results and unresolved semantic/UI/hosted work. Stop owned services retaining volumes, release your lock and stop editing. Return the [exact Codex review prompt](../prompts/W04-START.md). No Git, acceptance declaration, parallel agents or future packet work.

@@ -12,7 +12,9 @@ Authority: direct human instruction > current Codex-issued packet revision and e
 
 ## Current dispatch
 
-W03 local foundation is accepted; see [review 05](reviews/W03-review-05.md) and [status](STATUS.md). Codex is binding W04 backend next. Earlier W03 start/repair prompts are historical. Hosted P2 NOT_RUN; [UI/imagegen approval](UI_APPROVAL_GATE.md) PENDING.
+**W04 revision 2 backend only, attempt 01 READY_TO_DISPATCH.** Use [W04 start prompt](prompts/W04-START.md), [ingestion binding](bindings/W04-ingestion-v1.md) and [protected baseline](baselines/W04-backend-v1-baseline.json). W03 local acceptance and public GitHub checkpoint are complete. W01/P0 and W02/P1 remain accepted. Historical W03 prompts must not be rerun.
+
+Hosted P2 NOT_RUN; [UI/imagegen approval](UI_APPROVAL_GATE.md) PENDING. Backend dispatch does not waive UI or full-phase acceptance. Public reviewed checkpoints are [explicitly authorized](decisions/2026-10-30-public-repository.md).
 
 ## Reading and execution sequence
 

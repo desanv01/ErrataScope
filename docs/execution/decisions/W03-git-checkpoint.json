@@ -1,0 +1,19 @@
+{
+  "packet": "W03",
+  "scope": "accepted local foundation",
+  "commit": "99090c6aed74c0378eeae02860f33027b9cbca2d",
+  "tag": "w03-local-accepted",
+  "repository": "https://github.com/desanv01/ErrataScope",
+  "visibility": "PUBLIC",
+  "public_authorization": "docs/execution/decisions/2026-10-30-public-repository.md",
+  "pushed": true,
+  "remote_branch_verified": "99090c6aed74c0378eeae02860f33027b9cbca2d",
+  "remote_tag_verified": "99090c6aed74c0378eeae02860f33027b9cbca2d",
+  "github_actions_runs": [],
+  "verification_date": "2026-10-30",
+  "secret_scan": {
+    "changed_files_scanned": 162,
+    "pattern_hits": 0,
+    "limits": "Pattern-based scan plus staged-path review; not a claim to detect every possible secret."
+  }
+}

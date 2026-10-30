@@ -35,5 +35,5 @@ Preserve partial outputs and diagnostic evidence. Do not broaden scope or weaken
 
 ## Completion record
 
-No accepted implementation evidence yet. Codex will add review references after execution.
+The non-UI local foundation is accepted by [W03 review 05](../reviews/W03-review-05.md), with real PostgreSQL/Valkey/API/storage, descriptor lifetime and crash/restart evidence. Commit `99090c6aed74c0378eeae02860f33027b9cbca2d`, tag `w03-local-accepted`, is pushed and verified. Hosted execution remains NOT_RUN and UI/imagegen remains PENDING; full P2 is not declared complete.
 

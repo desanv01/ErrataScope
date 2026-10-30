@@ -1,6 +1,6 @@
 # Dispatch and return prompts
 
-W03 accepted. Follow [STATUS](../STATUS.md) for the next bound W04 backend assignment. Old W03 prompts are historical.
+Current assignment: [W04 backend START](W04-START.md), revision 2, attempt 01, READY_TO_DISPATCH. W03 local foundation is accepted and checkpointed. UI/imagegen PENDING. Old W03 prompts are historical.
 
 Future packet prompts are issued by Codex after acceptance of their dependencies and baseline binding. A generic prompt is not authorization to skip those gates.
 
