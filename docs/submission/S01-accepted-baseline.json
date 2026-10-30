@@ -154,8 +154,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "5a97b2ddb814197c0c64fecf92aa7aec076d54adcbf1a7703e9d1476df3c709d",
-      "bytes": 10835
+      "sha256": "cbd67ee7dd39935adb85ba4ed2cbbeefd120d25e2079a74ff3c67d21efa8e93e",
+      "bytes": 10867
     },
     {
       "path": "backend/.dockerignore",
@@ -2653,6 +2653,21 @@
       "previous_baseline": "docs/submission/release/baselines/S01-before-readme-2026-10-30.json",
       "previous_baseline_sha256": "6904298188fc4c77b4bfa7d7c6b104d0eea5deb16da2f66ad1e26fc89a10dbf6",
       "git_baseline": "715b5b0be529ea26ffef18a721c21993fb032c57",
+      "other_protected_files_unchanged": 526,
+      "provider_histories_and_code_changed": false
+    },
+    {
+      "date": "2026-10-30",
+      "reason": "User-authorized publication: replace the pending video text with the actual public YouTube URL.",
+      "git_baseline": "a094e74a4ca5c99fe4febeec5667a6387b95eb51",
+      "previous_manifest_sha256": "1a6da18f4e8be931c50799de266d831d58de1c616c26a23cb3511c8289a828ae",
+      "changes": [
+        {
+          "file": "README.md",
+          "before_sha256": "5a97b2ddb814197c0c64fecf92aa7aec076d54adcbf1a7703e9d1476df3c709d",
+          "after_sha256": "cbd67ee7dd39935adb85ba4ed2cbbeefd120d25e2079a74ff3c67d21efa8e93e"
+        }
+      ],
       "other_protected_files_unchanged": 526,
       "provider_histories_and_code_changed": false
     }

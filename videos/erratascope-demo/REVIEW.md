@@ -1,6 +1,6 @@
 # Final video review — 30 October 2026
 
-**Accepted as the requested local silent demonstration.** Public YouTube upload and Devpost submission remain separate, unfinished release actions.
+**Accepted as the requested silent demonstration.** The video is now [public on YouTube](https://youtu.be/oD1uhOq6UHk), with publication confirmed on 30 October 2026. Devpost submission confirmation is recorded separately.
 
 ## Measured
 

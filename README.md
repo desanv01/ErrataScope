@@ -20,6 +20,7 @@
 <p align="center">
   <a href="#features">Features</a> ·
   <a href="#demo">Demo</a> ·
+  <a href="https://youtu.be/oD1uhOq6UHk">Watch video</a> ·
   <a href="#get-started">Get started</a> ·
   <a href="#nvidia-nemotron--nebius-token-factory">NVIDIA &amp; Nebius</a> ·
   <a href="docs/submission/release/TESTING.md">Testing guide</a>
@@ -91,7 +92,7 @@ Switch to a clearly labeled synthetic/offline fixture. Its missing document iden
 
 ## Demo
 
-The local test build includes **ST ES0620 Rev 5**, selected entries **2.2.18** and **2.2.5**, an actual recorded NVIDIA Nemotron result, and a separate synthetic example. The **2:32 silent demo** has been rendered and verified; its public YouTube link will be added after publication. [Video verification →](videos/erratascope-demo/REVIEW.md)
+The local test build includes **ST ES0620 Rev 5**, selected entries **2.2.18** and **2.2.5**, an actual recorded NVIDIA Nemotron result, and a separate synthetic example. **[Watch the verified 2:32 silent demo on YouTube →](https://youtu.be/oD1uhOq6UHk)** · [Video verification](videos/erratascope-demo/REVIEW.md)
 
 1. Open **Recorded live Nemotron result** and inspect its provenance.
 2. Click a claim's citation and follow the highlighted manufacturer excerpt.

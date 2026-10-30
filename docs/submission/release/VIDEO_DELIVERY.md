@@ -2,7 +2,7 @@
 
 Production project: `videos/erratascope-demo/`. **Verified final master:** `videos/erratascope-demo/renders/ErrataScope_Demo_Desan_Vasu.mp4` — **2:32**, 1920×1080, 30fps, H.264, no audio stream, 21,395,190 bytes. Full decode and actual exported-review checks passed. SHA-256: `f7658c4ac6a664d6c86567ea40d8650354efb0aeca9481e25d94183e17a716ce`. Detailed evidence: `videos/erratascope-demo/VERIFICATION.json` and `REVIEW.md`.
 
-The user requested a local verified video. Public upload and Devpost submission are the next release actions and have not been performed in this video task.
+The verified video is now **published publicly on YouTube**: https://youtu.be/oD1uhOq6UHk. YouTube confirmed “Video published,” 2:32 duration and no copyright issues on 30 October 2026. The full saved title, description, chapter timestamps and settings are in YOUTUBE_METADATA.md. Devpost submission confirmation is recorded separately.
 
 ## YouTube
 
@@ -35,7 +35,7 @@ Track: Best Apps and Agents Track.
 - Public code repository: https://github.com/desanv01/ErrataScope
 - Source and test-build setup: https://github.com/desanv01/ErrataScope/blob/main/docs/submission/release/TESTING.md
 - Downloadable source checkout: https://github.com/desanv01/ErrataScope/archive/refs/heads/main.zip
-- Public YouTube video: enter the real uploaded URL; still pending until upload.
+- Public YouTube video: https://youtu.be/oD1uhOq6UHk.
 - Project description and NVIDIA/Nebius feedback: copy and finalize `SUBMISSION_COPY.md`.
 - Track: **Best Apps and Agents Track**.
 - Test access: local Docker test build with recorded live result and synthetic fixture; no Nebius key required for judging that workflow. Follow the pinned manufacturer-PDF prerequisite. Do not present the local URL as hosted public availability.
