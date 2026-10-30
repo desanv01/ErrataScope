@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "packet": "W03",
+  "worker_attempt": "W03-attempt-01",
+  "use": "Before-repair starting bytes; back up and verify before edits, not a post-repair equality requirement.",
+  "files": [
+    {
+      "path": "backend/.dockerignore",
+      "sha256": "74349239c08582839b1b521c7f7b23df9b711ed46642a3ab568c997abfa41dc0"
+    },
+    {
+      "path": "backend/README-W03.md",
+      "sha256": "bd8dbee5255cba6d9c550ce3ed8a580b3b54c6e9c4fb72268177d7080eb4b2dc"
+    },
+    {
+      "path": "backend/alembic.ini",
+      "sha256": "b6d7fd135b755a6d694ce1d6533786c8eacdd7d5a19261194d42b1a06df65c3e"
+    },
+    {
+      "path": "backend/erratascope_service/__init__.py",
+      "sha256": "76dc861bb589ac6c535241ffbaab0e2240a1f36cc9c03b247aa202443226850e"
+    },
+    {
+      "path": "backend/erratascope_service/api.py",
+      "sha256": "8f5460fe45618a98e0cc8fd8f708de6491c7948861e477f8c8050b1fed28d094"
+    },
+    {
+      "path": "backend/erratascope_service/artifacts.py",
+      "sha256": "40b7c93df70374e6f393ed434ffbbd45e4fb2d428d1844c9ffabdb88b0878f6b"
+    },
+    {
+      "path": "backend/erratascope_service/auth.py",
+      "sha256": "a7be33626f11bf71b1e32de90b647f012301bbaedbd97436e4ee4d63f6364c64"
+    },
+    {
+      "path": "backend/erratascope_service/cli.py",
+      "sha256": "dcf879df6dfc18459b6745e1c2aa3c077499f411a4a3679e125e15819b17ad3b"
+    },
+    {
+      "path": "backend/erratascope_service/config.py",
+      "sha256": "3652b229309b284789acd8cf96ded80a20cf28e076342dbdecb957503fad68dd"
+    },
+    {
+      "path": "backend/erratascope_service/db.py",
+      "sha256": "8f45ec18c337be87d8ea03959837027b64a273ab837733315b52ff14a366b9ee"
+    },
+    {
+      "path": "backend/erratascope_service/domain_adapter.py",
+      "sha256": "b807d4800ff6f2a650a8249192578e237e98bc85f2fdb2e02ab7bb5382f0acee"
+    },
+    {
+      "path": "backend/erratascope_service/errors.py",
+      "sha256": "4b9234be184d16102eaa1c708649c810f551ac3b17bcd77f477244978bb25aa4"
+    },
+    {
+      "path": "backend/erratascope_service/jobs.py",
+      "sha256": "78aea886da5e122620d22437b04b49823eaae382b8d559c5a11bc4a85069facf"
+    },
+    {
+      "path": "backend/erratascope_service/models.py",
+      "sha256": "81d3243eb082c1d00116a519774a8264fe8b2cc2f41ae70dd9228a126689027a"
+    },
+    {
+      "path": "backend/erratascope_service/schemas.py",
+      "sha256": "20258c0e93107f529492810ff64fe3f6707ec3af788e19dba110c4656a515dbc"
+    },
+    {
+      "path": "backend/erratascope_service/services.py",
+      "sha256": "cfd7ca5e5c62e9c73d7aef1c9df5ad232c8c8014b28cd43df005b415482190ef"
+    },
+    {
+      "path": "backend/migrations/env.py",
+      "sha256": "de05f053844344106d1d7524c116f2b4dae27bbbfc54973bb7b0a4787fc89687"
+    },
+    {
+      "path": "backend/migrations/script.py.mako",
+      "sha256": "807533bdf754df6cd7a7361fdef94b2301a2860f54e63b6a927b0969693a438a"
+    },
+    {
+      "path": "backend/migrations/versions/0001_foundation.py",
+      "sha256": "a587dc9bb82e3c279667859a31216620d82391550d26ea7d8a845b8317d9a0bd"
+    },
+    {
+      "path": "backend/requirements-service.lock",
+      "sha256": "7d53a786291e8419b03e8c2aaf412c6b49f02afc7814901d6783985c1facad23"
+    },
+    {
+      "path": "backend/tests_w03/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/tests_w03/helpers.py",
+      "sha256": "f773a45685b30fc50c5b44cd54f76fb395e216414e8bb8b423e2dd6bae58d390"
+    },
+    {
+      "path": "backend/tests_w03/test_artifacts.py",
+      "sha256": "fab261a1c6070b3bdeff61f8c3b2da9f52d1b6ea023cff01d3080e456dcd8d66"
+    },
+    {
+      "path": "backend/tests_w03/test_auth.py",
+      "sha256": "11de11c176e99a7b19d93ba371e03afb4f3fb5e33ab89355da1a6ff71335159a"
+    },
+    {
+      "path": "backend/tests_w03/test_connected_flow.py",
+      "sha256": "883fa03b23fef561b9076e7bec3dbe5cf5f1b84a008206d256d976ab4ea1a6d9"
+    },
+    {
+      "path": "backend/tests_w03/test_idempotency_review.py",
+      "sha256": "e7c98d061a5184021f92e4b8c750fcf6a098179eb861ee43f17f4949200132ca"
+    },
+    {
+      "path": "backend/tests_w03/test_jobs_recovery.py",
+      "sha256": "0f0c692fbc813663b3c6c204e5aed853e51c8ac3024a244960ecb01050b9d81b"
+    },
+    {
+      "path": "backend/tests_w03/test_persistence.py",
+      "sha256": "69f5d3fa83b79f74a174b4453016c2ecd9e02c18a0e785b6fb9959adbedeca2a"
+    },
+    {
+      "path": "docs/evidence/W03/IMPLEMENTATION_REPORT.md",
+      "sha256": "84cc444a821b07170e7a6dba7833b4e4e44f116026ea33733ba05bbf451fdd37"
+    },
+    {
+      "path": "docs/evidence/W03/dependency-inventory.json",
+      "sha256": "376b35cc29fed9cdb1b1e50b2fb3684b19a4958686baeaeecf34cf2a4c837e1c"
+    },
+    {
+      "path": "docs/evidence/W03/images.json",
+      "sha256": "a7e9693778b53fd7628372ba8849bba6dc8e56cbbd26daa94956d3f457607857"
+    },
+    {
+      "path": "docs/evidence/W03/openapi.json",
+      "sha256": "36315c79b123845083cbdfca4a5df3b1a90537b047c57b4b4c9f362a172fdeb1"
+    },
+    {
+      "path": "docs/evidence/W03/recovery-api-retrieval.json",
+      "sha256": "a4993b653c7cfd44f7421e222dbb1e68adb4cb5cecaaf90fc6c16ff4adde7fd3"
+    },
+    {
+      "path": "docs/evidence/W03/recovery-restart.json",
+      "sha256": "2921f6a81c79d11f3ac993c6d46cde77f521bb08037b2d5099110306f809c638"
+    },
+    {
+      "path": "docs/evidence/W03/recovery.json",
+      "sha256": "cb7a364a6b1e9ad028feeda8d6ae4876bf4cca93d27c19f790d2251a920b7d7e"
+    },
+    {
+      "path": "docs/evidence/W03/schema-inventory.json",
+      "sha256": "afbeacf5716c898615c0acead063b969dc596c1e7e9d393a1a3ec1a084885de9"
+    },
+    {
+      "path": "docs/evidence/W03/verification.json",
+      "sha256": "7bcb874b99258548c130971a7e0507e5b9f59b07dbb8f9534d214cd4a92014de"
+    },
+    {
+      "path": "infra/w03/Dockerfile",
+      "sha256": "638ec20dd5d766d29969be9714a6a4bc8a4c6ee77a4d47ab6d7f83a48e404d69"
+    },
+    {
+      "path": "infra/w03/compose.yaml",
+      "sha256": "5c2abee82158b2fb1b6dfc3ff8503838222d75347a633a63b89098ae179801fb"
+    },
+    {
+      "path": "infra/w03/db-init/01-roles.sh",
+      "sha256": "e4d0015955f6af7bcb3cd741d40ec94cafd99336bb4b3feb6fd3fa92fcd0a27c"
+    },
+    {
+      "path": "infra/w03/hosted-prerequisites.md",
+      "sha256": "0bec68fd85001615034d1ce5d9999ca1cd47ecbadd8c25bbb9dfabf5362241ab"
+    },
+    {
+      "path": "infra/w03/recover.ps1",
+      "sha256": "4194fc1a82b2bc454a1a4bc18c18f4489d8bcf150c4bc97dea8e7bf8e9447a1e"
+    },
+    {
+      "path": "infra/w03/recover_helper.py",
+      "sha256": "4cd7d970437b306b0266b2beb8eb8e39eb31f070c04dab723aea831697c7be08"
+    }
+  ]
+}

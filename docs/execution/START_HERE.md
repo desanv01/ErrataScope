@@ -12,9 +12,7 @@ Authority: direct human instruction > current Codex-issued packet revision and e
 
 ## Current dispatch
 
-**W03 revision 2, attempt 01 is READY_TO_DISPATCH.** W01/P0 and W02/P1 are accepted. Use [W03 prompt](prompts/W03-START.md), [packet](packets/W03-persistence-jobs.md), [binding](bindings/W03-foundation-v1.md) and [protected baseline](baselines/W03-baseline.json). W03 is local backend foundation with real PostgreSQL/Valkey integration; no Nebius key or provider call.
-
-[W02 checkpoint](reviews/W02-git-checkpoint.md) records the publication procedure. [UI/imagegen approval](UI_APPROVAL_GATE.md) and hosted P2 validation remain pending.
+W03 local foundation is accepted; see [review 05](reviews/W03-review-05.md) and [status](STATUS.md). Codex is binding W04 backend next. Earlier W03 start/repair prompts are historical. Hosted P2 NOT_RUN; [UI/imagegen approval](UI_APPROVAL_GATE.md) PENDING.
 
 ## Reading and execution sequence
 

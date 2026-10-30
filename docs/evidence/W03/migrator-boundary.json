@@ -1,0 +1,22 @@
+﻿[
+    {
+        "service":  "api",
+        "has_migrator_url":  false
+    },
+    {
+        "service":  "worker",
+        "has_migrator_url":  false
+    },
+    {
+        "service":  "dispatcher",
+        "has_migrator_url":  false
+    },
+    {
+        "service":  "migrate",
+        "has_migrator_url":  true
+    },
+    {
+        "service":  "test",
+        "has_migrator_url":  true
+    }
+]

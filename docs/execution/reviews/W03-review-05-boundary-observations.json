@@ -1,0 +1,80 @@
+{
+  "checks": [
+    {
+      "name": "expired_upload_fault_executed",
+      "expected": true,
+      "actual": true,
+      "passed": true
+    },
+    {
+      "name": "expired_upload_without_gc_rejected",
+      "expected": 409,
+      "actual": 409,
+      "passed": true
+    },
+    {
+      "name": "unknown_file_preserved",
+      "expected": true,
+      "actual": true,
+      "passed": true
+    },
+    {
+      "name": "static_internal_symlink_rejected",
+      "expected": true,
+      "actual": true,
+      "passed": true
+    },
+    {
+      "name": "parent_swap_fault_executed",
+      "expected": true,
+      "actual": true,
+      "passed": true
+    },
+    {
+      "name": "parent_swap_does_not_delete_external_file",
+      "expected": true,
+      "actual": true,
+      "passed": true
+    },
+    {
+      "name": "noncanonical_newline_key_rejected",
+      "expected": false,
+      "actual": false,
+      "passed": true
+    },
+    {
+      "name": "forged_hint_cannot_override_actual_session",
+      "expected": true,
+      "actual": true,
+      "passed": true
+    },
+    {
+      "name": "actual_mismatched_session_without_hint_denied",
+      "expected": true,
+      "actual": true,
+      "passed": true
+    },
+    {
+      "name": "mismatched_session_preserves_bytes",
+      "expected": true,
+      "actual": true,
+      "passed": true
+    },
+    {
+      "name": "prior_receipt_gc_race_preserves_result",
+      "expected": true,
+      "actual": true,
+      "passed": true
+    },
+    {
+      "name": "receipt_verification_releases_store_handles",
+      "expected": 0,
+      "actual": 0,
+      "passed": true
+    }
+  ],
+  "passed": 12,
+  "total": 12,
+  "scope": "real PostgreSQL with controlled timing and isolated temporary files; no application bytes touched",
+  "provider_calls": 0
+}

@@ -1,0 +1,24 @@
+{
+  "app_root": "/var/lib/erratascope/app-artifacts",
+  "test_root": "/var/lib/erratascope/test-artifacts",
+  "app_identity": "db:5432/erratascope",
+  "test_identity": "db:5432/erratascope_test",
+  "app_store_id": "3d453ca9-7b03-4fc2-ad4b-2a597a9c7855",
+  "test_store_id": "a65b0bbf-4394-4b8e-8c5e-764bdbcf7ea8",
+  "separate_roots": true,
+  "separate_identities": true,
+  "legacy_audit": {
+    "total": 81,
+    "readable": 40,
+    "unreadable": 41
+  },
+  "sentinel": {
+    "artifact_id": "eeda56ad-c578-4e5b-acec-56278801be61",
+    "receipt_artifact_id": "53dcd745-9092-46f4-adf6-e6490f68abbe",
+    "artifact_sha256": "2f45fe68a1e7e874548fd1c896b9273968a953cd849b3a72dcc433f04938a2bb",
+    "receipt_sha256": "a5bbeaa2b98e94b116d6b049933f6304ba1dbe5c7770c86d168e8a004913277f",
+    "before_after_artifact_equal": true,
+    "before_after_receipt_equal": true,
+    "passed": true
+  }
+}

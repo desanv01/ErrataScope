@@ -6,7 +6,7 @@ Last updated: 30 October 2026.
 
 W01/P0 and W02/P1 accepted. [W02 review 02](execution/reviews/W02-review-02.md) records 92 tests, 46 independent assertions and the small Codex corrections. [Accepted domain freeze](execution/bindings/W02-observed-contracts.md) is W03's immutable input.
 
-Current dispatch: [W03 revision 2](execution/packets/W03-persistence-jobs.md), [exact DeepSeek prompt](execution/prompts/W03-START.md). Local PostgreSQL/Valkey/API foundation only. No provider calls or hosted provisioning. [Git checkpoint procedure](execution/reviews/W02-git-checkpoint.md).
+[W03 local foundation accepted](execution/reviews/W03-review-05.md): 110 integration tests, 92 domain tests, real descriptor/recovery checks. Codex is checkpointing and binding W04 backend next. Hosted P2 NOT_RUN and UI/imagegen PENDING.
 
 ## Phase ledger
 
@@ -14,7 +14,7 @@ Current dispatch: [W03 revision 2](execution/packets/W03-persistence-jobs.md), [
 |---|---|---|
 | P0 Feasibility | Accepted | W01 review 06, live/semantic evidence frozen |
 | P1 Contracts/evaluator | Accepted | W02 review 02 and acceptance manifest |
-| P2 Persistence/auth/jobs | W03 bound; not started | Local integration/recovery; hosted flow and approved UI shell remain later |
+| P2 Persistence/auth/jobs | Local foundation accepted | Hosted/UI remain later; W03 review 05 accepted |
 | P3 Ingestion/review | Not started | Cited drafts and explicit review activation |
 | P4 Product assessment | Not started | Scoped persisted assessments |
 | P5 Evidence/requirements | Not started | Grounded requests/consistency |

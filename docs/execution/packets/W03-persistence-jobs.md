@@ -1,7 +1,9 @@
 # W03 — Persistence, authorization, artifacts, and durable jobs
 
+Acceptance notice (30 October 2026): **W03 local foundation accepted**, worker attempt 05, [review 05](../reviews/W03-review-05.md). [Observed freeze](../bindings/W03-observed-contracts.md). Earlier dispatch instructions below are historical; hosted P2 and UI remain open.
+
 Packet revision: **2**
-Dispatch state: **READY_TO_DISPATCH**
+Dispatch state: **ACCEPTED**
 Phase: [P2](../phases/P2-foundation.md), non-UI local foundation only.
 Worker: DeepSeek, attempt **W03-attempt-01**. Codex owns acceptance and Git.
 Starting baseline: [W03-baseline.json](../baselines/W03-baseline.json), bound after [W02/P1 acceptance](../reviews/W02-review-02.md).

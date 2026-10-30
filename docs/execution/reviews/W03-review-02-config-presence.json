@@ -1,0 +1,27 @@
+[
+  {
+    "service": "api",
+    "migrator_dsn_present": false,
+    "artifact_root": "/var/lib/erratascope/artifacts"
+  },
+  {
+    "service": "worker",
+    "migrator_dsn_present": false,
+    "artifact_root": "/var/lib/erratascope/artifacts"
+  },
+  {
+    "service": "dispatcher",
+    "migrator_dsn_present": false,
+    "artifact_root": "/var/lib/erratascope/artifacts"
+  },
+  {
+    "service": "migrate",
+    "migrator_dsn_present": true,
+    "artifact_root": "/var/lib/erratascope/artifacts"
+  },
+  {
+    "service": "test",
+    "migrator_dsn_present": true,
+    "artifact_root": "/var/lib/erratascope/artifacts"
+  }
+]

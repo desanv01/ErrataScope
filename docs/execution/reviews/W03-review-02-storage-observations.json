@@ -1,0 +1,50 @@
+{
+  "checks": [
+    {
+      "name": "other_database_gc_preserves_owned_bytes",
+      "expected": true,
+      "actual": false,
+      "passed": false
+    },
+    {
+      "name": "unknown_path_preserved",
+      "expected": true,
+      "actual": false,
+      "passed": false
+    },
+    {
+      "name": "internal_symlink_rejected",
+      "expected": true,
+      "actual": false,
+      "passed": false
+    },
+    {
+      "name": "fresh_expired_staging_honors_grace",
+      "expected": true,
+      "actual": false,
+      "passed": false
+    },
+    {
+      "name": "receipt_gc_race_fault_executed",
+      "expected": true,
+      "actual": true,
+      "passed": true
+    },
+    {
+      "name": "succeeded_job_has_readable_receipt",
+      "expected": true,
+      "actual": false,
+      "passed": false
+    }
+  ],
+  "passed": 1,
+  "total": 6,
+  "receipt_observation": {
+    "job_status": "succeeded",
+    "receipt_row": true,
+    "receipt_readable": false
+  },
+  "provider_calls": 0,
+  "storage_scope": "new temporary store only; application artifact volume untouched by this checker",
+  "timing": "controlled expired staging lease at actual pre-commit fence; real PostgreSQL and filesystem"
+}

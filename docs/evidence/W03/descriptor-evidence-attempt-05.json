@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "verify_receipt": {
+    "before": 1,
+    "after": 1,
+    "calls": 12
+  },
+  "reconcile": {
+    "before": 1,
+    "after": 1,
+    "calls": 8
+  },
+  "constructor_mismatch": {
+    "before": 0,
+    "after": 0,
+    "calls": 8
+  },
+  "app_lifespan": {
+    "before": 1,
+    "after": 1
+  },
+  "root": "/var/lib/erratascope/test-artifacts",
+  "passed": true
+}

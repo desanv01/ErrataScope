@@ -1,0 +1,9 @@
+{
+  "stage": "api_restart_retrieval",
+  "health_ready": true,
+  "artifact_listing": true,
+  "job_retrieval": true,
+  "artifact_bytes_preserved": true,
+  "receipt_preserved": true,
+  "passed": true
+}

@@ -1,0 +1,11 @@
+{
+  "stage": "restart_after_crash",
+  "job_status": "succeeded",
+  "attempts": 2,
+  "job_succeeded": true,
+  "attempt_count_at_least_2": true,
+  "result_artifact_present": true,
+  "stage_result_committed": true,
+  "receipt_digest_matches": true,
+  "passed": true
+}

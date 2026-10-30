@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "scope": "main application artifact+receipt across isolated test reset/GC",
+  "project_id": "668c44cf-06a3-4ce7-aaec-7c1866de7318",
+  "artifact_id": "a66406a4-6d3d-4420-99ed-28668d9c8c6c",
+  "receipt_artifact_id": "1d2890ef-a91b-4b82-b09d-5cf362e24eae",
+  "artifact_etag": "\"2f45fe68a1e7e874548fd1c896b9273968a953cd849b3a72dcc433f04938a2bb\"",
+  "artifact_sha256": "2f45fe68a1e7e874548fd1c896b9273968a953cd849b3a72dcc433f04938a2bb",
+  "receipt_sha256": "d9c15fd727c2e466d23a2aa7ec26b714e394ff0d5adb443830f60f7ed6f4cfa9",
+  "before_after_artifact_equal": true,
+  "before_after_receipt_equal": true,
+  "passed": true
+}

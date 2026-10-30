@@ -1,0 +1,15 @@
+{
+  "app_root": "/var/lib/erratascope/app-artifacts",
+  "test_root": "/var/lib/erratascope/test-artifacts",
+  "app_identity": "db:5432/erratascope",
+  "test_identity": "db:5432/erratascope_test",
+  "app_store_id": "3d453ca9-7b03-4fc2-ad4b-2a597a9c7855",
+  "test_store_id": "a65b0bbf-4394-4b8e-8c5e-764bdbcf7ea8",
+  "separate_roots": true,
+  "separate_identities": true,
+  "legacy_audit": {
+    "total": 50,
+    "readable": 9,
+    "unreadable": 41
+  }
+}

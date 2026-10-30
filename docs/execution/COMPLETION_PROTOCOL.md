@@ -20,4 +20,4 @@ If authentication, repository identity, network policy, or another real prerequi
 
 ## Current application
 
-[W01/P0](reviews/W01-review-06.md) and [W02/P1](reviews/W02-review-02.md) accepted; [W02 checkpoint procedure](reviews/W02-git-checkpoint.md). Current [W03 prompt](prompts/W03-START.md) authorizes only bound local backend foundation. W01 reservations remain exhausted. UI/imagegen and hosted P2 acceptance remain pending.
+W01/P0, W02/P1 and [W03 local foundation](reviews/W03-review-05.md) are accepted. Codex checkpoints W03 and binds the eligible W04 backend scope. Full hosted P2 and UI/imagegen remain open. Historical repair prompts are not current dispatches; follow [STATUS](STATUS.md).

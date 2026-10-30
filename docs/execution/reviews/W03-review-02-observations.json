@@ -1,0 +1,146 @@
+{
+  "checks": [
+    {
+      "name": "ready_real_services",
+      "expected": 200,
+      "actual": 200,
+      "pass": true
+    },
+    {
+      "name": "artifact_roundtrip",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "project_detail_route",
+      "expected": 200,
+      "actual": 200,
+      "pass": true
+    },
+    {
+      "name": "membership_put_route",
+      "expected": 200,
+      "actual": 200,
+      "pass": true
+    },
+    {
+      "name": "viewer_members_list_denied",
+      "expected": 403,
+      "actual": 403,
+      "pass": true
+    },
+    {
+      "name": "membership_delete_route",
+      "expected": 204,
+      "actual": 204,
+      "pass": true
+    },
+    {
+      "name": "revoked_fresh_artifact_read_denied",
+      "expected": 404,
+      "actual": 404,
+      "pass": true
+    },
+    {
+      "name": "revoked_review_idempotency_replay_denied",
+      "expected": 404,
+      "actual": 404,
+      "pass": true
+    },
+    {
+      "name": "revoked_job_idempotency_replay_denied",
+      "expected": 404,
+      "actual": 404,
+      "pass": true
+    },
+    {
+      "name": "revoked_fresh_job_create_denied",
+      "expected": 404,
+      "actual": 404,
+      "pass": true
+    },
+    {
+      "name": "nested_error_envelope",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "server_generated_request_uuid",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "duplicate_upload_one_resource",
+      "expected": 1,
+      "actual": 1,
+      "pass": true
+    },
+    {
+      "name": "duplicate_upload_no_orphan_bytes",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "name": "reconcile_cleans_unreferenced_upload_bytes",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "name": "live_worker_succeeds",
+      "expected": "succeeded",
+      "actual": "succeeded",
+      "pass": true
+    },
+    {
+      "name": "event_limit_one_honored",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "event_cursor_envelope",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "receipt_digest",
+      "expected": "8c4809ddab6542a00dc3db8bf4cefba5c81c0f9d74c85c5ec06bbad9192c58a1",
+      "actual": "8c4809ddab6542a00dc3db8bf4cefba5c81c0f9d74c85c5ec06bbad9192c58a1",
+      "pass": true
+    },
+    {
+      "name": "duplicate_execute_one_stage",
+      "expected": 1,
+      "actual": 1,
+      "pass": true
+    },
+    {
+      "name": "expired_lease_heartbeat_denied",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "name": "cancelled_attempt_closed",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    }
+  ],
+  "passed": 22,
+  "total": 22,
+  "source": "actual local HTTP/PostgreSQL/Valkey and private synthetic artifacts",
+  "provider_calls": 0,
+  "secret_values_recorded": false,
+  "synthetic_project_ids": [
+    "97e33052-7950-45cf-95b7-cb31f1c800ba",
+    "be175c05-7c40-44eb-bb10-259c4b26cc7d",
+    "ac79d4dc-82c1-43b1-8d23-262e60e3bb77"
+  ]
+}

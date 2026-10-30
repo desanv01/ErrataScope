@@ -1,6 +1,6 @@
 # Dispatch and return prompts
 
-Current assignment: [W03 revision 2](W03-START.md), attempt 01, READY_TO_DISPATCH after W02/P1 acceptance. W01/W02 worker prompts are historical. Follow [STATUS](../STATUS.md).
+W03 accepted. Follow [STATUS](../STATUS.md) for the next bound W04 backend assignment. Old W03 prompts are historical.
 
 Future packet prompts are issued by Codex after acceptance of their dependencies and baseline binding. A generic prompt is not authorization to skip those gates.
 

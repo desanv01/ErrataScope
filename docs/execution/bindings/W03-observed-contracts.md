@@ -1,0 +1,13 @@
+# W03 accepted local foundation boundary
+
+Accepted by [review 05](../reviews/W03-review-05.md); exact files in [ACCEPTANCE.json](../../evidence/W03/ACCEPTANCE.json). The original [foundation binding](W03-foundation-v1.md), supplemented by repairs 01–04, defines behavior. Scope is local, non-UI only.
+
+- Pinned Linux Python/PostgreSQL/Valkey stack, 40-package hashed service lock; existing Compose project erratascope-w03. Preserve pgdata/artifacts/test_artifacts and migrate the existing DB in place. Applied migrations 0001–0003 are immutable. Test database and storage are separate from application storage; marker identity must match the actual SQLAlchemy session database before collection.
+- API prefix /api/v1; strict typed bodies, nested error envelope with server request UUID, stable bounded pagination. Verify JWT signature/issuer/audience/expiry; RS256/ES256 only. PostgreSQL membership determines current actions, including before idempotent replay/race recovery. Owner-only member management/listing and self/last-owner protection. Runtime app/worker/dispatcher never receive migrator DSN.
+- Immutable artifacts and W02 bundle/version persistence preserve seals and project references. Artifact storage has hash/length checks, staged uploads, renewal only before expiry, short locked finalization, fenced ownership, protected live receipt staging, ambiguous-commit retention and safe reference/grace-based orphan collection. Canonical UUID paths, pinned directory-relative no-follow operations and deterministic store lifetimes are required.
+- PostgreSQL owns durable jobs/attempts/outbox/events; RQ JSON only schedules. Heartbeat, lease/attempt fencing, dispatch claim token and generation ordering, bounded retries, cancellation, committed-receipt settlement and integrity-error reporting remain required. Missing historical receipts are never silently regenerated.
+- Accepted W02 domain package, fixtures, schema exports and tests remain unchanged and pure. W01 frozen live evidence stays intact; its four inference reservations remain exhausted.
+- Hosted startup remains fail-closed; hosted P2 NOT_RUN. UI/imagegen PENDING. No arbitrary hosted/private upload or frontend authorization follows from local acceptance.
+- Legacy 41 missing artifact IDs are explicit and unreplaced. New flows must preserve fresh byte inventories/sentinels; volume retention alone is not evidence of historical byte integrity.
+
+W04 may extend service/API/jobs and add forward migrations only under its own explicit binding and starting inventory. This acceptance manifest records the accepted bytes historically; it is not permission to weaken those behaviors. Existing regression tests remain protected.

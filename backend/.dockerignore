@@ -1,0 +1,10 @@
+# Build exclusions for the backend-only W03 image context.
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.local/
+.env
+.env.*

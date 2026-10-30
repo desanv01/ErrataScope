@@ -1,6 +1,6 @@
 # Packet index and dependency map
 
-Revision 8. W01/P0 and W02/P1 accepted. [W03 revision 2](packets/W03-persistence-jobs.md) is ready against its bound local foundation contract. [Status](STATUS.md).
+Revision 13. W01/P0, W02/P1 and W03 local foundation accepted. [W03 review 05](reviews/W03-review-05.md); next eligible scope is W04 backend. [Status](STATUS.md).
 
 | Packet | Deliverable | Prerequisite acceptance | Phase coverage |
 |---|---|---|---|

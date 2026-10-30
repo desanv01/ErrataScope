@@ -1,0 +1,53 @@
+﻿{
+    "schema":  "erratascope",
+    "alembic_version":  "0003_staging_fencing",
+    "tables":  [
+                   "alembic_version",
+                   "artifacts",
+                   "bundle_members",
+                   "bundles",
+                   "domain_versions",
+                   "idempotency",
+                   "job_attempts",
+                   "job_events",
+                   "jobs",
+                   "memberships",
+                   "outbox",
+                   "projects",
+                   "review_events",
+                   "review_items",
+                   "stage_results",
+                   "upload_staging"
+               ],
+    "immutable_triggers":  [
+                               "artifacts:artifacts_immutable",
+                               "artifacts:artifacts_immutable",
+                               "bundle_members:bundle_members_immutable",
+                               "bundle_members:bundle_members_immutable",
+                               "bundles:bundles_immutable",
+                               "bundles:bundles_immutable",
+                               "domain_versions:domain_versions_immutable",
+                               "domain_versions:domain_versions_immutable",
+                               "job_events:job_events_immutable",
+                               "job_events:job_events_immutable",
+                               "review_events:review_events_immutable",
+                               "review_events:review_events_immutable",
+                               "review_items:review_items_immutable",
+                               "review_items:review_items_immutable",
+                               "stage_results:stage_results_immutable",
+                               "stage_results:stage_results_immutable"
+                           ],
+    "upload_staging_columns":  [
+                                   "artifact_id",
+                                   "project_id",
+                                   "actor_id",
+                                   "staging_key",
+                                   "state",
+                                   "lease_until",
+                                   "created_at",
+                                   "updated_at",
+                                   "owner_kind",
+                                   "owner_job_id",
+                                   "owner_attempt_token"
+                               ]
+}

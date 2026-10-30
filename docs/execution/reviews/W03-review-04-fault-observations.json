@@ -1,0 +1,58 @@
+{
+  "checks": [
+    {
+      "name": "staged_upload_real_db_rejection",
+      "expected": 409,
+      "actual": 409,
+      "pass": true
+    },
+    {
+      "name": "rollback_leaves_no_untracked_artifact",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "name": "orphan_reconciliation_available",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "name": "ack_loss_fault_injected",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "success_transaction_durable",
+      "expected": "succeeded",
+      "actual": "succeeded",
+      "pass": true
+    },
+    {
+      "name": "stage_transaction_durable",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "committed_receipt_survives_ack_loss",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "redelivery_restores_or_preserves_receipt",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    }
+  ],
+  "passed": 8,
+  "total": 8,
+  "fault_injection": "Actual PostgreSQL constraint failure; acknowledgement loss raised after actual Session.commit, no database mock",
+  "synthetic_project_id": "93a6d74a-1c81-499b-ab5b-135f79a6ac3f",
+  "synthetic_job_id": "befa584f-bd78-4dd1-8875-683bda326f7c",
+  "provider_calls": 0
+}

@@ -1,0 +1,8 @@
+{
+  "backup_files": 53,
+  "backup_mismatches": [],
+  "accepted_domain_hashes": 50,
+  "legacy_missing_count": 41,
+  "current_missing_count": 41,
+  "missing_ids_equal_legacy": true
+}

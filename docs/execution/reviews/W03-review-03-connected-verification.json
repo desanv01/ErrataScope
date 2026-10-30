@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-10-30T07:49:28.639300Z",
+  "api_base_url": "http://api:8000",
+  "checks": [
+    {
+      "name": "health_ready",
+      "passed": true,
+      "detail": {
+        "status": 200
+      }
+    },
+    {
+      "name": "idempotent_replay",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "idempotency_conflict",
+      "passed": true,
+      "detail": {
+        "status": 409
+      }
+    },
+    {
+      "name": "artifact_upload",
+      "passed": true,
+      "detail": {
+        "byte_length": 42
+      }
+    },
+    {
+      "name": "artifact_roundtrip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "review_stale_denied",
+      "passed": true,
+      "detail": {
+        "status": 409
+      }
+    },
+    {
+      "name": "job_completed",
+      "passed": true,
+      "detail": {
+        "status": "succeeded",
+        "attempts": 1
+      }
+    },
+    {
+      "name": "event_order",
+      "passed": true,
+      "detail": [
+        "queued",
+        "running",
+        "succeeded"
+      ]
+    },
+    {
+      "name": "receipt_digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "foreign_project_denied",
+      "passed": true,
+      "detail": {
+        "status": 404
+      }
+    },
+    {
+      "name": "viewer_membership_visible",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "secrets_recorded": false,
+  "passed": true
+}

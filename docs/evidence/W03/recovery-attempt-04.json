@@ -1,0 +1,33 @@
+﻿{
+    "generated_utc":  "2026-10-30T08:07:14Z",
+    "compose_project":  "erratascope-w03",
+    "stages":  [
+                   {
+                       "stage":  "seed",
+                       "ok":  true
+                   },
+                   {
+                       "stage":  "crash_after_stage",
+                       "exit":  43,
+                       "expected":  43
+                   },
+                   {
+                       "stage":  "reconcile",
+                       "ok":  true
+                   },
+                   {
+                       "stage":  "worker_restart",
+                       "ok":  true
+                   },
+                   {
+                       "stage":  "verify_after_restart",
+                       "ok":  true
+                   },
+                   {
+                       "stage":  "api_restart_retrieval",
+                       "ok":  true
+                   }
+               ],
+    "source":  "infra/w03/recover.ps1",
+    "provider_calls":  0
+}

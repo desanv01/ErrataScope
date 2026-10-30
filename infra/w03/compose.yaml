@@ -1,0 +1,156 @@
+name: erratascope-w03
+
+x-service-env: &service_env
+  W03_MODE: local
+  W03_DATABASE_URL: postgresql+psycopg://erratascope_app:dev_app_password@db:5432/erratascope
+  W03_BROKER_URL: redis://broker:6379/0
+  W03_ARTIFACT_ROOT: /var/lib/erratascope/artifacts
+  W03_ISSUER: http://local.erratascope.test
+  W03_AUDIENCE: erratascope-local
+  W03_JWKS_PATH: /run/dev-auth/jwks.json
+  W03_API_BASE_URL: http://api:8000
+  W03_TEST_MODE: "1"
+  W03_LEASE_SECONDS: "60"
+  W03_HEARTBEAT_SECONDS: "15"
+  W03_MAX_ATTEMPTS: "3"
+  W03_MAX_ARTIFACT_BYTES: "10485760"
+  W03_DISPATCH_INTERVAL_SECONDS: "2"
+  W03_RECONCILE_INTERVAL_SECONDS: "5"
+  W03_STAGING_LEASE_SECONDS: "60"
+  W03_ORPHAN_GRACE_SECONDS: "30"
+  W03_RETRY_DELAYS_SECONDS: "1,5"
+
+services:
+  db:
+    image: postgres:17-bookworm@sha256:858bb5e98eed02eb8cafbcdc007f9a65d1b613972028944a8ec2133ccaf80d27
+    environment:
+      POSTGRES_USER: erratascope
+      POSTGRES_PASSWORD: dev_local_postgres_password
+      POSTGRES_DB: erratascope
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db-init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U erratascope -d erratascope"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+
+  broker:
+    image: valkey/valkey:8.1.4-alpine@sha256:e706d1213aaba6896c162bb6a3a9e1894e1a435f28f8f856d14fab2e10aa098b
+    command: ["valkey-server", "--save", "", "--appendonly", "no"]
+    healthcheck:
+      test: ["CMD", "valkey-cli", "ping"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+
+  api:
+    build:
+      context: ../../backend
+      dockerfile: ../infra/w03/Dockerfile
+    image: erratascope-w03-service:local
+    environment:
+      <<: *service_env
+    command: ["python", "-m", "uvicorn", "erratascope_service.api:app", "--host", "0.0.0.0", "--port", "8000"]
+    depends_on:
+      db:
+        condition: service_healthy
+      broker:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:18080:8000"
+    volumes:
+      - artifacts:/var/lib/erratascope/artifacts
+      - ../../.local/w03/dev-auth/jwks.json:/run/dev-auth/jwks.json:ro
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health/ready', timeout=3)"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 10s
+    restart: unless-stopped
+
+  worker:
+    image: erratascope-w03-service:local
+    build:
+      context: ../../backend
+      dockerfile: ../infra/w03/Dockerfile
+    environment:
+      <<: *service_env
+    command: ["python", "-m", "erratascope_service.cli", "worker"]
+    depends_on:
+      db:
+        condition: service_healthy
+      broker:
+        condition: service_healthy
+    volumes:
+      - artifacts:/var/lib/erratascope/artifacts
+    restart: unless-stopped
+
+  dispatcher:
+    image: erratascope-w03-service:local
+    build:
+      context: ../../backend
+      dockerfile: ../infra/w03/Dockerfile
+    environment:
+      <<: *service_env
+    command: ["python", "-m", "erratascope_service.cli", "dispatcher"]
+    depends_on:
+      db:
+        condition: service_healthy
+      broker:
+        condition: service_healthy
+    volumes:
+      - artifacts:/var/lib/erratascope/artifacts
+    restart: unless-stopped
+
+  migrate:
+    image: erratascope-w03-service:local
+    build:
+      context: ../../backend
+      dockerfile: ../infra/w03/Dockerfile
+    environment:
+      <<: *service_env
+      W03_MIGRATOR_DATABASE_URL: postgresql+psycopg://erratascope_migrator:dev_migrator_password@db:5432/erratascope
+    command: ["python", "-m", "erratascope_service.cli", "migrate"]
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - artifacts:/var/lib/erratascope/artifacts
+
+  test:
+    image: erratascope-w03-service:local
+    build:
+      context: ../../backend
+      dockerfile: ../infra/w03/Dockerfile
+    environment:
+      <<: *service_env
+      W03_DATABASE_URL: postgresql+psycopg://erratascope_app:dev_app_password@db:5432/erratascope_test
+      W03_MIGRATOR_DATABASE_URL: postgresql+psycopg://erratascope_migrator:dev_migrator_password@db:5432/erratascope_test
+      W03_QUEUE_NAME: w03-test
+      W03_ARTIFACT_ROOT: /var/lib/erratascope/test-artifacts
+      W03_APP_API_URL: http://api:8000
+      W03_APP_DATABASE_URL: postgresql+psycopg://erratascope_app:dev_app_password@db:5432/erratascope
+      W03_JWKS_PATH: /local/dev-auth/jwks.json
+      W03_DEV_AUTH_DIR: /local/dev-auth
+    working_dir: /app
+    command: ["python", "-c", "import time; time.sleep(3600)"]
+    depends_on:
+      db:
+        condition: service_healthy
+      broker:
+        condition: service_healthy
+    volumes:
+      - test_artifacts:/var/lib/erratascope/test-artifacts
+      - artifacts:/var/lib/erratascope/app-artifacts
+      - ../../.local/w03:/local
+
+volumes:
+  pgdata:
+  artifacts:
+  test_artifacts:
+

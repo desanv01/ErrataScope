@@ -1,0 +1,26 @@
+{
+  "checks": [
+    {
+      "name": "rejected_store_construction_closes_root",
+      "expected_growth": 0,
+      "actual_growth": 0,
+      "passed": true
+    },
+    {
+      "name": "rejected_staging_parent_closes_intermediate_fd",
+      "expected_growth": 0,
+      "actual_growth": 0,
+      "passed": true
+    },
+    {
+      "name": "duplicate_staging_create_closes_pinned_parent",
+      "expected_growth": 0,
+      "actual_growth": 0,
+      "passed": true
+    }
+  ],
+  "passed": 3,
+  "total": 3,
+  "scope": "isolated temporary files; eight bounded calls per failure path; GC performed before measurement",
+  "provider_calls": 0
+}

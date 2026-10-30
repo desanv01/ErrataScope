@@ -1,0 +1,216 @@
+{
+  "image_files": 44,
+  "image_mismatches": [],
+  "migration": [
+    "0003_staging_fencing"
+  ],
+  "main_artifacts_checked": 112,
+  "main_artifact_failures": [
+    {
+      "id": "db7f3415-ad79-41f2-9ef1-1be7e65adacd",
+      "project_id": "71f8d6bd-30e4-41c2-b017-a5768ff29764",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "767df489-0a65-44d5-a77e-f56a33309e2f",
+      "project_id": "71f8d6bd-30e4-41c2-b017-a5768ff29764",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "8082f698-8a04-43da-b999-9a3f29b59218",
+      "project_id": "71f8d6bd-30e4-41c2-b017-a5768ff29764",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "fc5316e4-3183-44d3-b692-efe50062d87a",
+      "project_id": "71f8d6bd-30e4-41c2-b017-a5768ff29764",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "87b70ccc-85e1-4aa1-b918-f4b8942840b5",
+      "project_id": "71f8d6bd-30e4-41c2-b017-a5768ff29764",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "8efb12b9-349b-4083-b6af-9f9fcf4c4b4a",
+      "project_id": "3038ffa9-a250-4eee-80bb-9577137b20d3",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "ba6e69bf-c903-4f42-b20b-8578fe0c673b",
+      "project_id": "179f99e9-5d43-4aba-9617-6a52012337bb",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "09be93d8-afab-4eea-bc81-6d47916e25ca",
+      "project_id": "30092cb6-a190-405c-8c60-a02aeb0ae7c0",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "b4dd36e1-b2da-4330-b341-f3cc3c8f612d",
+      "project_id": "00000000-0000-0000-0000-000000000001",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "d8ede975-9869-4ef7-a4f1-b7364248f289",
+      "project_id": "30092cb6-a190-405c-8c60-a02aeb0ae7c0",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "e0a4e529-738f-42a3-b4fe-28ae9dd045b2",
+      "project_id": "3038ffa9-a250-4eee-80bb-9577137b20d3",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "1d783a72-66a0-4bfe-a059-63cb10721d8c",
+      "project_id": "30092cb6-a190-405c-8c60-a02aeb0ae7c0",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "456a5c72-11df-4790-a483-54f2436a18a9",
+      "project_id": "30092cb6-a190-405c-8c60-a02aeb0ae7c0",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "ed5a470d-f836-4b31-8fa2-4c447e919b78",
+      "project_id": "30092cb6-a190-405c-8c60-a02aeb0ae7c0",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "299eea69-dbb7-4f93-892a-5f9fdfcddd64",
+      "project_id": "30092cb6-a190-405c-8c60-a02aeb0ae7c0",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "429df00e-a148-4e28-a0be-8f7a9757ce98",
+      "project_id": "fb91afbf-9632-481a-ada1-4efbeb91e4b4",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "0f54a9de-b82f-4ad4-ab17-3d0873f5545d",
+      "project_id": "fb91afbf-9632-481a-ada1-4efbeb91e4b4",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "8c693042-31e4-47ca-9c67-562027fbbee3",
+      "project_id": "2670ec6e-4db0-4572-a761-9eb2d76a8dcf",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "ce06a626-725e-4ffe-b28d-927aca3005c2",
+      "project_id": "2670ec6e-4db0-4572-a761-9eb2d76a8dcf",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "da8ecb8b-4c03-4491-917c-fd542b4d7a42",
+      "project_id": "0e7b7ab5-a666-4f11-8dfb-ed2ef0744231",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "1e773a90-1cdf-4375-954b-87dc56c40790",
+      "project_id": "0e7b7ab5-a666-4f11-8dfb-ed2ef0744231",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "e518fd44-4804-46a3-8080-c0f9acd13205",
+      "project_id": "f031037a-42a4-4907-917c-905f3b736ab6",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "3bab2242-62d1-4e69-a5c8-cea810acf055",
+      "project_id": "f031037a-42a4-4907-917c-905f3b736ab6",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "9f98037f-f003-4e46-a0fa-738a5f9be38c",
+      "project_id": "d5aa0386-f39b-42e9-ae3b-ba490bd16545",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "6123cd51-dbba-47a2-a76f-f0c5ef5aa616",
+      "project_id": "d5aa0386-f39b-42e9-ae3b-ba490bd16545",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "b36368fb-1f87-4052-a0c2-c3dd712574b5",
+      "project_id": "6a117a2b-0ebc-4db1-b816-acf1ef7c1f3e",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "d6301857-6d6c-4f75-8712-df1014398e01",
+      "project_id": "6a117a2b-0ebc-4db1-b816-acf1ef7c1f3e",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "4f715407-3282-4128-8220-3c99af4c61ca",
+      "project_id": "f6243c5a-6b19-410c-998f-c156746b323f",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "50d77e71-407b-419b-ab33-206c0541c1ab",
+      "project_id": "f6243c5a-6b19-410c-998f-c156746b323f",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "30b617a9-0586-4ba9-bdce-1bd9da6eb377",
+      "project_id": "22f7425e-3f3b-4c42-ac54-45b495b8c0aa",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "2392d838-da84-46e8-8f7f-fa9c81fd29dd",
+      "project_id": "1410f133-67ae-4934-b12e-73fb13c62e81",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "57ed437e-6a31-4c28-95a2-f3ae22ac237e",
+      "project_id": "dd1d3ce7-99ed-4282-8e1a-3720d08f0633",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "076676b5-f6af-4894-99dd-3bc13ec0dc96",
+      "project_id": "22f7425e-3f3b-4c42-ac54-45b495b8c0aa",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "4eccf284-e2aa-409d-99a8-002f048344f9",
+      "project_id": "dd1d3ce7-99ed-4282-8e1a-3720d08f0633",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "618473f6-a602-4d99-b776-effb49b841ad",
+      "project_id": "9843ab75-9dc4-4207-9e2b-27207ed774f8",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "21b20300-1242-4163-8c07-ab295171bdde",
+      "project_id": "9843ab75-9dc4-4207-9e2b-27207ed774f8",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "12f50eb3-6190-43d1-996e-75e94ab6d38e",
+      "project_id": "30092cb6-a190-405c-8c60-a02aeb0ae7c0",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "a033d9d2-189e-4cc5-b398-7e6b033f226a",
+      "project_id": "1b905e86-2314-43ea-9c7b-d164c56c5270",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "dbbf0ea7-581d-4180-aa81-b0c5170e82c9",
+      "project_id": "1b905e86-2314-43ea-9c7b-d164c56c5270",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "bbf9c69b-4eb7-44b7-bafa-958f9d99ae6d",
+      "project_id": "55aaab7f-7779-46d1-b92f-10168d03115f",
+      "code": "ARTIFACT_MISSING"
+    },
+    {
+      "id": "9a11bd20-a063-4669-a03f-090fed866aaf",
+      "project_id": "55aaab7f-7779-46d1-b92f-10168d03115f",
+      "code": "ARTIFACT_MISSING"
+    }
+  ],
+  "attribution": "Review-05 read-only inventory before final HTTP/recovery additions. Missing IDs exactly match the legacy 41; no claim about historical cause/time or restoration."
+}
