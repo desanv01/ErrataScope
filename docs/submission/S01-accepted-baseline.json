@@ -154,8 +154,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "1fca655876b95e354cfd2b6350e6856bcb865e7f904d2c9d6054a602a51ac98f",
-      "bytes": 4104
+      "sha256": "5a97b2ddb814197c0c64fecf92aa7aec076d54adcbf1a7703e9d1476df3c709d",
+      "bytes": 10835
     },
     {
       "path": "backend/.dockerignore",
@@ -2641,6 +2641,20 @@
       "path": "visuals/erratascope-evidence-explorer.html",
       "sha256": "9e2a9c08f38f0870b46c1392e530f5122cb1a5f971c7033528a834eb1647e735",
       "bytes": 87983
+    }
+  ],
+  "release_document_amendments": [
+    {
+      "date": "2026-10-30",
+      "reason": "User explicitly requested a README styled after Aivora/AIVE, the hackathon name/year, and actual demo frames.",
+      "file": "README.md",
+      "before_sha256": "1fca655876b95e354cfd2b6350e6856bcb865e7f904d2c9d6054a602a51ac98f",
+      "after_sha256": "5a97b2ddb814197c0c64fecf92aa7aec076d54adcbf1a7703e9d1476df3c709d",
+      "previous_baseline": "docs/submission/release/baselines/S01-before-readme-2026-10-30.json",
+      "previous_baseline_sha256": "6904298188fc4c77b4bfa7d7c6b104d0eea5deb16da2f66ad1e26fc89a10dbf6",
+      "git_baseline": "715b5b0be529ea26ffef18a721c21993fb032c57",
+      "other_protected_files_unchanged": 526,
+      "provider_histories_and_code_changed": false
     }
   ]
 }
