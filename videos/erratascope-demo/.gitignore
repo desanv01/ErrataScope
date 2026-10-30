@@ -1,0 +1,10 @@
+.hyperframes/
+.media/
+.thumbnails/
+assets/capture/
+renders/
+snapshots/
+node_modules/
+*.log
+check*.json
+snapshot*.json

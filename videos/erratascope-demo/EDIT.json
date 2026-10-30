@@ -1,0 +1,149 @@
+{
+  "duration": 152,
+  "fps": 30,
+  "scenes": [
+    {
+      "id": "intro",
+      "duration": 8,
+      "type": "title",
+      "start": 0
+    },
+    {
+      "id": "workspace",
+      "duration": 18,
+      "file": "01-workspace.mp4",
+      "in": 12,
+      "title": "From manufacturer errata to a reviewable draft",
+      "caption": "Two selected ES0620 entries. Source evidence stays beside the interpretation.",
+      "start": 8
+    },
+    {
+      "id": "provenance",
+      "duration": 8,
+      "file": "01-workspace.mp4",
+      "in": 30,
+      "type": "focus",
+      "crop": [
+        1165,
+        195,
+        405,
+        220
+      ],
+      "title": "An actual NVIDIA model result",
+      "headline": "Nemotron, via Token Factory.",
+      "body": "nvidia/Nemotron-3.5-Super-VL",
+      "detail": "Interprets selected source excerpts through the Nebius API.",
+      "caption": "This demo replays the recorded response. It does not make a new inference call.",
+      "start": 26
+    },
+    {
+      "id": "citations",
+      "duration": 28,
+      "file": "02-citations.mp4",
+      "in": 4,
+      "title": "Follow a claim back to its source",
+      "caption": "Click a citation: the corresponding entry and source excerpt come into view.",
+      "start": 34
+    },
+    {
+      "id": "unknowns",
+      "duration": 8,
+      "file": "03-unknowns.mp4",
+      "in": 4,
+      "type": "focus",
+      "crop": [
+        1165,
+        350,
+        405,
+        260
+      ],
+      "title": "Preserve what the source does not establish",
+      "headline": "Unknown stays unknown.",
+      "body": "Affected device. Exception.",
+      "detail": "Missing information remains explicitly unresolved.",
+      "caption": "Null or unknown is not false. Human review cannot manufacture missing evidence.",
+      "start": 62
+    },
+    {
+      "id": "coverage",
+      "duration": 14,
+      "file": "03-unknowns.mp4",
+      "in": 12,
+      "title": "Keep the limits visible",
+      "caption": "2 supported of 53 detected entries. The inventory is incomplete; unselected entries are not assessed.",
+      "start": 70
+    },
+    {
+      "id": "review",
+      "duration": 13,
+      "file": "04-review.mp4",
+      "in": 4,
+      "title": "Record a human source review",
+      "caption": "A required note records the reviewer’s observations and remaining uncertainty.",
+      "start": 84
+    },
+    {
+      "id": "history",
+      "duration": 7,
+      "file": "04-review.mp4",
+      "in": 17,
+      "type": "focus",
+      "crop": [
+        1165,
+        425,
+        405,
+        325
+      ],
+      "title": "The decision is retained",
+      "headline": "Review. Record. Revisit.",
+      "body": "An append-only review history.",
+      "detail": "The submitted note remains attached to this interpretation.",
+      "caption": "A reviewed interpretation is not an accepted executable rule or an applicability assessment.",
+      "start": 97
+    },
+    {
+      "id": "saved-note",
+      "duration": 5,
+      "file": "05-export.mp4",
+      "in": 10,
+      "type": "focus",
+      "crop": [
+        1165,
+        585,
+        405,
+        175
+      ],
+      "title": "The saved note stays in the record",
+      "headline": "Your observation is saved.",
+      "body": "Review history · revision 2",
+      "detail": "The earlier review remains visible alongside the new note.",
+      "caption": "A persistent record of observations—not an applicability decision.",
+      "start": 104
+    },
+    {
+      "id": "export",
+      "duration": 14,
+      "file": "05-export.mp4",
+      "in": 4,
+      "title": "Take the evidence with you",
+      "caption": "Download actual JSON and Markdown summaries: citations, coverage, unknowns and review history.",
+      "start": 109
+    },
+    {
+      "id": "synthetic",
+      "duration": 22,
+      "file": "06-synthetic.mp4",
+      "in": 7,
+      "title": "A deliberately incomplete example",
+      "badge": "SYNTHETIC / OFFLINE",
+      "caption": "Synthetic fixture—not manufacturer evidence. Document identity and revision remain unknown.",
+      "start": 123
+    },
+    {
+      "id": "close",
+      "duration": 7,
+      "type": "title",
+      "start": 145
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "ok": true,
+  "file": "renders/ErrataScope_Demo_Desan_Vasu.mp4",
+  "bytes": 21395190,
+  "sha256": "f7658c4ac6a664d6c86567ea40d8650354efb0aeca9481e25d94183e17a716ce",
+  "duration_s": 152,
+  "video": {
+    "codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "pixel_format": "yuv420p",
+    "fps": "30/1",
+    "frames": 4560
+  },
+  "audio_streams": 0,
+  "full_decode": "PASS",
+  "actual_review_export": "PASS",
+  "provider_calls_during_capture": 0,
+  "source_captures": [
+    {
+      "file": "assets/capture/01-workspace.mp4",
+      "bytes": 2318241,
+      "sha256": "c3a9451a9e50e25a49b1bd605c7727523ebbd4f9d4d8bfcb8c68ec7d2df13364"
+    },
+    {
+      "file": "assets/capture/01-workspace.webm",
+      "bytes": 3705024,
+      "sha256": "2884ece0c1cbd68405d3b21e453a9ed47bc13e59201d06a53737a36d3f7f427f"
+    },
+    {
+      "file": "assets/capture/02-citations.mp4",
+      "bytes": 1883290,
+      "sha256": "97e8c69fc38ab16afb728d8397ff426e0afbea8bcb41fb8c49436a10a12a750b"
+    },
+    {
+      "file": "assets/capture/02-citations.webm",
+      "bytes": 3042173,
+      "sha256": "de5b17eaae04a5c1395b2888d3c74b6b527e70c93c116b4fb8fa1cecb4d85ab0"
+    },
+    {
+      "file": "assets/capture/03-unknowns.mp4",
+      "bytes": 1662923,
+      "sha256": "c950bff100e795c64418af8165b933c4353cfbee98eaba7b89ed4c5dd3678bd4"
+    },
+    {
+      "file": "assets/capture/03-unknowns.webm",
+      "bytes": 2396285,
+      "sha256": "37448e58bd26c9b2a72828755f8eac9bbafc26a933bff3b2f666f81db2bf14ad"
+    },
+    {
+      "file": "assets/capture/04-review.mp4",
+      "bytes": 2792419,
+      "sha256": "002cb00d91a6c03ce1faef1f7d93edcf5a07c7ad9a74e0b779ea8c5372228af8"
+    },
+    {
+      "file": "assets/capture/04-review.webm",
+      "bytes": 4401342,
+      "sha256": "eb41107c27ba2d87ec8ba5939ecdb1d80ebfd0808119981ebfab8981cc675c74"
+    },
+    {
+      "file": "assets/capture/05-export.mp4",
+      "bytes": 1609225,
+      "sha256": "ff03a65679a4f3d0e09501e5f59a9a2cb8e56dad7ac9d5bd006006a307c72d7e"
+    },
+    {
+      "file": "assets/capture/05-export.webm",
+      "bytes": 2226805,
+      "sha256": "ca3b9d51eae84e43181104ca73c54c30a64b03fbdaf88fbab76901cac6fcc944"
+    },
+    {
+      "file": "assets/capture/06-synthetic.mp4",
+      "bytes": 1542780,
+      "sha256": "817c84b30077c5c8a93e0b4b44938c901424754d935d848ebc831fdeaa45ac64"
+    },
+    {
+      "file": "assets/capture/06-synthetic.webm",
+      "bytes": 2311884,
+      "sha256": "20ff2bb438565ef0cb855fe4ac67f0ae22a14cf76c704f00c547e2596a783674"
+    }
+  ],
+  "failures": []
+}
