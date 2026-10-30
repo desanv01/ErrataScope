@@ -1,0 +1,77 @@
+{
+  "anchors": 2,
+  "case": "synthetic_missing_revision",
+  "checked_utc": "2026-10-30T10:19:10.402433+00:00",
+  "checks": {
+    "anchors_present": true,
+    "coverage_present": true,
+    "draft_present": true,
+    "draft_validated": true,
+    "extraction_succeeded": true,
+    "identity_rule": true,
+    "job_succeeded": true,
+    "provenance_expected": true,
+    "selected_supported": true
+  },
+  "coverage": 1,
+  "coverage_summary": {
+    "detected_entries": 1,
+    "inventory_complete": false,
+    "inventory_note": "Synthetic fixture only; no manufacturer inventory is claimed.",
+    "selected_entries": [
+      "2.9.99"
+    ],
+    "status_counts": {
+      "supported": 1
+    },
+    "supported_selected": 1
+  },
+  "draft": {
+    "draft": {
+      "claims": [
+        {
+          "citations": [
+            "w04-synthetic-missing-revision:s2-9-99:a1"
+          ],
+          "field": "consequence",
+          "status": "supported",
+          "value": "Synthetic ErrataScope fixture. This deliberately incomplete excerpt is not a manufacturer document. The synthetic device may skip its first reset pulse after a power-on event. No document identifier, publication date, or document revision is stated in this excerpt."
+        }
+      ],
+      "limitations": "Offline labeled mock draft. Not a safety verdict. Requires human source review.",
+      "schema_version": 1,
+      "source_document_id": null,
+      "source_revision": null,
+      "unresolved_fields": [
+        "affected_device",
+        "trigger_condition",
+        "exception",
+        "workaround_documented",
+        "source_document_id",
+        "source_revision"
+      ]
+    },
+    "id": "36f4dc79-d590-4e81-9cd7-25625d25063e",
+    "provenance": "mock",
+    "provider_request_id": null,
+    "status": "validated",
+    "usage": null,
+    "validation": {
+      "anchor_references": 1,
+      "checked_claims": 1,
+      "errors": [],
+      "identity_checked": true,
+      "status": "validated",
+      "warnings": []
+    }
+  },
+  "extraction_id": "ae10b45d-9fd6-42b0-adc2-66e8c1c8c8af",
+  "job_id": "eee7e4dc-1114-4b4d-983a-cc9647ee2484",
+  "job_status": "succeeded",
+  "mode": "offline",
+  "project_id": "a71e9838-dc96-49b5-91b2-2f5198107530",
+  "schema_version": 1,
+  "source_id": "69a397f4-354d-4c8a-a12a-dfe67a589bba",
+  "source_sha256": "27fe8110cc9d1af919d4a29f3e81d20edd821118200a18b7693a2057f07d8b07",
+  "status": "pass"
+}

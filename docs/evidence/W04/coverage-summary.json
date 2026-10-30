@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "real_source_coverage": {
+    "status_counts": {
+      "supported": 2,
+      "discovered": 51
+    },
+    "inventory_note": "Digital-text headings followed by a Description label only; scanned/OCR content is not claimed.",
+    "detected_entries": 53,
+    "selected_entries": [
+      "2.2.18",
+      "2.2.5"
+    ],
+    "inventory_complete": false,
+    "supported_selected": 2
+  }
+}

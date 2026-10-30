@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "state": "APPROVED_DIRECTION_S01_BOUND",
+  "decision_date_myt": "2026-10-30",
+  "decision": "Approve this direction",
+  "source": "User response to explicit imagegen mockup approval question in Codex chat",
+  "image": "docs/submission/ui/approved-workspace-v1.png",
+  "sha256": "ef1fd06799767a526db678e6c47e7a97edc1944c883baab86e9155571bf2eeef",
+  "scope": "Deadline workspace visual direction; no product implementation until W04 handoff and S01 binding",
+  "illustrative_content_is_not_source_evidence": true,
+  "canonical_ui_gate_update": "Activated after W04 review in S01 revision1"
+}

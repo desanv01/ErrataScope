@@ -1,0 +1,28 @@
+{
+  "anchors": 0,
+  "case": "synthetic_missing_revision",
+  "checked_utc": "2026-10-30T10:15:20.882444+00:00",
+  "checks": {
+    "anchors_present": false,
+    "coverage_present": false,
+    "draft_present": false,
+    "draft_validated": false,
+    "extraction_succeeded": false,
+    "identity_rule": false,
+    "job_succeeded": false,
+    "provenance_expected": false,
+    "selected_supported": true
+  },
+  "coverage": 0,
+  "coverage_summary": null,
+  "draft": null,
+  "extraction_id": "77902d36-a724-488c-90c8-d54380062831",
+  "job_id": "b62de41c-d1f8-4cbf-bb63-915473343a48",
+  "job_status": "failed",
+  "mode": "live",
+  "project_id": "ad2d3422-6ca4-456f-a106-fcc289f2878e",
+  "schema_version": 1,
+  "source_id": "0bcdd83d-fa04-41b2-a6d4-c7f2ef8048ed",
+  "source_sha256": "27fe8110cc9d1af919d4a29f3e81d20edd821118200a18b7693a2057f07d8b07",
+  "status": "fail"
+}

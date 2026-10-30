@@ -1,14 +1,13 @@
 # Canonical execution dispatch status
 
-Updated: 30 October 2026. Codex-owned.
+Updated 30 October 2026. Codex-owned.
 
-**W01/P0, W02/P1 and W03 local foundation ACCEPTED. W04 revision 2 BACKEND portion READY_TO_DISPATCH, attempt 01.**
+**W01/P0, W02/P1 and W03 local foundation ACCEPTED. W04 PARTIAL; the deadline fallback S01 revision 1 is the only next dispatch.**
 
-- [W03 review 05](reviews/W03-review-05.md): 110 real integration tests, 92 domain tests; independent lifetime 16/16, failure-handle 3/3, HTTP 22/22, ack-loss 8/8, connected 11/11, real crash/restart and fresh sentinel pass. [Accepted freeze](bindings/W03-observed-contracts.md).
-- Public GitHub checkpoint pushed/verified: commit `99090c6aed74c0378eeae02860f33027b9cbca2d`, tag `w03-local-accepted`. [Git record](decisions/W03-git-checkpoint.json), [standing public authorization](decisions/2026-10-30-public-repository.md).
-- Start [W04 prompt](prompts/W04-START.md), [packet](packets/W04-ingestion-review.md), [complete binding](bindings/W04-ingestion-v1.md), [protected baseline](baselines/W04-backend-v1-baseline.json), [starting inventory](reviews/W04-starting-inventory.json).
-- Scope: immutable sources/anchors/coverage, bounded ingestion jobs, actual Nebius drafts and explicit conversion/review backend. W01 four-call history remains exhausted; new W04-backend-v1 budget is at most two paid reservations and $0.25 reserved estimate, no automatic paid retries.
-- Preserve accepted evidence/domain/foundation behavior, existing volumes and the explicit 41 legacy missing artifacts. Hosted P2 NOT_RUN, UI/imagegen PENDING. Full W04/P3 is not accepted by a backend-only result. W05–W10 remain unbound.
-- No worker running at dispatch preparation. Review services stopped; pgdata/artifacts/test_artifacts retained. No W04 code was implemented by Codex.
+- [W04 independent review](reviews/W04-review-01.md): actual real-source result/source anchors inspected; 15 API authorization checks, 39 anchor checks, 11 W04 and 110 foundation tests pass. Full W04/P3 is not accepted. Synthetic live omission and general provider provenance/recovery remain limited.
+- [S01 binding](../submission/S01_BINDING.md), [exact worker prompt](../submission/S01-START.md), [baseline](../submission/S01-baseline.json). Run `python scripts/verify_submission_baseline.py --starting` before execution. The original W05–W10 sequence is deferred, not activated.
+- Journey: recorded live cited interpretation → source/uncertainty inspection → explicit interpretation review/reject → summary export → runnable local test build. No real applicability claims or broadened selectors.
+- [UI direction APPROVED](UI_APPROVAL_GATE.md); implementation/browser verification PENDING. HostedP2 NOT_RUN. No new paid calls; W01 4/4 and W04 2/2 remain exhausted and preserved. Known 41legacy missing artifacts remain explicit.
+- Public GitHub checkpoints are authorized. See [completion protocol](COMPLETION_PROTOCOL.md). W04 partial scope is checkpointed honestly, never tagged accepted. Actual commit/remote verification is in the chat and checkpoint record.
 
-Follow [completion protocol](COMPLETION_PROTOCOL.md): review actual evidence, checkpoint accepted scope, and provide the exact next eligible prompt.
+After the worker returns, review the implemented submission journey and release-critical gaps, perform its Git checkpoint and give concrete release/video/submission steps. Do not restart unrestricted W04 hardening.

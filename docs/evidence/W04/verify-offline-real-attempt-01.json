@@ -1,0 +1,85 @@
+{
+  "anchors": 39,
+  "case": "real_source",
+  "checked_utc": "2026-10-30T10:13:49.941472+00:00",
+  "checks": {
+    "anchors_present": true,
+    "coverage_present": true,
+    "draft_present": true,
+    "draft_validated": true,
+    "extraction_succeeded": true,
+    "identity_rule": true,
+    "job_succeeded": true,
+    "provenance_expected": true,
+    "selected_supported": true
+  },
+  "coverage": 53,
+  "coverage_summary": {
+    "detected_entries": 53,
+    "inventory_complete": false,
+    "inventory_note": "Digital-text headings followed by a Description label only; scanned/OCR content is not claimed.",
+    "selected_entries": [
+      "2.2.18",
+      "2.2.5"
+    ],
+    "status_counts": {
+      "discovered": 51,
+      "supported": 2
+    },
+    "supported_selected": 2
+  },
+  "draft": {
+    "draft": {
+      "claims": [
+        {
+          "citations": [
+            "st-es0620:ctx-identity"
+          ],
+          "field": "source_identity",
+          "status": "supported",
+          "value": "ES0620 - Rev 5"
+        },
+        {
+          "citations": [
+            "st-es0620:p06:s2.2.5:a002"
+          ],
+          "field": "consequence",
+          "status": "supported",
+          "value": "The DBGMCU_IDCODE register value remains the same."
+        }
+      ],
+      "limitations": "Offline labeled mock draft. Not a safety verdict. Requires human source review.",
+      "schema_version": 1,
+      "source_document_id": "ES0620",
+      "source_revision": "Rev 5",
+      "unresolved_fields": [
+        "affected_device",
+        "trigger_condition",
+        "exception",
+        "workaround_documented"
+      ]
+    },
+    "id": "eda6e665-03cd-4b20-86ff-755b20068560",
+    "provenance": "mock",
+    "provider_request_id": null,
+    "status": "validated",
+    "usage": null,
+    "validation": {
+      "anchor_references": 2,
+      "checked_claims": 2,
+      "errors": [],
+      "identity_checked": true,
+      "status": "validated",
+      "warnings": []
+    }
+  },
+  "extraction_id": "b3e7ef55-776c-45d8-b979-ad780e31bafc",
+  "job_id": "8db5d068-26b9-4a52-b749-9b590fd9281d",
+  "job_status": "succeeded",
+  "mode": "offline",
+  "project_id": "a62509c7-8cae-4403-aa87-1fae0843641e",
+  "schema_version": 1,
+  "source_id": "3581a1f1-b628-4354-a914-1e806cb8e241",
+  "source_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd",
+  "status": "pass"
+}

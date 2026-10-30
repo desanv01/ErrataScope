@@ -1,0 +1,1527 @@
+{
+  "schema_version": 1,
+  "migration_head": "0004_ingestion",
+  "tables": [
+    "accepted_rules",
+    "alembic_version",
+    "artifacts",
+    "bundle_members",
+    "bundles",
+    "conversion_proposals",
+    "coverage_entries",
+    "domain_versions",
+    "extraction_outputs",
+    "extractions",
+    "idempotency",
+    "job_attempts",
+    "job_events",
+    "jobs",
+    "memberships",
+    "model_drafts",
+    "outbox",
+    "projects",
+    "proposal_reviews",
+    "provider_attempt_events",
+    "provider_budgets",
+    "provider_reservations",
+    "review_events",
+    "review_items",
+    "source_anchors",
+    "source_versions",
+    "stage_results",
+    "upload_staging"
+  ],
+  "columns": {
+    "accepted_rules": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "project_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "proposal_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "review_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "source_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "entry_id",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "payload",
+        "type": "jsonb",
+        "nullable": false
+      },
+      {
+        "name": "content_hash",
+        "type": "character",
+        "nullable": false
+      },
+      {
+        "name": "reviewer_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp with time zone",
+        "nullable": false
+      }
+    ],
+    "alembic_version": [
+      {
+        "name": "version_num",
+        "type": "character varying",
+        "nullable": false
+      }
+    ],
+    "artifacts": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "project_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "storage_key",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "sha256",
+        "type": "character",
+        "nullable": false
+      },
+      {
+        "name": "byte_length",
+        "type": "bigint",
+        "nullable": false
+      },
+      {
+        "name": "media_type",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "original_name",
+        "type": "text",
+        "nullable": true
+      },
+      {
+        "name": "state",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "created_by",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp with time zone",
+        "nullable": false
+      }
+    ],
+    "bundle_members": [
+      {
+        "name": "project_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "bundle_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "kind",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "version_id",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "payload_hash",
+        "type": "character",
+        "nullable": false
+      }
+    ],
+    "bundles": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "project_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "input_hash",
+        "type": "character",
+        "nullable": false
+      },
+      {
+        "name": "schema_version",
+        "type": "integer",
+        "nullable": false
+      },
+      {
+        "name": "evaluator_version",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "payload",
+        "type": "jsonb",
+        "nullable": false
+      },
+      {
+        "name": "created_by",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp with time zone",
+        "nullable": false
+      }
+    ],
+    "conversion_proposals": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "project_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "draft_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "source_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "extraction_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "entry_id",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "payload",
+        "type": "jsonb",
+        "nullable": false
+      },
+      {
+        "name": "content_hash",
+        "type": "character",
+        "nullable": false
+      },
+      {
+        "name": "ineligible_reason",
+        "type": "text",
+        "nullable": true
+      },
+      {
+        "name": "reviewer_rationale",
+        "type": "text",
+        "nullable": true
+      },
+      {
+        "name": "current_revision",
+        "type": "integer",
+        "nullable": false
+      },
+      {
+        "name": "created_by",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp with time zone",
+        "nullable": false
+      },
+      {
+        "name": "updated_at",
+        "type": "timestamp with time zone",
+        "nullable": false
+      }
+    ],
+    "coverage_entries": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "project_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "extraction_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "section",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "title",
+        "type": "text",
+        "nullable": true
+      },
+      {
+        "name": "status",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "page_indexes",
+        "type": "jsonb",
+        "nullable": false
+      },
+      {
+        "name": "anchor_keys",
+        "type": "jsonb",
+        "nullable": false
+      },
+      {
+        "name": "reason",
+        "type": "text",
+        "nullable": true
+      },
+      {
+        "name": "notes",
+        "type": "jsonb",
+        "nullable": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp with time zone",
+        "nullable": false
+      }
+    ],
+    "domain_versions": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "project_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "kind",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "version_id",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "payload",
+        "type": "jsonb",
+        "nullable": false
+      },
+      {
+        "name": "payload_hash",
+        "type": "character",
+        "nullable": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp with time zone",
+        "nullable": false
+      }
+    ],
+    "extraction_outputs": [
+      {
+        "name": "extraction_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "project_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "source_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "output_hash",
+        "type": "character",
+        "nullable": false
+      },
+      {
+        "name": "manifest",
+        "type": "jsonb",
+        "nullable": false
+      },
+      {
+        "name": "parser",
+        "type": "jsonb",
+        "nullable": false
+      },
+      {
+        "name": "selected_scope",
+        "type": "jsonb",
+        "nullable": false
+      },
+      {
+        "name": "coverage_summary",
+        "type": "jsonb",
+        "nullable": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp with time zone",
+        "nullable": false
+      }
+    ],
+    "extractions": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "project_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "source_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "job_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "mode",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "case_kind",
+        "type": "text",
+        "nullable": true
+      },
+      {
+        "name": "selected_entries",
+        "type": "jsonb",
+        "nullable": false
+      },
+      {
+        "name": "status",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "diagnostics",
+        "type": "jsonb",
+        "nullable": false
+      },
+      {
+        "name": "current_stage",
+        "type": "text",
+        "nullable": true
+      },
+      {
+        "name": "error_code",
+        "type": "text",
+        "nullable": true
+      },
+      {
+        "name": "created_by",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp with time zone",
+        "nullable": false
+      },
+      {
+        "name": "updated_at",
+        "type": "timestamp with time zone",
+        "nullable": false
+      }
+    ],
+    "idempotency": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "project_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "actor_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "operation",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "key",
+        "type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "request_hash",
+        "type": "character",
+        "nullable": false
+      },
+      {
+        "name": "response_status",
+        "type": "integer",
+        "nullable": false
+      },
+      {
+        "name": "response_body",
+        "type": "jsonb",
+        "nullable": false
+      },
+      {
+        "name": "resource_id",
+        "type": "uuid",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp with time zone",
+        "nullable": false
+      }
+    ],
+    "job_attempts": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "project_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "job_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "attempt_number",
+        "type": "integer",
+        "nullable": false
+      },
+      {
+        "name": "token",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "started_at",
+        "type": "timestamp with time zone",
+        "nullable": false
+      },
+      {
+        "name": "ended_at",
+        "type": "timestamp with time zone",
+        "nullable": true
+      },
+      {
+        "name": "outcome",
+        "type": "text",
+        "nullable": true
+      },
+      {
+        "name": "error_code",
+        "type": "text",
+        "nullable": true
+      }
+    ],
+    "job_events": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "project_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "job_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "seq",
+        "type": "integer",
+        "nullable": false
+      },
+      {
+        "name": "event_type",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "payload",
+        "type": "jsonb",
+        "nullable": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp with time zone",
+        "nullable": false
+      }
+    ],
+    "jobs": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "project_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "actor_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "kind",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "artifact_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "status",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "attempt_count",
+        "type": "integer",
+        "nullable": false
+      },
+      {
+        "name": "max_attempts",
+        "type": "integer",
+        "nullable": false
+      },
+      {
+        "name": "current_attempt_token",
+        "type": "uuid",
+        "nullable": true
+      },
+      {
+        "name": "lease_until",
+        "type": "timestamp with time zone",
+        "nullable": true
+      },
+      {
+        "name": "next_event_seq",
+        "type": "integer",
+        "nullable": false
+      },
+      {
+        "name": "result_artifact_id",
+        "type": "uuid",
+        "nullable": true
+      },
+      {
+        "name": "result_sha256",
+        "type": "character",
+        "nullable": true
+      },
+      {
+        "name": "error_code",
+        "type": "text",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp with time zone",
+        "nullable": false
+      },
+      {
+        "name": "updated_at",
+        "type": "timestamp with time zone",
+        "nullable": false
+      }
+    ],
+    "memberships": [
+      {
+        "name": "project_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "actor_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "role",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp with time zone",
+        "nullable": false
+      }
+    ],
+    "model_drafts": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "project_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "extraction_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "source_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "case_kind",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "provenance",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "prompt_version",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "request_hash",
+        "type": "character",
+        "nullable": false
+      },
+      {
+        "name": "response_hash",
+        "type": "character",
+        "nullable": false
+      },
+      {
+        "name": "draft",
+        "type": "jsonb",
+        "nullable": false
+      },
+      {
+        "name": "validation",
+        "type": "jsonb",
+        "nullable": false
+      },
+      {
+        "name": "status",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "provider_request_id",
+        "type": "text",
+        "nullable": true
+      },
+      {
+        "name": "usage",
+        "type": "jsonb",
+        "nullable": true
+      },
+      {
+        "name": "request_artifact_id",
+        "type": "uuid",
+        "nullable": true
+      },
+      {
+        "name": "response_artifact_id",
+        "type": "uuid",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp with time zone",
+        "nullable": false
+      }
+    ],
+    "outbox": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "project_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "job_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "dispatch_generation",
+        "type": "integer",
+        "nullable": false
+      },
+      {
+        "name": "available_at",
+        "type": "timestamp with time zone",
+        "nullable": false
+      },
+      {
+        "name": "claim_token",
+        "type": "uuid",
+        "nullable": true
+      },
+      {
+        "name": "lease_until",
+        "type": "timestamp with time zone",
+        "nullable": true
+      },
+      {
+        "name": "sent_at",
+        "type": "timestamp with time zone",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp with time zone",
+        "nullable": false
+      }
+    ],
+    "projects": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "name",
+        "type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "created_by",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp with time zone",
+        "nullable": false
+      }
+    ],
+    "proposal_reviews": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "project_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "proposal_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "revision",
+        "type": "integer",
+        "nullable": false
+      },
+      {
+        "name": "actor_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "decision",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "rationale",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "expected_content_hash",
+        "type": "character",
+        "nullable": false
+      },
+      {
+        "name": "accepted_rule_version_id",
+        "type": "uuid",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp with time zone",
+        "nullable": false
+      }
+    ],
+    "provider_attempt_events": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "reservation_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "event",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "detail",
+        "type": "jsonb",
+        "nullable": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp with time zone",
+        "nullable": false
+      }
+    ],
+    "provider_budgets": [
+      {
+        "name": "budget_id",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "requests_reserved",
+        "type": "integer",
+        "nullable": false
+      },
+      {
+        "name": "spend_reserved_usd",
+        "type": "numeric",
+        "nullable": false
+      },
+      {
+        "name": "caps",
+        "type": "jsonb",
+        "nullable": false
+      },
+      {
+        "name": "updated_at",
+        "type": "timestamp with time zone",
+        "nullable": false
+      }
+    ],
+    "provider_reservations": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "budget_id",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "attempt",
+        "type": "integer",
+        "nullable": false
+      },
+      {
+        "name": "project_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "job_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "case_kind",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "source_sha256",
+        "type": "character",
+        "nullable": false
+      },
+      {
+        "name": "extraction_id",
+        "type": "uuid",
+        "nullable": true
+      },
+      {
+        "name": "context_hash",
+        "type": "character",
+        "nullable": false
+      },
+      {
+        "name": "request_hash",
+        "type": "character",
+        "nullable": false
+      },
+      {
+        "name": "prompt_version",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "endpoint",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "model",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "input_token_bound",
+        "type": "integer",
+        "nullable": false
+      },
+      {
+        "name": "output_token_bound",
+        "type": "integer",
+        "nullable": false
+      },
+      {
+        "name": "input_price_usd_per_million",
+        "type": "numeric",
+        "nullable": false
+      },
+      {
+        "name": "output_price_usd_per_million",
+        "type": "numeric",
+        "nullable": false
+      },
+      {
+        "name": "max_estimated_cost_usd",
+        "type": "numeric",
+        "nullable": false
+      },
+      {
+        "name": "status",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "reserved_utc",
+        "type": "timestamp with time zone",
+        "nullable": false
+      },
+      {
+        "name": "dispatch_utc",
+        "type": "timestamp with time zone",
+        "nullable": true
+      },
+      {
+        "name": "finalized_utc",
+        "type": "timestamp with time zone",
+        "nullable": true
+      },
+      {
+        "name": "provider_request_id",
+        "type": "text",
+        "nullable": true
+      },
+      {
+        "name": "response_hash",
+        "type": "character",
+        "nullable": true
+      },
+      {
+        "name": "usage",
+        "type": "jsonb",
+        "nullable": true
+      },
+      {
+        "name": "error_code",
+        "type": "text",
+        "nullable": true
+      }
+    ],
+    "review_events": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "project_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "review_item_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "revision",
+        "type": "integer",
+        "nullable": false
+      },
+      {
+        "name": "actor_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "decision",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "rationale",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp with time zone",
+        "nullable": false
+      }
+    ],
+    "review_items": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "project_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "artifact_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "content_hash",
+        "type": "character",
+        "nullable": false
+      },
+      {
+        "name": "annotation",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "current_revision",
+        "type": "integer",
+        "nullable": false
+      },
+      {
+        "name": "created_by",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp with time zone",
+        "nullable": false
+      }
+    ],
+    "source_anchors": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "project_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "extraction_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "anchor_key",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "source_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "page_index",
+        "type": "integer",
+        "nullable": false
+      },
+      {
+        "name": "printed_page_label",
+        "type": "text",
+        "nullable": true
+      },
+      {
+        "name": "section",
+        "type": "text",
+        "nullable": true
+      },
+      {
+        "name": "section_title",
+        "type": "text",
+        "nullable": true
+      },
+      {
+        "name": "block_role",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "context_kind",
+        "type": "text",
+        "nullable": true
+      },
+      {
+        "name": "geometry_kind",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "anchor_text",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "bbox",
+        "type": "jsonb",
+        "nullable": false
+      },
+      {
+        "name": "bbox_original",
+        "type": "jsonb",
+        "nullable": false
+      },
+      {
+        "name": "page_width_pt",
+        "type": "double precision",
+        "nullable": false
+      },
+      {
+        "name": "page_height_pt",
+        "type": "double precision",
+        "nullable": false
+      },
+      {
+        "name": "page_rotation",
+        "type": "integer",
+        "nullable": false
+      },
+      {
+        "name": "parser",
+        "type": "jsonb",
+        "nullable": false
+      },
+      {
+        "name": "document_sha256",
+        "type": "character",
+        "nullable": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp with time zone",
+        "nullable": false
+      }
+    ],
+    "source_versions": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "project_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "artifact_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "document_id",
+        "type": "text",
+        "nullable": true
+      },
+      {
+        "name": "revision",
+        "type": "text",
+        "nullable": true
+      },
+      {
+        "name": "manufacturer",
+        "type": "text",
+        "nullable": true
+      },
+      {
+        "name": "source_url",
+        "type": "text",
+        "nullable": true
+      },
+      {
+        "name": "published_at",
+        "type": "text",
+        "nullable": true
+      },
+      {
+        "name": "predecessor_id",
+        "type": "uuid",
+        "nullable": true
+      },
+      {
+        "name": "authority",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "synthetic",
+        "type": "boolean",
+        "nullable": false
+      },
+      {
+        "name": "sha256",
+        "type": "character",
+        "nullable": false
+      },
+      {
+        "name": "byte_length",
+        "type": "bigint",
+        "nullable": false
+      },
+      {
+        "name": "schema_version",
+        "type": "integer",
+        "nullable": false
+      },
+      {
+        "name": "content_hash",
+        "type": "character",
+        "nullable": false
+      },
+      {
+        "name": "created_by",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp with time zone",
+        "nullable": false
+      },
+      {
+        "name": "retrieval_utc",
+        "type": "timestamp with time zone",
+        "nullable": false
+      }
+    ],
+    "stage_results": [
+      {
+        "name": "project_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "job_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "stage_key",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "input_hash",
+        "type": "character",
+        "nullable": false
+      },
+      {
+        "name": "result_artifact_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "result_sha256",
+        "type": "character",
+        "nullable": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp with time zone",
+        "nullable": false
+      }
+    ],
+    "upload_staging": [
+      {
+        "name": "artifact_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "project_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "actor_id",
+        "type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "staging_key",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "state",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "lease_until",
+        "type": "timestamp with time zone",
+        "nullable": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp with time zone",
+        "nullable": false
+      },
+      {
+        "name": "updated_at",
+        "type": "timestamp with time zone",
+        "nullable": false
+      },
+      {
+        "name": "owner_kind",
+        "type": "text",
+        "nullable": false
+      },
+      {
+        "name": "owner_job_id",
+        "type": "uuid",
+        "nullable": true
+      },
+      {
+        "name": "owner_attempt_token",
+        "type": "uuid",
+        "nullable": true
+      }
+    ]
+  },
+  "w04_tables": [
+    "source_versions",
+    "extractions",
+    "extraction_outputs",
+    "source_anchors",
+    "coverage_entries",
+    "model_drafts",
+    "conversion_proposals",
+    "proposal_reviews",
+    "accepted_rules",
+    "provider_reservations",
+    "provider_attempt_events",
+    "provider_budgets"
+  ],
+  "provider_reservation_count": 2
+}

@@ -1,0 +1,14 @@
+services:
+  api:
+    environment:
+      W04_LIVE_ENABLED: "1"
+  worker:
+    environment:
+      W04_LIVE_ENABLED: "1"
+      W04_SECRET_FILE: /run/secrets/nebiustoken
+    volumes:
+      - ../../.local/w04:/w04
+      - ../../.env.local:/run/secrets/nebiustoken:ro
+  test:
+    environment:
+      W04_LIVE_ENABLED: "1"

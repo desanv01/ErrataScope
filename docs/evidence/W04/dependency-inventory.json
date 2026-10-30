@@ -1,0 +1,21 @@
+{
+  "locks": {
+    "requirements-ingestion.lock": "db105ab6f9d221ab25dda4d00832b1c138655345516bcb7ae49085f7484321ee",
+    "requirements-service.lock": "7d53a786291e8419b03e8c2aaf412c6b49f02afc7814901d6783985c1facad23"
+  },
+  "packages": {
+    "alembic": "1.20.1",
+    "charset-normalizer": "3.5.2",
+    "cryptography": "50.0.2",
+    "fastapi": "0.162.0",
+    "pdfminer.six": "20260107",
+    "pdfplumber": "0.11.10",
+    "pillow": "13.0.0",
+    "psycopg": "3.3.6",
+    "pypdfium2": "5.14.0",
+    "rq": "3.0.0",
+    "sqlalchemy": "2.1.6"
+  },
+  "python": "3.11.15",
+  "schema_version": 1
+}

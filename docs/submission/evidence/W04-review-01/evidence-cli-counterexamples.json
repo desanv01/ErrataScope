@@ -1,0 +1,18 @@
+[
+  {
+    "manifest_status": "partial",
+    "gate_status": "fail",
+    "files": 0,
+    "actual_exit": 0,
+    "actual_result": "pass",
+    "defect_reproduced": true
+  },
+  {
+    "manifest_status": "pass",
+    "gate_status": "pass",
+    "files": 0,
+    "actual_exit": 0,
+    "actual_result": "pass",
+    "defect_reproduced": true
+  }
+]

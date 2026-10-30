@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "project_id": "ac2a7c3e-784f-4510-92d8-86d1832bd0b5",
+  "artifact_id": "f3658b9f-b55e-4753-bbc7-15793b68f113",
+  "sha256": "f6ea27bb44d74bd7b69cf407e60281a3004b326f50063ab4a027666b39fe49cd",
+  "byte_length": 57,
+  "before_readback_sha256": "f6ea27bb44d74bd7b69cf407e60281a3004b326f50063ab4a027666b39fe49cd",
+  "after_readback_sha256": "f6ea27bb44d74bd7b69cf407e60281a3004b326f50063ab4a027666b39fe49cd",
+  "before_after_equal": true,
+  "passed": true
+}

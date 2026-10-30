@@ -578,9 +578,12 @@ def create_job(
     actor_id: uuid.UUID,
     artifact_id: uuid.UUID,
     kind: str = "artifact_digest",
+    max_attempts: int = 3,
 ) -> Job:
     require_role(session, project_id, actor_id, WRITE_ROLES)
     get_artifact(session, project_id, artifact_id)
+    if not 1 <= max_attempts <= 3:
+        raise ApiError(422, "INVALID_JOB_ATTEMPTS", "max_attempts must be 1-3")
     job = Job(
         id=uuid.uuid4(),
         project_id=project_id,
@@ -589,7 +592,7 @@ def create_job(
         artifact_id=artifact_id,
         status="queued",
         attempt_count=0,
-        max_attempts=3,
+        max_attempts=max_attempts,
         next_event_seq=0,
         created_at=utcnow(),
         updated_at=utcnow(),

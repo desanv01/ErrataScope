@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "budget_id": "W04-backend-v1",
+  "reserved_requests": 2,
+  "remaining_requests": 0,
+  "spend_reserved_usd": "0.016593",
+  "caps": {
+    "max_requests": 2,
+    "max_estimated_spend_usd": 0.25,
+    "max_input_tokens_per_request": 16000,
+    "max_output_tokens_per_request": 8192
+  },
+  "pricing_observed_2026_10_29": {
+    "input_usd_per_million": 0.3,
+    "output_usd_per_million": 0.9
+  },
+  "reservations": [
+    {
+      "attempt": 1,
+      "status": "succeeded",
+      "case": "real_source",
+      "input_token_bound": 3768,
+      "output_token_bound": 8192,
+      "max_estimated_cost_usd": "0.00850320",
+      "provider_request_id": "663823b4200b5f0a9cb78a2f092f5e71",
+      "response_hash": "4e62c49aaa01a61af4eda9031a9d71b6447c58396bc688e414a2e0679f26fa13",
+      "prompt_tokens": 3247,
+      "completion_tokens": 1587,
+      "total_tokens": 4834,
+      "reserved_utc": "2026-10-30 10:14:18.442634+00",
+      "dispatch_utc": "2026-10-30 10:14:18.475143+00",
+      "finalized_utc": "2026-10-30 10:14:22.964264+00",
+      "error_code": null
+    },
+    {
+      "attempt": 2,
+      "status": "succeeded",
+      "case": "synthetic_missing_revision",
+      "input_token_bound": 2390,
+      "output_token_bound": 8192,
+      "max_estimated_cost_usd": "0.00808980",
+      "provider_request_id": "8c86a58e8db4b2ea0aed99dab3dd536d",
+      "response_hash": "51084d88ef26bb04de4e30811a63a47a5f456cf1af8cc34beb01122812b8dee7",
+      "prompt_tokens": 1335,
+      "completion_tokens": 173,
+      "total_tokens": 1508,
+      "reserved_utc": "2026-10-30 10:15:18.653005+00",
+      "dispatch_utc": "2026-10-30 10:15:18.681374+00",
+      "finalized_utc": "2026-10-30 10:15:20.168878+00",
+      "error_code": null
+    }
+  ],
+  "budgets": [
+    {
+      "budget_id": "W04-backend-v1",
+      "requests_reserved": 2,
+      "spend_reserved_usd": "0.01659300",
+      "caps": {
+        "max_requests": 2,
+        "input_usd_per_million": 0.3,
+        "output_usd_per_million": 0.9,
+        "max_estimated_spend_usd": 0.25,
+        "max_input_tokens_per_request": 16000,
+        "max_output_tokens_per_request": 8192
+      },
+      "updated_utc": "2026-10-30 10:15:18.658867+00"
+    }
+  ]
+}

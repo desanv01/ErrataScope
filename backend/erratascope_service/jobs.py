@@ -380,6 +380,12 @@ def execute(job_id: str) -> None:
         project_id = job.project_id
         artifact_id = job.artifact_id
 
+        if job.kind == "source_extract":
+            from .ingestion.jobs import execute_source_extract
+
+            execute_source_extract(settings, job_uuid, token)
+            return
+
         artifact = session.get(Artifact, artifact_id)
         if artifact is None or artifact.project_id != project_id:
             raise ArtifactError("ARTIFACT_MISSING", "artifact row disappeared")

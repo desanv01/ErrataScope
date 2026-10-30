@@ -1,4 +1,4 @@
-"""W03 repair R?: upgrading an existing 0001 database without reset."""
+﻿"""W03 repair R?: upgrading an existing 0001 database without reset."""
 
 from __future__ import annotations
 
@@ -59,10 +59,11 @@ class MigrationUpgradeTests(unittest.TestCase):
             version = sessions.execute(
                 text("SELECT version_num FROM erratascope.alembic_version")
             ).scalar()
-            self.assertEqual(version, "0003_staging_fencing")
+            self.assertEqual(version, "0004_ingestion")
         finally:
             sessions.close()
 
 
 if __name__ == "__main__":
     unittest.main()
+

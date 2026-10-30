@@ -1,28 +1,9 @@
-# UI/UX research, imagegen, and human approval gate
+# UI/UX imagegen approval gate
 
-Status: **PENDING — no UI direction approved.**
-Authority: explicit human instruction on 29 October 2026.
+Status: **APPROVED DIRECTION — implementation verification PENDING.**
 
-## Required sequence, owned by Codex
+The user explicitly answered **“Approve this direction”** on 30 October 2026. The approved imagegen artifact, SHA256 and decision are recorded in [approval.json](../submission/ui/approval.json); implement [the approved brief](../submission/ui/APPROVED_DESIGN_BRIEF.md) and [image](../submission/ui/approved-workspace-v1.png). [Inspected inspiration](../submission/UI_PROPOSAL.md) informed the mockup.
 
-1. Notify the human before starting UI/UX work.
-2. Research https://trendshift.io/weekly and GitHub projects. Inspiration may come from any relevant interface category, not only engineering/errata products.
-3. Present a manageable shortlist with actual UI screenshots/examples where accessible, repository/live-demo links, specific useful design elements, and tradeoffs for ErrataScope. Clearly distinguish inspected UI from inferred or unavailable examples. Popularity is not evidence of suitability.
-4. Use imagegen to create ErrataScope mockups based on the research and the product's evidence-review workflow. Apply the required Codex design skills as appropriate. Label mockups as proposed design, not implemented screenshots.
-5. Present the mockups and obtain explicit human approval, including revisions if requested.
-6. Record approved artifact paths, user decision, design constraints, and the packet allowed to implement them. Freeze a worker-facing design brief.
-7. Only then dispatch UI implementation. Workers reproduce the approved direction; they do not substitute their own design.
+W04 is stopped and its original protected baseline was independently verified before this coordination update. S01 revision 1 may now implement this exact direction under its new binding. No further visual approval is required for that direction. This does not approve application behavior, fabricated source details, full W04/P3, hosted P2, or a new design direction. Implementation/browser acceptance remains PENDING.
 
-## Scope and enforcement
-
-No application UI shell, page layout, styled components, or visual implementation may start before approval. Backend, API/schema, evaluator, persistence, corpus/provider, and source-coordinate inspection work may proceed independently. A PDF page render used to check extraction is technical evidence and is not an application UI design.
-
-If a packet mixes backend and UI work, dispatch only an explicitly scoped backend portion while this gate is pending. Its UI acceptance remains incomplete. Do not mark the whole packet/phase accepted by omitting its UI deliverables.
-
-## Approval record
-
-- Inspiration shortlist: not prepared yet.
-- Imagegen mockups: not generated yet.
-- Human visual approval: not received.
-- Approved implementation brief: not issued.
-- UI worker dispatch: prohibited until the above sequence is complete.
+Only the bound S01 worker may edit the UI. Preserve real source content, recorded-live versus synthetic provenance, unknowns, accessible actions and explicit interpretation review. Do not copy illustrative page counters or technical prose from the mockup. Follow [S01](../submission/S01_BINDING.md).

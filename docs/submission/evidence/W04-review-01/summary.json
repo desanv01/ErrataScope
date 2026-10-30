@@ -1,0 +1,53 @@
+{
+  "migration": [
+    "0004_ingestion"
+  ],
+  "artifact_count": 149,
+  "response_artifact_equals_wire_hash": false,
+  "anchors": 39,
+  "coverage": 53,
+  "claims": 9,
+  "source": {
+    "document_id": "ES0620",
+    "revision": "Rev 5"
+  },
+  "image_source_files": 43,
+  "image_source_mismatches": [],
+  "checks": {
+    "source_hash": true,
+    "stored_response_matches_draft": true,
+    "no_thinking": true,
+    "finish_stop": true,
+    "exact_model": true,
+    "all_citations_resolve": true,
+    "anchor_scope_hash": true,
+    "coverage_selected": true,
+    "ledger_response_binding": true,
+    "image_matches_workspace": true
+  },
+  "legacy_missing_ids_unchanged": true,
+  "legacy_missing_count": 41,
+  "foundation_tests": {
+    "run": 110,
+    "failures": 0,
+    "skips": 0,
+    "note": "One psycopg ResourceWarning after successful suite; not a failed assertion."
+  },
+  "w04_tests": {
+    "run": 11,
+    "failures": 0,
+    "skips": 0
+  },
+  "domain": "Unchanged protected code; accepted92test evidence reused.",
+  "calls_made_by_review": 0,
+  "original_baseline": {
+    "hashes": 377,
+    "links": 373,
+    "status": "PASS before coordination updates"
+  },
+  "starting_backup": {
+    "files": 83,
+    "mismatches": 0
+  },
+  "decision": "PARTIAL; S01 bound; fullW04 not accepted"
+}

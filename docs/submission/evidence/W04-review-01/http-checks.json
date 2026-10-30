@@ -1,0 +1,92 @@
+[
+  {
+    "path": "/api/v1/projects/8b497e89-40f7-421d-a76f-9573f3c2e57b/sources",
+    "actor": "user-a",
+    "status": 200,
+    "pass": true
+  },
+  {
+    "path": "/api/v1/projects/8b497e89-40f7-421d-a76f-9573f3c2e57b/sources",
+    "actor": "user-b",
+    "status": 404,
+    "pass": true
+  },
+  {
+    "path": "/api/v1/projects/8b497e89-40f7-421d-a76f-9573f3c2e57b/sources",
+    "actor": "anonymous",
+    "status": 401,
+    "pass": true
+  },
+  {
+    "path": "/api/v1/extractions/4ec4379e-16c9-4e72-a373-8734c6453f91",
+    "actor": "user-a",
+    "status": 200,
+    "pass": true
+  },
+  {
+    "path": "/api/v1/extractions/4ec4379e-16c9-4e72-a373-8734c6453f91",
+    "actor": "user-b",
+    "status": 404,
+    "pass": true
+  },
+  {
+    "path": "/api/v1/extractions/4ec4379e-16c9-4e72-a373-8734c6453f91",
+    "actor": "anonymous",
+    "status": 401,
+    "pass": true
+  },
+  {
+    "path": "/api/v1/extractions/4ec4379e-16c9-4e72-a373-8734c6453f91/anchors?limit=100",
+    "actor": "user-a",
+    "status": 200,
+    "pass": true
+  },
+  {
+    "path": "/api/v1/extractions/4ec4379e-16c9-4e72-a373-8734c6453f91/anchors?limit=100",
+    "actor": "user-b",
+    "status": 404,
+    "pass": true
+  },
+  {
+    "path": "/api/v1/extractions/4ec4379e-16c9-4e72-a373-8734c6453f91/anchors?limit=100",
+    "actor": "anonymous",
+    "status": 401,
+    "pass": true
+  },
+  {
+    "path": "/api/v1/extractions/4ec4379e-16c9-4e72-a373-8734c6453f91/coverage?limit=100",
+    "actor": "user-a",
+    "status": 200,
+    "pass": true
+  },
+  {
+    "path": "/api/v1/extractions/4ec4379e-16c9-4e72-a373-8734c6453f91/coverage?limit=100",
+    "actor": "user-b",
+    "status": 404,
+    "pass": true
+  },
+  {
+    "path": "/api/v1/extractions/4ec4379e-16c9-4e72-a373-8734c6453f91/coverage?limit=100",
+    "actor": "anonymous",
+    "status": 401,
+    "pass": true
+  },
+  {
+    "path": "/api/v1/drafts/075a2625-862f-4d9a-b932-83f94358cb3d",
+    "actor": "user-a",
+    "status": 200,
+    "pass": true
+  },
+  {
+    "path": "/api/v1/drafts/075a2625-862f-4d9a-b932-83f94358cb3d",
+    "actor": "user-b",
+    "status": 404,
+    "pass": true
+  },
+  {
+    "path": "/api/v1/drafts/075a2625-862f-4d9a-b932-83f94358cb3d",
+    "actor": "anonymous",
+    "status": 401,
+    "pass": true
+  }
+]

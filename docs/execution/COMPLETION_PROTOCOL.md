@@ -20,4 +20,4 @@ If authentication, repository identity, network policy, or another real prerequi
 
 ## Current application
 
-W01/P0, W02/P1 and [W03 local foundation](reviews/W03-review-05.md) are accepted. W03 commit `99090c6aed74c0378eeae02860f33027b9cbca2d` and tag `w03-local-accepted` are pushed and remotely verified. [W04 backend start](prompts/W04-START.md) is bound and ready. Full hosted P2 and UI/imagegen remain open. Follow [STATUS](STATUS.md), not historical repair prompts.
+W01/P0, W02/P1 and [W03 local foundation](reviews/W03-review-05.md) are accepted. W03 commit `99090c6aed74c0378eeae02860f33027b9cbca2d` and tag `w03-local-accepted` are pushed and remotely verified. W04 is now partially reviewed; [S01](../submission/S01_BINDING.md) is the only next dispatch. UI direction is approved; browser acceptance and full hosted P2 remain open. Follow [STATUS](STATUS.md), not historical repair prompts.

@@ -148,6 +148,7 @@ services:
       - test_artifacts:/var/lib/erratascope/test-artifacts
       - artifacts:/var/lib/erratascope/app-artifacts
       - ../../.local/w03:/local
+      - ../../.local/w04:/w04
 
 volumes:
   pgdata:

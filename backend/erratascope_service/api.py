@@ -1284,6 +1284,9 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         )
         return JSONResponse(status_code=status, content=body)
 
+    from .ingestion.api import build_router
+
+    app.include_router(build_router(settings, actor_dep, session_dep))
     return app
 
 

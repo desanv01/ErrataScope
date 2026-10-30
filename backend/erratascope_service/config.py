@@ -57,6 +57,19 @@ class Settings:
     staging_lease_seconds: int
     orphan_grace_seconds: int
     retry_delays_seconds: tuple[int, ...]
+    w04_parse_timeout_seconds: int
+    w04_parse_memory_mb: int
+    w04_live_enabled: bool
+    w04_secret_file: Path | None
+    w04_provider_endpoint: str
+    w04_provider_model: str
+    w04_budget_id: str
+    w04_prompt_version: str
+    w04_provider_timeout_seconds: int
+    w04_max_response_bytes: int
+    w04_input_price_usd_per_million: float
+    w04_output_price_usd_per_million: float
+    w04_ledger_path: Path
 
     def ensure_startable(self) -> None:
         if self.mode == "hosted":
@@ -130,4 +143,30 @@ def load_settings() -> Settings:
         staging_lease_seconds=_int("W03_STAGING_LEASE_SECONDS", 60, 5, 3600),
         orphan_grace_seconds=_int("W03_ORPHAN_GRACE_SECONDS", 30, 5, 3600),
         retry_delays_seconds=retry_delays,
+        w04_parse_timeout_seconds=_int("W04_PARSE_TIMEOUT_SECONDS", 120, 10, 300),
+        w04_parse_memory_mb=_int("W04_PARSE_MEMORY_MB", 512, 128, 1024),
+        w04_live_enabled=_bool("W04_LIVE_ENABLED", False),
+        w04_secret_file=(
+            Path(os.environ["W04_SECRET_FILE"]) if os.environ.get("W04_SECRET_FILE") else None
+        ),
+        w04_provider_endpoint=os.environ.get(
+            "W04_PROVIDER_ENDPOINT",
+            "https://api.tokenfactory.nebius.com/v1/chat/completions",
+        ).strip(),
+        w04_provider_model=os.environ.get(
+            "W04_PROVIDER_MODEL", "nvidia/Nemotron-3.5-Super-VL"
+        ).strip(),
+        w04_budget_id=os.environ.get("W04_BUDGET_ID", "W04-backend-v1").strip(),
+        w04_prompt_version=os.environ.get(
+            "W04_PROMPT_VERSION", "w04-draft-v5-grounded-no-thinking"
+        ).strip(),
+        w04_provider_timeout_seconds=_int("W04_PROVIDER_TIMEOUT_SECONDS", 180, 30, 300),
+        w04_max_response_bytes=_int(
+            "W04_MAX_RESPONSE_BYTES", 2 * 1024 * 1024, 1024, 2 * 1024 * 1024
+        ),
+        w04_input_price_usd_per_million=0.30,
+        w04_output_price_usd_per_million=0.90,
+        w04_ledger_path=Path(
+            os.environ.get("W04_LEDGER_PATH", "/w04/provider/ledger.jsonl")
+        ),
     )

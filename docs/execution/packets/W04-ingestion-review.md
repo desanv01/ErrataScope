@@ -1,7 +1,7 @@
 # W04 — Source ingestion, live model drafts, and interpretation review
 
 Packet revision: **2**
-Dispatch state: **READY_TO_DISPATCH**
+Dispatch state: **DEFERRED_LIVE**
 Dispatched portion: **backend only**, worker attempt **01**.
 Phase: [P3](../phases/P3-ingestion.md). Full W04/P3 acceptance is not implied by backend completion.
 Starting baseline: [W04-backend-v1-baseline.json](../baselines/W04-backend-v1-baseline.json).

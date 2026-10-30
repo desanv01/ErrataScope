@@ -1,0 +1,180 @@
+{
+  "anchors": 39,
+  "case": "real_source",
+  "checked_utc": "2026-10-30T10:14:23.307491+00:00",
+  "checks": {
+    "anchors_present": true,
+    "coverage_present": true,
+    "draft_present": true,
+    "draft_validated": true,
+    "extraction_succeeded": true,
+    "identity_rule": true,
+    "job_succeeded": true,
+    "provenance_expected": true,
+    "selected_supported": true
+  },
+  "coverage": 53,
+  "coverage_summary": {
+    "detected_entries": 53,
+    "inventory_complete": false,
+    "inventory_note": "Digital-text headings followed by a Description label only; scanned/OCR content is not claimed.",
+    "selected_entries": [
+      "2.2.18",
+      "2.2.5"
+    ],
+    "status_counts": {
+      "discovered": 51,
+      "supported": 2
+    },
+    "supported_selected": 2
+  },
+  "draft": {
+    "draft": {
+      "claims": [
+        {
+          "citations": [
+            "st-es0620:ctx-identity"
+          ],
+          "field": "source_identity",
+          "status": "supported",
+          "value": "ES0620 - Rev 5 - August 2026 www.st.com"
+        },
+        {
+          "citations": [
+            "st-es0620:p01:row-2-2-5",
+            "st-es0620:ctx-legend-N",
+            "st-es0620:ctx-legend-A"
+          ],
+          "field": "affected_revision",
+          "status": "supported",
+          "value": "Section 2.2.5 Incorrect DBGMCU_IDCODE register value: Rev. Z = N (Limitation applicable. No workaround available), Rev. B = A (Limitation applicable. Workaround available), Rev. X = A (Limitation applicable. Workaround available)"
+        },
+        {
+          "citations": [
+            "st-es0620:p06:s2.2.5:a002"
+          ],
+          "field": "consequence",
+          "status": "supported",
+          "value": "The DBGMCU_IDCODE register value remains the same."
+        },
+        {
+          "citations": [
+            "st-es0620:p06:s2.2.5:a004",
+            "st-es0620:p06:s2.2.5:a005",
+            "st-es0620:p06:s2.2.5:a006"
+          ],
+          "field": "workaround_documented",
+          "status": "supported",
+          "value": "For revision Z devices, no workaround is available. For revision B devices, use the new register definition Boot ROM (Base address: 0x1800 1000, Address offset: 0x0004)."
+        },
+        {
+          "citations": [
+            "st-es0620:p01:row-2-2-18",
+            "st-es0620:ctx-legend-A",
+            "st-es0620:ctx-legend--"
+          ],
+          "field": "affected_revision",
+          "status": "supported",
+          "value": "Section 2.2.18 Incorrect reset behavior when using NRST pin: Rev. Z = A (Limitation applicable. Workaround available), Rev. B = A (Limitation applicable. Workaround available), Rev. X = - (Limitation not applicable)"
+        },
+        {
+          "citations": [
+            "st-es0620:p09:s2.2.18:a002",
+            "st-es0620:p09:s2.2.18:a005"
+          ],
+          "field": "trigger_condition",
+          "status": "supported",
+          "value": "Using the NRST pin for reset."
+        },
+        {
+          "citations": [
+            "st-es0620:p09:s2.2.18:a002",
+            "st-es0620:p09:s2.2.18:a003"
+          ],
+          "field": "consequence",
+          "status": "supported",
+          "value": "The system may fail to perform a correct reset when using the NRST pin. This issue might require a full power cycle (power off and on) to restore functionality."
+        },
+        {
+          "citations": [
+            "st-es0620:p09:s2.2.18:a005",
+            "st-es0620:p09:s2.2.18:a006",
+            "st-es0620:p09:s2.2.18:a007",
+            "st-es0620:p09:s2.2.18:a008",
+            "st-es0620:p09:s2.2.18:a009",
+            "st-es0620:p09:s2.2.18:a010",
+            "st-es0620:p09:s2.2.18:a011",
+            "st-es0620:p09:s2.2.18:a012",
+            "st-es0620:p09:s2.2.18:a013",
+            "st-es0620:p09:s2.2.18:a014",
+            "st-es0620:p09:s2.2.18:a015",
+            "st-es0620:p09:s2.2.18:a016",
+            "st-es0620:p09:s2.2.18:a017",
+            "st-es0620:p09:s2.2.18:a018",
+            "st-es0620:p09:s2.2.18:a019",
+            "st-es0620:p09:s2.2.18:a020",
+            "st-es0620:p09:s2.2.18:a021"
+          ],
+          "field": "workaround_documented",
+          "status": "supported",
+          "value": "When using the NRST pin, configure the reset mode to power-on reset: 1. On the first system power-on reset, set the reset type to power-on reset by setting the CORE_RESET_TYPE bit in the SYSCFG_CM55RSTCR register. 2. Generate a software reset by setting the SYSRESETREQ bit in the AIRCR register of the SBC. In the main application code, declare a global variable at any address in AXISRAM1; at the start of main, if the variable is not 0x11223344, set it to 0x11223344, enable SYSCFG clock, set power-on reset from NRST pin in SYSCFG->CM55RSTCR, issue __ISB() and __DSB(), then call NVIC_SystemReset()."
+        },
+        {
+          "citations": [
+            "st-es0620:p09:s2.2.18:a009",
+            "st-es0620:p09:s2.2.18:a010"
+          ],
+          "field": "workaround_restriction",
+          "status": "supported",
+          "value": "The example code declares the global variable at address 0x34001004, but the prose states the variable may be declared at any address in AXISRAM1; the specific address is not required."
+        }
+      ],
+      "limitations": "source-bounded draft; human review required; no safety/certification claim",
+      "schema_version": 1,
+      "source_document_id": "ES0620",
+      "source_revision": "Rev 5",
+      "unresolved_fields": [
+        "affected_device",
+        "exception"
+      ]
+    },
+    "id": "075a2625-862f-4d9a-b932-83f94358cb3d",
+    "provenance": "live",
+    "provider_request_id": "663823b4200b5f0a9cb78a2f092f5e71",
+    "status": "validated",
+    "usage": {
+      "completion_tokens": 1587,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 3247,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 4834
+    },
+    "validation": {
+      "anchor_references": 34,
+      "checked_claims": 9,
+      "errors": [],
+      "identity_checked": true,
+      "status": "validated",
+      "warnings": []
+    }
+  },
+  "extraction_id": "4ec4379e-16c9-4e72-a373-8734c6453f91",
+  "job_id": "84bfa4b5-f6dc-4200-a828-7fed335a905a",
+  "job_status": "succeeded",
+  "mode": "live",
+  "project_id": "8b497e89-40f7-421d-a76f-9573f3c2e57b",
+  "schema_version": 1,
+  "source_id": "8f3d777f-9e83-4cd7-b805-669825152c7b",
+  "source_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd",
+  "status": "pass"
+}

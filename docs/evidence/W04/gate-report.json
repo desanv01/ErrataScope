@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "status": "partial",
+  "packet": "W04-ingestion-review",
+  "binding": "W04-ingestion-v1",
+  "worker_attempt": "W04-attempt-01",
+  "gates": {
+    "B1_source_parse_anchors_coverage": {
+      "status": "pass",
+      "source_sha256": "dcabef6a6f7554b8ae83b9718b3924d1f76003448de3ba94b5f0a195da70d3fd",
+      "page_count": 38,
+      "selected_entries": [
+        "2.2.18",
+        "2.2.5"
+      ],
+      "anchors": 39,
+      "coverage_entries": 53,
+      "inventory_complete": false,
+      "evidence": "verify-offline-real-attempt-01.json; W04 tests source/parse/immutability"
+    },
+    "B2_strict_provider_evidence_accounting": {
+      "status": "partial",
+      "budget_id": "W04-backend-v1",
+      "reserved_requests": 2,
+      "remaining_requests": 0,
+      "spend_reserved_usd": "0.016593",
+      "reservations": [
+        {
+          "attempt": 1,
+          "status": "succeeded",
+          "case": "real_source",
+          "input_token_bound": 3768,
+          "output_token_bound": 8192,
+          "max_estimated_cost_usd": "0.00850320",
+          "provider_request_id": "663823b4200b5f0a9cb78a2f092f5e71",
+          "response_hash": "4e62c49aaa01a61af4eda9031a9d71b6447c58396bc688e414a2e0679f26fa13",
+          "prompt_tokens": 3247,
+          "completion_tokens": 1587,
+          "total_tokens": 4834,
+          "reserved_utc": "2026-10-30 10:14:18.442634+00",
+          "dispatch_utc": "2026-10-30 10:14:18.475143+00",
+          "finalized_utc": "2026-10-30 10:14:22.964264+00",
+          "error_code": null
+        },
+        {
+          "attempt": 2,
+          "status": "succeeded",
+          "case": "synthetic_missing_revision",
+          "input_token_bound": 2390,
+          "output_token_bound": 8192,
+          "max_estimated_cost_usd": "0.00808980",
+          "provider_request_id": "8c86a58e8db4b2ea0aed99dab3dd536d",
+          "response_hash": "51084d88ef26bb04de4e30811a63a47a5f456cf1af8cc34beb01122812b8dee7",
+          "prompt_tokens": 1335,
+          "completion_tokens": 173,
+          "total_tokens": 1508,
+          "reserved_utc": "2026-10-30 10:15:18.653005+00",
+          "dispatch_utc": "2026-10-30 10:15:18.681374+00",
+          "finalized_utc": "2026-10-30 10:15:20.168878+00",
+          "error_code": null
+        }
+      ],
+      "real_source_live": {
+        "status": "pass",
+        "draft_id": "075a2625-862f-4d9a-b932-83f94358cb3d",
+        "validation": {
+          "anchor_references": 34,
+          "checked_claims": 9,
+          "errors": [],
+          "identity_checked": true,
+          "status": "validated",
+          "warnings": []
+        },
+        "provider_request_id": "663823b4200b5f0a9cb78a2f092f5e71",
+        "usage": {
+          "completion_tokens": 1587,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 3247,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 4834
+        }
+      },
+      "synthetic_missing_revision_live": {
+        "status": "fail",
+        "blocker": "provider HTTP success and reservation 2 succeeded, but the worker rejected the draft (DRAFT_REJECTED) before a rejected-draft row could be persisted; no third paid call was made.",
+        "reservation": {
+          "attempt": 2,
+          "status": "succeeded",
+          "case": "synthetic_missing_revision",
+          "input_token_bound": 2390,
+          "output_token_bound": 8192,
+          "max_estimated_cost_usd": "0.00808980",
+          "provider_request_id": "8c86a58e8db4b2ea0aed99dab3dd536d",
+          "response_hash": "51084d88ef26bb04de4e30811a63a47a5f456cf1af8cc34beb01122812b8dee7",
+          "prompt_tokens": 1335,
+          "completion_tokens": 173,
+          "total_tokens": 1508,
+          "reserved_utc": "2026-10-30 10:15:18.653005+00",
+          "dispatch_utc": "2026-10-30 10:15:18.681374+00",
+          "finalized_utc": "2026-10-30 10:15:20.168878+00",
+          "error_code": null
+        }
+      },
+      "offline_cases": {
+        "real_source": "pass",
+        "synthetic_missing_revision": "pass"
+      },
+      "evidence": "usage.json, provenance.json, verify-*-attempt-01.json, provider mock/failure/budget tests"
+    },
+    "B3_reviewed_conversion_authorization": {
+      "status": "pass_mechanism_only",
+      "scope": "Synthetic append-only proposal/review mechanism tests; no real-source accepted rule.",
+      "real_source_conversion": "not representable with unchanged W02 selectors (NRST reset-mode trigger and DBGMCU register are absent); documented as future contract extension rather than forced.",
+      "tests": "W04 ReviewTests: accepted candidate, stale 409, foreign anchor/ineligible, immutable accepted rule; W03 auth/replay retained.",
+      "semantic_acceptance": "Codex decision; no human technical approval performed."
+    },
+    "B4_persistence_restart_idempotency_regressions": {
+      "status": "pass",
+      "w04_tests": 11,
+      "w03_tests": 110,
+      "domain_tests": 92,
+      "duplicate_delivery": "no duplicate anchors/output/draft",
+      "cancellation": "cancelled job publishes no extraction output/anchors",
+      "recovery": "W03 attempt-05 recovery passed; W04 reservation crash-after-dispatch path documented as a residual limit",
+      "sentinel": {
+        "schema_version": 1,
+        "project_id": "ac2a7c3e-784f-4510-92d8-86d1832bd0b5",
+        "artifact_id": "f3658b9f-b55e-4753-bbc7-15793b68f113",
+        "sha256": "f6ea27bb44d74bd7b69cf407e60281a3004b326f50063ab4a027666b39fe49cd",
+        "byte_length": 57,
+        "before_readback_sha256": "f6ea27bb44d74bd7b69cf407e60281a3004b326f50063ab4a027666b39fe49cd",
+        "after_readback_sha256": "f6ea27bb44d74bd7b69cf407e60281a3004b326f50063ab4a027666b39fe49cd",
+        "before_after_equal": true,
+        "passed": true
+      },
+      "legacy_loss": {
+        "current_total": 147,
+        "current_unreadable": 41,
+        "missing_ids_match_legacy": true,
+        "new_missing_ids": []
+      }
+    },
+    "W04-G1_real_source_to_reviewed_rule": {
+      "status": "partial",
+      "detail": "Real source to live cited draft is verified; real semantic conversion awaits Codex review, and no faithful real-source rule conversion is currently representable."
+    },
+    "W04-G2_conditions_to_exact_source_context": {
+      "status": "pass_backend",
+      "detail": "Anchors expose zero-based page, printed label, normalized bbox, dimensions/rotation, parser provenance and section/context roles; UI highlighting remains NOT_RUN."
+    },
+    "W04-G3_unselected_failed_visible": {
+      "status": "pass_backend",
+      "detail": "Coverage retains discovered/selected/supported/ambiguous/missing/failed; inventory_complete=false; unselected entries exposed with reasons."
+    },
+    "W04-G4_failures_cannot_activate_rules": {
+      "status": "pass",
+      "detail": "Malformed PDF, rejected draft, ineligible proposal, stale review and missing receipts fail closed; no failure path writes accepted_rules."
+    },
+    "W04-G5_approved_ui": {
+      "status": "not_run",
+      "detail": "UI/imagegen PENDING; no frontend work authorized."
+    }
+  },
+  "w01_ledger": {
+    "requests_reserved": 4,
+    "requests_cap": 4,
+    "sha256": "028084e43708460cc0e6a35cc03000bbbf2c756c6c87f235bf52d333a84e55a6"
+  },
+  "w04_ledger": {
+    "sha256": "f18b87a5c37dbcdf3aa2686f9e7a7784dcdf19d55c4d49e7eda48f67cd1ec1a9",
+    "entries": 6
+  },
+  "hosted_p2": "NOT_RUN",
+  "ui_imagegen": "PENDING",
+  "full_w04_p3_accepted": false
+}
